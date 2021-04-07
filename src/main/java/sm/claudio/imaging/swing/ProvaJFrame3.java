@@ -598,6 +598,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     intestaTabella();
   }
 
+  
   public void addRow(String att, String nuo, Path loc, Date dt) {
 
     Object[] arr = new Object[4];

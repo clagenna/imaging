@@ -21,6 +21,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -39,6 +40,8 @@ import org.apache.commons.imaging.formats.tiff.write.TiffOutputDirectory;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputField;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputSet;
 
+import sm.claudio.imaging.sys.AppProperties;
+import sm.claudio.imaging.sys.ISwingLogger;
 import sm.claudio.imaging.sys.ParseData;
 
 public abstract class FSFoto extends FSFile {
@@ -48,9 +51,9 @@ public abstract class FSFoto extends FSFile {
 
   static {
     s_arrFmt = new ArrayList<DateTimeFormatter>();
-    s_arrFmt.add(DateTimeFormatter.ofPattern("'f'yyyyMMdd'_'HHmmss"));
-    s_arrFmt.add(DateTimeFormatter.ofPattern("'WhatsApp Image 'yyyy-MM-dd' at 'HH.mm.ss"));
-    s_arrFmt.add(DateTimeFormatter.ofPattern("yyyy-MM-dd' at 'HH.mm.ss"));
+    FSFoto.s_arrFmt.add(DateTimeFormatter.ofPattern("'f'yyyyMMdd'_'HHmmss"));
+    FSFoto.s_arrFmt.add(DateTimeFormatter.ofPattern("'WhatsApp Image 'yyyy-MM-dd' at 'HH.mm.ss"));
+    FSFoto.s_arrFmt.add(DateTimeFormatter.ofPattern("yyyy-MM-dd' at 'HH.mm.ss"));
   }
 
   /** da EXIF_TAG_DATE_TIME_ORIGINAL */
@@ -217,9 +220,9 @@ public abstract class FSFoto extends FSFile {
       return;
     }
     FileTime ux = attr.lastModifiedTime();
-    setDtUltModif(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.systemDefault()));
+    setDtUltModif(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.systemDefault()).withNano(0));
     ux = attr.creationTime();
-    setDtCreazione(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.systemDefault()));
+    setDtCreazione(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.systemDefault()).withNano(0));
   }
 
   private void interpretaDateTimeDaNomefile() {
@@ -392,7 +395,9 @@ public abstract class FSFoto extends FSFile {
     } catch (IOException e) {
       getLogger().error("Errore rename per {}", getPath().toString(), e);
     }
-
+    ISwingLogger isw = AppProperties.getInst().getSwingLogger();
+    Date dt2 = Date.from(dt.atZone(ZoneId.systemDefault()).toInstant());
+    isw.addRow(pthFrom.getFileName().toString(), fnam, pthFrom.getParent().toAbsolutePath(), dt2);
   }
 
   private String creaNomeFile() {
@@ -402,7 +407,7 @@ public abstract class FSFoto extends FSFile {
   private String creaNomeFile(LocalDateTime p_dt) {
     if (p_dt == null)
       p_dt = getPiuVecchiaData();
-    DateTimeFormatter fmt = DateTimeFormatter.ofPattern(CSZ_FOTOFILEPATTERN);
+    DateTimeFormatter fmt = DateTimeFormatter.ofPattern(FSFoto.CSZ_FOTOFILEPATTERN);
     String fnam = String.format("%s.%s", fmt.format(p_dt), getFileExtention());
     return fnam;
   }
@@ -503,16 +508,16 @@ public abstract class FSFoto extends FSFile {
     StringBuilder sb = new StringBuilder();
     sb.append(getPath().toString()) //
         .append("\n\t");
-    sb.append("\tOldest Data:\t" + getPiuVecchiaData().toString()) //
+    sb.append("   Oldest Data:\t" + getPiuVecchiaData().toString()) //
         .append("\n\t");
     /*
      * dtNomeFile; dtCreazione; dtUltModif; dtAcquisizione;
      */
-    sb.append("dtNomeFile:\t" + (dtNomeFile != null ? dtNomeFile.toString() : "*NULL*")) //
+    sb.append("    dtNomeFile:\t" + (dtNomeFile != null ? dtNomeFile.toString() : "*NULL*")) //
         .append("\n\t");
-    sb.append("dtCreazione:\t" + (dtCreazione != null ? dtCreazione.toString() : "*NULL*")) //
+    sb.append("   dtCreazione:\t" + (dtCreazione != null ? dtCreazione.toString() : "*NULL*")) //
         .append("\n\t");
-    sb.append("dtUltModif:\t" + (dtUltModif != null ? dtUltModif.toString() : "*NULL*")) //
+    sb.append("    dtUltModif:\t" + (dtUltModif != null ? dtUltModif.toString() : "*NULL*")) //
         .append("\n\t");
     sb.append("dtAcquisizione:\t" + (dtAcquisizione != null ? dtAcquisizione.toString() : "*NULL*")) //
         .append("\n\t");
