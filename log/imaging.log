@@ -9381,3 +9381,189 @@ sm.claudio.imaging.sys.AppProperties  2021-04-07 16:16:49 INFO : Apro il file pr
 sm.claudio.imaging.sys.AppProperties  2021-04-07 16:17:23 INFO : Salvo property file C:\java\photon\imaging\imaging.properties
 sm.claudio.imaging.sys.AppProperties  2021-04-07 16:27:58 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
 sm.claudio.imaging.sys.AppProperties  2021-04-07 16:28:18 INFO : Salvo property file C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-04-07 16:51:30 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.swing.ImgModel  2021-04-07 16:51:43 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:14:34 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.sys.AppProperties  2021-04-07 17:27:53 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.swing.ImgModel  2021-04-07 17:28:00 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:28:23 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:21 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:21 INFO : Cambio nome da "f20210401_104808.jpg" a "f20210401_104807.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210401_104832_1.jpg" a "f20210401_104832.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105136.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210401_105136.jpg" a "f20210401_105135.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105140.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210401_105140.jpg" a "f20210401_105139.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121158.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210401_121158.jpg" a "f20210401_121157.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121224.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210401_121224.jpg" a "f20210401_121223.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135322.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210401_135322.jpg" a "f20210401_135321.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\f20210204_112816.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\f20210204_112828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 DEBUG: Analizzo C:\My Foto\2021\f20210204_112832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:26 INFO : Cambio nome da "f20210204_112832.jpg" a "f20210204_112831.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210204_112920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210204_112920.jpg" a "f20210204_112919.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210204_112922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210204_112922.jpg" a "f20210204_112920.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210204_112924.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210204_113400.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_084342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_084342.jpg" a "f20210213_084341.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_084404.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_084404.jpg" a "f20210213_084403.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091510.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_091510.jpg" a "f20210213_091509.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091512.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_091512.jpg" a "f20210213_091511.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091546.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_091546.jpg" a "f20210213_091545.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091650.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_091650.jpg" a "f20210213_091649.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091710.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210213_091730.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210213_091730.jpg" a "f20210213_091729.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_144128.jpg" a "f20210214_144127.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144144.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144250.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_144250.jpg" a "f20210214_144249.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144356.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144542.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_144542.jpg" a "f20210214_144541.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144710.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144734.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144846.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_144954.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_144954.jpg" a "f20210214_144953.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145004.jpg" a "f20210214_145003.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145320.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145320.jpg" a "f20210214_145319.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145338.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145340.jpg" a "f20210214_145339.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145340_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145340_1.jpg" a "f20210214_145439.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145342.jpg" a "f20210214_145340.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145342_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145342_1.jpg" a "f20210214_145440.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145342_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145342_2.jpg" a "f20210214_145341.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 DEBUG: Analizzo C:\My Foto\2021\f20210214_145400.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:29:27 INFO : Cambio nome da "f20210214_145400.jpg" a "f20210214_145359.jpg"
+sm.claudio.imaging.swing.ImgModel  2021-04-07 17:29:27 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-04-07 17:43:18 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-04-07 17:44:20 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 DEBUG: Analizzo C:\My Foto\2021\f20210204_112816.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:44:35 INFO : Cambio nome da "f20210204_112816.jpg" a "f20210204_102816.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:42 DEBUG: Analizzo C:\My Foto\2021\f20210204_112828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:42 INFO : Cambio nome da "f20210204_112828.jpg" a "f20210204_102828.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210204_112831.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210204_112831.jpg" a "f20210204_102831.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210204_112919.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210204_112919.jpg" a "f20210204_102919.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210204_112920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210204_112920.jpg" a "f20210204_102920.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210204_112924.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210204_112924.jpg" a "f20210204_102924.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210204_113400.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210204_113400.jpg" a "f20210204_103400.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_084341.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_084341.jpg" a "f20210213_074341.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_084403.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_084403.jpg" a "f20210213_074403.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091509.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091509.jpg" a "f20210213_081509.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091511.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091511.jpg" a "f20210213_081511.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091528.jpg" a "f20210213_081528.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091545.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091545.jpg" a "f20210213_081545.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091649.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091649.jpg" a "f20210213_081649.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091704.jpg" a "f20210213_081704.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091710.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091710.jpg" a "f20210213_081710.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210213_091729.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210213_091729.jpg" a "f20210213_081729.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144112.jpg" a "f20210214_134112.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144127.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144127.jpg" a "f20210214_134127.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144144.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144144.jpg" a "f20210214_134144.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144249.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144249.jpg" a "f20210214_134249.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144356.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144356.jpg" a "f20210214_134356.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144541.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144541.jpg" a "f20210214_134541.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144710.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144710.jpg" a "f20210214_134710.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144734.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144734.jpg" a "f20210214_134734.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144846.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144846.jpg" a "f20210214_134846.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_144953.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_144953.jpg" a "f20210214_134953.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145003.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145003.jpg" a "f20210214_135003.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145319.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145319.jpg" a "f20210214_135319.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145336.jpg" a "f20210214_135336.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145338.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145338.jpg" a "f20210214_135338.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145339.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145339.jpg" a "f20210214_135339.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145340.jpg" a "f20210214_135340.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145341.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145341.jpg" a "f20210214_135341.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145359.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145359.jpg" a "f20210214_135359.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145439.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145439.jpg" a "f20210214_135439.jpg"
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Foto\2021\f20210214_145440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145440.jpg" a "f20210214_135440.jpg"
+sm.claudio.imaging.swing.ImgModel  2021-04-07 17:45:47 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.sys.AppProperties  2021-04-07 17:46:11 INFO : Salvo property file C:\java\photon\imaging\imaging.properties
