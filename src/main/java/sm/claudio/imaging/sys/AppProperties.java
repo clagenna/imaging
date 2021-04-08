@@ -14,29 +14,25 @@ import org.apache.logging.log4j.Logger;
 
 import lombok.Getter;
 import lombok.Setter;
+import sm.claudio.imaging.swing.ImgModel;
 
 public class AppProperties {
 
-  private static final Logger  s_log               = LogManager.getLogger(AppProperties.class);
-  private static final String  CSZ_PROP_FILE       = "imaging.properties";
-  public static final String   CSZ_PROP_LASTDIR    = "last.dir";
-  public static final String   CSZ_PROP_LASTFIL    = "last.fil";
-  public static final String   CSZ_PROP_DIMFRAME_X = "frame.dimx";
-  public static final String   CSZ_PROP_DIMFRAME_Y = "frame.dimy";
-  public static final String   CSZ_PROP_POSFRAME_X = "frame.posx";
-  public static final String   CSZ_PROP_POSFRAME_Y = "frame.posy";
+  private static final Logger          s_log               = LogManager.getLogger(AppProperties.class);
+  private static final String          CSZ_PROP_FILE       = "imaging.properties";
+  public static final String           CSZ_PROP_LASTDIR    = "last.dir";
+  public static final String           CSZ_PROP_LASTFIL    = "last.fil";
+  public static final String           CSZ_PROP_DIMFRAME_X = "frame.dimx";
+  public static final String           CSZ_PROP_DIMFRAME_Y = "frame.dimy";
+  public static final String           CSZ_PROP_POSFRAME_X = "frame.posx";
+  public static final String           CSZ_PROP_POSFRAME_Y = "frame.posy";
 
-  private static AppProperties s_inst;
+  private static AppProperties         s_inst;
 
-  @Getter
-  @Setter
-  private ISwingLogger         swingLogger;
-  @Getter
-  @Setter
-  private Properties           properties;
-  @Getter
-  @Setter
-  private File                 propertyFile;
+  @Getter @Setter private ISwingLogger swingLogger;
+  @Getter @Setter private Properties   properties;
+  @Getter @Setter private File         propertyFile;
+  @Getter @Setter private ImgModel     model;
 
   public AppProperties() {
     if (AppProperties.s_inst != null && !Beans.isDesignTime())

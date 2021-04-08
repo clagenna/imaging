@@ -15,7 +15,6 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Point;
 import java.awt.RenderingHints;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -23,7 +22,10 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -47,6 +49,8 @@ import javax.swing.table.DefaultTableModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import sm.claudio.imaging.fsvisit.FSFile;
+import sm.claudio.imaging.fsvisit.FSFoto;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ISwingLogger;
@@ -62,6 +66,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
   private Point                         m_winPos;
   private JTextField                    m_txDir;
   private ImgModel                      m_model;
+  private JButton                       m_btAnalizza;
   private JButton                       m_btExec;
   private JLabel                        m_lblLogs;
   private JTable                        table;
@@ -139,6 +144,13 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     panChooseDir.add(m_txDir);
 
     JButton m_btChooseDir = new JButton("Cerca...");
+    m_btChooseDir.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        locBtChooseDir(e);
+      }
+    });
+
     panChooseDir.add(m_btChooseDir);
 
     JPanel panRadioB = new JPanel();
@@ -211,6 +223,17 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
       }
     });
     panExec.add(ckbRecurse);
+
+    m_btAnalizza = new JButton("Analizza");
+    m_btAnalizza.addActionListener(new ActionListener() {
+
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        locBtAnalizza_Click(e);
+      }
+    });
+    m_btAnalizza.setEnabled(false);
+    panExec.add(m_btAnalizza);
 
     m_btExec = new JButton("Esegui");
     m_btExec.addActionListener(new ActionListener() {
@@ -377,19 +400,6 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     pane.add(table, gblc);
   }
 
-  private void intestaTabella() {
-    DefaultTableModel mod = new DefaultTableModel();
-
-    mod.addColumn("Attuale");
-    mod.addColumn("Nuovo Nome");
-    mod.addColumn("Data");
-    mod.addColumn("Percorso");
-
-    table.setModel(mod);
-    // tbl.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
-    // tbl.getTableHeader().resizeAndRepaint();
-  }
-
   @SuppressWarnings("unused")
   private void creaCheck(Container pane) {
     JCheckBox chk = new JCheckBox("Recursive");
@@ -451,12 +461,12 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     int dimX = prop.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_X);
     int dimY = prop.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_Y);
 
-    Toolkit tk = java.awt.Toolkit.getDefaultToolkit();
+    // Toolkit tk = java.awt.Toolkit.getDefaultToolkit();
+    // Dimension screen = tk.getScreenSize();
     GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
     // Returns an array of all of the screen GraphicsDevice objects.
     GraphicsDevice[] devices = env.getScreenDevices();
     int numberOfScreens = devices.length;
-    Dimension screen = tk.getScreenSize();
 
     if ( (dimX * dimY) > 0) {
       m_winDim = new Dimension(dimX, dimY);
@@ -517,7 +527,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
      *      caretColor=javax.swing.plaf.ColorUIResource[r=0,g=0,b=0],
      *      disabledTextColor=javax.swing.plaf.ColorUIResource[r=109,g=109,b=109],
      *      editable=true,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],selectedTextColor=javax.swing.plaf.ColorUIResource[r=255,g=255,b=255],selectionColor=javax.swing.plaf.ColorUIResource[r=0,g=120,b=215],columns=30,columnWidth=8,command=,horizontalAlignment=LEADING]
-
+    
      */
     // System.out.println("ProvaJFrame3.locTxDir_Click:" + e.toString());
     String szDir = e.getActionCommand();
@@ -559,17 +569,99 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     checkFattibilita();
   }
 
-  protected void locBtEsegui_Click(ActionEvent e) {
+  protected void locBtAnalizza_Click(ActionEvent e) {
     try {
       this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
       clear();
-      m_model.esegui();
+      m_model.analizza();
+      caricaGriglia();
     } finally {
       this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
   }
 
+  private void intestaTabella() {
+    DefaultTableModel mod = new DefaultTableModel();
+
+    mod.addColumn("Attuale");
+    mod.addColumn("Percorso");
+    mod.addColumn("Errore");
+    mod.addColumn("Nuovo Nome");
+    mod.addColumn("dt Nome File");
+    mod.addColumn("dt Creazione");
+    mod.addColumn("dt Ult Modif");
+    mod.addColumn("dt Acquisizione");
+    mod.addColumn("dt Parent Dir");
+    mod.addColumn("dt Assunta");
+
+    table.setModel(mod);
+    // tbl.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
+    // tbl.getTableHeader().resizeAndRepaint();
+  }
+
+  private void caricaGriglia() {
+    List<FSFile> li = m_model.getListFiles();
+    intestaTabella();
+    if (li == null || li.size() == 0) {
+      sparaMess("Nessun file trovato !");
+      return;
+    }
+    DefaultTableModel mod = (DefaultTableModel) table.getModel();
+    for (FSFile fsf : li) {
+      Object[] arr = new Object[10];
+      arr[0] = fsf.getPath().getFileName().toString();
+      arr[1] = fsf.getParent().toAbsolutePath().toString();
+      if (fsf instanceof FSFoto) {
+        FSFoto fot = (FSFoto) fsf;
+        arr[2] = fot.isFileInError() ? "E" : "";
+        arr[3] = fot.creaNomeFile();
+        arr[4] = formatDt(fot.getDtNomeFile());
+        arr[5] = formatDt(fot.getDtCreazione());
+        arr[6] = formatDt(fot.getDtUltModif());
+        arr[7] = formatDt(fot.getDtAcquisizione());
+        arr[8] = formatDt(fot.getDtParentDir());
+        arr[9] = formatDt(fot.getDtAssunta());
+      }
+      mod.addRow(arr);
+    }
+  }
+
+  private String formatDt(LocalDateTime dt) {
+    Date dt2 = null;
+    try {
+      if (dt != null)
+        dt2 = Date.from(dt.atZone(ZoneId.systemDefault()).toInstant());
+    } catch (Exception e) {
+      return e.getMessage();
+    }
+    return formatDt(dt2);
+  }
+
+  private String formatDt(Date dt2) {
+    String szRet = "*";
+    if (dt2 != null)
+      szRet = ProvaJFrame3.s_fmt.format(dt2);
+    return szRet;
+  }
+
+  @Override
+  public void addRow(String att, String nuo, Path loc, Date dt) {
+
+    Object[] arr = new Object[4];
+    arr[0] = att;
+    arr[1] = nuo;
+    arr[2] = loc.toAbsolutePath();
+    arr[3] = ProvaJFrame3.s_fmt.format(dt);
+    DefaultTableModel mod = (DefaultTableModel) table.getModel();
+    mod.addRow(arr);
+  }
+
+  protected void locBtEsegui_Click(ActionEvent e) {
+    s_log.error("btEsegui non ancora implementata");
+  }
+
   private void checkFattibilita() {
+    m_btAnalizza.setEnabled(m_model.isValoriOk());
     m_btExec.setEnabled(m_model.isValoriOk());
   }
 
@@ -596,18 +688,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
   private void clear() {
     sparaMess(ProvaJFrame3.s_fmt.format(new Date()) + " Inizio esecuzione");
     intestaTabella();
-  }
-
-  
-  public void addRow(String att, String nuo, Path loc, Date dt) {
-
-    Object[] arr = new Object[4];
-    arr[0] = att;
-    arr[1] = nuo;
-    arr[2] = loc.toAbsolutePath();
-    arr[3] = ProvaJFrame3.s_fmt.format(dt);
-    DefaultTableModel mod = (DefaultTableModel) table.getModel();
-    mod.addRow(arr);
+    m_model.clear();
   }
 
   public static void main(String[] args) {

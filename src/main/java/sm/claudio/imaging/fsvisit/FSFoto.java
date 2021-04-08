@@ -40,6 +40,7 @@ import org.apache.commons.imaging.formats.tiff.write.TiffOutputDirectory;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputField;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputSet;
 
+import lombok.Getter;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ISwingLogger;
 import sm.claudio.imaging.sys.ParseData;
@@ -58,12 +59,13 @@ public abstract class FSFoto extends FSFile {
 
   /** da EXIF_TAG_DATE_TIME_ORIGINAL */
   private boolean       m_bFileInError;
-  private LocalDateTime dtAssunta = null;
   private LocalDateTime dtNomeFile;
   private LocalDateTime dtCreazione;
   private LocalDateTime dtUltModif;
   private LocalDateTime dtAcquisizione;
+  @Getter
   private LocalDateTime dtParentDir;
+  private LocalDateTime dtAssunta = null;
 
   enum CosaFare {
     setNomeFile, //
@@ -85,6 +87,7 @@ public abstract class FSFoto extends FSFile {
   @Override
   public void setPath(Path p_fi) throws FileNotFoundException {
     super.setPath(p_fi);
+
     m_bFileInError = false;
     leggiFilesAttributes();
     interpretaDateTimeDaNomefile();
@@ -335,6 +338,8 @@ public abstract class FSFoto extends FSFile {
       if ( !getPath().endsWith(szNam))
         m_daFare.add(CosaFare.setNomeFile);
     }
+    LocalDateTime dt = getPiuVecchiaData();
+    setDtAssunta(dt);
     return m_daFare.size() != 0;
   }
 
@@ -400,7 +405,7 @@ public abstract class FSFoto extends FSFile {
     isw.addRow(pthFrom.getFileName().toString(), fnam, pthFrom.getParent().toAbsolutePath(), dt2);
   }
 
-  private String creaNomeFile() {
+  public String creaNomeFile() {
     return creaNomeFile(null);
   }
 

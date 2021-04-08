@@ -45,6 +45,9 @@ public class FSJpeg extends FSFoto {
       getLogger().debug("Nulla da fare con {}", getPath().toString());
       return;
     }
+  }
+
+  public void lavoraFile() {
     // System.out.println(toString());
     Set<CosaFare> df = getCosaFare();
     // il cambio nome ha priorita perche imposta anche     dtAssunta
