@@ -3,9 +3,14 @@ package sm.claudio.imaging.fsvisit;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import sm.claudio.imaging.swing.ImgModel;
+import sm.claudio.imaging.sys.AppProperties;
 
 public class FileSystemVisitatore implements IFSVisitatore {
 
@@ -13,6 +18,15 @@ public class FileSystemVisitatore implements IFSVisitatore {
 
   @Override
   public void visit(FSDir p_vis) throws FileNotFoundException {
+    ImgModel mod = AppProperties.getInst().getModel();
+    boolean recurse = mod.isRecursive();
+    if ( !recurse) {
+      // se non corrisponde il path vuol dire che sono in un sub-dir
+      Path pth = Paths.get(mod.getDirectory());
+      if ( !pth.equals(p_vis.getPath()))
+        return;
+    }
+
     FSFileFactory fact = FSFileFactory.getInst();
     try {
       Files.list(p_vis.getPath()) //

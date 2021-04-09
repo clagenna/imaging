@@ -1,4 +1,4 @@
-package sm.claudio.imaging.swing;
+package prova.swing;
 
 import java.awt.Dimension;
 import java.awt.Point;

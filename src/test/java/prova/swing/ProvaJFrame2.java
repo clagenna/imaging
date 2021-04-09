@@ -9,7 +9,6 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Point;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -47,15 +46,15 @@ import sm.claudio.imaging.sys.AppProperties;
 public class ProvaJFrame2 extends JFrame {
 
   /** long serialVersionUID */
-  private static final long   serialVersionUID = -2259901874713949787L;
-  private static final Logger s_log            = LogManager.getLogger(ProvaJFrame2.class);
-  private Dimension           m_winDim;
-  private Point               m_winPos;
-  private JTextField          m_txDir;
-  private ImgModel            m_model;
-  private JTable              table;
-  private JButton             m_btExec;
-  private JLabel              m_lblLogs;
+  private static final long                               serialVersionUID = -2259901874713949787L;
+  @SuppressWarnings("unused") private static final Logger s_log            = LogManager.getLogger(ProvaJFrame2.class);
+  private Dimension                                       m_winDim;
+  private Point                                           m_winPos;
+  private JTextField                                      m_txDir;
+  @SuppressWarnings("unused") private ImgModel            m_model;
+  private JTable                                          table;
+  private JButton                                         m_btExec;
+  private JLabel                                          m_lblLogs;
 
   public ProvaJFrame2() {
     initialize();
@@ -79,7 +78,7 @@ public class ProvaJFrame2 extends JFrame {
     });
 
     initPos(prop);
-    
+
     GridBagLayout gridBagLayout = new GridBagLayout();
     gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 1.0, 0.0 };
     gridBagLayout.columnWeights = new double[] { 1.0, 1.0 };
@@ -247,12 +246,12 @@ public class ProvaJFrame2 extends JFrame {
     int dimX = prop.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_X);
     int dimY = prop.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_Y);
 
-    Toolkit tk = java.awt.Toolkit.getDefaultToolkit();
+    //    Toolkit tk = java.awt.Toolkit.getDefaultToolkit();
+    //    Dimension screen = tk.getScreenSize();
     GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
     // Returns an array of all of the screen GraphicsDevice objects.
     GraphicsDevice[] devices = env.getScreenDevices();
     int numberOfScreens = devices.length;
-    Dimension screen = tk.getScreenSize();
 
     if ( (dimX * dimY) > 0) {
       m_winDim = new Dimension(dimX, dimY);

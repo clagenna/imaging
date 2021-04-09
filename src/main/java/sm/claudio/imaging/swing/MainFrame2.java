@@ -1,8 +1,6 @@
 package sm.claudio.imaging.swing;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -15,7 +13,6 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Point;
 import java.awt.RenderingHints;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -23,7 +20,11 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -47,27 +48,30 @@ import javax.swing.table.DefaultTableModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import sm.claudio.imaging.fsvisit.FSFile;
+import sm.claudio.imaging.fsvisit.FSFoto;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ISwingLogger;
 
-public class ProvaJFrame3 extends JFrame implements ISwingLogger {
+public class MainFrame2 extends JFrame implements ISwingLogger {
 
   /** long serialVersionUID */
   private static final long             serialVersionUID = 5862421005705834030L;
-  private static final Logger           s_log            = LogManager.getLogger(ProvaJFrame3.class);
+  private static final Logger           s_log            = LogManager.getLogger(MainFrame2.class);
   private static final SimpleDateFormat s_fmt            = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");;
 
   private Dimension                     m_winDim;
   private Point                         m_winPos;
   private JTextField                    m_txDir;
   private ImgModel                      m_model;
+  private JButton                       m_btAnalizza;
   private JButton                       m_btExec;
   private JLabel                        m_lblLogs;
   private JTable                        table;
 
-  public ProvaJFrame3() {
-    //
+  public MainFrame2() {
+    creaComponenti();
   }
 
   protected void creaComponenti() {
@@ -76,7 +80,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
       // Set cross-platform Java L&F (also called "Metal")
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (Exception l_e) {
-      ProvaJFrame3.s_log.error("Set Look and Feel", l_e);
+      MainFrame2.s_log.error("Set Look and Feel", l_e);
     }
 
     AppProperties prop = new AppProperties();
@@ -139,6 +143,13 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     panChooseDir.add(m_txDir);
 
     JButton m_btChooseDir = new JButton("Cerca...");
+    m_btChooseDir.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        locBtChooseDir(e);
+      }
+    });
+
     panChooseDir.add(m_btChooseDir);
 
     JPanel panRadioB = new JPanel();
@@ -203,6 +214,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
 
     JCheckBox ckbRecurse = new JCheckBox("Recurse Dirs.");
     ckbRecurse.setSelected(true);
+    m_model.setRecursive(true);
     ckbRecurse.addActionListener(new ActionListener() {
 
       @Override
@@ -211,6 +223,17 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
       }
     });
     panExec.add(ckbRecurse);
+
+    m_btAnalizza = new JButton("Analizza");
+    m_btAnalizza.addActionListener(new ActionListener() {
+
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        locBtAnalizza_Click(e);
+      }
+    });
+    m_btAnalizza.setEnabled(false);
+    panExec.add(m_btAnalizza);
 
     m_btExec = new JButton("Esegui");
     m_btExec.addActionListener(new ActionListener() {
@@ -251,199 +274,186 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     setVisible(true);
   }
 
-  @SuppressWarnings("unused")
-  private void creaFileChooser(Container pane) {
-    AppProperties prop = AppProperties.getInst();
+  //  @SuppressWarnings("unused")
+  //  private void creaFileChooser(Container pane) {
+  //    AppProperties prop = AppProperties.getInst();
+  //
+  //    JPanel panChooseDir = new JPanel(new FlowLayout(FlowLayout.LEADING));
+  //    JLabel m_lbChoseDir = new JLabel("Directory");
+  //    panChooseDir.add(m_lbChoseDir);
+  //
+  //    m_txDir = new JTextField();
+  //    m_txDir.setSize(140, 25);
+  //    m_txDir.setMinimumSize(new Dimension(80, m_txDir.getPreferredSize().height));
+  //    m_txDir.setColumns(30);
+  //    m_txDir.setText(prop.getLastDir());
+  //    m_txDir.addActionListener(new ActionListener() {
+  //
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locTxDir_Click(e);
+  //      }
+  //    });
+  //    panChooseDir.add(m_txDir, BorderLayout.CENTER);
+  //
+  //    JButton m_btChooseDir = new JButton("Scegli...");
+  //    m_btChooseDir.addActionListener(new ActionListener() {
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locBtChooseDir(e);
+  //      }
+  //    });
+  //    panChooseDir.add(m_btChooseDir);
+  //
+  //    GridBagConstraints gblc = new GridBagConstraints();
+  //    gblc.fill = GridBagConstraints.HORIZONTAL;
+  //    gblc.gridx = 0;
+  //    gblc.gridy = 0;
+  //    gblc.gridwidth = 2;
+  //    pane.add(panChooseDir, gblc);
+  //  }
 
-    JPanel panChooseDir = new JPanel(new FlowLayout(FlowLayout.LEADING));
-    JLabel m_lbChoseDir = new JLabel("Directory");
-    panChooseDir.add(m_lbChoseDir);
+  //  @SuppressWarnings("unused")
+  //  private void creaRadios(Container pane) {
+  //    JPanel panRadioB = new JPanel(new GridBagLayout());
+  //    ButtonGroup m_rdbPrioGroup = new ButtonGroup();
+  //    GridBagConstraints gbcPanGen2 = new GridBagConstraints();
+  //
+  //    gbcPanGen2.fill = GridBagConstraints.HORIZONTAL;
+  //    gbcPanGen2.gridy = 0;
+  //    gbcPanGen2.gridx = 1;
+  //
+  //    GridBagConstraints gbcRadio1 = new GridBagConstraints();
+  //
+  //    JRadioButton m_rdbPrioEFD = new JRadioButton("Exif File Dir");
+  //    m_rdbPrioEFD.setActionCommand(EExifPriority.ExifFileDir.toString());
+  //    m_rdbPrioEFD.setSelected(true);
+  //    m_model.setPriority(EExifPriority.ExifFileDir);
+  //    m_rdbPrioEFD.addActionListener(new ActionListener() {
+  //
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locRadioPrio_Click(e);
+  //      }
+  //    });
+  //    m_rdbPrioGroup.add(m_rdbPrioEFD);
+  //    gbcRadio1.fill = GridBagConstraints.HORIZONTAL;
+  //    gbcRadio1.gridx = 0;
+  //    gbcRadio1.gridy = 0;
+  //    panRadioB.add(m_rdbPrioEFD, gbcRadio1);
+  //
+  //    JRadioButton m_rdbPrioFDE = new JRadioButton("File Dir Exif");
+  //    m_rdbPrioFDE.setActionCommand(EExifPriority.FileDirExif.toString());
+  //    m_rdbPrioFDE.addActionListener(new ActionListener() {
+  //
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locRadioPrio_Click(e);
+  //      }
+  //    });
+  //
+  //    m_rdbPrioGroup.add(m_rdbPrioFDE);
+  //    GridBagConstraints gbcRadio2 = new GridBagConstraints();
+  //    gbcRadio2.fill = GridBagConstraints.HORIZONTAL;
+  //    gbcRadio2.gridx = 0;
+  //    gbcRadio2.gridy = 1;
+  //    panRadioB.add(m_rdbPrioFDE, gbcRadio2);
+  //
+  //    JRadioButton m_rdbPrioDFE = new JRadioButton("Dir File Exif");
+  //    m_rdbPrioDFE.setActionCommand(EExifPriority.DirFileExif.toString());
+  //    m_model.setPriority(EExifPriority.DirFileExif);
+  //    m_rdbPrioDFE.setSelected(true);
+  //    m_rdbPrioDFE.addActionListener(new ActionListener() {
+  //
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locRadioPrio_Click(e);
+  //      }
+  //    });
+  //
+  //    m_rdbPrioGroup.add(m_rdbPrioDFE);
+  //    GridBagConstraints gbcRadio3 = new GridBagConstraints();
+  //    gbcRadio3.fill = GridBagConstraints.HORIZONTAL;
+  //    gbcRadio3.gridx = 0;
+  //    gbcRadio3.gridy = 2;
+  //    panRadioB.add(m_rdbPrioDFE, gbcRadio3);
+  //
+  //    GridBagConstraints gblc = new GridBagConstraints();
+  //    gblc.fill = GridBagConstraints.HORIZONTAL;
+  //    gblc.gridx = 2;
+  //    gblc.gridy = 0;
+  //    gblc.gridheight = 2;
+  //    pane.add(panRadioB, gblc);
+  //
+  //  }
 
-    m_txDir = new JTextField();
-    m_txDir.setSize(140, 25);
-    m_txDir.setMinimumSize(new Dimension(80, m_txDir.getPreferredSize().height));
-    m_txDir.setColumns(30);
-    m_txDir.setText(prop.getLastDir());
-    m_txDir.addActionListener(new ActionListener() {
+  //  @SuppressWarnings("unused")
+  //  private void creaJTable(Container pane) {
+  //    table = new JTable();
+  //    intestaTabella();
+  //
+  //    GridBagConstraints gblc = new GridBagConstraints();
+  //    gblc.fill = GridBagConstraints.HORIZONTAL;
+  //    gblc.gridx = 0;
+  //    gblc.gridy = 2;
+  //    gblc.gridwidth = 3;
+  //    pane.add(table, gblc);
+  //  }
 
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locTxDir_Click(e);
-      }
-    });
-    panChooseDir.add(m_txDir, BorderLayout.CENTER);
+  //  @SuppressWarnings("unused")
+  //  private void creaCheck(Container pane) {
+  //    JCheckBox chk = new JCheckBox("Recursive");
+  //    chk.setSelected(true);
+  //    m_model.setRecursive(true);
+  //    chk.addActionListener(new ActionListener() {
+  //
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locChkRecursive_Click(e);
+  //      }
+  //    });
+  //
+  //    GridBagConstraints gblc = new GridBagConstraints();
+  //    gblc.fill = GridBagConstraints.HORIZONTAL;
+  //    gblc.gridx = 0;
+  //    gblc.gridy = 3;
+  //    pane.add(chk, gblc);
+  //  }
 
-    JButton m_btChooseDir = new JButton("Scegli...");
-    m_btChooseDir.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locBtChooseDir(e);
-      }
-    });
-    panChooseDir.add(m_btChooseDir);
+  //  @SuppressWarnings("unused")
+  //  private void creaButtonExec(Container pane) {
+  //    m_btExec = new JButton("Esegui");
+  //    m_btExec.addActionListener(new ActionListener() {
+  //
+  //      @Override
+  //      public void actionPerformed(ActionEvent e) {
+  //        locBtEsegui_Click(e);
+  //      }
+  //    });
+  //
+  //    m_btExec.setEnabled(false);
+  //
+  //    GridBagConstraints gblc = new GridBagConstraints();
+  //    gblc.fill = GridBagConstraints.HORIZONTAL;
+  //    gblc.gridx = 1;
+  //    gblc.gridy = 3;
+  //    pane.add(m_btExec, gblc);
+  //  }
 
-    GridBagConstraints gblc = new GridBagConstraints();
-    gblc.fill = GridBagConstraints.HORIZONTAL;
-    gblc.gridx = 0;
-    gblc.gridy = 0;
-    gblc.gridwidth = 2;
-    pane.add(panChooseDir, gblc);
-  }
-
-  @SuppressWarnings("unused")
-  private void creaRadios(Container pane) {
-    JPanel panRadioB = new JPanel(new GridBagLayout());
-    ButtonGroup m_rdbPrioGroup = new ButtonGroup();
-    GridBagConstraints gbcPanGen2 = new GridBagConstraints();
-
-    gbcPanGen2.fill = GridBagConstraints.HORIZONTAL;
-    gbcPanGen2.gridy = 0;
-    gbcPanGen2.gridx = 1;
-
-    GridBagConstraints gbcRadio1 = new GridBagConstraints();
-
-    JRadioButton m_rdbPrioEFD = new JRadioButton("Exif File Dir");
-    m_rdbPrioEFD.setActionCommand(EExifPriority.ExifFileDir.toString());
-    m_rdbPrioEFD.setSelected(true);
-    m_model.setPriority(EExifPriority.ExifFileDir);
-    m_rdbPrioEFD.addActionListener(new ActionListener() {
-
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locRadioPrio_Click(e);
-      }
-    });
-    m_rdbPrioGroup.add(m_rdbPrioEFD);
-    gbcRadio1.fill = GridBagConstraints.HORIZONTAL;
-    gbcRadio1.gridx = 0;
-    gbcRadio1.gridy = 0;
-    panRadioB.add(m_rdbPrioEFD, gbcRadio1);
-
-    JRadioButton m_rdbPrioFDE = new JRadioButton("File Dir Exif");
-    m_rdbPrioFDE.setActionCommand(EExifPriority.FileDirExif.toString());
-    m_rdbPrioFDE.addActionListener(new ActionListener() {
-
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locRadioPrio_Click(e);
-      }
-    });
-
-    m_rdbPrioGroup.add(m_rdbPrioFDE);
-    GridBagConstraints gbcRadio2 = new GridBagConstraints();
-    gbcRadio2.fill = GridBagConstraints.HORIZONTAL;
-    gbcRadio2.gridx = 0;
-    gbcRadio2.gridy = 1;
-    panRadioB.add(m_rdbPrioFDE, gbcRadio2);
-
-    JRadioButton m_rdbPrioDFE = new JRadioButton("Dir File Exif");
-    m_rdbPrioDFE.setActionCommand(EExifPriority.DirFileExif.toString());
-    m_model.setPriority(EExifPriority.DirFileExif);
-    m_rdbPrioDFE.setSelected(true);
-    m_rdbPrioDFE.addActionListener(new ActionListener() {
-
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locRadioPrio_Click(e);
-      }
-    });
-
-    m_rdbPrioGroup.add(m_rdbPrioDFE);
-    GridBagConstraints gbcRadio3 = new GridBagConstraints();
-    gbcRadio3.fill = GridBagConstraints.HORIZONTAL;
-    gbcRadio3.gridx = 0;
-    gbcRadio3.gridy = 2;
-    panRadioB.add(m_rdbPrioDFE, gbcRadio3);
-
-    GridBagConstraints gblc = new GridBagConstraints();
-    gblc.fill = GridBagConstraints.HORIZONTAL;
-    gblc.gridx = 2;
-    gblc.gridy = 0;
-    gblc.gridheight = 2;
-    pane.add(panRadioB, gblc);
-
-  }
-
-  @SuppressWarnings("unused")
-  private void creaJTable(Container pane) {
-    table = new JTable();
-    intestaTabella();
-
-    GridBagConstraints gblc = new GridBagConstraints();
-    gblc.fill = GridBagConstraints.HORIZONTAL;
-    gblc.gridx = 0;
-    gblc.gridy = 2;
-    gblc.gridwidth = 3;
-    pane.add(table, gblc);
-  }
-
-  private void intestaTabella() {
-    DefaultTableModel mod = new DefaultTableModel();
-
-    mod.addColumn("Attuale");
-    mod.addColumn("Nuovo Nome");
-    mod.addColumn("Data");
-    mod.addColumn("Percorso");
-
-    table.setModel(mod);
-    // tbl.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
-    // tbl.getTableHeader().resizeAndRepaint();
-  }
-
-  @SuppressWarnings("unused")
-  private void creaCheck(Container pane) {
-    JCheckBox chk = new JCheckBox("Recursive");
-    chk.setSelected(true);
-    m_model.setRecursive(true);
-    chk.addActionListener(new ActionListener() {
-
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locChkRecursive_Click(e);
-      }
-    });
-
-    GridBagConstraints gblc = new GridBagConstraints();
-    gblc.fill = GridBagConstraints.HORIZONTAL;
-    gblc.gridx = 0;
-    gblc.gridy = 3;
-    pane.add(chk, gblc);
-  }
-
-  @SuppressWarnings("unused")
-  private void creaButtonExec(Container pane) {
-    m_btExec = new JButton("Esegui");
-    m_btExec.addActionListener(new ActionListener() {
-
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        locBtEsegui_Click(e);
-      }
-    });
-
-    m_btExec.setEnabled(false);
-
-    GridBagConstraints gblc = new GridBagConstraints();
-    gblc.fill = GridBagConstraints.HORIZONTAL;
-    gblc.gridx = 1;
-    gblc.gridy = 3;
-    pane.add(m_btExec, gblc);
-  }
-
-  @SuppressWarnings("unused")
-  private void creaLogArea(Container pane) {
-    m_lblLogs = new JLabel();
-    m_lblLogs.setHorizontalAlignment(SwingConstants.CENTER);
-    m_lblLogs.setForeground(Color.BLUE);
-
-    GridBagConstraints gblc = new GridBagConstraints();
-    gblc.fill = GridBagConstraints.HORIZONTAL;
-    gblc.gridx = 0;
-    gblc.gridy = 4;
-    gblc.gridwidth = 3;
-    pane.add(m_lblLogs, gblc);
-
-  }
+  //  @SuppressWarnings("unused")
+  //  private void creaLogArea(Container pane) {
+  //    m_lblLogs = new JLabel();
+  //    m_lblLogs.setHorizontalAlignment(SwingConstants.CENTER);
+  //    m_lblLogs.setForeground(Color.BLUE);
+  //
+  //    GridBagConstraints gblc = new GridBagConstraints();
+  //    gblc.fill = GridBagConstraints.HORIZONTAL;
+  //    gblc.gridx = 0;
+  //    gblc.gridy = 4;
+  //    gblc.gridwidth = 3;
+  //    pane.add(m_lblLogs, gblc);
+  //
+  //  }
 
   private void initPos(AppProperties prop) {
     int posX = prop.getPropIntVal(AppProperties.CSZ_PROP_POSFRAME_X);
@@ -451,12 +461,12 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     int dimX = prop.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_X);
     int dimY = prop.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_Y);
 
-    Toolkit tk = java.awt.Toolkit.getDefaultToolkit();
+    // Toolkit tk = java.awt.Toolkit.getDefaultToolkit();
+    // Dimension screen = tk.getScreenSize();
     GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
     // Returns an array of all of the screen GraphicsDevice objects.
     GraphicsDevice[] devices = env.getScreenDevices();
     int numberOfScreens = devices.length;
-    Dimension screen = tk.getScreenSize();
 
     if ( (dimX * dimY) > 0) {
       m_winDim = new Dimension(dimX, dimY);
@@ -517,7 +527,7 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
      *      caretColor=javax.swing.plaf.ColorUIResource[r=0,g=0,b=0],
      *      disabledTextColor=javax.swing.plaf.ColorUIResource[r=109,g=109,b=109],
      *      editable=true,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],selectedTextColor=javax.swing.plaf.ColorUIResource[r=255,g=255,b=255],selectionColor=javax.swing.plaf.ColorUIResource[r=0,g=120,b=215],columns=30,columnWidth=8,command=,horizontalAlignment=LEADING]
-
+    
      */
     // System.out.println("ProvaJFrame3.locTxDir_Click:" + e.toString());
     String szDir = e.getActionCommand();
@@ -559,17 +569,103 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     checkFattibilita();
   }
 
-  protected void locBtEsegui_Click(ActionEvent e) {
+  protected void locBtAnalizza_Click(ActionEvent e) {
     try {
       this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
       clear();
-      m_model.esegui();
+      m_model.analizza();
+      caricaGriglia();
     } finally {
       this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
   }
 
+  private void intestaTabella() {
+    DefaultTableModel mod = new DefaultTableModel();
+
+    mod.addColumn("Attuale");
+    mod.addColumn("Percorso");
+    mod.addColumn("Errore");
+    mod.addColumn("Nuovo Nome");
+    mod.addColumn("dt Nome File");
+    mod.addColumn("dt Creazione");
+    mod.addColumn("dt Ult Modif");
+    mod.addColumn("dt Acquisizione");
+    mod.addColumn("dt Parent Dir");
+    mod.addColumn("dt Assunta");
+
+    table.setModel(mod);
+    // tbl.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
+    // tbl.getTableHeader().resizeAndRepaint();
+  }
+
+  private void caricaGriglia() {
+    List<FSFile> li = m_model.getListFiles();
+    intestaTabella();
+    if (li == null || li.size() == 0) {
+      sparaMess("Nessun file trovato !");
+      return;
+    }
+    DefaultTableModel mod = (DefaultTableModel) table.getModel();
+    for (FSFile fsf : li) {
+      Object[] arr = new Object[10];
+      arr[0] = fsf.getPath().getFileName().toString();
+      arr[1] = fsf.getParent().toAbsolutePath().toString();
+      if (fsf instanceof FSFoto) {
+        FSFoto fot = (FSFoto) fsf;
+        arr[2] = fot.isFileInError() ? "E" : "";
+        arr[3] = fot.creaNomeFile();
+        arr[4] = formatDt(fot.getDtNomeFile());
+        arr[5] = formatDt(fot.getDtCreazione());
+        arr[6] = formatDt(fot.getDtUltModif());
+        arr[7] = formatDt(fot.getDtAcquisizione());
+        arr[8] = formatDt(fot.getDtParentDir());
+        arr[9] = formatDt(fot.getDtAssunta());
+      }
+      mod.addRow(arr);
+    }
+  }
+
+  private String formatDt(LocalDateTime dt) {
+    Date dt2 = null;
+    Instant ll = null;
+    try {
+      if (dt != null) {
+        ll = dt.atZone(ZoneId.systemDefault()).toInstant();
+        if (ll.toString().indexOf("9999-") < 0)
+          dt2 = Date.from(ll);
+      }
+    } catch (Exception e) {
+      return e.getMessage();
+    }
+    return formatDt(dt2);
+  }
+
+  private String formatDt(Date dt2) {
+    String szRet = "*";
+    if (dt2 != null)
+      szRet = MainFrame2.s_fmt.format(dt2);
+    return szRet;
+  }
+
+  @Override
+  public void addRow(String att, String nuo, Path loc, Date dt) {
+
+    Object[] arr = new Object[4];
+    arr[0] = att;
+    arr[1] = nuo;
+    arr[2] = loc.toAbsolutePath();
+    arr[3] = MainFrame2.s_fmt.format(dt);
+    DefaultTableModel mod = (DefaultTableModel) table.getModel();
+    mod.addRow(arr);
+  }
+
+  protected void locBtEsegui_Click(ActionEvent e) {
+    MainFrame2.s_log.error("btEsegui non ancora implementata");
+  }
+
   private void checkFattibilita() {
+    m_btAnalizza.setEnabled(m_model.isValoriOk());
     m_btExec.setEnabled(m_model.isValoriOk());
   }
 
@@ -588,34 +684,22 @@ public class ProvaJFrame3 extends JFrame implements ISwingLogger {
     if (returnValue == JFileChooser.APPROVE_OPTION) {
       retFi = jfc.getSelectedFile();
       props.setLastDir(retFi.getAbsolutePath());
-      ProvaJFrame3.s_log.info("Scelto file: {}", retFi.getAbsolutePath());
+      MainFrame2.s_log.info("Scelto file: {}", retFi.getAbsolutePath());
     }
     return retFi;
   }
 
   private void clear() {
-    sparaMess(ProvaJFrame3.s_fmt.format(new Date()) + " Inizio esecuzione");
+    sparaMess(MainFrame2.s_fmt.format(new Date()) + " Inizio esecuzione");
     intestaTabella();
-  }
-
-  
-  public void addRow(String att, String nuo, Path loc, Date dt) {
-
-    Object[] arr = new Object[4];
-    arr[0] = att;
-    arr[1] = nuo;
-    arr[2] = loc.toAbsolutePath();
-    arr[3] = ProvaJFrame3.s_fmt.format(dt);
-    DefaultTableModel mod = (DefaultTableModel) table.getModel();
-    mod.addRow(arr);
+    m_model.clear();
   }
 
   public static void main(String[] args) {
     javax.swing.SwingUtilities.invokeLater(new Runnable() {
       @Override
       public void run() {
-        ProvaJFrame3 fra = new ProvaJFrame3();
-        fra.creaComponenti();
+        /* MainFrame2 fra = */ new MainFrame2();
       }
     });
   }

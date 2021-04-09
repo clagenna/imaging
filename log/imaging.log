@@ -9567,3 +9567,1013 @@ sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 DEBUG: Analizzo C:\My Fot
 sm.claudio.imaging.fsvisit.FSJpeg  2021-04-07 17:45:47 INFO : Cambio nome da "f20210214_145440.jpg" a "f20210214_135440.jpg"
 sm.claudio.imaging.swing.ImgModel  2021-04-07 17:45:47 INFO : Fine scansione di C:\My Foto\2021
 sm.claudio.imaging.sys.AppProperties  2021-04-07 17:46:11 INFO : Salvo property file C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-04-09 21:16:12 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-04-09 21:16:19 INFO : Salvo property file C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-04-09 21:17:23 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:17:38 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:17:38 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:38 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:38 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Nulla da fare con C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_102816.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_102828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_102831.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_102919.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_102920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_102924.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210204_103400.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_074341.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_074403.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081509.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081511.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081545.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081649.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081710.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210213_081729.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134127.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134144.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134249.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134356.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134541.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134710.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134734.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134846.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_134953.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135003.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135319.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135338.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135339.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135341.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135359.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135439.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:17:39 DEBUG: Analizzo C:\My Foto\2021\f20210214_135440.jpg
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:17:39 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.MainFrame2  2021-04-09 21:18:46 INFO : Scelto file: C:\temp\photo
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:18:49 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:18:49 INFO : Inizio scansione di C:\temp\photo
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:18:49 WARN : Il dir non contiene una data:photo
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:49 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_140544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_140544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_173401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_173401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_180855.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_180855.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_184719.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_184719.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_185354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_185354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: File name no e' DateTime :IMG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0001.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0003.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0005.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0006.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0007.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0008.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0009.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0010.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0011.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0013.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0015.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0016.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0017.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0018.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0019.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\IMG_0629 -1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\IMG_0630 -1.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:18:50 WARN : Il dir non contiene una data:raw
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: No e' DateTime Parent Dir name :raw
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\raw\IMG_0674 -1.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:18:50 WARN : Il dir non contiene una data:conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0722.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0726.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0729.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0735_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0740 -1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\IMG_0720.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\IMG_0721.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0783.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0784.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0789.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0790.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0792.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0793.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0794.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0795.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0796.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0797.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0798.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0799.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0800.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0801.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0001.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0002.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0003.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0004.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0005.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0006.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0007.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0010.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0011.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0012.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0013.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0014.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0015.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0016.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0017.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0018.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0019.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0020.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0021.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0022.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0023.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0024.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0025.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0026.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0027.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0028.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0029.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0030.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0031.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0032.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3356.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3357.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3358.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3359.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3360.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3361.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3362.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3363.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-16 Magia della sera\IMG_0428.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-16 Magia della sera\IMG_0436_5_Detail.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0472.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0473.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0474.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0475.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0476.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0477.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0478.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0479.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0480.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0481.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:50 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0482.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0483.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0484.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0485.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0486.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0487.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0488.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0489.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0490.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0491.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0492.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0493.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-08-28 Ale parte\IMG_0592.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-11-02 Foto in Citta\IMG_0926_1.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2012\2012-11-02 Foto in Citta\IMG_0929_1.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130115_221629.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130115_221639.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_105935.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_105951.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_110005.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_110119.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130125_173424.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_090223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_090235.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091523.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091548.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091554.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130207_072115.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_115515.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_115527.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_131625.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_131641.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_132236.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141859.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_142045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2014\2014-11-01 Iran\2014-11-02 Teheran to Shiraz\IMG_2961.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4756.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4757.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4759.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4760.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4763.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4765.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4766.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4767.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4769.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4771.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4772.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4773.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4774.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4775.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4777.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4778.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4779.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4780.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4785.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4787.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:18:51 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4789.JPG
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:18:51 INFO : Fine scansione di C:\temp\photo
+sm.claudio.imaging.sys.AppProperties  2021-04-09 21:29:17 INFO : Salvo property file C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-04-09 21:36:29 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:36:41 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:36:41 INFO : Inizio scansione di C:\temp\photo
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:36:41 WARN : Il dir non contiene una data:photo
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_140544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_140544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_173401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_173401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_180855.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_180855.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_184719.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_184719.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_185354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_185354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: File name no e' DateTime :IMG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0001.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0003.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0005.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0006.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0007.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0008.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0009.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0010.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0011.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0013.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0015.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0016.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0017.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0018.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0019.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\IMG_0629 -1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\IMG_0630 -1.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:36:42 WARN : Il dir non contiene una data:raw
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: No e' DateTime Parent Dir name :raw
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\raw\IMG_0674 -1.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:36:42 WARN : Il dir non contiene una data:conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0722.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0726.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0729.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0735_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0740 -1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\IMG_0720.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\IMG_0721.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0783.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0784.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0789.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0790.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0792.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0793.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0794.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0795.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0796.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0797.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0798.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0799.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0800.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0801.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0001.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0002.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0003.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0004.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0005.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0006.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0007.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0010.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0011.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0012.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0013.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0014.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0015.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0016.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0017.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0018.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0019.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0020.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0021.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0022.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0023.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0024.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0025.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0026.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0027.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0028.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0029.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0030.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0031.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0032.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3356.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3357.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3358.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3359.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3360.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3361.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3362.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3363.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-16 Magia della sera\IMG_0428.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-16 Magia della sera\IMG_0436_5_Detail.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0472.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0473.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0474.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0475.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0476.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0477.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0478.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0479.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0480.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0481.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0482.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0483.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0484.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0485.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0486.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0487.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0488.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0489.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0490.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0491.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0492.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0493.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-08-28 Ale parte\IMG_0592.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-11-02 Foto in Citta\IMG_0926_1.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2012\2012-11-02 Foto in Citta\IMG_0929_1.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130115_221629.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130115_221639.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_105935.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_105951.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_110005.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_110119.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130125_173424.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_090223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_090235.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091523.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091548.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091554.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130207_072115.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_115515.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_115527.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_131625.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:42 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_131641.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_132236.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141859.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_142045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2014\2014-11-01 Iran\2014-11-02 Teheran to Shiraz\IMG_2961.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4756.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4757.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4759.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4760.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4763.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4765.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4766.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4767.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4769.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4771.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4772.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4773.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4774.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4775.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4777.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4778.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4779.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4780.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4785.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4787.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:36:43 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4789.JPG
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:36:43 INFO : Fine scansione di C:\temp\photo
+sm.claudio.imaging.sys.AppProperties  2021-04-09 21:46:57 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:47:06 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:47:06 INFO : Inizio scansione di C:\temp\photo
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:47:06 WARN : Il dir non contiene una data:photo
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:06 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img031
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img032
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img033
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img034
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img035
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img035.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img036
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img037
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img037.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img038
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img039
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img039.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img040
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img041
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img042
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img043
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img043.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img044
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img045
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img046
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :img047
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\1985-03-21 Ziano2\img047.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_140544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_140544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_173401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_173401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174031.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_174737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_180855.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_180855.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_184719.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_184719.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_185354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_185354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Nulla da fare con C:\temp\photo\2003-11-01 Info Gia Settate\f20031030_190828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: File name no e' DateTime :IMG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0001.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0003.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0005.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0006.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0007.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0008.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0009.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0010.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0011.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0013.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0015.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0016.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0017.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0018.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0019.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2008\2008-06-24 Lizardo\IMG_0020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\IMG_0629 -1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\IMG_0630 -1.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:47:07 WARN : Il dir non contiene una data:raw
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: No e' DateTime Parent Dir name :raw
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-09 Dolomiti\raw\IMG_0674 -1.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-04-09 21:47:07 WARN : Il dir non contiene una data:conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0722.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0726.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0729.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0735_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: No e' DateTime Parent Dir name :conv
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\conv\IMG_0740 -1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\IMG_0720.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-09-30 San Marino sera\IMG_0721.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0783.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0784.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0789.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0790.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0792.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0793.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0794.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0795.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0796.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0797.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0798.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0799.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0800.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-10-05 Bici a Montescudo\IMG_0801.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0001.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0002.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0003.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0004.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0005.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0006.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2011\2011-12-11 Casa\IMG_0007.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0010.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0011.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0012.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0013.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0014.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0015.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0016.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0017.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0018.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0019.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0020.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0021.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0022.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0023.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0024.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0025.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0026.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0027.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0028.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0029.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0030.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0031.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-03-30 GSRiders\IMG_0032.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3356.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3357.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3358.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3359.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3360.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3361.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3362.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-07-17 Dalla Nonna\IMG_3363.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-16 Magia della sera\IMG_0428.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-16 Magia della sera\IMG_0436_5_Detail.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0472.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0473.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0474.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0475.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0476.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0477.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0478.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0479.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0480.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0481.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0482.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0483.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0484.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0485.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0486.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0487.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0488.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0489.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0490.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0491.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0492.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-18 Badia Prataglia\IMG_0493.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-08-28 Ale parte\IMG_0592.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-11-02 Foto in Citta\IMG_0926_1.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 INFO : Mancano completamente le info EXIF!
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2012\2012-11-02 Foto in Citta\IMG_0929_1.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130115_221629.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130115_221639.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_105935.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_105951.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_110005.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130120_110119.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130125_173424.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_090223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_090235.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091523.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091548.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130129_091554.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-01-01 Da HTC\IMG_20130207_072115.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_115515.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_115527.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_131625.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_131641.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_132236.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141859.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_141918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2013\2013-05-18 Genga\IMG_20130518_142045.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2014\2014-11-01 Iran\2014-11-02 Teheran to Shiraz\IMG_2961.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4756.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4757.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4759.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4760.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4763.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4765.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4766.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4767.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4769.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4771.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4772.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4773.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:07 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4774.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4775.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4777.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4778.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4779.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4780.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4785.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4787.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-04-09 21:47:08 DEBUG: Analizzo C:\temp\photo\2016\2016-05-21 Moto Tour salento\IMG_4789.JPG
+sm.claudio.imaging.swing.ImgModel  2021-04-09 21:47:08 INFO : Fine scansione di C:\temp\photo

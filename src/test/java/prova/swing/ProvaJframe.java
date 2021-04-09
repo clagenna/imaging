@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -60,8 +59,8 @@ public class ProvaJframe extends JFrame {
     gbcPanGen.ipady = 5;
     gbcPanGen.ipadx = 5;
     gbcPanGen.gridy = 0;
-    gblPanGen.columnWidths = new int[] {80, 80, 89, 0};
-    gblPanGen.rowHeights = new int[] {89, 0, 0, 0};
+    gblPanGen.columnWidths = new int[] { 80, 80, 89, 0 };
+    gblPanGen.rowHeights = new int[] { 89, 0, 0, 0 };
     gblPanGen.columnWeights = new double[] { 1.0, 0.0, 0.0, Double.MIN_VALUE };
     gblPanGen.rowWeights = new double[] { 0.0, 0.0, 1.0, Double.MIN_VALUE };
     panGeneral.setLayout(gblPanGen);
@@ -104,7 +103,7 @@ public class ProvaJframe extends JFrame {
     panGeneral.add(panRadioB, gbcPanGen2);
 
     GridBagLayout gblRadio = new GridBagLayout();
-    gblRadio.columnWidths = new int[] { 312,  0 };
+    gblRadio.columnWidths = new int[] { 312, 0 };
     gblRadio.rowHeights = new int[] { 69, 0 };
     gblRadio.columnWeights = new double[] { 1.0, 0.0 };
     gblRadio.rowWeights = new double[] { 0.0, 0.0, 1.0 };
