@@ -51,10 +51,7 @@ public class ImgModel {
 
   public void analizza() {
     ISwingLogger swingl = AppProperties.getInst().getSwingLogger();
-    String sz = recursive ? "Recurse" : "No Recusion";
-    sz += ";" + priority.desc();
-    sz += ";" + directory;
-    System.out.println("ImgModel.esegui:" + sz);
+    System.out.println("ImgModel.esegui:" + toString());
     String szSrc = getDirectory();
     Path fi = Paths.get(szSrc);
     ImgModel.s_log.info("Inizio scansione di {}", szSrc);
@@ -103,6 +100,13 @@ public class ImgModel {
     swLog.sparaMess(szLog);
     // System.out.println("ImgModel.isValoriOk():" + bRet);
     return bRet;
+  }
+
+  @Override
+  public String toString() {
+    String sz = String.format("path=\"%s\", prio=%s, recurse=%s", //
+        directory, priority.desc(), (recursive ? "recursive" : "currDir only"));
+    return sz;
   }
 
 }
