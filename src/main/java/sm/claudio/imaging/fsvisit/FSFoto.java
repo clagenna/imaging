@@ -16,12 +16,11 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -41,14 +40,16 @@ import org.apache.commons.imaging.formats.tiff.write.TiffOutputField;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputSet;
 
 import lombok.Getter;
+import sm.claudio.imaging.main.EExifPriority;
+import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
-import sm.claudio.imaging.sys.ISwingLogger;
 import sm.claudio.imaging.sys.ParseData;
 
 public abstract class FSFoto extends FSFile {
-
   private static final String                  CSZ_FOTOFILEPATTERN = "'f'yyyyMMdd_HHmmss";
   private static final List<DateTimeFormatter> s_arrFmt;
+  /** questa funziona col fuso estivo, verificare in inverno se va */
+  private static final ZoneOffset              s_offset            = ZoneOffset.of("+01:00");
 
   static {
     s_arrFmt = new ArrayList<DateTimeFormatter>();
@@ -58,14 +59,13 @@ public abstract class FSFoto extends FSFile {
   }
 
   /** da EXIF_TAG_DATE_TIME_ORIGINAL */
-  private boolean       m_bFileInError;
-  private LocalDateTime dtNomeFile;
-  private LocalDateTime dtCreazione;
-  private LocalDateTime dtUltModif;
-  private LocalDateTime dtAcquisizione;
-  @Getter
-  private LocalDateTime dtParentDir;
-  private LocalDateTime dtAssunta = null;
+  private boolean               m_bFileInError;
+  private LocalDateTime         dtNomeFile;
+  private LocalDateTime         dtCreazione;
+  private LocalDateTime         dtUltModif;
+  private LocalDateTime         dtAcquisizione;
+  @Getter private LocalDateTime dtParentDir;
+  private LocalDateTime         dtAssunta = null;
 
   enum CosaFare {
     setNomeFile, //
@@ -223,9 +223,9 @@ public abstract class FSFoto extends FSFile {
       return;
     }
     FileTime ux = attr.lastModifiedTime();
-    setDtUltModif(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.systemDefault()).withNano(0));
+    setDtUltModif(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.of("GMT")).withNano(0));
     ux = attr.creationTime();
-    setDtCreazione(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.systemDefault()).withNano(0));
+    setDtCreazione(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.of("GMT")).withNano(0));
   }
 
   private void interpretaDateTimeDaNomefile() {
@@ -296,9 +296,26 @@ public abstract class FSFoto extends FSFile {
     dtAssunta = p_dtAssunta;
   }
 
-  public boolean isDaAggiornare() {
+  private void studiaIlDaFarsi() {
     getLogger().debug("Analizzo {}", getPath().toString());
     m_daFare = new HashSet<>();
+    ImgModel mod = AppProperties.getInst().getModel();
+    EExifPriority prio = mod.getPriority();
+
+    switch (prio) {
+      case ExifFileDir:
+        break;
+      case DirFileExif:
+        sudiaConDirFiExif();
+        break;
+      case FileDirExif:
+        sudiaConFiDirExif();
+        break;
+      default:
+        break;
+
+    }
+
     if (dtNomeFile == null) {
       dtNomeFile = LocalDateTime.MAX;
       m_daFare.add(CosaFare.setNomeFile);
@@ -340,7 +357,48 @@ public abstract class FSFoto extends FSFile {
     }
     LocalDateTime dt = getPiuVecchiaData();
     setDtAssunta(dt);
-    return m_daFare.size() != 0;
+  }
+
+  private void sudiaConDirFiExif() {
+    LocalDateTime dt = null;
+    if (dtParentDir != null)
+      dt = dtParentDir;
+    if (dt == null)
+      if (dtNomeFile != null)
+        dt = dtNomeFile;
+    if (dt == null)
+      if (dtAcquisizione != null)
+        dt = dtAcquisizione;
+    if ( !m_daFare.contains(CosaFare.setNomeFile)) {
+      String szNam = creaNomeFile();
+      if ( !getPath().endsWith(szNam))
+        m_daFare.add(CosaFare.setNomeFile);
+    }
+    setDtNomeFile(dt);
+    setDtAssunta(dt);
+  }
+
+  private void sudiaConFiDirExif() {
+    LocalDateTime dt = null;
+    if (dtNomeFile != null)
+      dt = dtNomeFile;
+    if (dt == null)
+      if (dtParentDir != null)
+        dt = dtParentDir;
+    if (dt == null)
+      if (dtAcquisizione != null)
+        dt = dtAcquisizione;
+    setDtNomeFile(dt);
+    setDtAssunta(dt);
+    if ( !m_daFare.contains(CosaFare.setNomeFile)) {
+      String szNam = creaNomeFile();
+      if ( !getPath().endsWith(szNam))
+        m_daFare.add(CosaFare.setNomeFile);
+    }
+  }
+
+  public boolean isDaAggiornare() {
+    return m_daFare != null && m_daFare.size() != 0;
   }
 
   public Set<CosaFare> getCosaFare() {
@@ -352,6 +410,9 @@ public abstract class FSFoto extends FSFile {
     if (dtAssunta != null)
       return dtAssunta;
     // verifico le altre ...
+    //    if ( dtNomeFile != null && dtNomeFile.equals(LocalDateTime.MAX))
+    //      if ( dtParentDir != null)
+    //        dt = dtParentDir;
     if (dtNomeFile != null && dt.isAfter(dtNomeFile))
       dt = dtNomeFile;
     if (dtCreazione != null && dt.isAfter(dtCreazione))
@@ -364,8 +425,8 @@ public abstract class FSFoto extends FSFile {
         dt = dtAcquisizione;
     } else {
       // se non ha dtAcq allora prendo il parent Dt
-      if (dtParentDir != null)
-        if (dtNomeFile == null)
+      if (dtParentDir != null && dtNomeFile.equals(LocalDateTime.MAX))
+        if (dtParentDir != null)
           dt = dtParentDir;
     }
     return dt;
@@ -400,9 +461,9 @@ public abstract class FSFoto extends FSFile {
     } catch (IOException e) {
       getLogger().error("Errore rename per {}", getPath().toString(), e);
     }
-    ISwingLogger isw = AppProperties.getInst().getSwingLogger();
-    Date dt2 = Date.from(dt.atZone(ZoneId.systemDefault()).toInstant());
-    isw.addRow(pthFrom.getFileName().toString(), fnam, pthFrom.getParent().toAbsolutePath(), dt2);
+    //    ISwingLogger isw = AppProperties.getInst().getSwingLogger();
+    //    Date dt2 = Date.from(dt.atZone(ZoneId.of("GMT")).toInstant());
+    //    isw.addRow(pthFrom.getFileName().toString(), fnam, pthFrom.getParent().toAbsolutePath(), dt2);
   }
 
   public String creaNomeFile() {
@@ -419,7 +480,8 @@ public abstract class FSFoto extends FSFile {
 
   public void cambiaDtCreazione() {
     LocalDateTime dt = getPiuVecchiaData();
-    Instant inst = dt.toInstant(OffsetDateTime.now().getOffset());
+    // Instant inst = dt.toInstant(OffsetDateTime.now().getOffset());
+    Instant inst = dt.toInstant(s_offset);
     FileTime tm = FileTime.fromMillis(inst.toEpochMilli());
 
     try {
@@ -432,7 +494,7 @@ public abstract class FSFoto extends FSFile {
 
   public void cambiaDtUltModif() {
     LocalDateTime dt = getPiuVecchiaData();
-    Instant inst = dt.toInstant(OffsetDateTime.now().getOffset());
+    Instant inst = dt.toInstant(s_offset);
     FileTime tm = FileTime.from(inst);
 
     try {
@@ -539,5 +601,45 @@ public abstract class FSFoto extends FSFile {
   }
 
   public abstract String getFileExtention();
+
+  public void analizzaFoto() {
+    if (isFileInError()) {
+      getLogger().error("Il file \"{}\" e' in errore, non lo tratto", getPath().toString());
+      return;
+    }
+    studiaIlDaFarsi();
+    if ( !isDaAggiornare()) {
+      getLogger().debug("Nulla da fare con {}", getPath().toString());
+      return;
+    }
+  }
+
+  public void lavoraIlFile() {
+    // System.out.println(toString());
+    Set<CosaFare> df = getCosaFare();
+    // il cambio nome ha priorita perche imposta anche     dtAssunta
+    if (df.contains(CosaFare.setNomeFile)) {
+      cambiaNomeFile();
+      df.remove(CosaFare.setNomeFile);
+    }
+    for (CosaFare che : df) {
+      switch (che) {
+        case setDtAcquisizione:
+          cambiaDtAcquisizione();
+          break;
+        case setDtCreazione:
+          cambiaDtCreazione();
+          cambiaDtUltModif();
+          break;
+        case setNomeFile:
+          cambiaNomeFile();
+          break;
+        case setUltModif:
+          cambiaDtUltModif();
+          break;
+      }
+    }
+
+  }
 
 }

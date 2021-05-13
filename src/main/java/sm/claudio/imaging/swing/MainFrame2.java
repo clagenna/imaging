@@ -1,6 +1,7 @@
 package sm.claudio.imaging.swing;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -10,14 +11,19 @@ import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.HeadlessException;
 import java.awt.Insets;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -26,10 +32,12 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
+import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -44,6 +52,8 @@ import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 import javax.swing.filechooser.FileSystemView;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -246,9 +256,29 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
     m_btExec.setEnabled(false);
     panExec.add(m_btExec);
 
-    table = new JTable();
+    // vedi https://stackoverflow.com/questions/17858132/automatically-adjust-jtable-column-to-fit-content/25570812
+    table = new JTable() {
+      /** long serialVersionUID */
+      private static final long serialVersionUID = 700122689371194993L;
+
+      @Override
+      public Component prepareRenderer(TableCellRenderer renderer, int row, int column) {
+        Component component = super.prepareRenderer(renderer, row, column);
+        int rendererWidth = component.getPreferredSize().width;
+        TableColumn tableColumn = getColumnModel().getColumn(column);
+        tableColumn.setPreferredWidth(Math.max(rendererWidth + getIntercellSpacing().width + 4, tableColumn.getPreferredWidth()));
+        return component;
+      }
+    };
+    table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
     // table.setFillsViewportHeight(true);
     table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    table.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent me) {
+        locDblClickJFrame(me);
+      }
+    });
     intestaTabella();
 
     GridBagConstraints gbc_table = new GridBagConstraints();
@@ -580,19 +610,99 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
     }
   }
 
+  protected void locBtEsegui_Click(ActionEvent e) {
+    try {
+      this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+      m_model.rinominaFiles();
+      clear();
+      m_model.analizza();
+      caricaGriglia();
+    } finally {
+      this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+    }
+  }
+
+  protected void locDblClickJFrame(MouseEvent me) {
+    if (me.getClickCount() != 2)
+      return;
+
+    JTable target = (JTable) me.getSource();
+    int row = target.getSelectedRow();
+    // int column = target.getSelectedColumn();
+    String szName = String.format("%s\\%s", table.getValueAt(row, 1), table.getValueAt(row, 0));
+
+    File fiImg = new File(szName);
+    if ( !fiImg.exists()) {
+      sparaMess(szName + " non esiste !!!");
+      return;
+    }
+
+    try {
+      final int wi = 800;
+      BufferedImage img = ImageIO.read(fiImg);
+      double ratio = (double) img.getWidth() / (double) img.getHeight();
+      double he = wi / ratio;
+      JDialog dial = new JDialog();
+      dial.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+      dial.setTitle("Anteprima di " + szName);
+      dial.setModal(true);
+
+      dial.setPreferredSize(new Dimension(wi, (int) he));
+      // ImageIcon imgIco = new ImageIcon(img);
+      // JLabel lbImg = new JLabel(imgIco);
+      JPanel pan = new JPanel() {
+        /** long serialVersionUID */
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        protected void paintComponent(Graphics g) {
+          super.paintComponent(g);
+          g.drawImage(img, 0, 0, dial.getWidth(), dial.getHeight(), this);
+        };
+
+        @Override
+        public Dimension getPreferredSize() {
+          Dimension size = super.getPreferredSize();
+          size.width = Math.max(img.getWidth(), size.width);
+          size.height = Math.max(img.getHeight(), size.height);
+          return size;
+        }
+      };
+
+      JScrollPane scroll = new JScrollPane(pan);
+      dial.getContentPane().add(scroll);
+      dial.pack();
+      dial.setLocationRelativeTo(this);
+      dial.setVisible(true);
+
+      // JOptionPane.showMessageDialog(table, scroll, "Anteprima di " + szName, JOptionPane.OK_OPTION, null);
+    } catch (HeadlessException | IOException e) {
+      String szMsg = "Errore Image I/O :" + e.getMessage();
+      sparaMess(szMsg);
+    }
+  }
+
   private void intestaTabella() {
-    DefaultTableModel mod = new DefaultTableModel();
+    DefaultTableModel mod = new DefaultTableModel() {
+      /** long serialVersionUID */
+      private static final long serialVersionUID = 9153983299490782331L;
+
+      @Override
+      public boolean isCellEditable(int row, int column) {
+        return false;
+      }
+    };
 
     mod.addColumn("Attuale");
     mod.addColumn("Percorso");
-    mod.addColumn("Errore");
+    // mod.addColumn("Errore");
     mod.addColumn("Nuovo Nome");
+    mod.addColumn("dt Assunta");
     mod.addColumn("dt Nome File");
     mod.addColumn("dt Creazione");
     mod.addColumn("dt Ult Modif");
     mod.addColumn("dt Acquisizione");
     mod.addColumn("dt Parent Dir");
-    mod.addColumn("dt Assunta");
 
     table.setModel(mod);
     // tbl.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
@@ -609,21 +719,33 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
     DefaultTableModel mod = (DefaultTableModel) table.getModel();
     for (FSFile fsf : li) {
       Object[] arr = new Object[10];
-      arr[0] = fsf.getPath().getFileName().toString();
-      arr[1] = fsf.getParent().toAbsolutePath().toString();
+      int k = 0;
+      arr[k++] = fsf.getPath().getFileName().toString();
+      arr[k++] = fsf.getParent().toAbsolutePath().toString();
       if (fsf instanceof FSFoto) {
         FSFoto fot = (FSFoto) fsf;
-        arr[2] = fot.isFileInError() ? "E" : "";
-        arr[3] = fot.creaNomeFile();
-        arr[4] = formatDt(fot.getDtNomeFile());
-        arr[5] = formatDt(fot.getDtCreazione());
-        arr[6] = formatDt(fot.getDtUltModif());
-        arr[7] = formatDt(fot.getDtAcquisizione());
-        arr[8] = formatDt(fot.getDtParentDir());
-        arr[9] = formatDt(fot.getDtAssunta());
+        // arr[k++] = fot.isFileInError() ? "E" : "";
+        arr[k++] = fot.creaNomeFile();
+        LocalDateTime dtAss = fot.getDtAssunta();
+        arr[k++] = formatDt(fot.getDtAssunta());
+        arr[k++] = formatDt(fot.getDtNomeFile());
+        arr[k++] = formatDt(fot.getDtCreazione(), dtAss);
+        arr[k++] = formatDt(fot.getDtUltModif(), dtAss);
+        arr[k++] = formatDt(fot.getDtAcquisizione(), dtAss);
+        arr[k++] = formatDt(fot.getDtParentDir(), dtAss);
       }
       mod.addRow(arr);
     }
+  }
+
+  private String formatDt(LocalDateTime dt, LocalDateTime dtAss) {
+    if (dt == null)
+      return formatDt(dt);
+    if ( dtAss == null)
+      return formatDt(dt);
+    if (dt.isEqual(dtAss))
+      return "= dt Ass";
+    return formatDt(dt);
   }
 
   private String formatDt(LocalDateTime dt) {
@@ -650,23 +772,22 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
 
   @Override
   public void addRow(String att, String nuo, Path loc, Date dt) {
-
-    Object[] arr = new Object[4];
-    arr[0] = att;
-    arr[1] = nuo;
-    arr[2] = loc.toAbsolutePath();
-    arr[3] = MainFrame2.s_fmt.format(dt);
-    DefaultTableModel mod = (DefaultTableModel) table.getModel();
-    mod.addRow(arr);
-  }
-
-  protected void locBtEsegui_Click(ActionEvent e) {
-    MainFrame2.s_log.error("btEsegui non ancora implementata");
+    // obsoleto e fuori moda !
+    //
+    //    Object[] arr = new Object[4];
+    //    arr[0] = att;
+    //    arr[1] = nuo;
+    //    arr[2] = loc.toAbsolutePath();
+    //    arr[3] = MainFrame2.s_fmt.format(dt);
+    //    DefaultTableModel mod = (DefaultTableModel) table.getModel();
+    //    mod.addRow(arr);
   }
 
   private void checkFattibilita() {
     m_btAnalizza.setEnabled(m_model.isValoriOk());
     m_btExec.setEnabled(m_model.isValoriOk());
+    if (m_model.getListFiles() != null)
+      locBtAnalizza_Click(null);
   }
 
   private File apriFileChooser() {

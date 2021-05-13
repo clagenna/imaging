@@ -8,7 +8,7 @@ public interface IFSVisitatore {
 
   void visit(FSFile vis) throws FileNotFoundException;
 
-  void visit(FSJpeg vis) throws FileNotFoundException;
+  void visit(FSFoto vis) throws FileNotFoundException;
 
   void visit(FSTiff vis) throws FileNotFoundException;
 

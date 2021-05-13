@@ -16,6 +16,7 @@ import lombok.Setter;
 import sm.claudio.imaging.fsvisit.FSDir;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.fsvisit.FSFileFactory;
+import sm.claudio.imaging.fsvisit.FSFoto;
 import sm.claudio.imaging.fsvisit.FileSystemVisitatore;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
@@ -74,7 +75,15 @@ public class ImgModel {
     ImgModel.s_log.info("Fine scansione di {}", szSrc);
   }
 
-  public void esegui() {
+  public void rinominaFiles() {
+    List<FSFile> li = getListFiles();
+    if (li == null || li.size() == 0) 
+      return;
+    
+    for (FSFile fsf : li) {
+      if (fsf instanceof FSFoto)
+        ((FSFoto) fsf).lavoraIlFile();
+    }
   }
 
   public List<FSFile> getListFiles() {

@@ -6,30 +6,37 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParseData implements IParseData {
-  public static DateTimeFormatter s_fmtDtExif = DateTimeFormatter.ofPattern("yyyy:MM:dd HH:mm:ss");
+  public static DateTimeFormatter    s_fmtDtExif = DateTimeFormatter.ofPattern("yyyy:MM:dd HH:mm:ss");
+  private static final LocalDateTime s_dtMin;
+  private static final LocalDateTime s_dtMax;
 
-  private static Pattern[]               s_arrpat      = {                                                      //
+  static {
+    s_dtMin = LocalDateTime.parse("1861:01:01 00:00:00", s_fmtDtExif);
+    s_dtMax = LocalDateTime.parse("2050:12:31 23:59:59", s_fmtDtExif);
+  }
+
+  private static Pattern[] s_arrpat = { //
       //               .* yyyy-MM-dd?*hh.mm.ss ?*
-      Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2}).*([0-9]{2})\\.([0-9]{2})\\.([0-9]{2}).*"),   //
+      Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2}).*([0-9]{2})\\.([0-9]{2})\\.([0-9]{2}).*"), //
       //               .* yyyyMMdd?hhmmss .*
-      Pattern.compile(".*([0-9]{4})([0-9]{2})([0-9]{2}).([0-9]{2})([0-9]{2})([0-9]{2}).*"),            //
+      Pattern.compile(".*([0-9]{4})([0-9]{2})([0-9]{2}).([0-9]{2})([0-9]{2})([0-9]{2}).*"), //
 
       //               .* yyyy-MM-dd?*hh.mm ?*
-      Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2}).*([0-9]{2})\\.([0-9]{2})\\.*"),              //
+      Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2}).*([0-9]{2})\\.([0-9]{2})\\.*"), //
       //               .* yyyy-MM-dd ?*
-      Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2})\\.*"),                                       //
+      Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2})\\.*"), //
       //               .* yyyy-MM ?*
-      Pattern.compile(".*([0-9]{4})-([0-9]{2})\\.*"),                                                  //
+      Pattern.compile(".*([0-9]{4})-([0-9]{2})\\.*"), //
 
       //               .* yyyyMMdd?hhmm .*
-      Pattern.compile(".*([0-9]{4})([0-9]{2})([0-9]{2}).([0-9]{2})([0-9]{2}).*"),                      //
+      Pattern.compile(".*([0-9]{4})([0-9]{2})([0-9]{2}).([0-9]{2})([0-9]{2}).*"), //
       //               .* yyyyMMdd .*
-      Pattern.compile(".*([0-9]{4})([0-9]{2})([0-9]{2}).*"),                                           //
+      Pattern.compile(".*([0-9]{4})([0-9]{2})([0-9]{2}).*"), //
       //               .* yyyyMM .*
-      Pattern.compile(".*([0-9]{4})([0-9]{2}).*"),                                                     //
-      
+      Pattern.compile(".*([0-9]{4})([0-9]{2}).*"), //
+
       //               .* yyyy .*
-      Pattern.compile(".*([0-9]{4}).*"),                                                     //
+      Pattern.compile(".*([0-9]{4}).*"), //
   };
 
   @Override
@@ -46,7 +53,9 @@ public class ParseData implements IParseData {
           szFmtDt[k] = mtch.group(k + 1);
         String szDt = String.format("%s:%s:%s %s:%s:%s", (Object[]) szFmtDt);
         dtRet = LocalDateTime.parse(szDt, s_fmtDtExif);
-        break;
+        if (dtRet.isAfter(s_dtMin) && dtRet.isBefore(s_dtMax))
+          break;
+        dtRet = null;
       }
     }
 
