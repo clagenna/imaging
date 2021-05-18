@@ -101,7 +101,8 @@ public abstract class FSFoto extends FSFile {
     try {
       metadata = Imaging.getMetadata(fi);
     } catch (ImageReadException | IOException e) {
-      setFileInError(true);
+      // manda in crisi la pipe in FileSystemVisitatore:34
+      // setFileInError(true);
       getLogger().error("Errore Lettura metadata:" + fi.getAbsolutePath(), e);
       return;
     }
@@ -361,8 +362,9 @@ public abstract class FSFoto extends FSFile {
 
   private void sudiaConDirFiExif() {
     LocalDateTime dt = null;
-    if (dtParentDir != null)
+    if (dtParentDir != null) {
       dt = dtParentDir;
+    }
     if (dt == null)
       if (dtNomeFile != null)
         dt = dtNomeFile;
@@ -374,6 +376,7 @@ public abstract class FSFoto extends FSFile {
       if ( !getPath().endsWith(szNam))
         m_daFare.add(CosaFare.setNomeFile);
     }
+    m_daFare.add(CosaFare.setDtAcquisizione);
     setDtNomeFile(dt);
     setDtAssunta(dt);
   }
