@@ -1,3 +1,4 @@
 /target/
+*.zip
 /imaging-jar-with-dependencies.jar
 /imaging.zip

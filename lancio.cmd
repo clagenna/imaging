@@ -3,27 +3,31 @@ cd /d "%LUOGO%"
 cd
 set qta=0
 
-set JAREXE=target\imaging-jar-with-dependencies.jar
-if exist "%JAREXE%" (
-  call :info  "%JAREXE%"
+set JARTEST=target\imaging-jar-with-dependencies.jar
+if exist "%JARTEST%" (
+  set JAREXE=%JARTEST%
+  call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
-set JAREXE=imaging-jar-with-dependencies.jar
-if exist "%JAREXE%" (
-  call :info  "%JAREXE%"
+set JARTEST=imaging-jar-with-dependencies.jar
+if exist "%JARTEST%" (
+  set JAREXE=%JARTEST%
+  call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
-set JAREXE=target\imaging.jar
-if exist "%JAREXE%" (
-  call :info  "%JAREXE%"
+set JARTEST=target\imaging.jar
+if exist "%JARTEST%" (
+  set JAREXE=%JARTEST%
+  call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
-set JAREXE=imaging.jar
-if exist "%JAREXE%" (
-  call :info  "%JAREXE%"
+set JARTEST=imaging.jar
+if exist "%JARTEST%" (
+  set JAREXE=%JARTEST%
+  call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
@@ -39,16 +43,8 @@ if %qta% gtr 1 (
   call :errore e rilancia
   goto fine
 ) 
+goto vai
 
-
-set JAREXE=target\imaging-jar-with-dependencies.jar
-if exist "%JAREXE%" goto vai
-set JAREXE=imaging-jar-with-dependencies.jar
-if exist "%JAREXE%" goto vai
-set JAREXE=target\imaging.jar
-if exist "%JAREXE%" goto vai
-@echo Non trovo il *.JAR del programma ?!?
-goto fine
 
 
 :info

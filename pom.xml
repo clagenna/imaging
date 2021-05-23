@@ -90,6 +90,7 @@
 			<id>remote</id>
 			<build>
 				<plugins>
+
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-assembly-plugin</artifactId>
@@ -111,6 +112,12 @@
 								<goals>
 									<goal>single</goal>
 								</goals>
+								<configuration>
+<!-- 									<descriptors> -->
+<!-- 										<descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor> -->
+<!-- 									</descriptors> -->
+									<appendAssemblyId>true</appendAssemblyId>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
