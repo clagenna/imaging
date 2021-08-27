@@ -140,7 +140,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<compilerArgs>--enable-preview</compilerArgs>
+					<!--  compilerArgs> - - enable - preview</compilerArgs -->
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 				</configuration>

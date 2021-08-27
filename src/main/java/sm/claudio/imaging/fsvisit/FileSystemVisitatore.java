@@ -46,12 +46,10 @@ public class FileSystemVisitatore implements IFSVisitatore {
   @Override
   public void visit(FSFoto p_vis) {
     p_vis.analizzaFoto();
-
   }
 
   @Override
   public void visit(FSTiff p_vis) {
-    // s_log.warn("non analizzo FSTiff : " + p_vis.getPath().toString());
     p_vis.analizzaFoto();
   }
 

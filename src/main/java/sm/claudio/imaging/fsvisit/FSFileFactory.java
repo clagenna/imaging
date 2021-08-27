@@ -19,8 +19,10 @@ public class FSFileFactory {
 
   static {
     s_map = new HashMap<>();
-    s_map.put(".jpg", FSJpeg.class);
+    s_map.put(".cr2", FSCr2.class);
     s_map.put(".jpeg", FSJpeg.class);
+    s_map.put(".jpg", FSJpeg.class);
+    s_map.put(".nef", FSNef.class);
     s_map.put(".tif", FSTiff.class);
     s_map.put(".tiff", FSTiff.class);
     s_map.put(".xml", FSXml.class);

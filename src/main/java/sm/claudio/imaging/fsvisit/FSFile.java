@@ -65,6 +65,10 @@ public class FSFile implements IFSVisitable {
       case "FSTiff":
         getModel().add(this);
         break;
+      case "FSNef":
+      case "FSCr2":
+        getModel().add(this);
+        break;
       default:
         break;
     }

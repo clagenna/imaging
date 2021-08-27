@@ -16,6 +16,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
@@ -49,13 +50,19 @@ public abstract class FSFoto extends FSFile {
   private static final String                  CSZ_FOTOFILEPATTERN = "'f'yyyyMMdd_HHmmss";
   private static final List<DateTimeFormatter> s_arrFmt;
   /** questa funziona col fuso estivo, verificare in inverno se va */
-  private static final ZoneOffset              s_offset            = ZoneOffset.of("+01:00");
+  //  private static final ZoneOffset              s_offset            = ZoneOffset.of("+01:00");
+  private static ZoneOffset                    s_zoneOffSet;
+  private static ZoneId                        s_zone;
 
   static {
     s_arrFmt = new ArrayList<DateTimeFormatter>();
     FSFoto.s_arrFmt.add(DateTimeFormatter.ofPattern("'f'yyyyMMdd'_'HHmmss"));
     FSFoto.s_arrFmt.add(DateTimeFormatter.ofPattern("'WhatsApp Image 'yyyy-MM-dd' at 'HH.mm.ss"));
     FSFoto.s_arrFmt.add(DateTimeFormatter.ofPattern("yyyy-MM-dd' at 'HH.mm.ss"));
+
+    s_zone = ZoneId.systemDefault();
+    LocalDateTime now = LocalDateTime.now();
+    s_zoneOffSet = s_zone.getRules().getOffset(now);
   }
 
   /** da EXIF_TAG_DATE_TIME_ORIGINAL */
@@ -223,10 +230,10 @@ public abstract class FSFoto extends FSFile {
       getLogger().error("Errore lettura attr files", e);
       return;
     }
-    FileTime ux = attr.lastModifiedTime();
-    setDtUltModif(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.of("GMT")).withNano(0));
-    ux = attr.creationTime();
-    setDtCreazione(LocalDateTime.ofInstant(ux.toInstant(), ZoneId.of("GMT")).withNano(0));
+    OffsetDateTime ux2 = toOfsetDatetime(attr.lastModifiedTime());
+    setDtUltModif(LocalDateTime.ofInstant(ux2.toInstant(), s_zoneOffSet).withNano(0));
+    ux2 = toOfsetDatetime(attr.creationTime());
+    setDtCreazione(LocalDateTime.ofInstant(ux2.toInstant(), s_zoneOffSet).withNano(0));
   }
 
   private void interpretaDateTimeDaNomefile() {
@@ -484,7 +491,7 @@ public abstract class FSFoto extends FSFile {
   public void cambiaDtCreazione() {
     LocalDateTime dt = getPiuVecchiaData();
     // Instant inst = dt.toInstant(OffsetDateTime.now().getOffset());
-    Instant inst = dt.toInstant(s_offset);
+    Instant inst = dt.toInstant(s_zoneOffSet);
     FileTime tm = FileTime.fromMillis(inst.toEpochMilli());
 
     try {
@@ -497,7 +504,7 @@ public abstract class FSFoto extends FSFile {
 
   public void cambiaDtUltModif() {
     LocalDateTime dt = getPiuVecchiaData();
-    Instant inst = dt.toInstant(s_offset);
+    Instant inst = dt.toInstant(s_zoneOffSet);
     FileTime tm = FileTime.from(inst);
 
     try {
@@ -642,7 +649,12 @@ public abstract class FSFoto extends FSFile {
           break;
       }
     }
+  }
 
+  private OffsetDateTime toOfsetDatetime(FileTime ux) {
+    LocalDateTime ux1 = LocalDateTime.ofInstant(ux.toInstant(), s_zoneOffSet);
+    OffsetDateTime ux2 = ux1.atOffset(s_zoneOffSet);
+    return ux2;
   }
 
 }
