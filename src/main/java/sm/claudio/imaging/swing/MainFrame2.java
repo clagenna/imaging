@@ -1,5 +1,6 @@
 package sm.claudio.imaging.swing;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Cursor;
@@ -134,12 +135,15 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
     gbc_panCercaDir.gridx = 0;
     gbc_panCercaDir.gridy = 0;
     getContentPane().add(panChooseDir, gbc_panCercaDir);
-    panChooseDir.setLayout(new FlowLayout(FlowLayout.LEADING, 5, 5));
+    panChooseDir.setLayout(new BorderLayout(5,5));
 
     JLabel m_lbChooseDir = new JLabel("Directory");
-    panChooseDir.add(m_lbChooseDir);
+    m_lbChooseDir.setAlignmentX(0.5f);
+    panChooseDir.add(m_lbChooseDir, BorderLayout.WEST);
 
     m_txDir = new JTextField();
+    m_txDir.setToolTipText("Scegli il direttorio radice da cui iniziare la scansione di foto");
+    m_lbChooseDir.setLabelFor(m_txDir);
     panChooseDir.add(m_txDir);
     m_txDir.setColumns(20);
     m_txDir.setText(prop.getLastDir());
@@ -150,7 +154,7 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
         locTxDir_Click(e);
       }
     });
-    panChooseDir.add(m_txDir);
+    panChooseDir.add(m_txDir, BorderLayout.CENTER);
 
     JButton m_btChooseDir = new JButton("Cerca...");
     m_btChooseDir.addActionListener(new ActionListener() {
@@ -160,13 +164,15 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
       }
     });
 
-    panChooseDir.add(m_btChooseDir);
+    panChooseDir.add(m_btChooseDir, BorderLayout.EAST);
 
     JPanel panRadioB = new JPanel();
+    panRadioB.setToolTipText("Scegli con quale ordine di priorità interpretare le date");
     GridBagConstraints gbc_panRadio = new GridBagConstraints();
+    gbc_panRadio.fill = GridBagConstraints.BOTH;
+    gbc_panRadio.anchor = GridBagConstraints.EAST;
     gbc_panRadio.insets = new Insets(0, 0, 5, 0);
     gbc_panRadio.gridheight = 2;
-    gbc_panRadio.fill = GridBagConstraints.BOTH;
     gbc_panRadio.gridx = 1;
     gbc_panRadio.gridy = 0;
     getContentPane().add(panRadioB, gbc_panRadio);

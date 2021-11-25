@@ -2,3 +2,5 @@
 *.zip
 /imaging-jar-with-dependencies.jar
 /imaging.zip
+/imaging_run.exe
+/log/
