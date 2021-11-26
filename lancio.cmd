@@ -1,3 +1,5 @@
+rem questo riguarda il progetto SWING
+
 set LUOGO=%~dp0
 cd /d "%LUOGO%"
 cd
