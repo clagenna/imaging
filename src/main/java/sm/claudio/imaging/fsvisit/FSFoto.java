@@ -71,7 +71,7 @@ public abstract class FSFoto extends FSFile {
   private LocalDateTime         dtCreazione;
   private LocalDateTime         dtUltModif;
   private LocalDateTime         dtAcquisizione;
-  @Getter private LocalDateTime dtParentDir;
+  private LocalDateTime dtParentDir;
   private LocalDateTime         dtAssunta = null;
 
   enum CosaFare {
@@ -303,6 +303,16 @@ public abstract class FSFoto extends FSFile {
   public void setDtAssunta(LocalDateTime p_dtAssunta) {
     dtAssunta = p_dtAssunta;
   }
+
+  public LocalDateTime getDtParentDir() {
+    return dtParentDir;
+  }
+
+  public void setDtParentDir(LocalDateTime p_dt) {
+    dtParentDir = p_dt;
+  }
+  
+  
 
   private void studiaIlDaFarsi() {
     getLogger().debug("Analizzo {}", getPath().toString());

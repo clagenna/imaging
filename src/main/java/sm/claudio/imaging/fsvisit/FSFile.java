@@ -4,10 +4,15 @@ import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import sm.claudio.imaging.javafx.MainApp2FxmlController;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
 
@@ -101,11 +106,114 @@ public class FSFile implements IFSVisitable {
       return false;
     FSFile fsAltro = (FSFile) obj;
     Path pthAltro = fsAltro.getPath();
-    if (pthAltro == null)
-      return false;
-    if (getPath() == null)
+    if ( (pthAltro == null) || (getPath() == null))
       return false;
     return m_file.equals(pthAltro);
+  }
+
+  public static final String COL01_ATTUALE        = "attuale";
+  public static final String COL02_PERCORSO       = "percorso";
+  public static final String COL03_NUOVONOME      = "nuovoNome";
+  public static final String COL04_DTASSUNTA      = "assunta";
+  public static final String COL05_DTNOMEFILE     = "nomeFileDt";
+  public static final String COL06_DTCREAZIONE    = "creazione";
+  public static final String COL07_DTULTMODIF     = "ultModif";
+  public static final String COL08_DTACQUISIZIONE = "acquisizione";
+  public static final String COL09_DTPARENTDIR    = "parentDirDt";
+
+  public String getAttuale() {
+    String szRet = getPath().getFileName().toString();
+    return szRet;
+  }
+
+  public String getPercorso() {
+    String szRet = getParent().getFileName().toString();
+    return szRet;
+  }
+
+  public String getNuovoNome() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = fot.creaNomeFile();
+    return szRet;
+  }
+
+  public String getAssunta() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = formatDt(fot.getDtAssunta());
+    return szRet;
+  }
+
+  public String getNomeFileDt() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = formatDt(fot.getDtNomeFile());
+    return szRet;
+  }
+
+  public String getCreazione() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = formatDt(fot.getDtCreazione());
+    return szRet;
+  }
+
+  public String getUltModif() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = formatDt(fot.getDtUltModif());
+    return szRet;
+  }
+
+  public String getAcquisizione() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = formatDt(fot.getDtAcquisizione());
+    return szRet;
+  }
+
+  public String getParentDirDt() {
+    String szRet = "";
+    if ( ! (this instanceof FSFoto))
+      return szRet;
+    FSFoto fot = (FSFoto) this;
+    szRet = formatDt(fot.getDtParentDir());
+    return szRet;
+  }
+
+  private String formatDt(LocalDateTime dt) {
+    Date dt2 = null;
+    Instant ll = null;
+    try {
+      if (dt != null) {
+        ll = dt.atZone(ZoneId.systemDefault()).toInstant();
+        if (ll.toString().indexOf("9999-") < 0)
+          dt2 = Date.from(ll);
+      }
+    } catch (Exception e) {
+      return e.getMessage();
+    }
+    return formatDt(dt2);
+  }
+
+  private String formatDt(Date dt2) {
+    String szRet = "*";
+    if (dt2 != null)
+      szRet = MainApp2FxmlController.s_fmt.format(dt2);
+    return szRet;
   }
 
 }

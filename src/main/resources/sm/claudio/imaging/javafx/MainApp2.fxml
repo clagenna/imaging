@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import org.controlsfx.control.ToggleSwitch?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="900.0" stylesheets="@styleMainApp2.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sm.claudio.imaging.javafx.MainApp2FxmlController">
+	<children>
+		<Label fx:id="lblLogs" layoutX="6.0" layoutY="380.0" prefHeight="18.0" prefWidth="743.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0" />
+		<TextField fx:id="txDir" layoutX="76.0" layoutY="10.0" onAction="#onEnter" prefHeight="26.0" prefWidth="337.0" promptText="Digita oppure cerca il direttorio di partenza delle foto" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="288.0" />
+		<JFXButton fx:id="btCerca" buttonType="RAISED" layoutX="423.0" layoutY="8.0" onAction="#btCercaClick" text="Cerca..." AnchorPane.rightAnchor="219.0">
+			<ripplerFill>
+				<RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+					<stops>
+						<Stop>
+							<color>
+								<Color />
+							</color>
+						</Stop>
+						<Stop offset="1.0">
+							<color>
+								<Color red="1.0" green="1.0" blue="1.0" />
+							</color>
+						</Stop>
+					</stops>
+				</RadialGradient>
+			</ripplerFill>
+		</JFXButton>
+		<ToggleSwitch id="ckRecurse" fx:id="ckRecurse" layoutX="14.0" layoutY="48.0" onDragDone="#ckRecurseClick" prefHeight="26.0" prefWidth="127.0" text="Recurse Dirs." AnchorPane.leftAnchor="14.0" />
+		<JFXButton id="btAnalizza" fx:id="btAnalizza" layoutX="213.0" layoutY="46.0" onAction="#btAnalizzaClick" text="Analizza" />
+		<JFXButton id="btEsegui" fx:id="btEsegui" layoutX="296.0" layoutY="46.0" onAction="#btEseguiClick" text="Esegui" />
+		<ChoiceBox id="panRadioB" fx:id="panRadioB" layoutX="498.0" layoutY="10.0" prefHeight="26.0" prefWidth="191.0" AnchorPane.rightAnchor="12.0" />
+		<TableView fx:id="table" layoutX="5.0" layoutY="88.0" prefHeight="293.0" prefWidth="736.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="88.0">
+			<columns>
+				<TableColumn fx:id="attuale" prefWidth="75.0" text="Attuale" />
+				<TableColumn fx:id="percorso" prefWidth="120.0" text="Percorso" />
+				<TableColumn fx:id="nuovonome" prefWidth="90.0" text="Nuovo Nome" />
+				<TableColumn fx:id="dtassunta" prefWidth="75.0" text="dt Assunta" />
+				<TableColumn fx:id="dtnomefile" prefWidth="75.0" text="dt Nome File" />
+				<TableColumn fx:id="dtcreazione" prefWidth="75.0" text="dt Creazione" />
+				<TableColumn fx:id="dtultmodif" prefWidth="75.0" text="dt Ult Modif" />
+				<TableColumn fx:id="dtacquisizione" prefWidth="75.0" text="dt Acquisizione" />
+				<TableColumn fx:id="dtparentdir" prefWidth="75.0" text="dt Parent Dir" />
+			</columns>
+		</TableView>
+	</children>
+</AnchorPane>
