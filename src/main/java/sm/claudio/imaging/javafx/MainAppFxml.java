@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import lombok.Getter;
+import sm.claudio.imaging.sys.AppProperties;
 
 public class MainAppFxml extends Application {
 
@@ -33,6 +34,25 @@ public class MainAppFxml extends Application {
 
     pStage.setScene(scene);
     pStage.show();
+  }
+  
+  @Override
+  public void stop() throws Exception {
+    
+    var siz = getSize();
+    var pos = getLocation();
+    AppProperties prop = AppProperties.getInst();
+
+    prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_X, siz.width);
+    prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_Y, siz.height);
+    prop.setPropVal(AppProperties.CSZ_PROP_POSFRAME_X, pos.x);
+    prop.setPropVal(AppProperties.CSZ_PROP_POSFRAME_Y, pos.y);
+
+    prop.setLastDir(m_txDir.getText());
+    prop.saveProperties();
+
+    
+    super.stop();
   }
 
   public static void main(String[] args) {

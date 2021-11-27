@@ -32332,3 +32332,1409 @@ sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 17:49:45 DEBUG: Analizzo F:\My Fot
 sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 17:49:45 DEBUG: Analizzo F:\My Foto\2021\2021-04-20 Asia compleanno\f20210420_164922.jpg
 sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 17:49:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@623e0670
 sm.claudio.imaging.swing.ImgModel  2021-11-27 17:49:45 INFO : Fine scansione di F:\My Foto\2021\2021-04-20 Asia compleanno
+sm.claudio.imaging.sys.AppProperties  2021-11-27 22:55:15 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-11-27 22:56:58 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.sys.AppProperties  2021-11-27 22:58:46 INFO : Apro il file properties C:\java\photon\imaging\imaging.properties
+sm.claudio.imaging.swing.ImgModel  2021-11-27 22:59:40 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 22:59:40 INFO : Inizio scansione di C:\My Foto
+sm.claudio.imaging.fsvisit.FSDir  2021-11-27 22:59:40 WARN : Il dir non contiene una data:My Foto
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:40 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@715908f8
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_100120.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_100126.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_113056.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_113107.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_113342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_151153.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_151344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-09 Comacchio\20190309_151401.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:40 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@359f28d1
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-12 Primavera\20190310_104619.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-12 Primavera\20190310_104625.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-12 Primavera\20190312_161437.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-12 Primavera\20190312_161500.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:40 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@1b62216
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:40 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7fbfcb65
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-16 Muraglione\20190316_113808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-16 Muraglione\20190316_113832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-16 Muraglione\20190316_113833.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-16 Muraglione\20190316_131011.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-16 Muraglione\20190316_131012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-16 Muraglione\20190316_131013.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:40 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2f48c732
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190308_230513.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151505.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151713.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151802_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151806.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151816.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151829.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_151912.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152002_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152058.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152117.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152147.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152209.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152325.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152422.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152425.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_152635.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_153234.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_153828.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_154504.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_154645.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_154702.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_154744.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_160547.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_160736.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:40 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_160927.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_161125.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_161428.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_161724.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_161911.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163123.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163323.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163324.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163412.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_163832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164108.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164136.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164148_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164149_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164150_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164150_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164152_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164155.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164155_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164156.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164156_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164200.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164314.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164640.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_164650.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_165040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_165530.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_165544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_165956.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_171000.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_173331.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-17 Rimini\f20190317_173345.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:41 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2eadc55d
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:41 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@21f33af6
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_111703.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_111731.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112402.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112552.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112615.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112737.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112744.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112853.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_112920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_113142.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_114200.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_115110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_120639.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121338.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121357.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121423.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121513.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121611.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-24 Spasso\f20190324_121632.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:41 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@49c77a9d
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:41 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@20df45c0
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:41 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@6018fbab
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190330_085733.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190330_111556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190330_212600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190330_212617.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190330_212803.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_091629.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_091648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_113642.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_113657.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_114034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_114813.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_114849.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_115109.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_115111.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_122200.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_122218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_122633.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_130610.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_130624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190331_141812.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:41 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_100359.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_100826.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_101744.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:42 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@580449d4
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_112119.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_151820.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_151922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_151938.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-03-30 Corsica\20190401_152208.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:42 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2ae5d3db
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:42 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@704e6202
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_084722.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_084849.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_084904.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_084919.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_112910.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_112952.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_113534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_113618(0).jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_113711.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_113851.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_115805.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_120152.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_120359.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_120418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_120707.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_121041.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_121048.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_121220.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_122120.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_122122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_122124.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_122125.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_122147.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_122650.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_133802.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_133852.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_184922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_185111.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_185450.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_185640.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_203527.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_204201.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_204355.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190603_212310.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_093531.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_093555.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_111205.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_111553.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_120033.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_120113.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_120221.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_122129.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_122422.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_122616.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_122620.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_153001.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_153012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_162755.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_162822.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_163019.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_163051.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_163137.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190604_163149.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_084245.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_084248.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_084251.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_084254.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_084257.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_084314.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_085522.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_085606.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090635.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090639.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090640.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090643.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090644.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090646.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090652.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090706.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090707.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090712.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_090714.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:42 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2957032d
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_091903.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_091919.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_091946.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_104111.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_104947.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_105020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_105214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_105217.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_105417.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_105437.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_113949.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_114124.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_114127.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_114130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_114132.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_114148.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_114210.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_155202.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_155225.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:42 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_171431.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_182957.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190605_183014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_074809.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_075219.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_075332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_085419.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_105352.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_105600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\20190606_202042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\f20190610_135044.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\f20190610_135105.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\f20190610_135127.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\f20190610_135127_X.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-06-02 Francia\f20190610_135516.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-11-27 22:59:43 WARN : Il dir non contiene una data:NKSC_PARAM
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:43 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@4eff7a93
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:43 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@66e982e1
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_095734.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_095843.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_095859.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_100143.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_100228.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_100249.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_100539.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_100615.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_115346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_115748.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_115827.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120414.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120524.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120641.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120727.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_120812.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_134527.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_134600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_134950.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135235.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135250.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135407.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135423.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135452.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135551.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135615.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135700.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135751.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_135904.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_140615.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_172019.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_172659.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_173014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_173356.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_173655.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_173723.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_173725.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_173808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174028.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174211.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174303.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174305_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174437.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174437_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174438.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174711.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174722.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174722_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174724.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_174725.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_175830.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_175841.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180034_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180545.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180604.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180605.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180606.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_180607.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_181212.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_181215.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:43 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_181345.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_181426.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_181429.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_182237.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_185413.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_185425.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_185428.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_185429.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_190816.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_190929.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_192850.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_203908.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_204046.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_204456.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_204631.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_204715.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_204837.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_205149.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_205427.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_205453.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_205705.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_210300.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_210401.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_210649.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_210803.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_210851.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_210936.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_211034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190720_211229.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_090224.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_090824.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_090923.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_091139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_091152.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_091909.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092134.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092241.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092302.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092327.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092339.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092749.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092821.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_092923.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_093058.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_093321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_093648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_094425.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_094558.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-07-20 Siena\f20190721_094812.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:44 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@70b135eb
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: File name no e' DateTime :_DSC5830
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-08-16 Mattina\_DSC5830.JPG
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: File name no e' DateTime :_DSC5831
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-08-16 Mattina\_DSC5831.JPG
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:44 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7a791638
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_172708.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_173118.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_173320.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_173322.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_174224.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_174348.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_175556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_175840.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_180130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_180144.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_180820.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_181058_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_181256_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_181446.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_184012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-09-21 Cesenatico\f20190921_210738.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:44 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2bb906b9
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_120350.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_121808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_121932.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_122004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_122302.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_122306.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_122518.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_122830.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_122922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_123606.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:44 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_123628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_123654.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_123706.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_123744.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_124540.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_124708.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_124836.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_125324.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_125436.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_125554.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_125906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_125918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_130728.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_130758.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_130858.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_131012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144638.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144720.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144730.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144902.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144910.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144924.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_144944.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_145002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_145028.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_145152.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_145222.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155510.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155638.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155640.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155642.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155642_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_155924.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-10-26 Gubbio\f20191026_160120.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7c7ad30a
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_115050.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_115732.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_120256.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_120418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_120440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_120950.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_121110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_121430.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_121702.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_121756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_121812.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_121946.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_122030.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_130532.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_130616.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_130622.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-23 Rimini\f20191123_130624.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@51daf03
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_122258.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_122310.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_122330.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_123012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_123210.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_123244.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_123308.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_123310.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_123800.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_124134.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_124156.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_124208.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-11-24 dogana\f20191124_124920.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@37e7b14e
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_201228.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_201310.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_201338.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_202010.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_202100.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_202110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_202114.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2019\2019-12-11 Luna\f20191211_202118.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5408f5c5
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7e409ecd
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@16cd53b1
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:45 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@1caafde7
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_090956.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_091030.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_091208.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_091222.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_091308.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_091330.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_092534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_092630.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200413_092724.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:45 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200420_114738.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090508.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090520.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090724.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090804.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090826.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090858.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090908.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_090926.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_155608.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_155648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160030.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160144.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160504.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160516.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160608.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160730.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160750.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_160954.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_161036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_161312.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-04-24 Primavera\f20200426_161324.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194022.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194024.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194058.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194058_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_194100.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-06-11 Arcobaleno\f20200611_205240.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:46 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@f1f856a
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_135612.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_135636.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154850.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154902.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154952.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154956.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_154958.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163322.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163334.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163358.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163400.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163658.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163746.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_163750.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_164408.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_164432.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_165012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_165048.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_165548.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_165654.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_165754.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_165800.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170010.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170012.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170058.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170116.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170206_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170322.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170330.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170332_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170408.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170410.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_170434.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171236.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171240.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171514.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171540.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171546.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171548.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171706.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171814.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_171908.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172108.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172140.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172210.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:46 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172222.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172518_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_172628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173250.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173520.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173520_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173522.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173612.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173618.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173842.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173938.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_173944.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174008.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174016.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174040.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174042.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174112_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174124.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174126.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174216.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174316.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174320.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174334.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174414.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174428.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174432.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174434.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174626.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174646.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174716.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_174736.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175036.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175302.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175330.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175334.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175358.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175406.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175408.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175410.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175428.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175628_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175628_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175630.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175630_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175632.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175946.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_175950.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_180108.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181458.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181502.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181502_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181546.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181816.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181818.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_181818_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_182016.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_183426.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_183436.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_185052.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_185056.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_185110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_185124.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_190336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_190346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_190352.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200704_190354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_113240.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_113554.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_113704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_115648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_115748.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_115804.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120204.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120302.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120334.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120446.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120916.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_120940.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_122332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_123026.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_124058.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_125552.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_125902.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_130006.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:47 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_130738.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_130742.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134630.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134650.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134748.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134904.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134928.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_134938.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_135038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_135048.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_135154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_135318.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_140608.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_150600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_150606.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_152130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_152154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_152200.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_152212.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_152218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_152228.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200705_160038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124722.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124738.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124752.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124752_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124752_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124754.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_124822.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_133216.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_133224.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_133226.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_133250.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_133708.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_133716.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_151106.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_151138.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_151202.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_151354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_151544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_151558.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152156.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152512.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152544.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152610.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152632.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152634.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_152934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_153054.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_153124.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_153510.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_153922.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-04 Peio\f20200706_153930.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-19 Sabato\f20200719_213850.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-19 Sabato\f20200719_214130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-19 Sabato\f20200719_222154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-19 Sabato\f20200719_222204.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-07-19 Sabato\f20200719_223508.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200816_205210.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205632.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205652.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205728.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205806.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205820.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205846.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_205944.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_210106.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_210400.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_210418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_220558.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_224556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_224622.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_224634.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225230.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225234.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225244.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225250.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225328.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225354.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225408.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225428.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225514.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225518.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225524.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225724.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225752.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-08-20 Casa con Asia\f20200820_225758.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-11-27 22:59:48 WARN : Il dir non contiene una data:Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: No e' DateTime Parent Dir name :Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\Conservazione automatica Corel\f20201225_171412.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: No e' DateTime Parent Dir name :Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\Conservazione automatica Corel\f20201225_171412_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: No e' DateTime Parent Dir name :Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:48 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\Conservazione automatica Corel\f20201225_171424_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: No e' DateTime Parent Dir name :Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\Conservazione automatica Corel\f20201225_172108.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: No e' DateTime Parent Dir name :Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\Conservazione automatica Corel\f20201225_172518.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: No e' DateTime Parent Dir name :Conservazione automatica Corel
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\Conservazione automatica Corel\f20201225_172522.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_125050.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_125128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_125148.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_125836.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_125932.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_131110.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_131410.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_131432.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_131506.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145530.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145554.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145730.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145740.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145742_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145746.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145748.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145750.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145758.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145802.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_145808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_151626.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_151626_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_151628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_151628_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_151700.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_151704_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170300.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170306.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170330.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170332_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170350.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170444.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170514.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170526.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170538.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170616.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170618.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170620_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170700.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170744.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_170952.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171004_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171136.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171408.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171412.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171412_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171424_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171502.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171740.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171742.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_171746.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172108.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172116.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172312.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172320_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172518.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172522.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172526.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172526_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172616.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172622.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172622_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_172624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_174024.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_174028.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_174104.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\2020-12-25 Natale\f20201225_174122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000016.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000026.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000114.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000256.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000446.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000504.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20200830_000512.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20201024_084744.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20201024_084808.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20201024_084834.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2020\f20201024_084934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:49 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_140538.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_140600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142102.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142222.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142256.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143448.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143524.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143542.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_161550.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_161600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_163624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_163642.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_164350.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_191128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_215852.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_215914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_220214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184844.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184904.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185024.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185048.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185402.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185416.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185500.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185654.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185738.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185752.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185834.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185834_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185836.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185836_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185844.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185844_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185950.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190240.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190258.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190306.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190420.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190436.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190540.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190622.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190630.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190700.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190702.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190956.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191358.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191438.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191632.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_192004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210628_192004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183420.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:50 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210703_182020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210703_182146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_163636.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_164424.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_164934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165254.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165404.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165408.jpg
+sm.claudio.imaging.fsvisit.FSDir  2021-11-27 22:59:51 WARN : Il dir non contiene una data:orig
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7553c4b2
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@97f5172
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@4271c07f
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@31b6398e
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5aab1d5e
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@292c23b8
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@65126cda
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@65e853bf
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@67abe3b1
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2fd22d1f
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5950f083
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7e8225bd
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@468ce7b7
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@780880ac
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2602b3c6
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@4942c576
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@68d222b6
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@54e3c2e0
+sm.claudio.imaging.fsvisit.FSNef  2021-11-27 22:59:51 DEBUG: File name no e' DateTime :DSC_8853
+sm.claudio.imaging.fsvisit.FSNef  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\DSC_8853.NEF
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_191618.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_191750.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_192022.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@67191fd7
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@73d87870
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@dad9e7a
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 22:59:51 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5244524b
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102118.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102126.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102126_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102512.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_123312.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_123314.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_132906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_132910.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_091214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_091708.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_094418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_094634.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_104944.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_171940.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_202130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_084238.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_094918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_094934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_095032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_095034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102506.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102516.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102536.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_104912.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_104914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140148.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140202.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140206.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210727_115100.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: No e' DateTime Parent Dir name :My Foto
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 22:59:51 DEBUG: Analizzo C:\My Foto\f20140831_103302.jpg
+sm.claudio.imaging.swing.ImgModel  2021-11-27 22:59:51 INFO : Fine scansione di C:\My Foto
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:01:13 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:01:13 INFO : Inizio scansione di C:\My Foto
+sm.claudio.imaging.fsvisit.FSDir  2021-11-27 23:01:13 WARN : Il dir non contiene una data:My Foto
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:01:13 DEBUG: No e' DateTime Parent Dir name :My Foto
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:01:13 DEBUG: Analizzo C:\My Foto\f20140831_103302.jpg
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:01:13 INFO : Fine scansione di C:\My Foto
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:01:41 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:01:41 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:01:41 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:03:08 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:03:08 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_140538.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_140600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142102.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142222.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142256.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143448.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143524.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143542.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_161550.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_161600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_163624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_163642.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_164350.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_191128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_215852.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_215914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_220214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184844.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184904.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185024.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185048.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185402.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185416.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185500.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185654.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185738.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185752.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185834.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185834_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185836.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185836_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185844.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185844_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185950.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190240.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190258.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190306.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190420.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190436.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190540.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190622.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190630.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190700.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190702.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190956.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191358.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191438.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191632.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_192004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210628_192004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183420.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210703_182020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210703_182146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_163636.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_164424.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_164934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165254.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165404.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165408.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@1b61093e
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2a5bc08d
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5b7d909
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@50e42750
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@435ffc8b
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@37f413c5
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@cb0fba3
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7d1f83c2
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@4198934e
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5665ca83
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5d835e0f
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5c03c7ee
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@59843dc3
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@214dd5a2
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@667994a2
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@24870334
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@5c954842
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@13ba66b7
+sm.claudio.imaging.fsvisit.FSNef  2021-11-27 23:03:08 DEBUG: File name no e' DateTime :DSC_8853
+sm.claudio.imaging.fsvisit.FSNef  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\DSC_8853.NEF
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_191618.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_191750.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_192022.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@394c2ce6
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@25ce0658
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@53ef9dfb
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:03:08 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@1320c6ef
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102118.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102126.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102126_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102512.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_123312.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_123314.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_132906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_132910.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_091214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_091708.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_094418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_094634.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_104944.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_171940.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_202130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_084238.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_094918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_094934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_095032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_095034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102506.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102516.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102536.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_104912.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_104914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140148.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140202.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140206.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:03:08 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210727_115100.jpg
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:03:08 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:04:56 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:04:56 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:04:56 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:04:59 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:04:59 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:04:59 INFO : Fine scansione di C:\My Foto\2021
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:05:06 DEBUG: Pulizia del Model
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:05:06 INFO : Inizio scansione di C:\My Foto\2021
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104807.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_104832.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105135.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_105139.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121150.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121157.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121218.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_121223.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-04-01 Asia casa\f20210401_135321.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_140538.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_140600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141528.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_141756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142014.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142102.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142222.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_142256.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143440.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143448.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143524.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143542.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_143602.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_161550.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_161600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_163624.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_163642.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_164350.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_191128.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_215852.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_215914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210625_220214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184844.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184904.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_184920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185002.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185024.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185038.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185048.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185112.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185402.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185416.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185500.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185628.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185648.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185654.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185738.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185752.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185810.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185834.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185834_stitch.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185836.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185836_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185838_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185840_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185842_2.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185844.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185844_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_185950.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190122.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190240.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190258.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190306.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190420.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190436.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190534.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190540.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190622.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190630.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190700.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190702.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190756.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190920.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_190956.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191358.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191438.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191632.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_191704.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-06-25 Salento\f20210628_192004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210628_192004.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183342.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183420.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183556.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210629_183600.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210703_182020.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210703_182146.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_163636.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_164424.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_164934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165254.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165332.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165336.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165340.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165344.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165346.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165404.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-05 Salento\f20210704_165408.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@794d24cb
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@39157fbb
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@2d8c4241
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@71899f76
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@61f286f0
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@7308c5d2
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@3cd91fb8
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@196457a
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@74a686be
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@41b5ebad
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@356508fc
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@66b26bf
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@4638d3ba
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@28beb053
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@35817f50
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@6a00f981
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@6a254278
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@37c45b47
+sm.claudio.imaging.fsvisit.FSNef  2021-11-27 23:05:06 DEBUG: File name no e' DateTime :DSC_8853
+sm.claudio.imaging.fsvisit.FSNef  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\DSC_8853.NEF
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_191618.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_191750.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-21 Luna\f20210721_192022.jpg
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@981c910
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@64a0e550
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@24d65d3e
+sm.claudio.imaging.fsvisit.FileSystemVisitatore  2021-11-27 23:05:06 WARN : non analizzo FSFile sm.claudio.imaging.fsvisit.FSFile@315d2480
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102118.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102126.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102126_1.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_102512.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_123312.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_123314.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_132906.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210724_132910.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_091214.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_091708.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_094418.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_094634.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_104944.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_171940.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210725_202130.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_084238.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_094918.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_094934.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_095032.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_095034.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102506.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102516.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_102536.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_104912.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_104914.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140148.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140154.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140202.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210726_140206.jpg
+sm.claudio.imaging.fsvisit.FSJpeg  2021-11-27 23:05:06 DEBUG: Analizzo C:\My Foto\2021\2021-07-23 peio\f20210727_115100.jpg
+sm.claudio.imaging.swing.ImgModel  2021-11-27 23:05:06 INFO : Fine scansione di C:\My Foto\2021

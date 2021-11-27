@@ -214,6 +214,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     List<FSFile> li = m_model.getListFiles();
     ObservableList<FSFile> itms = table.getItems();
     itms.clear();
+    if ( li == null)
+      return;
     for (FSFile fi : li) {
       itms.add(fi);
     }
