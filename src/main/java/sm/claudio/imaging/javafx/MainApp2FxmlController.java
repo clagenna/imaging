@@ -15,21 +15,29 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Toggle;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import org.controlsfx.control.ToggleSwitch;
 
 import com.jfoenix.controls.JFXButton;
 
+import prova.javafx.ImageViewResizer;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
@@ -82,6 +90,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     m_model = new ImgModel();
     m_model.setPriority(EExifPriority.ExifFileDir);
     m_model.setRecursive(true);
+    ckRecurse.setSelected(true);
 
     btAnalizza.setDisable(true);
     btEsegui.setDisable(true);
@@ -100,7 +109,19 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   }
 
   private void initializeTable() {
-    attuale.setText("Attuale");
+    // attuale.setText("Attuale");
+    table.setRowFactory(tv -> {
+      TableRow<FSFile> row = new TableRow<>();
+      row.setOnMouseClicked(event -> {
+        if (event.getClickCount() == 2 && ( !row.isEmpty())) {
+          FSFile rowData = row.getItem();
+          System.out.println("Double click on: " + rowData.getAttuale());
+          imagePopupWindowShow(rowData);
+        }
+      });
+      return row;
+    });
+
     attuale.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL01_ATTUALE));
     percorso.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL02_PERCORSO));
     nuovonome.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL03_NUOVONOME));
@@ -203,6 +224,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     Stage stage = MainAppFxml.getInst().getPrimaryStage();
     try {
       stage.getScene().getRoot().setCursor(Cursor.WAIT);
+      m_model.rinominaFiles();
       clear();
       m_model.analizza();
       caricaGriglia();
@@ -232,4 +254,32 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     //    DefaultTableModel mod = (DefaultTableModel) table.getModel();
     //    mod.addRow(arr);
   }
+
+  public void imagePopupWindowShow(FSFile fileName2) {
+
+    Stage stage = new Stage();
+    Stage primaryStage = MainAppFxml.getInst().getPrimaryStage();
+    stage.setWidth(800);
+    stage.setHeight(600);
+    File imageFile = fileName2.getPath().toFile();
+    Image image = new Image(imageFile.toURI().toString());
+    ImageView imageView = new ImageView(image);
+    ImageViewResizer imgResiz = new ImageViewResizer(imageView);
+
+    VBox vbox = new VBox();
+    StackPane root = new StackPane();
+    root.getChildren().addAll(imgResiz);
+
+    vbox.getChildren().addAll(root);
+    VBox.setVgrow(root, Priority.ALWAYS);
+    stage.setScene(new Scene(vbox));
+
+    stage.setTitle(fileName2.getAttuale());
+    stage.initModality(Modality.NONE);
+    stage.initOwner(primaryStage);
+
+    stage.show();
+
+  }
+
 }

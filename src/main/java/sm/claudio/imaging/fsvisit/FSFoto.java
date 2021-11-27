@@ -40,7 +40,6 @@ import org.apache.commons.imaging.formats.tiff.write.TiffOutputDirectory;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputField;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputSet;
 
-import lombok.Getter;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
@@ -66,20 +65,20 @@ public abstract class FSFoto extends FSFile {
   }
 
   /** da EXIF_TAG_DATE_TIME_ORIGINAL */
-  private boolean               m_bFileInError;
-  private LocalDateTime         dtNomeFile;
-  private LocalDateTime         dtCreazione;
-  private LocalDateTime         dtUltModif;
-  private LocalDateTime         dtAcquisizione;
+  private boolean       m_bFileInError;
+  private LocalDateTime dtNomeFile;
+  private LocalDateTime dtCreazione;
+  private LocalDateTime dtUltModif;
+  private LocalDateTime dtAcquisizione;
   private LocalDateTime dtParentDir;
-  private LocalDateTime         dtAssunta = null;
+  private LocalDateTime dtAssunta = null;
 
   enum CosaFare {
     setNomeFile, //
     setDtCreazione, //
     setUltModif, //
     setDtAcquisizione
-  };
+  }
 
   private Set<CosaFare> m_daFare;
 
@@ -160,8 +159,8 @@ public abstract class FSFoto extends FSFile {
       // return;
     }
 
-    @SuppressWarnings("unchecked")
-    List<TiffImageMetadata.TiffMetadataItem> items = (List<TiffImageMetadata.TiffMetadataItem>) exif.getItems();
+    @SuppressWarnings("unchecked") List<TiffImageMetadata.TiffMetadataItem> items = (List<TiffImageMetadata.TiffMetadataItem>) exif
+        .getItems();
     /**
      * <pre>
      *
@@ -311,8 +310,6 @@ public abstract class FSFoto extends FSFile {
   public void setDtParentDir(LocalDateTime p_dt) {
     dtParentDir = p_dt;
   }
-  
-  
 
   private void studiaIlDaFarsi() {
     getLogger().debug("Analizzo {}", getPath().toString());

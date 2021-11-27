@@ -37,6 +37,17 @@
 			<artifactId>javafx-web</artifactId>
 			<version>16</version>
 		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-media</artifactId>
+			<version>18-ea+7</version>
+		</dependency>
+
+
+
 		<!-- per la swzione 8 prove con JFoenix -->
 		<dependency>
 			<groupId>com.jfoenix</groupId>
@@ -101,18 +112,6 @@
 			<id>local</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<version>3.2.1</version>
-						<executions>
-							<execution>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
 				</plugins>
 			</build>
 		</profile>
@@ -157,6 +156,35 @@
 	<build>
 		<finalName>imaging</finalName>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<!-- This is required by bnd-maven-plugin -->
+						<manifestFile>
+							${project.build.outputDirectory}/META-INF/MANIFEST.MF
+						</manifestFile>
+						<manifestEntries>
+							<Automatic-Module-Name>commons.cli</Automatic-Module-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

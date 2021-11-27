@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import lombok.Getter;
-import sm.claudio.imaging.main.MainApp;
 
 public class MainAppFxml extends Application {
 
@@ -21,7 +20,7 @@ public class MainAppFxml extends Application {
   public void start(Stage pStage) throws Exception {
     inst = this;
     this.primaryStage = pStage;
-    
+
     URL url = getClass().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
     if (url == null)
       url = getClass().getClassLoader().getResource(MainApp2FxmlController.CSZ_FXMLNAME);

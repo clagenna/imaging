@@ -18,6 +18,7 @@ module imaging {
   requires javafx.graphics;
   requires javafx.base;
   requires javafx.web;
+  requires javafx.media;
   requires org.controlsfx.controls;
   requires lombok;
   requires java.sql;
@@ -27,6 +28,8 @@ module imaging {
   requires org.apache.logging.log4j;
   requires org.apache.commons.imaging;
 
-  opens sm.claudio.imaging.javafx to javafx.graphics, javafx.fxml, org.controlsfx.controls;
+  opens prova.javafx to javafx.graphics, javafx.fxml, org.controlsfx.controls;
+  
+  opens sm.claudio.imaging.javafx to javafx.graphics, javafx.fxml, javafx.media, org.controlsfx.controls;
   opens sm.claudio.imaging.fsvisit to javafx.base, javafx.graphics, javafx.fxml, org.controlsfx.controls;
 }
