@@ -35,23 +35,19 @@ public class MainAppFxml extends Application {
     pStage.setScene(scene);
     pStage.show();
   }
-  
+
   @Override
   public void stop() throws Exception {
-    
-    var siz = getSize();
-    var pos = getLocation();
+    System.out.println("MainAppFxml.stop()");
     AppProperties prop = AppProperties.getInst();
 
-    prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_X, siz.width);
-    prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_Y, siz.height);
-    prop.setPropVal(AppProperties.CSZ_PROP_POSFRAME_X, pos.x);
-    prop.setPropVal(AppProperties.CSZ_PROP_POSFRAME_Y, pos.y);
+    prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_X, String.format("%.0f", primaryStage.getWidth()));
+    prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_Y, String.format("%.0f", primaryStage.getHeight()));
+    prop.setPropVal(AppProperties.CSZ_PROP_POSFRAME_X, String.format("%.0f", primaryStage.getX()));
+    prop.setPropVal(AppProperties.CSZ_PROP_POSFRAME_Y, String.format("%.0f", primaryStage.getY()));
 
-    prop.setLastDir(m_txDir.getText());
     prop.saveProperties();
 
-    
     super.stop();
   }
 

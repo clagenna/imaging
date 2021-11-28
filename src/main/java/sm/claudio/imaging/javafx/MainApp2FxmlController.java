@@ -1,13 +1,20 @@
 package sm.claudio.imaging.javafx;
 
+import java.awt.Dimension;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Point;
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -32,6 +39,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import org.controlsfx.control.ToggleSwitch;
 
@@ -106,6 +114,10 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
     initializeTable();
 
+    Stage mainstage = MainAppFxml.getInst().getPrimaryStage();
+    mainstage.setOnCloseRequest(e -> exitApplication(e));
+    leggiProperties(mainstage);
+
   }
 
   private void initializeTable() {
@@ -133,6 +145,26 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     dtparentdir.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL09_DTPARENTDIR));
   }
 
+  private void leggiProperties(Stage mainstage) {
+    AppProperties props = AppProperties.getInst();
+    int posX = props.getPropIntVal(AppProperties.CSZ_PROP_POSFRAME_X);
+    int posY = props.getPropIntVal(AppProperties.CSZ_PROP_POSFRAME_Y);
+    int dimX = props.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_X);
+    int dimY = props.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_Y);
+
+    if ( (dimX * dimY) > 0) {
+      mainstage.setWidth(dimX);
+      mainstage.setHeight(dimY);
+    }
+    if ( (posX * posY) != 0) {
+      mainstage.setX(posX);
+      mainstage.setY(posY);
+    }
+    String sz = props.getPropVal(AppProperties.CSZ_PROP_LASTDIR);
+    if (sz != null)
+      settaDir(sz, true);
+  }
+
   @FXML
   public void onEnter(ActionEvent ae) {
     String szPath = txDir.getText();
@@ -146,8 +178,10 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     // imposto la dir precedente (se c'è)
     AppProperties props = AppProperties.getInst();
     String sz = props.getLastDir();
-    if (sz != null)
-      fil.setInitialDirectory(new File(sz));
+    if (sz != null) {
+      if (Files.exists(Paths.get(sz)))
+        fil.setInitialDirectory(new File(sz));
+    }
 
     File fileScelto = fil.showDialog(stage);
     if (fileScelto != null) {
@@ -214,7 +248,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     List<FSFile> li = m_model.getListFiles();
     ObservableList<FSFile> itms = table.getItems();
     itms.clear();
-    if ( li == null)
+    if (li == null)
       return;
     for (FSFile fi : li) {
       itms.add(fi);
@@ -282,6 +316,15 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
     stage.show();
 
+  }
+
+  public void exitApplication(WindowEvent e) {
+    if (m_model == null)
+      return;
+    AppProperties prop = AppProperties.getInst();
+    prop.setPropVal(AppProperties.CSZ_PROP_LASTDIR, m_model.getDirectory());
+
+    Platform.exit();
   }
 
 }
