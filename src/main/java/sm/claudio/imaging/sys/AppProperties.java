@@ -122,8 +122,12 @@ public class AppProperties {
   public int getPropIntVal(String p_key) {
     Integer ii = Integer.valueOf(0);
     String sz = getPropVal(p_key);
-    if (sz != null)
-      ii = Integer.decode(sz);
+    try {
+      if (sz != null)
+        ii = Integer.decode(sz);
+    } catch (NumberFormatException e) {
+      e.printStackTrace();
+    }
     return ii.intValue();
   }
 

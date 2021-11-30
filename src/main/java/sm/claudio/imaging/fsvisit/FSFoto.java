@@ -319,6 +319,7 @@ public abstract class FSFoto extends FSFile {
 
     switch (prio) {
       case ExifFileDir:
+        studiaConExifFileDir();
         break;
       case DirFileExif:
         sudiaConDirFiExif();
@@ -328,41 +329,102 @@ public abstract class FSFoto extends FSFile {
         break;
       default:
         break;
-
     }
+  }
 
-    if (dtNomeFile == null) {
-      dtNomeFile = LocalDateTime.MAX;
+  /**
+   * segue la priorità in tabella per l'assegnazione
+   * <table>
+   * <tr>
+   * <th></th>
+   * <th>ExFiDi</th>
+   * <th>DiFiEx</th>
+   * <th>FiDiEx</th>
+   * <tr>
+   * <tr>
+   * <td>attuale</td>
+   * <tr>
+   * <tr>
+   * <td>creazione</td>
+   * <td>4</td>
+   * <td>3</td>
+   * <td>4</td>
+   * <tr>
+   * <tr>
+   * <td>ultmodif</td>
+   * <td>5</td>
+   * <td>5</td>
+   * <td>5</td>
+   * <tr>
+   * <tr>
+   * <td>acquisiz</td>
+   * <td>1</td>
+   * <td>4</td>
+   * <td>3</td>
+   * <tr>
+   * <tr>
+   * <td>parent</td>
+   * <td>3</td>
+   * <td>1</td>
+   * <td>2</td>
+   * <tr>
+   * <tr>
+   * <td>nomefile</td>
+   * <td>2</td>
+   * <td>2</td>
+   * <td>1</td>
+   * <tr>
+   * </table>
+   */
+  private void studiaConExifFileDir() {
+    LocalDateTime dt = null;
+    if (dtAcquisizione != null)
+      dt = dtAcquisizione;
+    if (dt == null && dtNomeFile != null)
+      dt = dtNomeFile;
+    if (dt == null && dtParentDir != null)
+      dt = dtParentDir;
+    if (dt == null && dtCreazione != null)
+      dt = dtCreazione;
+    if (dt == null && dtUltModif != null)
+      dt = dtUltModif;
+
+    if (dtAcquisizione == null) {
+      dtAcquisizione = dt;
       m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
+    }
+    if (dtNomeFile == null) {
+      dtNomeFile = dt;
+      m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setUltModif);
     }
     if (dtCreazione == null)
       m_daFare.add(CosaFare.setDtCreazione);
     if (dtUltModif == null)
       m_daFare.add(CosaFare.setUltModif);
-    if (dtAcquisizione == null)
+
+    if ( !dtAcquisizione.isEqual(dt)) {
       m_daFare.add(CosaFare.setDtAcquisizione);
-
-    if (dtAcquisizione != null) {
-      if (dtNomeFile.isAfter(dtAcquisizione))
-        m_daFare.add(CosaFare.setNomeFile);
-      if (dtAcquisizione.isAfter(dtNomeFile))
-        m_daFare.add(CosaFare.setDtAcquisizione);
+      m_daFare.add(CosaFare.setNomeFile);
+      m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
+    }
+    if ( !dtNomeFile.isEqual(dt)) {
+      m_daFare.add(CosaFare.setNomeFile);
+      m_daFare.add(CosaFare.setNomeFile);
+      m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
     }
 
-    if (dtCreazione != null) {
-      if (dtNomeFile.isAfter(dtCreazione))
-        m_daFare.add(CosaFare.setNomeFile);
-      if (dtCreazione.isAfter(dtNomeFile))
-        m_daFare.add(CosaFare.setDtCreazione);
+    if ( !dtCreazione.isEqual(dt)) {
+      m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
     }
 
-    if (dtUltModif != null) {
-      if (dtNomeFile.isAfter(dtUltModif))
-        m_daFare.add(CosaFare.setNomeFile);
-      if (dtUltModif.isAfter(dtNomeFile))
-        m_daFare.add(CosaFare.setUltModif);
+    if ( !dtUltModif.isEqual(dt)) {
+      m_daFare.add(CosaFare.setUltModif);
     }
 
     if ( !m_daFare.contains(CosaFare.setNomeFile)) {
@@ -370,7 +432,6 @@ public abstract class FSFoto extends FSFile {
       if ( !getPath().endsWith(szNam))
         m_daFare.add(CosaFare.setNomeFile);
     }
-    LocalDateTime dt = getPiuVecchiaData();
     setDtAssunta(dt);
   }
 
@@ -662,6 +723,34 @@ public abstract class FSFoto extends FSFile {
     LocalDateTime ux1 = LocalDateTime.ofInstant(ux.toInstant(), s_zoneOffSet);
     OffsetDateTime ux2 = ux1.atOffset(s_zoneOffSet);
     return ux2;
+  }
+
+  public LocalDateTime getItem(String p_colName) {
+    LocalDateTime retDt = null;
+    if (getPath().toString().contains("19860723")) {
+      System.out.println("FSFoto.getItem() f=" + getPath().toString());
+    }
+    switch (p_colName) {
+      case FSFile.COL04_DTASSUNTA:
+        retDt = getDtAssunta();
+        break;
+      case FSFile.COL05_DTNOMEFILE:
+        retDt = getDtNomeFile();
+        break;
+      case FSFile.COL06_DTCREAZIONE:
+        retDt = getDtCreazione();
+        break;
+      case FSFile.COL07_DTULTMODIF:
+        retDt = getDtUltModif();
+        break;
+      case FSFile.COL08_DTACQUISIZIONE:
+        retDt = getDtAcquisizione();
+        break;
+      case FSFile.COL09_DTPARENTDIR:
+        retDt = getDtParentDir();
+        break;
+    }
+    return retDt;
   }
 
 }

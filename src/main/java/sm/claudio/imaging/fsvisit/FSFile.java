@@ -18,6 +18,16 @@ import sm.claudio.imaging.sys.AppProperties;
 
 public class FSFile implements IFSVisitable {
 
+  public static final String COL01_ATTUALE        = "attuale";
+  public static final String COL02_PERCORSO       = "percorso";
+  public static final String COL03_NUOVONOME      = "nuovoNome";
+  public static final String COL04_DTASSUNTA      = "assunta";
+  public static final String COL05_DTNOMEFILE     = "nomeFileDt";
+  public static final String COL06_DTCREAZIONE    = "creazione";
+  public static final String COL07_DTULTMODIF     = "ultModif";
+  public static final String COL08_DTACQUISIZIONE = "acquisizione";
+  public static final String COL09_DTPARENTDIR    = "parentDirDt";
+
   private Logger   m_log;
   private Path     m_file;
   // private File   m_fiBackup;
@@ -111,15 +121,6 @@ public class FSFile implements IFSVisitable {
     return m_file.equals(pthAltro);
   }
 
-  public static final String COL01_ATTUALE        = "attuale";
-  public static final String COL02_PERCORSO       = "percorso";
-  public static final String COL03_NUOVONOME      = "nuovoNome";
-  public static final String COL04_DTASSUNTA      = "assunta";
-  public static final String COL05_DTNOMEFILE     = "nomeFileDt";
-  public static final String COL06_DTCREAZIONE    = "creazione";
-  public static final String COL07_DTULTMODIF     = "ultModif";
-  public static final String COL08_DTACQUISIZIONE = "acquisizione";
-  public static final String COL09_DTPARENTDIR    = "parentDirDt";
 
   public String getAttuale() {
     String szRet = getPath().getFileName().toString();
@@ -149,52 +150,86 @@ public class FSFile implements IFSVisitable {
     return szRet;
   }
 
-  public String getNomeFileDt() {
-    String szRet = "";
+  public LocalDateTime getNomeFileDt() {
+//    String szRet = "";
+//    if ( ! (this instanceof FSFoto))
+//      return szRet;
+//    FSFoto fot = (FSFoto) this;
+//    szRet = formatDt(fot.getDtNomeFile());
+//    return szRet;
+    LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
     FSFoto fot = (FSFoto) this;
-    szRet = formatDt(fot.getDtNomeFile());
+    szRet = fot.getDtNomeFile();
     return szRet;
   }
 
-  public String getCreazione() {
-    String szRet = "";
+  public LocalDateTime getCreazione() {
+//    String szRet = "";
+//    if ( ! (this instanceof FSFoto))
+//      return szRet;
+//    FSFoto fot = (FSFoto) this;
+//    szRet = formatDt(fot.getDtCreazione());
+//    return szRet;
+    LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
     FSFoto fot = (FSFoto) this;
-    szRet = formatDt(fot.getDtCreazione());
+    szRet = fot.getDtCreazione();
     return szRet;
+
   }
 
-  public String getUltModif() {
-    String szRet = "";
+  public LocalDateTime getUltModif() {
+//    String szRet = "";
+//    if ( ! (this instanceof FSFoto))
+//      return szRet;
+//    FSFoto fot = (FSFoto) this;
+//    szRet = formatDt(fot.getDtUltModif());
+//    return szRet;
+    LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
     FSFoto fot = (FSFoto) this;
-    szRet = formatDt(fot.getDtUltModif());
+    szRet = fot.getDtUltModif();
     return szRet;
+
   }
 
-  public String getAcquisizione() {
-    String szRet = "";
+  public LocalDateTime getAcquisizione() {
+//    String szRet = "";
+//    if ( ! (this instanceof FSFoto))
+//      return szRet;
+//    FSFoto fot = (FSFoto) this;
+//    szRet = formatDt(fot.getDtAcquisizione());
+//    return szRet;
+    LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
     FSFoto fot = (FSFoto) this;
-    szRet = formatDt(fot.getDtAcquisizione());
+    szRet = fot.getDtAcquisizione();
     return szRet;
+
   }
 
-  public String getParentDirDt() {
-    String szRet = "";
+  public LocalDateTime getParentDirDt() {
+//    String szRet = "";
+//    if ( ! (this instanceof FSFoto))
+//      return szRet;
+//    FSFoto fot = (FSFoto) this;
+//    szRet = formatDt(fot.getDtParentDir());
+//    return szRet;
+    LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
     FSFoto fot = (FSFoto) this;
-    szRet = formatDt(fot.getDtParentDir());
+    szRet = fot.getDtParentDir();
     return szRet;
+
   }
 
-  private String formatDt(LocalDateTime dt) {
+  public String formatDt(LocalDateTime dt) {
     Date dt2 = null;
     Instant ll = null;
     try {

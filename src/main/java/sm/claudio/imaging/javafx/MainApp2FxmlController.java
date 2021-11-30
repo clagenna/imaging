@@ -1,15 +1,12 @@
 package sm.claudio.imaging.javafx;
 
-import java.awt.Dimension;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-import java.awt.Point;
 import java.io.File;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -21,6 +18,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -38,6 +36,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -54,37 +53,37 @@ import sm.claudio.imaging.sys.ISwingLogger;
 
 public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
-  private static final String               EXIF_FILE_DIR = "Exif File Dir";
-  private static final String               FILE_DIR_EXIF = "File Dir Exif";
-  private static final String               DIR_FILE_EXIF = "Dir File Exif";
-  public static final SimpleDateFormat      s_fmt         = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+  private static final String                      EXIF_FILE_DIR = "Exif File Dir";
+  private static final String                      FILE_DIR_EXIF = "File Dir Exif";
+  private static final String                      DIR_FILE_EXIF = "Dir File Exif";
+  public static final SimpleDateFormat             s_fmt         = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
   /**
    * Nel fxml ci deve essere la specifica:<br/>
    * <code>fx:controller="sm.clagenna...MainApp2FxmlController"</code>
    */
-  public static final String                CSZ_FXMLNAME  = "MainApp2.fxml";
+  public static final String                       CSZ_FXMLNAME  = "MainApp2.fxml";
 
-  @FXML private JFXButton                   btCerca;
-  @FXML private JFXButton                   btAnalizza;
-  @FXML private JFXButton                   btEsegui;
-  @FXML private TextField                   txDir;
-  @FXML private ToggleSwitch                ckRecurse;
-  @FXML private ChoiceBox<String>           panRadioB;
-  @FXML private Label                       lblLogs;
+  @FXML private JFXButton                          btCerca;
+  @FXML private JFXButton                          btAnalizza;
+  @FXML private JFXButton                          btEsegui;
+  @FXML private TextField                          txDir;
+  @FXML private ToggleSwitch                       ckRecurse;
+  @FXML private ChoiceBox<String>                  panRadioB;
+  @FXML private Label                              lblLogs;
 
-  @FXML private TableView<FSFile>           table;
-  @FXML private TableColumn<FSFile, String> attuale;
-  @FXML private TableColumn<FSFile, String> percorso;
-  @FXML private TableColumn<FSFile, String> nuovonome;
-  @FXML private TableColumn<FSFile, String> dtassunta;
-  @FXML private TableColumn<FSFile, String> dtnomefile;
-  @FXML private TableColumn<FSFile, String> dtcreazione;
-  @FXML private TableColumn<FSFile, String> dtultmodif;
-  @FXML private TableColumn<FSFile, String> dtacquisizione;
-  @FXML private TableColumn<FSFile, String> dtparentdir;
+  @FXML private TableView<FSFile>                  table;
+  @FXML private TableColumn<FSFile, String>        attuale;
+  @FXML private TableColumn<FSFile, String>        percorso;
+  @FXML private TableColumn<FSFile, String>        nuovonome;
+  @FXML private TableColumn<FSFile, String>        dtassunta;
+  @FXML private TableColumn<FSFile, LocalDateTime> dtnomefile;
+  @FXML private TableColumn<FSFile, LocalDateTime> dtcreazione;
+  @FXML private TableColumn<FSFile, LocalDateTime> dtultmodif;
+  @FXML private TableColumn<FSFile, LocalDateTime> dtacquisizione;
+  @FXML private TableColumn<FSFile, LocalDateTime> dtparentdir;
 
-  private ImgModel                          m_model;
+  private ImgModel                                 m_model;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -138,11 +137,71 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     percorso.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL02_PERCORSO));
     nuovonome.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL03_NUOVONOME));
     dtassunta.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL04_DTASSUNTA));
-    dtnomefile.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL05_DTNOMEFILE));
-    dtcreazione.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL06_DTCREAZIONE));
-    dtultmodif.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL07_DTULTMODIF));
-    dtacquisizione.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL08_DTACQUISIZIONE));
-    dtparentdir.setCellValueFactory(new PropertyValueFactory<FSFile, String>(FSFile.COL09_DTPARENTDIR));
+    dtnomefile.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL05_DTNOMEFILE));
+    dtcreazione.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL06_DTCREAZIONE));
+    dtultmodif.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL07_DTULTMODIF));
+    dtacquisizione.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL08_DTACQUISIZIONE));
+    dtparentdir.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL09_DTPARENTDIR));
+
+    dtnomefile.setCellFactory(column -> {
+      return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL05_DTNOMEFILE);
+    });
+    dtcreazione.setCellFactory(column -> {
+      return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL06_DTCREAZIONE);
+    });
+    dtultmodif.setCellFactory(column -> {
+      return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL07_DTULTMODIF);
+    });
+    dtacquisizione.setCellFactory(column -> {
+      return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL08_DTACQUISIZIONE);
+    });
+    dtparentdir.setCellFactory(column -> {
+      return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL09_DTPARENTDIR);
+    });
+
+    //    dtnomefile.setCellFactory(column -> {
+    //      return new TableCell<FSFile, LocalDateTime>() {
+    //        @Override
+    //        protected void updateItem(LocalDateTime item, boolean empty) {
+    //          super.updateItem(item, empty);
+    //          if (item == null || empty) {
+    //            setText(null);
+    //            setStyle("");
+    //            return;
+    //          }
+    //          if (getTableRow() == null)
+    //            return;
+    //          FSFile fil = getTableRow().getItem();
+    //          if ( ! (fil instanceof FSFoto)) {
+    //            setText(null);
+    //            setStyle("");
+    //            return;
+    //          }
+    //          FSFoto fot = (FSFoto) fil;
+    //          // Format date.
+    //          LocalDateTime dtass = fot.getDtAssunta();
+    //          String sz = fil.formatDt(dtass);
+    //          setText(sz);
+    //          // Style all dates in March with a different color.
+    //          int v = dtass.compareTo(item);
+    //          // v = -1;
+    //          switch (v) {
+    //            case -1:
+    //              setTextFill(Color.DARKGREEN);
+    //              setStyle("-fx-background-color: lightcoral");
+    //              break;
+    //            case 0:
+    //              setTextFill(Color.BLACK);
+    //              setStyle("");
+    //              break;
+    //            case 1:
+    //              setTextFill(Color.CHOCOLATE);
+    //              setStyle("-fx-background-color: deepskyblue");
+    //              break;
+    //          }
+    //        }
+    //      };
+    //    });
   }
 
   private void leggiProperties(Stage mainstage) {
@@ -152,11 +211,26 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     int dimX = props.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_X);
     int dimY = props.getPropIntVal(AppProperties.CSZ_PROP_DIMFRAME_Y);
 
+    double minx = 0, maxx = 0, miny = 0, maxy = 0;
+
+    for (Screen scr : Screen.getScreens()) {
+      Rectangle2D schermo = scr.getBounds();
+      System.out.println(schermo);
+      minx = schermo.getMinX() < minx ? schermo.getMinX() : minx;
+      maxx = schermo.getMaxX() >= maxx ? schermo.getMaxX() : maxx;
+      miny = schermo.getMinY() < miny ? schermo.getMinY() : miny;
+      maxy = schermo.getMaxY() >= maxy ? schermo.getMaxY() : maxy;
+    }
+    //    System.out.printf("X %.2f - %.2f\n", minx, maxx);
+    //    System.out.printf("Y %.2f - %.2f\n", miny, maxy);
+
     if ( (dimX * dimY) > 0) {
       mainstage.setWidth(dimX);
       mainstage.setHeight(dimY);
     }
     if ( (posX * posY) != 0) {
+      posX = (int) (posX < minx ? minx : posX);
+      posY = (int) (posY < minx ? minx : posY);
       mainstage.setX(posX);
       mainstage.setY(posY);
     }
