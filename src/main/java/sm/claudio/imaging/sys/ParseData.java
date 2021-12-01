@@ -25,6 +25,8 @@ public class ParseData implements IParseData {
       Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2}).*([0-9]{2})\\.([0-9]{2})\\.*"), //
       //               .* yyyy-MM-dd ?*
       Pattern.compile(".*([0-9]{4})-([0-9]{2})-([0-9]{2})\\.*"), //
+      //               .* yy-MM-dd ?*
+      Pattern.compile(".*([0-9]{2})-([0-9]{2})-([0-9]{2})\\.*"), //
       //               .* yyyy-MM ?*
       Pattern.compile(".*([0-9]{4})-([0-9]{2})\\.*"), //
 
@@ -52,9 +54,15 @@ public class ParseData implements IParseData {
         for (int k = 0; k < mtch.groupCount(); k++)
           szFmtDt[k] = mtch.group(k + 1);
         String szDt = String.format("%s:%s:%s %s:%s:%s", (Object[]) szFmtDt);
-        dtRet = LocalDateTime.parse(szDt, s_fmtDtExif);
-        if (dtRet.isAfter(s_dtMin) && dtRet.isBefore(s_dtMax))
-          break;
+        try {
+          dtRet = LocalDateTime.parse(szDt, s_fmtDtExif);
+        } catch (Exception e) {
+          dtRet = null;
+          // e.printStackTrace();
+        }
+        if (dtRet != null)
+          if (dtRet.isAfter(s_dtMin) && dtRet.isBefore(s_dtMax))
+            break;
         dtRet = null;
       }
     }

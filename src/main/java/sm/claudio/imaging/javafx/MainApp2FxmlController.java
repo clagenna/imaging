@@ -126,7 +126,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       row.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2 && ( !row.isEmpty())) {
           FSFile rowData = row.getItem();
-          System.out.println("Double click on: " + rowData.getAttuale());
+          // System.out.println("Double click on: " + rowData.getAttuale());
           imagePopupWindowShow(rowData);
         }
       });

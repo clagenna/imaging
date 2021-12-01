@@ -99,6 +99,7 @@ public abstract class FSFoto extends FSFile {
     interpretaDateTimeDaNomefile();
     leggiExifDtOriginal();
     leggiDtParentDir();
+    //    System.out.println(this.toString());
   }
 
   private void leggiExifDtOriginal() {
@@ -133,8 +134,8 @@ public abstract class FSFoto extends FSFile {
       if (szDt != null)
         dtAcquisizione = LocalDateTime.from(ParseData.s_fmtDtExif.parse(szDt));
     } catch (ImageReadException | DateTimeParseException e) {
-      setFileInError(true);
-      getLogger().error("Errore leggi Dt ORIGINAL", e);
+      // setFileInError(true);
+      getLogger().error("Errore leggi Dt ORIGINAL \"{}\", err={}", szDt, e.getMessage());
     }
 
   }
@@ -502,9 +503,12 @@ public abstract class FSFoto extends FSFile {
       if (dt.isAfter(dtAcquisizione))
         dt = dtAcquisizione;
     } else {
+      if (dtNomeFile != null)
+        if (dt.isAfter(dtNomeFile))
+          dt = dtNomeFile;
       // se non ha dtAcq allora prendo il parent Dt
-      if (dtParentDir != null && dtNomeFile.equals(LocalDateTime.MAX))
-        if (dtParentDir != null)
+      if (dtParentDir != null)
+        if (dt.isAfter(dtParentDir))
           dt = dtParentDir;
     }
     return dt;
@@ -665,6 +669,8 @@ public abstract class FSFoto extends FSFile {
     sb.append("    dtUltModif:\t" + (dtUltModif != null ? dtUltModif.toString() : "*NULL*")) //
         .append("\n\t");
     sb.append("dtAcquisizione:\t" + (dtAcquisizione != null ? dtAcquisizione.toString() : "*NULL*")) //
+        .append("\n\t");
+    sb.append("dtParentDir:\t" + (dtParentDir != null ? dtParentDir.toString() : "*NULL*")) //
         .append("\n\t");
 
     return sb.toString();

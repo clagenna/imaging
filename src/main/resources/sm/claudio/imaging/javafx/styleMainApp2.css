@@ -16,5 +16,5 @@
 .button:pressed {
 	-fx-text-fill: #333;
 	-fx-background-color: darkcyan;
-	-fx-padding: 5 45 13 45;
+	-fx-padding: 5 10 13 10;
 }
