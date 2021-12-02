@@ -16,6 +16,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
@@ -31,6 +32,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -125,9 +128,9 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       TableRow<FSFile> row = new TableRow<>();
       row.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2 && ( !row.isEmpty())) {
-          FSFile rowData = row.getItem();
+          // FSFile rowData = row.getItem();
           // System.out.println("Double click on: " + rowData.getAttuale());
-          imagePopupWindowShow(rowData);
+          imagePopupWindowShow(row);
         }
       });
       return row;
@@ -365,30 +368,89 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     //    mod.addRow(arr);
   }
 
-  public void imagePopupWindowShow(FSFile fileName2) {
-
+  public void imagePopupWindowShow(TableRow<FSFile> row) {
+    FSFile filejpeg = row.getItem();
     Stage stage = new Stage();
     Stage primaryStage = MainAppFxml.getInst().getPrimaryStage();
     stage.setWidth(800);
     stage.setHeight(600);
-    File imageFile = fileName2.getPath().toFile();
-    Image image = new Image(imageFile.toURI().toString());
-    ImageView imageView = new ImageView(image);
-    ImageViewResizer imgResiz = new ImageViewResizer(imageView);
+    //    File imageFile = rowData.getPath().toFile();
+    //    Image image = new Image(imageFile.toURI().toString());
+    //    ImageView imageView = new ImageView(image);
+    //    ImageViewResizer imgResiz = new ImageViewResizer(imageView);
+
+    ImageViewResizer imgResiz = caricaImg(filejpeg);
+
+    //    StackPane root = new StackPane();
+    //    root.getChildren().addAll(imgResiz);
 
     VBox vbox = new VBox();
-    StackPane root = new StackPane();
-    root.getChildren().addAll(imgResiz);
+    vbox.getChildren().addAll(imgResiz);
+    // VBox.setVgrow(root, Priority.ALWAYS);
+    Scene scene = new Scene(vbox);
+    scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
 
-    vbox.getChildren().addAll(root);
-    VBox.setVgrow(root, Priority.ALWAYS);
-    stage.setScene(new Scene(vbox));
+      @Override
+      public void handle(KeyEvent event) {
+        switch (event.getCode()) {
+          case RIGHT:
+          case LEFT:
+            doRightLeft(row, event.getCode(), scene);
+            break;
+          default:
+            break;
+        }
 
-    stage.setTitle(fileName2.getAttuale());
+      }
+    });
+
+    stage.setScene(scene);
+    stage.setTitle(filejpeg.getAttuale());
     stage.initModality(Modality.NONE);
     stage.initOwner(primaryStage);
 
     stage.show();
+  }
+
+  private ImageViewResizer caricaImg(FSFile p_fi) {
+    File imageFile = p_fi.getPath().toFile();
+    Image image = new Image(imageFile.toURI().toString());
+    ImageView imageView = new ImageView(image);
+    ImageViewResizer imgResiz = new ImageViewResizer(imageView);
+    return imgResiz;
+  }
+
+  protected void doRightLeft(TableRow<FSFile> row, KeyCode code, Scene scene) {
+    boolean bOk = false;
+    int qta = table.getItems().size();
+    int indx = table.getSelectionModel().getSelectedIndex();
+    switch (code) {
+      case LEFT:
+        table.getFocusModel().focusPrevious();
+        indx--;
+        if (indx >= 0)
+          bOk = true;
+        break;
+      case RIGHT:
+        table.getFocusModel().focusNext();
+        indx++;
+        if (indx < qta)
+          bOk = true;
+        break;
+      default:
+        break;
+    }
+    if ( !bOk)
+      return;
+    table.getSelectionModel().select(indx);
+    FSFile fi = table.getSelectionModel().getSelectedItem();
+    System.out.printf("MainApp2FxmlController.doRightLeft(%s)\n", fi.getAttuale());
+
+    ImageViewResizer imgResiz = caricaImg(fi);
+
+    VBox vbox = new VBox();
+    vbox.getChildren().addAll(imgResiz);
+    scene.setRoot(vbox);
 
   }
 
