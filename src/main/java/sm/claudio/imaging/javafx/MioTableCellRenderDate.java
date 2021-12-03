@@ -10,6 +10,7 @@ import sm.claudio.imaging.fsvisit.FSFoto;
 
 public class MioTableCellRenderDate<T, F> extends TableCell<FSFile, LocalDateTime> {
 
+  @SuppressWarnings("unused")
   private String m_colName;
 
   public MioTableCellRenderDate(String p_colNam) {

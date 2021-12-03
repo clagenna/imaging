@@ -126,7 +126,7 @@ public class AppProperties {
       if (sz != null)
         ii = Integer.decode(sz);
     } catch (NumberFormatException e) {
-      e.printStackTrace();
+      // e.printStackTrace();
     }
     return ii.intValue();
   }

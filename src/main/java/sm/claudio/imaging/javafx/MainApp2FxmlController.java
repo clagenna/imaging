@@ -1,6 +1,7 @@
 package sm.claudio.imaging.javafx;
 
 import java.io.File;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,8 +35,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
@@ -56,16 +55,17 @@ import sm.claudio.imaging.sys.ISwingLogger;
 
 public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
-  private static final String                      EXIF_FILE_DIR = "Exif File Dir";
-  private static final String                      FILE_DIR_EXIF = "File Dir Exif";
-  private static final String                      DIR_FILE_EXIF = "Dir File Exif";
-  public static final SimpleDateFormat             s_fmt         = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+  private static final String                      IMAGE_EDITING_ICO = "image-editing.png";
+  private static final String                      EXIF_FILE_DIR     = "Exif File Dir";
+  private static final String                      FILE_DIR_EXIF     = "File Dir Exif";
+  private static final String                      DIR_FILE_EXIF     = "Dir File Exif";
+  public static final SimpleDateFormat             s_fmt             = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
   /**
    * Nel fxml ci deve essere la specifica:<br/>
    * <code>fx:controller="sm.clagenna...MainApp2FxmlController"</code>
    */
-  public static final String                       CSZ_FXMLNAME  = "MainApp2.fxml";
+  public static final String                       CSZ_FXMLNAME      = "MainApp2.fxml";
 
   @FXML private JFXButton                          btCerca;
   @FXML private JFXButton                          btAnalizza;
@@ -118,6 +118,14 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
     Stage mainstage = MainAppFxml.getInst().getPrimaryStage();
     mainstage.setOnCloseRequest(e -> exitApplication(e));
+    InputStream stre = getClass().getResourceAsStream(IMAGE_EDITING_ICO);
+    if (stre == null)
+      stre = getClass().getClassLoader().getResourceAsStream(IMAGE_EDITING_ICO);
+    if (stre != null) {
+      Image ico = new Image(stre);
+      mainstage.getIcons().add(ico);
+    }
+    mainstage.setTitle("Convertitore nomi foto");
     leggiProperties(mainstage);
 
   }
