@@ -18,16 +18,18 @@ import sm.claudio.imaging.swing.ImgModel;
 
 public class AppProperties {
 
-  private static final Logger          s_log               = LogManager.getLogger(AppProperties.class);
-  private static final String          CSZ_PROP_FILE       = "imaging.properties";
-  public static final String           CSZ_PROP_LASTDIR    = "last.dir";
-  public static final String           CSZ_PROP_LASTFIL    = "last.fil";
-  public static final String           CSZ_PROP_DIMFRAME_X = "frame.dimx";
-  public static final String           CSZ_PROP_DIMFRAME_Y = "frame.dimy";
-  public static final String           CSZ_PROP_POSFRAME_X = "frame.posx";
-  public static final String           CSZ_PROP_POSFRAME_Y = "frame.posy";
+  private static final Logger          s_log                = LogManager.getLogger(AppProperties.class);
+  private static final String          CSZ_PROP_FILE        = "imaging.properties";
+  public static final String           CSZ_PROP_LASTDIR     = "last.dir";
+  public static final String           CSZ_PROP_LASTFIL     = "last.fil";
+  public static final String           CSZ_PROP_DIMFRAME_X  = "frame.dimx";
+  public static final String           CSZ_PROP_DIMFRAME_Y  = "frame.dimy";
+  public static final String           CSZ_PROP_POSFRAME_X  = "frame.posx";
+  public static final String           CSZ_PROP_POSFRAME_Y  = "frame.posy";
+  private static final String          CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
 
   private static AppProperties         s_inst;
+  private ETipoCambioNome              tipoCambioNome;
 
   @Getter @Setter private ISwingLogger swingLogger;
   @Getter @Setter private Properties   properties;
@@ -100,6 +102,27 @@ public class AppProperties {
     if (properties != null)
       if (p_lastFile != null)
         properties.setProperty(AppProperties.CSZ_PROP_LASTFIL, p_lastFile);
+  }
+
+  public ETipoCambioNome getTipoCambioNome() {
+    if (tipoCambioNome == null) {
+      if (properties.containsKey(CSZ_TIPO_CAMBIO_NOME)) {
+        String sz = getPropVal(CSZ_TIPO_CAMBIO_NOME);
+        try {
+          tipoCambioNome = ETipoCambioNome.valueOf(sz);
+        } catch (Exception e) {
+          s_log.error("Il valore {}={} non e' interpreabile", CSZ_TIPO_CAMBIO_NOME, sz);
+        }
+      } else
+        tipoCambioNome = ETipoCambioNome.piu1Secondo;
+      properties.setProperty(CSZ_TIPO_CAMBIO_NOME, tipoCambioNome.toString());
+    }
+    return tipoCambioNome;
+  }
+
+  public void setTipoCambioNome(ETipoCambioNome p_t) {
+    tipoCambioNome = p_t;
+    properties.setProperty(CSZ_TIPO_CAMBIO_NOME, tipoCambioNome.toString());
   }
 
   public String getPropVal(String p_key) {

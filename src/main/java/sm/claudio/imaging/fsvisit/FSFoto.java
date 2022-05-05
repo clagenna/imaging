@@ -43,6 +43,7 @@ import org.apache.commons.imaging.formats.tiff.write.TiffOutputSet;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
+import sm.claudio.imaging.sys.ETipoCambioNome;
 import sm.claudio.imaging.sys.ParseData;
 
 public abstract class FSFoto extends FSFile {
@@ -52,6 +53,7 @@ public abstract class FSFoto extends FSFile {
   //  private static final ZoneOffset              s_offset            = ZoneOffset.of("+01:00");
   private static ZoneOffset                    s_zoneOffSet;
   private static ZoneId                        s_zone;
+  
 
   static {
     s_arrFmt = new ArrayList<DateTimeFormatter>();
@@ -243,6 +245,8 @@ public abstract class FSFoto extends FSFile {
     int n = sz.lastIndexOf(".");
     if (n > 0)
       sz = sz.substring(0, n);
+    if ( sz.endsWith("_01"))
+      System.out.println("Trovato");
     ParseData prs = new ParseData();
     setDtNomeFile(prs.parseData(sz));
     if (dtNomeFile == null)
@@ -313,7 +317,11 @@ public abstract class FSFoto extends FSFile {
   }
 
   private void studiaIlDaFarsi() {
-    getLogger().debug("Analizzo {}", getPath().toString());
+    String szPath = getPath().toString();
+    getLogger().debug("Analizzo {}", szPath);
+    if ( szPath.contains("_03."))
+      System.out.println("trovato");
+    
     m_daFare = new HashSet<>();
     ImgModel mod = AppProperties.getInst().getModel();
     EExifPriority prio = mod.getPriority();
@@ -378,6 +386,10 @@ public abstract class FSFoto extends FSFile {
    * </table>
    */
   private void studiaConExifFileDir() {
+    String szPath = getPath().toString();
+    if ( szPath.contains("_03."))
+      System.out.println("trovato");
+
     LocalDateTime dt = null;
     if (dtAcquisizione != null)
       dt = dtAcquisizione;
@@ -413,7 +425,6 @@ public abstract class FSFoto extends FSFile {
       m_daFare.add(CosaFare.setUltModif);
     }
     if ( !dtNomeFile.isEqual(dt)) {
-      m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setDtCreazione);
       m_daFare.add(CosaFare.setUltModif);
@@ -517,18 +528,37 @@ public abstract class FSFoto extends FSFile {
   public void cambiaNomeFile() {
     LocalDateTime dt = getPiuVecchiaData();
     String fnam = creaNomeFile(dt);
+    String fnamExt = fnam;
     Path pthFrom = getPath();
     Path pthTo = Paths.get(getParent().toString(), fnam);
     int k = 1; // loop
-
+    AppProperties app = AppProperties.getInst();
+    ETipoCambioNome tipoambio = app.getTipoCambioNome();
     while (Files.exists(pthTo, LinkOption.NOFOLLOW_LINKS)) {
+      getLogger().debug("chg fil.nam: {} esiste!", fnam);
+      String szExt = String.format("_%02d.", k);
       //      String sz = fnam.replace(".", String.format("_%d.", k++));
       //      pthTo = Paths.get(getParent().toString(), sz);
       if (k++ > 1000)
         throw new UnsupportedOperationException("Troppi loop sul nome file:" + pthFrom.toString());
-      dt = dt.plusMinutes(1);
-      fnam = creaNomeFile(dt);
-      pthTo = Paths.get(getParent().toString(), fnam);
+      switch ( tipoambio) {
+        case conSuffisso:
+          fnamExt = fnam.replace(".", szExt);
+          break;
+        case piu1Minuto:
+          dt = dt.plusMinutes(1);
+          fnamExt = creaNomeFile(dt);
+          break;
+        case piu1Secondo:
+          dt = dt.plusSeconds(1);
+          fnamExt = creaNomeFile(dt);
+          break;
+      }
+      pthTo = Paths.get(getParent().toString(), fnamExt);
+      if ( pthTo.compareTo(pthFrom) == 0) {
+        getLogger().info("No rename per {}", pthFrom.toString());
+        return;
+      }
     }
     setDtAssunta(dt);
     try {
@@ -700,6 +730,10 @@ public abstract class FSFoto extends FSFile {
 
   public void lavoraIlFile() {
     // System.out.println(toString());
+    String szPath = getPath().toString();
+    if ( szPath.contains("_03."))
+      System.out.println("trovato");
+
     Set<CosaFare> df = getCosaFare();
     // il cambio nome ha priorita perche imposta anche     dtAssunta
     if (df.contains(CosaFare.setNomeFile)) {

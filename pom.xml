@@ -1,13 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>sm.ciscoop</groupId>
+	<groupId>sm.clagenna</groupId>
 	<artifactId>imaging</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mainClassName>sm.claudio.imaging.javafx.MainAppFxml</mainClassName>
+		<mainClassName>sm.claudio.imaging.javafx.GpxParseMainApp</mainClassName>
 		<lo4j2.vers>2.14.0</lo4j2.vers>
 		<java.version>16</java.version>
 		<javafx.version>16</javafx.version>
@@ -38,17 +36,12 @@
 			<artifactId>javafx-web</artifactId>
 			<version>16</version>
 		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-media</artifactId>
 			<version>18-ea+7</version>
 		</dependency>
-
-
-
 		<!-- per la swzione 8 prove con JFoenix -->
 		<dependency>
 			<groupId>com.jfoenix</groupId>
@@ -61,7 +54,6 @@
 			<artifactId>controlsfx</artifactId>
 			<version>11.1.0</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -87,9 +79,11 @@
 			<artifactId>commons-cli</artifactId>
 			<version>1.4</version>
 		</dependency>
-		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
+		<!--
+ <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
 			<version>${lo4j2.vers}</version> </dependency> <dependency> <groupId>org.slf4j</groupId> 
-			<artifactId>slf4j-log4j12</artifactId> <version>${lo4j2.vers}</version> </dependency> -->
+			<artifactId>slf4j-log4j12</artifactId> <version>${lo4j2.vers}</version> </dependency> 
+		-->
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -112,8 +106,7 @@
 		<profile>
 			<id>local</id>
 			<build>
-				<plugins>
-				</plugins>
+				<plugins/>
 			</build>
 		</profile>
 		<profile>
@@ -131,8 +124,12 @@
 							<appendAssemblyId>false</appendAssemblyId>
 							<archive>
 								<manifest>
-									<!-- <mainClass>sm.claudio.imaging.main.MainApp</mainClass> -->
-									<!-- mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass -->
+									<!--
+ <mainClass>sm.claudio.imaging.main.MainApp</mainClass> 
+									-->
+									<!--
+ mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass 
+									-->
 									<mainClass>${mainClassName}</mainClass>
 								</manifest>
 							</archive>
@@ -161,12 +158,14 @@
 				<configuration>
 					<archive>
 						<!-- This is required by bnd-maven-plugin -->
-						<!--   manifestFile>
+						<!--
+   manifestFile>
 							${project.build.outputDirectory}/META-INF/MANIFEST.MF
 						</manifestFile>
 						<manifestEntries>
 							<Automatic-Module-Name>commons.cli</Automatic-Module-Name>
-						</manifestEntries -->
+						</manifestEntries 
+						-->
 					</archive>
 				</configuration>
 			</plugin>
@@ -182,18 +181,21 @@
 					</execution>
 				</executions>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<!-- compilerArgs> - - enable - preview</compilerArgs -->
+					<!--
+ compilerArgs> - - enable - preview</compilerArgs 
+					-->
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 					<fork>true</fork>
 					<compilerArgs>
-						<!--  arg  enable-preview< / arg -->
+						<!--
+  arg  enable-preview< / arg 
+						-->
 						<arg>-Xlint:all</arg>
 						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
 						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
@@ -215,7 +217,6 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.openjfx</groupId>
 				<artifactId>javafx-maven-plugin</artifactId>
@@ -224,7 +225,6 @@
 					<mainClass>${mainClassName}</mainClass>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -236,4 +236,3 @@
 		</plugins>
 	</build>
 </project>
-
