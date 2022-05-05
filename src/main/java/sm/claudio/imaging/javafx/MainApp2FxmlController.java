@@ -2,6 +2,7 @@ package sm.claudio.imaging.javafx;
 
 import java.io.File;
 import java.io.InputStream;
+import java.lang.module.ModuleDescriptor.Version;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -52,6 +53,7 @@ import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ISwingLogger;
+import sm.claudio.imaging.sys.Versione;
 
 public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
@@ -125,7 +127,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       Image ico = new Image(stre);
       mainstage.getIcons().add(ico);
     }
-    mainstage.setTitle("Convertitore nomi foto");
+    // mainstage.setTitle("Convertitore nomi foto");
+    mainstage.setTitle(Versione.getVersionEx());
     leggiProperties(mainstage);
 
   }
