@@ -7,15 +7,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import lombok.Getter;
 import sm.claudio.imaging.sys.AppProperties;
 
 public class MainAppFxml extends Application {
 
-  private static final String        CSZ_MAIN_APP2_CSS = "/sm/claudio/imaging/javafx/styleMainApp2.css";
-  @Getter private static MainAppFxml inst;
-  @Getter private Stage              primaryStage;
+  private static final String CSZ_MAIN_APP2_CSS = "/sm/claudio/imaging/javafx/styleMainApp2.css";
+  private static MainAppFxml  inst;
+  private Stage               primaryStage;
 
   @Override
   public void start(Stage pStage) throws Exception {
@@ -26,7 +24,7 @@ public class MainAppFxml extends Application {
     if (url == null)
       url = getClass().getClassLoader().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
     Parent radice = FXMLLoader.load(url);
-    Scene scene = new Scene(radice, 900, 440);
+    Scene  scene  = new Scene(radice, 900, 440);
     url = getClass().getResource(CSZ_MAIN_APP2_CSS);
     if (url == null)
       url = getClass().getClassLoader().getResource(CSZ_MAIN_APP2_CSS);
@@ -53,5 +51,21 @@ public class MainAppFxml extends Application {
 
   public static void main(String[] args) {
     Application.launch(args);
+  }
+
+  public static MainAppFxml getInst() {
+    return inst;
+  }
+
+  public static void setInst(MainAppFxml inst) {
+    MainAppFxml.inst = inst;
+  }
+
+  public Stage getPrimaryStage() {
+    return primaryStage;
+  }
+
+  public void setPrimaryStage(Stage primaryStage) {
+    this.primaryStage = primaryStage;
   }
 }

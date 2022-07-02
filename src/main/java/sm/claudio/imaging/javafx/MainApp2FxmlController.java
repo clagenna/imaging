@@ -2,7 +2,6 @@ package sm.claudio.imaging.javafx;
 
 import java.io.File;
 import java.io.InputStream;
-import java.lang.module.ModuleDescriptor.Version;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;

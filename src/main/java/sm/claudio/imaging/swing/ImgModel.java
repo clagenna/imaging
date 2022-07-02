@@ -11,8 +11,6 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import lombok.Getter;
-import lombok.Setter;
 import sm.claudio.imaging.fsvisit.FSDir;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.fsvisit.FSFileFactory;
@@ -23,12 +21,12 @@ import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ISwingLogger;
 
 public class ImgModel {
-  private static final Logger           s_log = LogManager.getLogger(ImgModel.class);
-  @Setter @Getter private String        directory;
-  @Setter @Getter private EExifPriority priority;
-  @Setter @Getter private boolean       recursive;
+  private static final Logger s_log = LogManager.getLogger(ImgModel.class);
+  private String              directory;
+  private EExifPriority       priority;
+  private boolean             recursive;
 
-  private List<FSFile>                  m_liFoto;
+  private List<FSFile>        m_liFoto;
 
   public ImgModel() {
     AppProperties prop = AppProperties.getInst();
@@ -54,7 +52,7 @@ public class ImgModel {
     ISwingLogger swingl = AppProperties.getInst().getSwingLogger();
     System.out.println("ImgModel.esegui:" + toString());
     String szSrc = getDirectory();
-    Path fi = Paths.get(szSrc);
+    Path   fi    = Paths.get(szSrc);
     ImgModel.s_log.info("Inizio scansione di {}", szSrc);
     try {
       FSFileFactory.getInst();
@@ -77,9 +75,9 @@ public class ImgModel {
 
   public void rinominaFiles() {
     List<FSFile> li = getListFiles();
-    if (li == null || li.size() == 0) 
+    if (li == null || li.size() == 0)
       return;
-    
+
     for (FSFile fsf : li) {
       if (fsf instanceof FSFoto)
         ((FSFoto) fsf).lavoraIlFile();
@@ -91,9 +89,9 @@ public class ImgModel {
   }
 
   public boolean isValoriOk() {
-    String szLog = "";
+    String       szLog = "";
     ISwingLogger swLog = AppProperties.getInst().getSwingLogger();
-    boolean bRet = priority != null;
+    boolean      bRet  = priority != null;
     if ( !bRet)
       szLog = "Manca la priority";
     bRet &= directory != null;
@@ -109,6 +107,30 @@ public class ImgModel {
     swLog.sparaMess(szLog);
     // System.out.println("ImgModel.isValoriOk():" + bRet);
     return bRet;
+  }
+
+  public String getDirectory() {
+    return directory;
+  }
+
+  public void setDirectory(String directory) {
+    this.directory = directory;
+  }
+
+  public EExifPriority getPriority() {
+    return priority;
+  }
+
+  public void setPriority(EExifPriority priority) {
+    this.priority = priority;
+  }
+
+  public boolean isRecursive() {
+    return recursive;
+  }
+
+  public void setRecursive(boolean recursive) {
+    this.recursive = recursive;
   }
 
   @Override

@@ -5,11 +5,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mainClassName>sm.claudio.imaging.javafx.GpxParseMainApp</mainClassName>
+		<mainClassName>sm.claudio.imaging.javafx.MainAppFxml</mainClassName>
 		<lo4j2.vers>2.14.0</lo4j2.vers>
 		<java.version>16</java.version>
 		<javafx.version>16</javafx.version>
-		<lombok.version>1.18.16</lombok.version>
+		<lombok.version>1.18.22</lombok.version>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
@@ -55,12 +55,12 @@
 			<version>11.1.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
+		<!-- dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 			<scope>provided</scope>
-		</dependency>
+		</ dependency -->
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-imaging -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -147,6 +147,66 @@
 				</plugins>
 			</build>
 		</profile>
+		
+				<profile>
+			<id>delombok</id>
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.8.1</version>
+						<configuration>
+							<!--  compilerArgs> - - enable - preview</compilerArgs	-->
+							<source>${maven.compiler.source}</source>
+							<target>${maven.compiler.target}</target>
+							<fork>true</fork>
+							<compilerArgs>
+								<!--  arg enable-preview< / arg -->
+								<arg>-Xlint:all</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+							</compilerArgs>
+							<annotationProcessorPaths>
+								<path>
+									<groupId>org.projectlombok</groupId>
+									<artifactId>lombok</artifactId>
+									<version>${lombok.version}</version>
+								</path>
+							</annotationProcessorPaths>
+						</configuration>
+					</plugin>
+
+
+					<plugin>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok-maven-plugin</artifactId>
+						<version>1.18.20.0</version>
+						<executions>
+							<execution>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>delombok</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+
+		
+		
 	</profiles>
 	<build>
 		<finalName>imaging</finalName>

@@ -20,7 +20,6 @@ module imaging {
   requires javafx.web;
   requires javafx.media;
   requires org.controlsfx.controls;
-  requires lombok;
   requires java.sql;
   requires com.jfoenix;
   requires java.desktop;
