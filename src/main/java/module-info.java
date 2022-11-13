@@ -26,6 +26,7 @@ module imaging {
   requires commons.cli;
   requires org.apache.logging.log4j;
   requires org.apache.commons.imaging;
+  requires lombok;
 
   opens prova.javafx to javafx.graphics, javafx.fxml, org.controlsfx.controls;
   

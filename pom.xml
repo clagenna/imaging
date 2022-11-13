@@ -9,7 +9,8 @@
 		<lo4j2.vers>2.14.0</lo4j2.vers>
 		<java.version>16</java.version>
 		<javafx.version>16</javafx.version>
-		<lombok.version>1.18.22</lombok.version>
+		<lombok.version>1.18.24</lombok.version>
+		<jpro.version>2022.1.6</jpro.version>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
@@ -55,12 +56,12 @@
 			<version>11.1.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<!-- dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 			<scope>provided</scope>
-		</ dependency -->
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-imaging -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -106,7 +107,7 @@
 		<profile>
 			<id>local</id>
 			<build>
-				<plugins/>
+				<plugins />
 			</build>
 		</profile>
 		<profile>
@@ -124,12 +125,8 @@
 							<appendAssemblyId>false</appendAssemblyId>
 							<archive>
 								<manifest>
-									<!--
- <mainClass>sm.claudio.imaging.main.MainApp</mainClass> 
-									-->
-									<!--
- mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass 
-									-->
+									<!--  <mainClass>sm.claudio.imaging.main.MainApp</mainClass> -->
+									<!--   mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass -->
 									<mainClass>${mainClassName}</mainClass>
 								</manifest>
 							</archive>
@@ -147,8 +144,8 @@
 				</plugins>
 			</build>
 		</profile>
-		
-				<profile>
+
+		<profile>
 			<id>delombok</id>
 			<build>
 				<plugins>
@@ -204,10 +201,46 @@
 			</build>
 		</profile>
 
+		<profile>
+			<id>jpro</id>
 
-		
-		
+			<pluginRepositories>
+				<pluginRepository>
+					<id>jpro - sandec repository</id>
+					<url>https://sandec.jfrog.io/artifactory/repo</url>
+				</pluginRepository>
+			</pluginRepositories>
+
+			<repositories>
+				<repository>
+					<id>jpro - sandec repository</id>
+					<url>https://sandec.jfrog.io/artifactory/repo</url>
+				</repository>
+			</repositories>
+
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.sandec.jpro</groupId>
+						<artifactId>jpro-maven-plugin</artifactId>
+						<version>${jpro.version}</version>
+						<configuration>
+							<visible>false</visible>
+							<JVMArgs>
+								<!-- <JVMArg>your-args</JVMArg> -->
+							</JVMArgs>
+							<mainClassName>${mainClassName}</mainClassName>
+							<openingPath>/</openingPath>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
 	</profiles>
+
+
 	<build>
 		<finalName>imaging</finalName>
 		<plugins>
@@ -218,8 +251,7 @@
 				<configuration>
 					<archive>
 						<!-- This is required by bnd-maven-plugin -->
-						<!--
-   manifestFile>
+						<!-- manifestFile>
 							${project.build.outputDirectory}/META-INF/MANIFEST.MF
 						</manifestFile>
 						<manifestEntries>
@@ -246,16 +278,12 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<!--
- compilerArgs> - - enable - preview</compilerArgs 
-					-->
+					<!--   compilerArgs> - - enable - preview</compilerArgs -->
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 					<fork>true</fork>
 					<compilerArgs>
-						<!--
-  arg  enable-preview< / arg 
-						-->
+						<!--   arg  enable-preview< / arg -->
 						<arg>-Xlint:all</arg>
 						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
 						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
