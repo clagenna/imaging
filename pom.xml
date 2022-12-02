@@ -8,7 +8,7 @@
 		<mainClassName>sm.claudio.imaging.javafx.MainAppFxml</mainClassName>
 		<lo4j2.vers>2.14.0</lo4j2.vers>
 		<java.version>16</java.version>
-		<javafx.version>16</javafx.version>
+		<javafx.version>17.0.1</javafx.version>
 		<lombok.version>1.18.24</lombok.version>
 		<jpro.version>2022.1.6</jpro.version>
 	</properties>
@@ -238,11 +238,41 @@
 			</build>
 		</profile>
 
+		<profile>
+			<id>copy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+							<execution>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<copy file="target/imaging.jar" toDir="F:/Google Drive/Util/java" overwrite="true" />
+										<copy file="imaging.cmd"        toDir="F:/Google Drive/Util/java" overwrite="true" />
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+
+			</build>
+		</profile>
+
 	</profiles>
 
 
 	<build>
 		<finalName>imaging</finalName>
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
