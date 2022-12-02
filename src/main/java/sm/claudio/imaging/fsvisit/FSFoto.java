@@ -14,6 +14,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -53,7 +54,6 @@ public abstract class FSFoto extends FSFile {
   //  private static final ZoneOffset              s_offset            = ZoneOffset.of("+01:00");
   private static ZoneOffset                    s_zoneOffSet;
   private static ZoneId                        s_zone;
-  
 
   static {
     s_arrFmt = new ArrayList<DateTimeFormatter>();
@@ -73,7 +73,9 @@ public abstract class FSFoto extends FSFile {
   private LocalDateTime dtUltModif;
   private LocalDateTime dtAcquisizione;
   private LocalDateTime dtParentDir;
-  private LocalDateTime dtAssunta = null;
+  private LocalDateTime dtAssunta        = null;
+
+  private boolean       m_bExifParseable = true;
 
   enum CosaFare {
     setNomeFile, //
@@ -105,6 +107,8 @@ public abstract class FSFoto extends FSFile {
   }
 
   private void leggiExifDtOriginal() {
+    if ( !isExifParseable())
+      return;
     ImageMetadata metadata = null;
     File fi = getPath().toFile();
     try {
@@ -245,7 +249,7 @@ public abstract class FSFoto extends FSFile {
     int n = sz.lastIndexOf(".");
     if (n > 0)
       sz = sz.substring(0, n);
-    if ( sz.endsWith("_01"))
+    if (sz.endsWith("_01"))
       System.out.println("Trovato");
     ParseData prs = new ParseData();
     setDtNomeFile(prs.parseData(sz));
@@ -319,9 +323,9 @@ public abstract class FSFoto extends FSFile {
   private void studiaIlDaFarsi() {
     String szPath = getPath().toString();
     getLogger().debug("Analizzo {}", szPath);
-    if ( szPath.contains("_03."))
+    if (szPath.contains("_03."))
       System.out.println("trovato");
-    
+
     m_daFare = new HashSet<>();
     ImgModel mod = AppProperties.getInst().getModel();
     EExifPriority prio = mod.getPriority();
@@ -387,7 +391,7 @@ public abstract class FSFoto extends FSFile {
    */
   private void studiaConExifFileDir() {
     String szPath = getPath().toString();
-    if ( szPath.contains("_03."))
+    if (szPath.contains("heic"))
       System.out.println("trovato");
 
     LocalDateTime dt = null;
@@ -401,6 +405,16 @@ public abstract class FSFoto extends FSFile {
       dt = dtCreazione;
     if (dt == null && dtUltModif != null)
       dt = dtUltModif;
+    /*
+     * se la dtAcquisizione *non* c'è allora prediligo la dtCreazione purchè non
+     * sia troppo distante dalla calcolata dt (<15 gg)
+     */
+    if (dtAcquisizione == null && dtCreazione != null) {
+      long mins = Duration.between(dtCreazione, dt).toMinutes();
+      long MAXMIN = 24 * 60 * 15;
+      if (Math.abs(mins) < MAXMIN)
+        dt = dtCreazione;
+    }
 
     if (dtAcquisizione == null) {
       dtAcquisizione = dt;
@@ -413,6 +427,7 @@ public abstract class FSFoto extends FSFile {
       m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setUltModif);
     }
+
     if (dtCreazione == null)
       m_daFare.add(CosaFare.setDtCreazione);
     if (dtUltModif == null)
@@ -429,7 +444,6 @@ public abstract class FSFoto extends FSFile {
       m_daFare.add(CosaFare.setDtCreazione);
       m_daFare.add(CosaFare.setUltModif);
     }
-
     if ( !dtCreazione.isEqual(dt)) {
       m_daFare.add(CosaFare.setDtCreazione);
       m_daFare.add(CosaFare.setUltModif);
@@ -541,7 +555,7 @@ public abstract class FSFoto extends FSFile {
       //      pthTo = Paths.get(getParent().toString(), sz);
       if (k++ > 1000)
         throw new UnsupportedOperationException("Troppi loop sul nome file:" + pthFrom.toString());
-      switch ( tipoambio) {
+      switch (tipoambio) {
         case conSuffisso:
           fnamExt = fnam.replace(".", szExt);
           break;
@@ -555,7 +569,7 @@ public abstract class FSFoto extends FSFile {
           break;
       }
       pthTo = Paths.get(getParent().toString(), fnamExt);
-      if ( pthTo.compareTo(pthFrom) == 0) {
+      if (pthTo.compareTo(pthFrom) == 0) {
         getLogger().info("No rename per {}", pthFrom.toString());
         return;
       }
@@ -731,7 +745,7 @@ public abstract class FSFoto extends FSFile {
   public void lavoraIlFile() {
     // System.out.println(toString());
     String szPath = getPath().toString();
-    if ( szPath.contains("_03."))
+    if (szPath.contains("_03."))
       System.out.println("trovato");
 
     Set<CosaFare> df = getCosaFare();
@@ -793,4 +807,11 @@ public abstract class FSFoto extends FSFile {
     return retDt;
   }
 
+  public boolean isExifParseable() {
+    return m_bExifParseable;
+  }
+
+  public void setExifParseable(boolean bv) {
+    m_bExifParseable = bv;
+  }
 }

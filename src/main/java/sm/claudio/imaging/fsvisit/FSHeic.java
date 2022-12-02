@@ -6,17 +6,18 @@ import java.nio.file.Path;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class FSNef extends FSFoto {
+public class FSHeic extends FSFoto {
 
-  private static final String CSZ_EXTENTION = "nef";
-  private static Logger s_log = LogManager.getLogger(FSNef.class);
+  private static final String CSZ_EXTENTION = "heic";
+  private static Logger       s_log         = LogManager.getLogger(FSHeic.class);
 
-  public FSNef() {
-    //
+  public FSHeic() {
+    setExifParseable(false);
   }
 
-  public FSNef(Path p_fi) throws FileNotFoundException {
+  public FSHeic(Path p_fi) throws FileNotFoundException {
     super(p_fi);
+    setExifParseable(false);
   }
 
   @Override
