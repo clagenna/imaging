@@ -1,7 +1,7 @@
 
 .button {
-	-fx-text-fill: olive;
-	-fx-background-color: #cdf;
+	-fx-background-color: darkgray;
+	-fx-text-fill: black;
 	-fx-background-radius: 10 10 0 10;
 	-fx-padding: 5 10 5 10;
 /*	-fx-border-color: #f4f4; */

@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import org.controlsfx.control.ToggleSwitch?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="900.0" stylesheets="@styleMainApp2.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sm.claudio.imaging.javafx.MainApp2FxmlController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="900.0" stylesheets="@styleMainApp2.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sm.claudio.imaging.javafx.MainApp2FxmlController">
 	<children>
 		<Label fx:id="lblLogs" layoutX="6.0" layoutY="380.0" prefHeight="18.0" prefWidth="743.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0" />
 		<TextField fx:id="txDir" layoutX="76.0" layoutY="10.0" onAction="#onEnter" prefHeight="26.0" prefWidth="337.0" promptText="Digita oppure cerca il direttorio di partenza delle foto" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="288.0" />

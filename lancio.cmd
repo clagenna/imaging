@@ -58,6 +58,20 @@ echo [91m%*[0m
 goto :eof
 
 :vai
-java --enable-preview -jar "%JAREXE%"
+
+:vai
+@echo on
+set MODPATH=C:\Program Files\javafx-sdk-17.0.1\lib
+set MODS=javafx.controls
+set MODS=%MODS%,javafx.base
+set MODS=%MODS%,javafx.fxml
+set MODS=%MODS%,javafx.graphics
+rem set MODS=%MODS%,javafx.media
+
+java --module-path "%MODPATH%" --add-modules="%MODS%" -jar "%JAREXE%"
+
+
+rem  java --enable-preview -jar "%JAREXE%"
+
 
 :fine

@@ -12,6 +12,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.controlsfx.control.ToggleSwitch;
+
+import com.jfoenix.controls.JFXButton;
+
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -23,6 +29,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -40,12 +48,8 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.stage.WindowEvent;
-
-import org.controlsfx.control.ToggleSwitch;
-
-import com.jfoenix.controls.JFXButton;
-
 import prova.javafx.ImageViewResizer;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.main.EExifPriority;
@@ -56,43 +60,64 @@ import sm.claudio.imaging.sys.Versione;
 
 public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
-  private static final String                      IMAGE_EDITING_ICO = "image-editing.png";
-  private static final String                      EXIF_FILE_DIR     = "Exif File Dir";
-  private static final String                      FILE_DIR_EXIF     = "File Dir Exif";
-  private static final String                      DIR_FILE_EXIF     = "Dir File Exif";
-  public static final SimpleDateFormat             s_fmt             = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+  private static final Logger                s_log             = LogManager.getLogger(MainApp2FxmlController.class);
+
+  private static final String                IMAGE_EDITING_ICO = "image-editing.png";
+  private static final String                EXIF_FILE_DIR     = "Exif File Dir";
+  private static final String                FILE_DIR_EXIF     = "File Dir Exif";
+  private static final String                DIR_FILE_EXIF     = "Dir File Exif";
+  public static final SimpleDateFormat       s_fmt             = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
   /**
    * Nel fxml ci deve essere la specifica:<br/>
    * <code>fx:controller="sm.clagenna...MainApp2FxmlController"</code>
    */
-  public static final String                       CSZ_FXMLNAME      = "MainApp2.fxml";
+  public static final String                 CSZ_FXMLNAME      = "MainApp2.fxml";
 
-  @FXML private JFXButton                          btCerca;
-  @FXML private JFXButton                          btAnalizza;
-  @FXML private JFXButton                          btEsegui;
-  @FXML private TextField                          txDir;
-  @FXML private ToggleSwitch                       ckRecurse;
-  @FXML private ChoiceBox<String>                  panRadioB;
-  @FXML private Label                              lblLogs;
+  @FXML
+  private JFXButton                          btCerca;
+  @FXML
+  private JFXButton                          btAnalizza;
+  @FXML
+  private JFXButton                          btEsegui;
+  @FXML
+  private TextField                          txDir;
+  @FXML
+  private ToggleSwitch                       ckRecurse;
+  @FXML
+  private ChoiceBox<String>                  panRadioB;
+  @FXML
+  private Label                              lblLogs;
 
-  @FXML private TableView<FSFile>                  table;
-  @FXML private TableColumn<FSFile, String>        attuale;
-  @FXML private TableColumn<FSFile, String>        percorso;
-  @FXML private TableColumn<FSFile, String>        nuovonome;
-  @FXML private TableColumn<FSFile, String>        dtassunta;
-  @FXML private TableColumn<FSFile, LocalDateTime> dtnomefile;
-  @FXML private TableColumn<FSFile, LocalDateTime> dtcreazione;
-  @FXML private TableColumn<FSFile, LocalDateTime> dtultmodif;
-  @FXML private TableColumn<FSFile, LocalDateTime> dtacquisizione;
-  @FXML private TableColumn<FSFile, LocalDateTime> dtparentdir;
+  @FXML
+  private TableView<FSFile>                  table;
+  @FXML
+  private TableColumn<FSFile, String>        attuale;
+  @FXML
+  private TableColumn<FSFile, String>        percorso;
+  @FXML
+  private TableColumn<FSFile, String>        nuovonome;
+  @FXML
+  private TableColumn<FSFile, String>        dtassunta;
+  @FXML
+  private TableColumn<FSFile, LocalDateTime> dtnomefile;
+  @FXML
+  private TableColumn<FSFile, LocalDateTime> dtcreazione;
+  @FXML
+  private TableColumn<FSFile, LocalDateTime> dtultmodif;
+  @FXML
+  private TableColumn<FSFile, LocalDateTime> dtacquisizione;
+  @FXML
+  private TableColumn<FSFile, LocalDateTime> dtparentdir;
 
-  private ImgModel                                 m_model;
+  private ImgModel                           m_model;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
     panRadioB.getItems().addAll(EXIF_FILE_DIR, FILE_DIR_EXIF, DIR_FILE_EXIF);
     panRadioB.getSelectionModel().select(0);
+
+    txDir.focusedProperty().addListener((obs, oldv, newv) -> txDirLostFocus(obs, oldv, newv));
 
     AppProperties prop = new AppProperties();
     prop.openProperties();
@@ -130,6 +155,14 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     mainstage.setTitle(Versione.getVersionEx());
     leggiProperties(mainstage);
 
+  }
+
+  private Object txDirLostFocus(ObservableValue<? extends Boolean> p_obs, Boolean p_oldv, Boolean p_newv) {
+    if ( !p_newv) {
+      // System.out.println("MainApp2FxmlController.txDirLostFocus():" + txDir.getText());
+      settaDir(txDir.getText());
+    }
+    return null;
   }
 
   private void initializeTable() {
@@ -280,8 +313,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
     double wx = stage.getWidth();
     double wy = stage.getHeight();
-    System.out.printf("dim=%.2f,%.2f\n", wx, wy);
-
+    sz = String.format("dim=%.2f,%.2f\n", wx, wy);
+    s_log.debug(sz);
   }
 
   private void settaDir(String p_pth) {
@@ -290,12 +323,36 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
   private void settaDir(String p_pth, boolean bSetTx) {
     AppProperties props = AppProperties.getInst();
-    System.out.println("file:" + p_pth);
+    // System.out.println("file:" + p_pth);
     props.setLastDir(p_pth);
     if (bSetTx)
       txDir.setText(p_pth);
+    if ( !Files.exists(Paths.get(p_pth))) {
+      String sz = String.format("Il path %s non esiste...", p_pth);
+      msgBox(sz);
+      sparaMess(sz);
+    }
     m_model.setDirectory(p_pth);
     checkFattibilita();
+  }
+
+  private void msgBox(String p_format) {
+    msgBox(p_format, AlertType.INFORMATION);
+  }
+
+  private void msgBox(String p_txt, AlertType tipo) {
+    Alert alt = new Alert(tipo);
+    Scene sce = MainAppFxml.getInst().getPrimaryStage().getScene();
+    Window wnd = null;
+    if (sce != null)
+      wnd = sce.getWindow();
+    if (wnd != null) {
+      alt.initOwner(wnd);
+      alt.setTitle("Informazione");
+      alt.setContentText(p_txt);
+      alt.show();
+    } else
+      s_log.error("Windows==null; msg={}", p_txt);
   }
 
   private void checkFattibilita() {
