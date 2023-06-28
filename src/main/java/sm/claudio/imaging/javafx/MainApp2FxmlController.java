@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -327,10 +328,18 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     props.setLastDir(p_pth);
     if (bSetTx)
       txDir.setText(p_pth);
-    if ( !Files.exists(Paths.get(p_pth))) {
+    Path pth = Paths.get(p_pth);
+    if ( !Files.exists(pth)) {
       String sz = String.format("Il path %s non esiste...", p_pth);
       msgBox(sz);
       sparaMess(sz);
+      return;
+    }
+    if ( !Files.isDirectory(pth, LinkOption.NOFOLLOW_LINKS)) {
+      String sz = String.format("Il path %s non e' un direttorio!", p_pth);
+      msgBox(sz);
+      sparaMess(sz);
+      return;
     }
     m_model.setDirectory(p_pth);
     checkFattibilita();

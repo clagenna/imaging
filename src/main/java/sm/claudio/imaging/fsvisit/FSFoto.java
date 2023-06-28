@@ -323,7 +323,7 @@ public abstract class FSFoto extends FSFile {
   private void studiaIlDaFarsi() {
     String szPath = getPath().toString();
     getLogger().debug("Analizzo {}", szPath);
-    if (szPath.contains("_03."))
+    if (szPath.contains("f20230621_150426_01."))
       System.out.println("trovato");
 
     m_daFare = new HashSet<>();
@@ -540,11 +540,17 @@ public abstract class FSFoto extends FSFile {
   }
 
   public void cambiaNomeFile() {
+    //    String szPath = getPath().toString().toLowerCase();
+    //    if (szPath.contains("f20230621_150426_01."))
+    //      System.out.println("trovato");
+
     LocalDateTime dt = getPiuVecchiaData();
     String fnam = creaNomeFile(dt);
     String fnamExt = fnam;
     Path pthFrom = getPath();
     Path pthTo = Paths.get(getParent().toString(), fnam);
+    if (pthFrom.compareTo(pthTo) == 0)
+      return;
     int k = 1; // loop
     AppProperties app = AppProperties.getInst();
     ETipoCambioNome tipoambio = app.getTipoCambioNome();
