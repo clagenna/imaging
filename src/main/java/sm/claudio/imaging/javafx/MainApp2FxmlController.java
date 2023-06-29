@@ -1,6 +1,7 @@
 package sm.claudio.imaging.javafx;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
@@ -26,9 +27,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Cursor;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -51,7 +54,6 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
-import prova.javafx.ImageViewResizer;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
@@ -81,6 +83,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   private JFXButton                          btAnalizza;
   @FXML
   private JFXButton                          btEsegui;
+  @FXML
+  private JFXButton                          btDupl;
   @FXML
   private TextField                          txDir;
   @FXML
@@ -539,4 +543,24 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     Platform.exit();
   }
 
+  @FXML
+  void btCercaDuplicati(ActionEvent event) throws IOException {
+
+    Stage stage = new Stage();
+    Stage primaryStage = MainAppFxml.getInst().getPrimaryStage();
+    stage.setWidth(800);
+    stage.setHeight(600);
+
+    URL url = getClass().getResource(TreeViewScene.CSZ_FXMLNAME);
+    if (url == null)
+      url = getClass().getClassLoader().getResource(TreeViewScene.CSZ_FXMLNAME);
+    Parent radice = FXMLLoader.load(url);
+    Scene scene = new Scene(radice, 600, 440);
+    stage.setScene(scene);
+    stage.setTitle("Cerca file duplicati");
+    stage.initModality(Modality.NONE);
+    stage.initOwner(primaryStage);
+
+    stage.show();
+  }
 }

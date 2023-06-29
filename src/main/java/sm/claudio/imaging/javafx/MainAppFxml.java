@@ -36,7 +36,7 @@ public class MainAppFxml extends Application {
 
   @Override
   public void stop() throws Exception {
-    System.out.println("MainAppFxml.stop()");
+    // System.out.println("MainAppFxml.stop()");
     AppProperties prop = AppProperties.getInst();
 
     prop.setPropVal(AppProperties.CSZ_PROP_DIMFRAME_X, String.format("%.0f", primaryStage.getWidth()));

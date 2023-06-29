@@ -5,6 +5,8 @@ import java.nio.file.Paths;
 
 import org.junit.Test;
 
+import sm.claudio.imaging.sys.Foto;
+
 public class ProvaFoto {
 
   public ProvaFoto() {

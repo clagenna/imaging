@@ -13,6 +13,7 @@ import java.util.stream.Stream;
 
 import org.junit.Test;
 
+import sm.claudio.imaging.sys.Foto;
 import sm.claudio.imaging.sys.TimerMeter;
 
 public class ProvaWalk {

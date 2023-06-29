@@ -13,6 +13,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import sm.claudio.imaging.javafx.ImageViewResizer;
 
 public class ImagePopup2 extends Application {
 

@@ -1,4 +1,4 @@
-package prova.javafx;
+package sm.claudio.imaging.javafx;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
