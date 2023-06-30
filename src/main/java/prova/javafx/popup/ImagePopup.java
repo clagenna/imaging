@@ -1,4 +1,4 @@
-package prova.javafx;
+package prova.javafx.popup;
 
 
 import java.io.File;
