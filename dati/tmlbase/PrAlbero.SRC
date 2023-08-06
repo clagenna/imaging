@@ -1,0 +1,14 @@
+makefile='"F:\java\release\javafx\JavaFX.mak"'
+begin {
+    Appl='imaging'
+    ClassNam='PrAlbero'
+    Author='Claudio'
+    Package='prova.javafx'
+    SubPkg='tree'
+    FrmCaption='Prova in JavaFX del tree view'
+    PackageResource='/prova/tree'
+    
+    minWidth=600
+    minEight=400
+    ConCSS='/sm/claudio/imaging/javafx/styleMainApp2.css'
+      }

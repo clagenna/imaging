@@ -10,15 +10,15 @@ import sm.claudio.imaging.sys.Foto;
 public class ProvaFoto {
 
   public ProvaFoto() {
-    
+
   }
-  
+
   @Test
   public void provalo() {
-    Path pth = Paths.get("F:","My Foto","1963","Eugenia Origini","f19821103_114323.jpg");
+    Path pth = Paths.get("F:", "My Foto", "1963", "Eugenia Origini", "f19821103_114323.jpg");
     String sz = Foto.getId(pth);
     Foto fo = Foto.parse(pth);
-    System.out.println(sz);
+    System.out.println(sz + " " + fo.toString());
   }
 
 }

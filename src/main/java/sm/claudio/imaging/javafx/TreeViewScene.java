@@ -20,6 +20,7 @@ import sm.claudio.imaging.sys.ScanDuplFiles;
 
 public class TreeViewScene implements Initializable {
 
+  @SuppressWarnings("unused")
   private static final Logger s_log        = LogManager.getLogger(TreeViewScene.class);
   /**
    * Nel fxml ci deve essere la specifica:<br/>

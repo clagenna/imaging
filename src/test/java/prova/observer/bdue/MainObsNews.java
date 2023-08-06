@@ -32,7 +32,6 @@ public class MainObsNews {
     app.doTheJob();
   }
 
-  @SuppressWarnings("deprecation")
   private void doTheJob() {
     ObsAgenziaNews anews = new ObsAgenziaNews();
     RaiUno uno = new RaiUno();

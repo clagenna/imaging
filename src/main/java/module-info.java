@@ -29,9 +29,8 @@ module imaging {
   requires lombok;
 
   // opens prova.javafx to javafx.graphics, javafx.fxml, org.controlsfx.controls;
-  
   opens sm.claudio.imaging.javafx to javafx.graphics, javafx.fxml, javafx.media, org.controlsfx.controls;
   opens sm.claudio.imaging.fsvisit to javafx.base, javafx.graphics, javafx.fxml, org.controlsfx.controls;
-  opens prova.javafx.tree to javafx.base, javafx.graphics, javafx.fxml, org.controlsfx.controls;
+  opens prova.javafx.tree       to javafx.base, javafx.graphics, javafx.fxml, org.controlsfx.controls;
   
 }
