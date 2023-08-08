@@ -1,8 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sm.clagenna</groupId>
 	<artifactId>imaging</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!--
+	easy way to set up JavFX on eclipse:
+	https://pragmaticways.com/how-to-add-javafx-to-eclipse-the-easy-way/ 
+	-->
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mainClassName>sm.claudio.imaging.javafx.MainAppFxml</mainClassName>
@@ -12,8 +19,15 @@
 		<lombok.version>1.18.24</lombok.version>
 		<jpro.version>2022.1.6</jpro.version>
 		<gdrive.dir>F:/Google Drive/Util/java</gdrive.dir>
+		<metadata.version>2.18.0</metadata.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.drewnoakes</groupId>
+			<artifactId>metadata-extractor</artifactId>
+			<version>${metadata.version}</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
 		<dependency>
 			<groupId>org.openjfx</groupId>
@@ -63,7 +77,8 @@
 			<version>${lombok.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-imaging -->
+		<!--
+		https://mvnrepository.com/artifact/org.apache.commons/commons-imaging -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-imaging</artifactId>
@@ -82,9 +97,12 @@
 			<version>1.4</version>
 		</dependency>
 		<!--
- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
-			<version>${lo4j2.vers}</version> </dependency> <dependency> <groupId>org.slf4j</groupId> 
-			<artifactId>slf4j-log4j12</artifactId> <version>${lo4j2.vers}</version> </dependency> 
+ <dependency> <groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId> 
+			<version>${lo4j2.vers}</version>
+		</dependency> <dependency> <groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId> <version>${lo4j2.vers}</version>
+		</dependency> 
 		-->
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j -->
 		<dependency>
@@ -126,8 +144,10 @@
 							<appendAssemblyId>false</appendAssemblyId>
 							<archive>
 								<manifest>
-									<!--  <mainClass>sm.claudio.imaging.main.MainApp</mainClass> -->
-									<!--   mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass -->
+									<!--
+									<mainClass>sm.claudio.imaging.main.MainApp</mainClass> -->
+									<!--
+									mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass -->
 									<mainClass>${mainClassName}</mainClass>
 								</manifest>
 							</archive>
@@ -142,9 +162,8 @@
 							</execution>
 						</executions>
 					</plugin>
-					
-					
-					
+
+
 					<plugin>
 						<artifactId>maven-antrun-plugin</artifactId>
 						<version>3.0.0</version>
@@ -156,18 +175,19 @@
 								</goals>
 								<configuration>
 									<target>
-										<copy file="target/imaging.jar" toDir="${gdrive.dir}" overwrite="true" />
-										<copy file="imaging.cmd"        toDir="${gdrive.dir}" overwrite="true" />
+										<copy file="target/imaging.jar"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
+										<copy file="imaging.cmd"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
 									</target>
 								</configuration>
 							</execution>
 						</executions>
 					</plugin>
 
-					
-					
-					
-					
+
 				</plugins>
 			</build>
 		</profile>
@@ -182,23 +202,34 @@
 						<artifactId>maven-compiler-plugin</artifactId>
 						<version>3.8.1</version>
 						<configuration>
-							<!--  compilerArgs> - - enable - preview</compilerArgs	-->
+							<!--  compilerArgs> - - enable -
+							preview</compilerArgs	-->
 							<source>${maven.compiler.source}</source>
 							<target>${maven.compiler.target}</target>
 							<fork>true</fork>
 							<compilerArgs>
 								<!--  arg enable-preview< / arg -->
 								<arg>-Xlint:all</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-								<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
 							</compilerArgs>
 							<annotationProcessorPaths>
 								<path>
@@ -280,8 +311,12 @@
 								</goals>
 								<configuration>
 									<target>
-										<copy file="target/imaging.jar" toDir="${gdrive.dir}" overwrite="true" />
-										<copy file="imaging.cmd"        toDir="${gdrive.dir}" overwrite="true" />
+										<copy file="target/imaging.jar"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
+										<copy file="imaging.cmd"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
 									</target>
 								</configuration>
 							</execution>
@@ -309,10 +344,10 @@
 					<archive>
 						<!-- This is required by bnd-maven-plugin -->
 						<!-- manifestFile>
-							${project.build.outputDirectory}/META-INF/MANIFEST.MF
+						${project.build.outputDirectory}/META-INF/MANIFEST.MF
 						</manifestFile>
 						<manifestEntries>
-							<Automatic-Module-Name>commons.cli</Automatic-Module-Name>
+						<Automatic-Module-Name>commons.cli</Automatic-Module-Name>
 						</manifestEntries 
 						-->
 					</archive>
@@ -342,16 +377,26 @@
 					<compilerArgs>
 						<!--   arg  enable-preview< / arg -->
 						<arg>-Xlint:all</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-						<arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
 					</compilerArgs>
 					<annotationProcessorPaths>
 						<path>

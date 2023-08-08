@@ -27,6 +27,7 @@ module imaging {
   requires org.apache.logging.log4j;
   requires org.apache.commons.imaging;
   requires lombok;
+  requires metadata.extractor;
 
   // opens prova.javafx to javafx.graphics, javafx.fxml, org.controlsfx.controls;
   opens sm.claudio.imaging.javafx to javafx.graphics, javafx.fxml, javafx.media, org.controlsfx.controls;

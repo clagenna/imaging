@@ -27,15 +27,25 @@ public class FSFile implements IFSVisitable {
   public static final String COL07_DTULTMODIF     = "ultModif";
   public static final String COL08_DTACQUISIZIONE = "acquisizione";
   public static final String COL09_DTPARENTDIR    = "parentDirDt";
+  public static final String COL10_LATITUDE       = "latitude";
+  public static final String COL11_LONGITUDE      = "longitude";
 
-  private Logger   m_log;
-  private Path     m_file;
+  private Logger             m_log;
+  private Path               m_file;
   // private File   m_fiBackup;
-  private Path     m_parent;
-  private ImgModel m_model;
+  private double             latitude;
+  private double             longitude;
+
+  private Path               m_parent;
+  private ImgModel           m_model;
 
   public FSFile() {
-    //
+    init();
+  }
+
+  private void init() {
+    latitude = 0;
+    longitude = 0;
   }
 
   /**
@@ -46,6 +56,7 @@ public class FSFile implements IFSVisitable {
    * @throws FileNotFoundException
    */
   public FSFile(Path p_fi) throws FileNotFoundException {
+    init();
     setPath(p_fi);
   }
 
@@ -122,7 +133,6 @@ public class FSFile implements IFSVisitable {
     return m_file.equals(pthAltro);
   }
 
-
   public String getAttuale() {
     String szRet = getPath().getFileName().toString();
     return szRet;
@@ -152,12 +162,12 @@ public class FSFile implements IFSVisitable {
   }
 
   public LocalDateTime getNomeFileDt() {
-//    String szRet = "";
-//    if ( ! (this instanceof FSFoto))
-//      return szRet;
-//    FSFoto fot = (FSFoto) this;
-//    szRet = formatDt(fot.getDtNomeFile());
-//    return szRet;
+    //    String szRet = "";
+    //    if ( ! (this instanceof FSFoto))
+    //      return szRet;
+    //    FSFoto fot = (FSFoto) this;
+    //    szRet = formatDt(fot.getDtNomeFile());
+    //    return szRet;
     LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
@@ -167,12 +177,12 @@ public class FSFile implements IFSVisitable {
   }
 
   public LocalDateTime getCreazione() {
-//    String szRet = "";
-//    if ( ! (this instanceof FSFoto))
-//      return szRet;
-//    FSFoto fot = (FSFoto) this;
-//    szRet = formatDt(fot.getDtCreazione());
-//    return szRet;
+    //    String szRet = "";
+    //    if ( ! (this instanceof FSFoto))
+    //      return szRet;
+    //    FSFoto fot = (FSFoto) this;
+    //    szRet = formatDt(fot.getDtCreazione());
+    //    return szRet;
     LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
@@ -183,12 +193,12 @@ public class FSFile implements IFSVisitable {
   }
 
   public LocalDateTime getUltModif() {
-//    String szRet = "";
-//    if ( ! (this instanceof FSFoto))
-//      return szRet;
-//    FSFoto fot = (FSFoto) this;
-//    szRet = formatDt(fot.getDtUltModif());
-//    return szRet;
+    //    String szRet = "";
+    //    if ( ! (this instanceof FSFoto))
+    //      return szRet;
+    //    FSFoto fot = (FSFoto) this;
+    //    szRet = formatDt(fot.getDtUltModif());
+    //    return szRet;
     LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
@@ -199,12 +209,12 @@ public class FSFile implements IFSVisitable {
   }
 
   public LocalDateTime getAcquisizione() {
-//    String szRet = "";
-//    if ( ! (this instanceof FSFoto))
-//      return szRet;
-//    FSFoto fot = (FSFoto) this;
-//    szRet = formatDt(fot.getDtAcquisizione());
-//    return szRet;
+    //    String szRet = "";
+    //    if ( ! (this instanceof FSFoto))
+    //      return szRet;
+    //    FSFoto fot = (FSFoto) this;
+    //    szRet = formatDt(fot.getDtAcquisizione());
+    //    return szRet;
     LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
@@ -215,12 +225,12 @@ public class FSFile implements IFSVisitable {
   }
 
   public LocalDateTime getParentDirDt() {
-//    String szRet = "";
-//    if ( ! (this instanceof FSFoto))
-//      return szRet;
-//    FSFoto fot = (FSFoto) this;
-//    szRet = formatDt(fot.getDtParentDir());
-//    return szRet;
+    //    String szRet = "";
+    //    if ( ! (this instanceof FSFoto))
+    //      return szRet;
+    //    FSFoto fot = (FSFoto) this;
+    //    szRet = formatDt(fot.getDtParentDir());
+    //    return szRet;
     LocalDateTime szRet = null;
     if ( ! (this instanceof FSFoto))
       return szRet;
@@ -252,4 +262,23 @@ public class FSFile implements IFSVisitable {
     return szRet;
   }
 
+  public boolean isGPS() {
+    return (longitude * latitude) != 0;
+  }
+
+  public double getLatitude() {
+    return latitude;
+  }
+
+  public void setLatitude(double vv) {
+    latitude = vv;
+  }
+
+  public double getLongitude() {
+    return longitude;
+  }
+
+  public void setLongitude(double vv) {
+    longitude = vv;
+  }
 }

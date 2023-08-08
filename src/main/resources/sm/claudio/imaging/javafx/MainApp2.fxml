@@ -35,22 +35,54 @@
 				</RadialGradient>
 			</ripplerFill>
 		</JFXButton>
-		<ToggleSwitch id="ckRecurse" fx:id="ckRecurse" layoutX="14.0" layoutY="48.0" onDragDone="#ckRecurseClick" prefHeight="26.0" prefWidth="127.0" text="Recurse Dirs." AnchorPane.leftAnchor="14.0">
+        <TextField fx:id="txGpx" layoutX="76.0" layoutY="54.0" onAction="#onEnter" prefHeight="26.0" prefWidth="536.0" promptText="Dammi un file di tracce GPX per settare le latitudini e longitudini delle foto" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="288.0" />
+        <JFXButton fx:id="btCercaGPX" buttonType="RAISED" layoutX="620.0" layoutY="54.0" onAction="#btCercaGPXClick" text="Cerca..." AnchorPane.rightAnchor="219.0">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <ToggleSwitch id="ckUseGPX" fx:id="ckUseGPX" layoutX="697.0" layoutY="54.0" onDragDone="#ckUseGPXClick" prefHeight="26.0" prefWidth="127.0" text="Usa il file GPX" AnchorPane.rightAnchor="76.0">
+         <tooltip>
+            <Tooltip text="Esegue la ricerca anche nei sub direttori" />
+         </tooltip>
+      </ToggleSwitch>
+		<ToggleSwitch id="ckRecurse" fx:id="ckRecurse" layoutX="14.0" layoutY="102.0" onDragDone="#ckRecurseClick" prefHeight="26.0" prefWidth="127.0" text="Recurse Dirs." AnchorPane.leftAnchor="14.0">
          <tooltip>
             <Tooltip text="Esegue la ricerca anche nei sub direttori" />
          </tooltip></ToggleSwitch>
-		<JFXButton id="btAnalizza" fx:id="btAnalizza" layoutX="213.0" layoutY="46.0" onAction="#btAnalizzaClick" text="Analizza" />
-		<JFXButton id="btEsegui" fx:id="btEsegui" layoutX="296.0" layoutY="46.0" onAction="#btEseguiClick" text="Esegui">
+		<JFXButton id="btAnalizza" fx:id="btAnalizza" layoutX="213.0" layoutY="100.0" onAction="#btAnalizzaClick" text="Analizza">
+         <tooltip>
+            <Tooltip text="Scandisce il direttorio alla ricerca di foto da analizzare" />
+         </tooltip></JFXButton>
+		<JFXButton id="btEsegui" fx:id="btEsegui" layoutX="296.0" layoutY="100.0" onAction="#btEseguiClick" text="Esegui">
          <tooltip>
             <Tooltip text="Rinomina tutti i files con il nuovo nome" />
          </tooltip></JFXButton>
-      <JFXButton id="btDupl" fx:id="btDupl" accessibleText="Cerca i files duplicati" layoutX="616.0" layoutY="46.0" onAction="#btCercaDuplicati" text="Duplicati" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="46.0">
+		<ChoiceBox id="panRadioB" fx:id="panRadioB" layoutX="498.0" layoutY="10.0" prefHeight="26.0" prefWidth="191.0" AnchorPane.rightAnchor="12.0" />
+      <JFXButton id="btInterpolaGPX" fx:id="btInterpolaGPX" layoutX="366.0" layoutY="100.0" onAction="#btInterpolaGPXClick" text="Interp. GPX">
+         <tooltip>
+            <Tooltip text="Imposta le coordinate GPS della foto Interpolando le coordinate (con il time stamp) dal file delle tracce GPX" />
+         </tooltip>
+      </JFXButton>
+      <JFXButton id="btDupl" fx:id="btDupl" accessibleText="Cerca i files duplicati" layoutX="616.0" layoutY="100.0" onAction="#btCercaDuplicati" text="Duplicati" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="100.0">
          <tooltip>
             <Tooltip text="Cerca i files duplicati" />
          </tooltip>
       </JFXButton>
-		<ChoiceBox id="panRadioB" fx:id="panRadioB" layoutX="498.0" layoutY="10.0" prefHeight="26.0" prefWidth="191.0" AnchorPane.rightAnchor="12.0" />
-		<TableView fx:id="table" layoutX="5.0" layoutY="88.0" prefHeight="293.0" prefWidth="736.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="88.0">
+		<TableView fx:id="table" layoutX="5.0" layoutY="135.0" prefHeight="302.0" prefWidth="887.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="135.0">
 			<columns>
 				<TableColumn fx:id="attuale" prefWidth="75.0" text="Attuale" />
 				<TableColumn fx:id="percorso" prefWidth="120.0" text="Percorso" />
@@ -61,6 +93,8 @@
 				<TableColumn fx:id="dtultmodif" prefWidth="75.0" text="dt Ult Modif" />
 				<TableColumn fx:id="dtacquisizione" prefWidth="75.0" text="dt Acquisizione" />
 				<TableColumn fx:id="dtparentdir" prefWidth="75.0" text="dt Parent Dir" />
+            <TableColumn fx:id="latitude" prefWidth="75.0" text="Latitude" />
+            <TableColumn fx:id="longitude" prefWidth="75.0" text="Longitude" />
 			</columns>
 		</TableView>
 	</children>

@@ -35,6 +35,7 @@ import org.apache.commons.imaging.common.ImageMetadata;
 import org.apache.commons.imaging.formats.jpeg.JpegImageMetadata;
 import org.apache.commons.imaging.formats.jpeg.exif.ExifRewriter;
 import org.apache.commons.imaging.formats.tiff.TiffImageMetadata;
+import org.apache.commons.imaging.formats.tiff.TiffImageMetadata.GPSInfo;
 import org.apache.commons.imaging.formats.tiff.constants.ExifTagConstants;
 import org.apache.commons.imaging.formats.tiff.fieldtypes.FieldType;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputDirectory;
@@ -87,7 +88,7 @@ public abstract class FSFoto extends FSFile {
   private Set<CosaFare> m_daFare;
 
   public FSFoto() {
-    //
+    super();
   }
 
   public FSFoto(Path p_fi) throws FileNotFoundException {
@@ -139,6 +140,17 @@ public abstract class FSFoto extends FSFile {
       }
       if (szDt != null)
         dtAcquisizione = LocalDateTime.from(ParseData.s_fmtDtExif.parse(szDt));
+    } catch (ImageReadException | DateTimeParseException e) {
+      // setFileInError(true);
+      getLogger().error("Errore leggi Dt ORIGINAL \"{}\", err={}", szDt, e.getMessage());
+    }
+
+    try {
+      GPSInfo gpsi = exif.getGPS();
+      if (gpsi != null) {
+        setLongitude(gpsi.getLongitudeAsDegreesEast());
+        setLatitude(gpsi.getLatitudeAsDegreesNorth());
+      }
     } catch (ImageReadException | DateTimeParseException e) {
       // setFileInError(true);
       getLogger().error("Errore leggi Dt ORIGINAL \"{}\", err={}", szDt, e.getMessage());

@@ -18,27 +18,28 @@ import sm.claudio.imaging.swing.ImgModel;
 
 public class AppProperties {
 
-  private static final Logger          s_log                = LogManager.getLogger(AppProperties.class);
-  private static final String          CSZ_PROP_FILE        = "imaging.properties";
-  public static final String           CSZ_PROP_LASTDIR     = "last.dir";
-  public static final String           CSZ_PROP_LASTFIL     = "last.fil";
-  public static final String           CSZ_PROP_DIMFRAME_X  = "frame.dimx";
-  public static final String           CSZ_PROP_DIMFRAME_Y  = "frame.dimy";
-  public static final String           CSZ_PROP_POSFRAME_X  = "frame.posx";
-  public static final String           CSZ_PROP_POSFRAME_Y  = "frame.posy";
-  private static final String          CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
+  private static final Logger  s_log                = LogManager.getLogger(AppProperties.class);
+  private static final String  CSZ_PROP_FILE        = "imaging.properties";
+  public static final String   CSZ_PROP_LASTDIR     = "last.dir";
+  public static final String   CSZ_PROP_LASTFIL     = "last.fil";
+  public static final String   CSZ_PROP_DIMFRAME_X  = "frame.dimx";
+  public static final String   CSZ_PROP_DIMFRAME_Y  = "frame.dimy";
+  public static final String   CSZ_PROP_POSFRAME_X  = "frame.posx";
+  public static final String   CSZ_PROP_POSFRAME_Y  = "frame.posy";
+  private static final String  CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
+  private static final String  CSZ_PROP_LASTGPX     = "last.gpx";
 
-  private static AppProperties         s_inst;
-  private ETipoCambioNome              tipoCambioNome;
+  private static AppProperties s_inst;
+  private ETipoCambioNome      tipoCambioNome;
 
-  @Getter
-  @Setter private ISwingLogger         swingLogger;
-  @Getter
-  @Setter private Properties           properties;
-  @Getter
-  @Setter private File                 propertyFile;
-  @Getter
-  @Setter private ImgModel             model;
+  @Getter @Setter
+  private ISwingLogger         swingLogger;
+  @Getter @Setter
+  private Properties           properties;
+  @Getter @Setter
+  private File                 propertyFile;
+  @Getter @Setter
+  private ImgModel             model;
 
   public AppProperties() {
     if (AppProperties.s_inst != null && !Beans.isDesignTime())
@@ -108,6 +109,19 @@ public class AppProperties {
         getProperties().setProperty(AppProperties.CSZ_PROP_LASTFIL, p_lastFile);
   }
 
+  public String getLastGPX() {
+    String szRet = null;
+    if (getProperties() != null)
+      szRet = getProperties().getProperty(AppProperties.CSZ_PROP_LASTGPX);
+    return szRet;
+  }
+
+  public void setLastGPX(String p_lastGPX) {
+    if (getProperties() != null)
+      if (p_lastGPX != null)
+        getProperties().setProperty(AppProperties.CSZ_PROP_LASTGPX, p_lastGPX);
+  }
+
   public ETipoCambioNome getTipoCambioNome() {
     if (tipoCambioNome == null) {
       if (getProperties().containsKey(CSZ_TIPO_CAMBIO_NOME)) {
@@ -148,7 +162,7 @@ public class AppProperties {
 
   public int getPropIntVal(String p_key) {
     Integer ii = Integer.valueOf(0);
-    String  sz = getPropVal(p_key);
+    String sz = getPropVal(p_key);
     try {
       if (sz != null)
         ii = Integer.decode(sz);
@@ -160,7 +174,7 @@ public class AppProperties {
 
   public boolean getBooleanPropVal(String p_key) {
     boolean bRet = false;
-    String  sz   = getPropVal(p_key);
+    String sz = getPropVal(p_key);
     if (sz == null)
       return bRet;
     sz = sz.toLowerCase();

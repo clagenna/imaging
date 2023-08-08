@@ -49,6 +49,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -84,9 +86,17 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   @FXML
   private JFXButton                          btEsegui;
   @FXML
+  private JFXButton                          btInterpolaGPX;
+  @FXML
   private JFXButton                          btDupl;
   @FXML
   private TextField                          txDir;
+  @FXML
+  private TextField                          txGpx;
+  @FXML
+  private JFXButton                          btCercaGPX;
+  @FXML
+  private ToggleSwitch                       ckUseGPX;
   @FXML
   private ToggleSwitch                       ckRecurse;
   @FXML
@@ -114,6 +124,10 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   private TableColumn<FSFile, LocalDateTime> dtacquisizione;
   @FXML
   private TableColumn<FSFile, LocalDateTime> dtparentdir;
+  @FXML
+  private TableColumn<FSFile, Double>        longitude;
+  @FXML
+  private TableColumn<FSFile, Double>        latitude;
 
   private ImgModel                           m_model;
 
@@ -130,11 +144,23 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
 
     m_model = new ImgModel();
     m_model.setPriority(EExifPriority.ExifFileDir);
+
+    ckUseGPX.setDisable(true);
+    ckUseGPX.selectedProperty().addListener(new ChangeListener<Boolean>() {
+
+      @Override
+      public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+        System.out.println("ckUseGPX.change event:" + newValue);
+        ckUseGPXClick((DragEvent) null);
+      }
+    });
+
     m_model.setRecursive(true);
     ckRecurse.setSelected(true);
 
     btAnalizza.setDisable(true);
     btEsegui.setDisable(true);
+    btInterpolaGPX.setDisable(true);
 
     ckRecurse.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
@@ -193,6 +219,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     dtultmodif.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL07_DTULTMODIF));
     dtacquisizione.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL08_DTACQUISIZIONE));
     dtparentdir.setCellValueFactory(new PropertyValueFactory<FSFile, LocalDateTime>(FSFile.COL09_DTPARENTDIR));
+    latitude.setCellValueFactory(new PropertyValueFactory<FSFile, Double>(FSFile.COL10_LATITUDE));
+    longitude.setCellValueFactory(new PropertyValueFactory<FSFile, Double>(FSFile.COL11_LONGITUDE));
 
     dtnomefile.setCellFactory(column -> {
       return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL05_DTNOMEFILE);
@@ -208,6 +236,13 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     });
     dtparentdir.setCellFactory(column -> {
       return new MioTableCellRenderDate<FSFile, LocalDateTime>(FSFile.COL09_DTPARENTDIR);
+    });
+
+    latitude.setCellFactory(column -> {
+      return new MioTableCellRenderCoord<FSFile, Double>(FSFile.COL10_LATITUDE);
+    });
+    longitude.setCellFactory(column -> {
+      return new MioTableCellRenderCoord<FSFile, Double>(FSFile.COL11_LONGITUDE);
     });
 
     //    dtnomefile.setCellFactory(column -> {
@@ -349,6 +384,65 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     checkFattibilita();
   }
 
+  private void settaGPX(String p_pth, boolean bSetTx) {
+    AppProperties props = AppProperties.getInst();
+
+    props.setLastGPX(p_pth);
+    if (bSetTx)
+      txGpx.setText(p_pth);
+    Path pth = Paths.get(p_pth);
+    if ( !Files.exists(pth)) {
+      String sz = String.format("Il path del GPX %s non esiste...", p_pth);
+      msgBox(sz);
+      sparaMess(sz);
+      return;
+    }
+    if ( !Files.isRegularFile(pth, LinkOption.NOFOLLOW_LINKS)) {
+      String sz = String.format("Il file %s non e' un GPX!", p_pth);
+      msgBox(sz);
+      sparaMess(sz);
+      return;
+    }
+    m_model.setFileGPX(p_pth);
+    checkFattibilita();
+  }
+
+  @FXML
+  void btCercaGPXClick(ActionEvent event) {
+    Stage stage = MainAppFxml.getInst().getPrimaryStage();
+    FileChooser fil = new FileChooser();
+    fil.setTitle("Un file GPX con tracce (TRK)");
+    fil.getExtensionFilters().add( //
+        new ExtensionFilter("GPX file", "*.gpx"));
+    // imposto la dir precedente (se c'è)
+    AppProperties props = AppProperties.getInst();
+    String sz = props.getLastDir();
+    if (sz != null) {
+      if (Files.exists(Paths.get(sz)))
+        fil.setInitialDirectory(new File(sz));
+    }
+
+    File fileScelto = fil.showOpenDialog(stage);
+    if (fileScelto != null) {
+      String pathDir = fileScelto.getAbsolutePath();
+      settaGPX(pathDir, true);
+    } else {
+      System.out.println("Non hai scelto nessun GPX!!");
+    }
+    //
+    //    double wx = stage.getWidth();
+    //    double wy = stage.getHeight();
+    //    sz = String.format("dim=%.2f,%.2f\n", wx, wy);
+    //    s_log.debug(sz);
+
+  }
+
+  @FXML
+  void ckUseGPXClick(DragEvent event) {
+    System.out.println("MainApp2FxmlController.ckUseGPXClick():" + ckRecurse.isSelected());
+
+  }
+
   private void msgBox(String p_format) {
     msgBox(p_format, AlertType.INFORMATION);
   }
@@ -371,6 +465,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   private void checkFattibilita() {
     btAnalizza.setDisable( !m_model.isValoriOk());
     btEsegui.setDisable( !m_model.isValoriOk());
+    ckUseGPX.setDisable( !m_model.isGPXFileOk());
+    btInterpolaGPX.setDisable( !m_model.isValoriOk() || !m_model.isGPXFileOk());
     if (m_model.getListFiles() != null)
       btAnalizzaClick(null);
   }
@@ -425,6 +521,19 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       stage.getScene().getRoot().setCursor(Cursor.DEFAULT);
     }
 
+  }
+
+  @FXML
+  void btInterpolaGPXClick(ActionEvent event) {
+    Stage stage = MainAppFxml.getInst().getPrimaryStage();
+    try {
+      Scene sce = stage.getScene();
+      sce.setCursor(Cursor.WAIT);
+      // stage.getScene().getRoot().setCursor(Cursor.WAIT);
+      m_model.interpolaGPX();
+    } finally {
+      stage.getScene().getRoot().setCursor(Cursor.DEFAULT);
+    }
   }
 
   @Override
