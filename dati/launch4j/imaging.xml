@@ -2,7 +2,7 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>F:\java\photon2\imaging\target\imaging-jar-with-dependencies.jar</jar>
+  <jar>F:\java\photon2\imaging\target\imaging.jar</jar>
   <outfile>F:\java\photon2\imaging\imaging_run.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
@@ -13,7 +13,7 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon></icon>
+  <icon>F:\java\photon2\imaging\src\main\resources\image-editing.ico</icon>
   <jre>
     <path></path>
     <bundledJre64Bit>false</bundledJre64Bit>
@@ -22,9 +22,10 @@
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
+    <opt>--module-path &quot;C:\Program Files\javafx-sdk-17.0.1\lib&quot; --add-modules=&quot;javafx.controls,javafx.base,javafx.fxml,javafx.graphics&quot;</opt>
   </jre>
   <splash>
-    <file>F:\java\photon2\imaging\splash.bmp</file>
+    <file>F:\java\photon2\imaging\src\main\resources\image-editing.bmp</file>
     <waitForWindow>true</waitForWindow>
     <timeout>30</timeout>
     <timeoutErr>true</timeoutErr>

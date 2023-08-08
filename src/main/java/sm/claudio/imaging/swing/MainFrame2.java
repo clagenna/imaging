@@ -70,7 +70,7 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
   /** long serialVersionUID */
   private static final long             serialVersionUID = 5862421005705834030L;
   private static final Logger           s_log            = LogManager.getLogger(MainFrame2.class);
-  private static final SimpleDateFormat s_fmt            = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");;
+  private static final SimpleDateFormat s_fmt            = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
   private Dimension                     m_winDim;
   private Point                         m_winPos;
@@ -109,15 +109,6 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
     });
 
     initPos(prop);
-
-    //    Container pane = getContentPane();
-    //    pane.setLayout(new GridBagLayout());
-    //    creaFileChooser(pane);
-    //    creaRadios(pane);
-    //    creaJTable(pane);
-    //    creaCheck(pane);
-    //    creaButtonExec(pane);
-    //    creaLogArea(pane);
 
     GridBagLayout gridBagLayout = new GridBagLayout();
     gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 1.0, 0.0 };
@@ -309,187 +300,6 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
     pack();
     setVisible(true);
   }
-
-  //  @SuppressWarnings("unused")
-  //  private void creaFileChooser(Container pane) {
-  //    AppProperties prop = AppProperties.getInst();
-  //
-  //    JPanel panChooseDir = new JPanel(new FlowLayout(FlowLayout.LEADING));
-  //    JLabel m_lbChoseDir = new JLabel("Directory");
-  //    panChooseDir.add(m_lbChoseDir);
-  //
-  //    m_txDir = new JTextField();
-  //    m_txDir.setSize(140, 25);
-  //    m_txDir.setMinimumSize(new Dimension(80, m_txDir.getPreferredSize().height));
-  //    m_txDir.setColumns(30);
-  //    m_txDir.setText(prop.getLastDir());
-  //    m_txDir.addActionListener(new ActionListener() {
-  //
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locTxDir_Click(e);
-  //      }
-  //    });
-  //    panChooseDir.add(m_txDir, BorderLayout.CENTER);
-  //
-  //    JButton m_btChooseDir = new JButton("Scegli...");
-  //    m_btChooseDir.addActionListener(new ActionListener() {
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locBtChooseDir(e);
-  //      }
-  //    });
-  //    panChooseDir.add(m_btChooseDir);
-  //
-  //    GridBagConstraints gblc = new GridBagConstraints();
-  //    gblc.fill = GridBagConstraints.HORIZONTAL;
-  //    gblc.gridx = 0;
-  //    gblc.gridy = 0;
-  //    gblc.gridwidth = 2;
-  //    pane.add(panChooseDir, gblc);
-  //  }
-
-  //  @SuppressWarnings("unused")
-  //  private void creaRadios(Container pane) {
-  //    JPanel panRadioB = new JPanel(new GridBagLayout());
-  //    ButtonGroup m_rdbPrioGroup = new ButtonGroup();
-  //    GridBagConstraints gbcPanGen2 = new GridBagConstraints();
-  //
-  //    gbcPanGen2.fill = GridBagConstraints.HORIZONTAL;
-  //    gbcPanGen2.gridy = 0;
-  //    gbcPanGen2.gridx = 1;
-  //
-  //    GridBagConstraints gbcRadio1 = new GridBagConstraints();
-  //
-  //    JRadioButton m_rdbPrioEFD = new JRadioButton("Exif File Dir");
-  //    m_rdbPrioEFD.setActionCommand(EExifPriority.ExifFileDir.toString());
-  //    m_rdbPrioEFD.setSelected(true);
-  //    m_model.setPriority(EExifPriority.ExifFileDir);
-  //    m_rdbPrioEFD.addActionListener(new ActionListener() {
-  //
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locRadioPrio_Click(e);
-  //      }
-  //    });
-  //    m_rdbPrioGroup.add(m_rdbPrioEFD);
-  //    gbcRadio1.fill = GridBagConstraints.HORIZONTAL;
-  //    gbcRadio1.gridx = 0;
-  //    gbcRadio1.gridy = 0;
-  //    panRadioB.add(m_rdbPrioEFD, gbcRadio1);
-  //
-  //    JRadioButton m_rdbPrioFDE = new JRadioButton("File Dir Exif");
-  //    m_rdbPrioFDE.setActionCommand(EExifPriority.FileDirExif.toString());
-  //    m_rdbPrioFDE.addActionListener(new ActionListener() {
-  //
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locRadioPrio_Click(e);
-  //      }
-  //    });
-  //
-  //    m_rdbPrioGroup.add(m_rdbPrioFDE);
-  //    GridBagConstraints gbcRadio2 = new GridBagConstraints();
-  //    gbcRadio2.fill = GridBagConstraints.HORIZONTAL;
-  //    gbcRadio2.gridx = 0;
-  //    gbcRadio2.gridy = 1;
-  //    panRadioB.add(m_rdbPrioFDE, gbcRadio2);
-  //
-  //    JRadioButton m_rdbPrioDFE = new JRadioButton("Dir File Exif");
-  //    m_rdbPrioDFE.setActionCommand(EExifPriority.DirFileExif.toString());
-  //    m_model.setPriority(EExifPriority.DirFileExif);
-  //    m_rdbPrioDFE.setSelected(true);
-  //    m_rdbPrioDFE.addActionListener(new ActionListener() {
-  //
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locRadioPrio_Click(e);
-  //      }
-  //    });
-  //
-  //    m_rdbPrioGroup.add(m_rdbPrioDFE);
-  //    GridBagConstraints gbcRadio3 = new GridBagConstraints();
-  //    gbcRadio3.fill = GridBagConstraints.HORIZONTAL;
-  //    gbcRadio3.gridx = 0;
-  //    gbcRadio3.gridy = 2;
-  //    panRadioB.add(m_rdbPrioDFE, gbcRadio3);
-  //
-  //    GridBagConstraints gblc = new GridBagConstraints();
-  //    gblc.fill = GridBagConstraints.HORIZONTAL;
-  //    gblc.gridx = 2;
-  //    gblc.gridy = 0;
-  //    gblc.gridheight = 2;
-  //    pane.add(panRadioB, gblc);
-  //
-  //  }
-
-  //  @SuppressWarnings("unused")
-  //  private void creaJTable(Container pane) {
-  //    table = new JTable();
-  //    intestaTabella();
-  //
-  //    GridBagConstraints gblc = new GridBagConstraints();
-  //    gblc.fill = GridBagConstraints.HORIZONTAL;
-  //    gblc.gridx = 0;
-  //    gblc.gridy = 2;
-  //    gblc.gridwidth = 3;
-  //    pane.add(table, gblc);
-  //  }
-
-  //  @SuppressWarnings("unused")
-  //  private void creaCheck(Container pane) {
-  //    JCheckBox chk = new JCheckBox("Recursive");
-  //    chk.setSelected(true);
-  //    m_model.setRecursive(true);
-  //    chk.addActionListener(new ActionListener() {
-  //
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locChkRecursive_Click(e);
-  //      }
-  //    });
-  //
-  //    GridBagConstraints gblc = new GridBagConstraints();
-  //    gblc.fill = GridBagConstraints.HORIZONTAL;
-  //    gblc.gridx = 0;
-  //    gblc.gridy = 3;
-  //    pane.add(chk, gblc);
-  //  }
-
-  //  @SuppressWarnings("unused")
-  //  private void creaButtonExec(Container pane) {
-  //    m_btExec = new JButton("Esegui");
-  //    m_btExec.addActionListener(new ActionListener() {
-  //
-  //      @Override
-  //      public void actionPerformed(ActionEvent e) {
-  //        locBtEsegui_Click(e);
-  //      }
-  //    });
-  //
-  //    m_btExec.setEnabled(false);
-  //
-  //    GridBagConstraints gblc = new GridBagConstraints();
-  //    gblc.fill = GridBagConstraints.HORIZONTAL;
-  //    gblc.gridx = 1;
-  //    gblc.gridy = 3;
-  //    pane.add(m_btExec, gblc);
-  //  }
-
-  //  @SuppressWarnings("unused")
-  //  private void creaLogArea(Container pane) {
-  //    m_lblLogs = new JLabel();
-  //    m_lblLogs.setHorizontalAlignment(SwingConstants.CENTER);
-  //    m_lblLogs.setForeground(Color.BLUE);
-  //
-  //    GridBagConstraints gblc = new GridBagConstraints();
-  //    gblc.fill = GridBagConstraints.HORIZONTAL;
-  //    gblc.gridx = 0;
-  //    gblc.gridy = 4;
-  //    gblc.gridwidth = 3;
-  //    pane.add(m_lblLogs, gblc);
-  //
-  //  }
 
   private void initPos(AppProperties prop) {
     int posX = prop.getPropIntVal(AppProperties.CSZ_PROP_POSFRAME_X);

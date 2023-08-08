@@ -9,6 +9,10 @@ import org.apache.logging.log4j.Logger;
 public class FSXml extends FSFile {
 
   private static Logger s_log = LogManager.getLogger(FSXml.class);
+  
+  public FSXml() {
+    // 
+  }
 
   public FSXml(Path p_fi) throws FileNotFoundException {
     super(p_fi);

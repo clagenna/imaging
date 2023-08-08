@@ -14,6 +14,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -34,16 +35,17 @@ import org.apache.commons.imaging.common.ImageMetadata;
 import org.apache.commons.imaging.formats.jpeg.JpegImageMetadata;
 import org.apache.commons.imaging.formats.jpeg.exif.ExifRewriter;
 import org.apache.commons.imaging.formats.tiff.TiffImageMetadata;
+import org.apache.commons.imaging.formats.tiff.TiffImageMetadata.GPSInfo;
 import org.apache.commons.imaging.formats.tiff.constants.ExifTagConstants;
 import org.apache.commons.imaging.formats.tiff.fieldtypes.FieldType;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputDirectory;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputField;
 import org.apache.commons.imaging.formats.tiff.write.TiffOutputSet;
 
-import lombok.Getter;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
+import sm.claudio.imaging.sys.ETipoCambioNome;
 import sm.claudio.imaging.sys.ParseData;
 
 public abstract class FSFoto extends FSFile {
@@ -66,25 +68,27 @@ public abstract class FSFoto extends FSFile {
   }
 
   /** da EXIF_TAG_DATE_TIME_ORIGINAL */
-  private boolean               m_bFileInError;
-  private LocalDateTime         dtNomeFile;
-  private LocalDateTime         dtCreazione;
-  private LocalDateTime         dtUltModif;
-  private LocalDateTime         dtAcquisizione;
-  @Getter private LocalDateTime dtParentDir;
-  private LocalDateTime         dtAssunta = null;
+  private boolean       m_bFileInError;
+  private LocalDateTime dtNomeFile;
+  private LocalDateTime dtCreazione;
+  private LocalDateTime dtUltModif;
+  private LocalDateTime dtAcquisizione;
+  private LocalDateTime dtParentDir;
+  private LocalDateTime dtAssunta        = null;
+
+  private boolean       m_bExifParseable = true;
 
   enum CosaFare {
     setNomeFile, //
     setDtCreazione, //
     setUltModif, //
     setDtAcquisizione
-  };
+  }
 
   private Set<CosaFare> m_daFare;
 
   public FSFoto() {
-    //
+    super();
   }
 
   public FSFoto(Path p_fi) throws FileNotFoundException {
@@ -100,9 +104,12 @@ public abstract class FSFoto extends FSFile {
     interpretaDateTimeDaNomefile();
     leggiExifDtOriginal();
     leggiDtParentDir();
+    //    System.out.println(this.toString());
   }
 
   private void leggiExifDtOriginal() {
+    if ( !isExifParseable())
+      return;
     ImageMetadata metadata = null;
     File fi = getPath().toFile();
     try {
@@ -134,8 +141,19 @@ public abstract class FSFoto extends FSFile {
       if (szDt != null)
         dtAcquisizione = LocalDateTime.from(ParseData.s_fmtDtExif.parse(szDt));
     } catch (ImageReadException | DateTimeParseException e) {
-      setFileInError(true);
-      getLogger().error("Errore leggi Dt ORIGINAL", e);
+      // setFileInError(true);
+      getLogger().error("Errore leggi Dt ORIGINAL \"{}\", err={}", szDt, e.getMessage());
+    }
+
+    try {
+      GPSInfo gpsi = exif.getGPS();
+      if (gpsi != null) {
+        setLongitude(gpsi.getLongitudeAsDegreesEast());
+        setLatitude(gpsi.getLatitudeAsDegreesNorth());
+      }
+    } catch (ImageReadException | DateTimeParseException e) {
+      // setFileInError(true);
+      getLogger().error("Errore leggi Dt ORIGINAL \"{}\", err={}", szDt, e.getMessage());
     }
 
   }
@@ -160,8 +178,8 @@ public abstract class FSFoto extends FSFile {
       // return;
     }
 
-    @SuppressWarnings("unchecked")
-    List<TiffImageMetadata.TiffMetadataItem> items = (List<TiffImageMetadata.TiffMetadataItem>) exif.getItems();
+    @SuppressWarnings("unchecked") List<TiffImageMetadata.TiffMetadataItem> items = (List<TiffImageMetadata.TiffMetadataItem>) exif
+        .getItems();
     /**
      * <pre>
      *
@@ -243,6 +261,8 @@ public abstract class FSFoto extends FSFile {
     int n = sz.lastIndexOf(".");
     if (n > 0)
       sz = sz.substring(0, n);
+    if (sz.endsWith("_01"))
+      System.out.println("Trovato");
     ParseData prs = new ParseData();
     setDtNomeFile(prs.parseData(sz));
     if (dtNomeFile == null)
@@ -304,14 +324,27 @@ public abstract class FSFoto extends FSFile {
     dtAssunta = p_dtAssunta;
   }
 
+  public LocalDateTime getDtParentDir() {
+    return dtParentDir;
+  }
+
+  public void setDtParentDir(LocalDateTime p_dt) {
+    dtParentDir = p_dt;
+  }
+
   private void studiaIlDaFarsi() {
-    getLogger().debug("Analizzo {}", getPath().toString());
+    String szPath = getPath().toString();
+    getLogger().debug("Analizzo {}", szPath);
+    if (szPath.contains("f20230621_150426_01."))
+      System.out.println("trovato");
+
     m_daFare = new HashSet<>();
     ImgModel mod = AppProperties.getInst().getModel();
     EExifPriority prio = mod.getPriority();
 
     switch (prio) {
       case ExifFileDir:
+        studiaConExifFileDir();
         break;
       case DirFileExif:
         sudiaConDirFiExif();
@@ -321,41 +354,115 @@ public abstract class FSFoto extends FSFile {
         break;
       default:
         break;
+    }
+  }
 
+  /**
+   * segue la priorità in tabella per l'assegnazione
+   * <table>
+   * <tr>
+   * <th></th>
+   * <th>ExFiDi</th>
+   * <th>DiFiEx</th>
+   * <th>FiDiEx</th>
+   * <tr>
+   * <tr>
+   * <td>attuale</td>
+   * <tr>
+   * <tr>
+   * <td>creazione</td>
+   * <td>4</td>
+   * <td>3</td>
+   * <td>4</td>
+   * <tr>
+   * <tr>
+   * <td>ultmodif</td>
+   * <td>5</td>
+   * <td>5</td>
+   * <td>5</td>
+   * <tr>
+   * <tr>
+   * <td>acquisiz</td>
+   * <td>1</td>
+   * <td>4</td>
+   * <td>3</td>
+   * <tr>
+   * <tr>
+   * <td>parent</td>
+   * <td>3</td>
+   * <td>1</td>
+   * <td>2</td>
+   * <tr>
+   * <tr>
+   * <td>nomefile</td>
+   * <td>2</td>
+   * <td>2</td>
+   * <td>1</td>
+   * <tr>
+   * </table>
+   */
+  private void studiaConExifFileDir() {
+    String szPath = getPath().toString();
+    if (szPath.contains("heic"))
+      System.out.println("trovato");
+
+    LocalDateTime dt = null;
+    if (dtAcquisizione != null)
+      dt = dtAcquisizione;
+    if (dt == null && dtNomeFile != null)
+      dt = dtNomeFile;
+    if (dt == null && dtParentDir != null)
+      dt = dtParentDir;
+    if (dt == null && dtCreazione != null)
+      dt = dtCreazione;
+    if (dt == null && dtUltModif != null)
+      dt = dtUltModif;
+    /*
+     * se la dtAcquisizione *non* c'è allora prediligo la dtCreazione purchè non
+     * sia troppo distante dalla calcolata dt (<15 gg)
+     */
+    if (dtAcquisizione == null && dtCreazione != null) {
+      long mins = Duration.between(dtCreazione, dt).toMinutes();
+      long MAXMIN = 24 * 60 * 15;
+      if (Math.abs(mins) < MAXMIN)
+        dt = dtCreazione;
     }
 
-    if (dtNomeFile == null) {
-      dtNomeFile = LocalDateTime.MAX;
+    if (dtAcquisizione == null) {
+      dtAcquisizione = dt;
       m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setDtCreazione);
       m_daFare.add(CosaFare.setUltModif);
     }
+    if (dtNomeFile == null) {
+      dtNomeFile = dt;
+      m_daFare.add(CosaFare.setNomeFile);
+      m_daFare.add(CosaFare.setUltModif);
+    }
+
     if (dtCreazione == null)
       m_daFare.add(CosaFare.setDtCreazione);
     if (dtUltModif == null)
       m_daFare.add(CosaFare.setUltModif);
-    if (dtAcquisizione == null)
+
+    if ( !dtAcquisizione.isEqual(dt)) {
       m_daFare.add(CosaFare.setDtAcquisizione);
-
-    if (dtAcquisizione != null) {
-      if (dtNomeFile.isAfter(dtAcquisizione))
-        m_daFare.add(CosaFare.setNomeFile);
-      if (dtAcquisizione.isAfter(dtNomeFile))
-        m_daFare.add(CosaFare.setDtAcquisizione);
+      m_daFare.add(CosaFare.setNomeFile);
+      m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
+    }
+    if ( !dtNomeFile.isEqual(dt)) {
+      m_daFare.add(CosaFare.setNomeFile);
+      m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
+    }
+    if ( !dtCreazione.isEqual(dt)) {
+      m_daFare.add(CosaFare.setDtCreazione);
+      m_daFare.add(CosaFare.setUltModif);
     }
 
-    if (dtCreazione != null) {
-      if (dtNomeFile.isAfter(dtCreazione))
-        m_daFare.add(CosaFare.setNomeFile);
-      if (dtCreazione.isAfter(dtNomeFile))
-        m_daFare.add(CosaFare.setDtCreazione);
-    }
-
-    if (dtUltModif != null) {
-      if (dtNomeFile.isAfter(dtUltModif))
-        m_daFare.add(CosaFare.setNomeFile);
-      if (dtUltModif.isAfter(dtNomeFile))
-        m_daFare.add(CosaFare.setUltModif);
+    if ( !dtUltModif.isEqual(dt)) {
+      m_daFare.add(CosaFare.setUltModif);
     }
 
     if ( !m_daFare.contains(CosaFare.setNomeFile)) {
@@ -363,7 +470,6 @@ public abstract class FSFoto extends FSFile {
       if ( !getPath().endsWith(szNam))
         m_daFare.add(CosaFare.setNomeFile);
     }
-    LocalDateTime dt = getPiuVecchiaData();
     setDtAssunta(dt);
   }
 
@@ -434,29 +540,57 @@ public abstract class FSFoto extends FSFile {
       if (dt.isAfter(dtAcquisizione))
         dt = dtAcquisizione;
     } else {
+      if (dtNomeFile != null)
+        if (dt.isAfter(dtNomeFile))
+          dt = dtNomeFile;
       // se non ha dtAcq allora prendo il parent Dt
-      if (dtParentDir != null && dtNomeFile.equals(LocalDateTime.MAX))
-        if (dtParentDir != null)
+      if (dtParentDir != null)
+        if (dt.isAfter(dtParentDir))
           dt = dtParentDir;
     }
     return dt;
   }
 
   public void cambiaNomeFile() {
+    //    String szPath = getPath().toString().toLowerCase();
+    //    if (szPath.contains("f20230621_150426_01."))
+    //      System.out.println("trovato");
+
     LocalDateTime dt = getPiuVecchiaData();
     String fnam = creaNomeFile(dt);
+    String fnamExt = fnam;
     Path pthFrom = getPath();
     Path pthTo = Paths.get(getParent().toString(), fnam);
+    if (pthFrom.compareTo(pthTo) == 0)
+      return;
     int k = 1; // loop
-
+    AppProperties app = AppProperties.getInst();
+    ETipoCambioNome tipoambio = app.getTipoCambioNome();
     while (Files.exists(pthTo, LinkOption.NOFOLLOW_LINKS)) {
+      getLogger().debug("chg fil.nam: {} esiste!", fnam);
+      String szExt = String.format("_%02d.", k);
       //      String sz = fnam.replace(".", String.format("_%d.", k++));
       //      pthTo = Paths.get(getParent().toString(), sz);
       if (k++ > 1000)
         throw new UnsupportedOperationException("Troppi loop sul nome file:" + pthFrom.toString());
-      dt = dt.plusMinutes(1);
-      fnam = creaNomeFile(dt);
-      pthTo = Paths.get(getParent().toString(), fnam);
+      switch (tipoambio) {
+        case conSuffisso:
+          fnamExt = fnam.replace(".", szExt);
+          break;
+        case piu1Minuto:
+          dt = dt.plusMinutes(1);
+          fnamExt = creaNomeFile(dt);
+          break;
+        case piu1Secondo:
+          dt = dt.plusSeconds(1);
+          fnamExt = creaNomeFile(dt);
+          break;
+      }
+      pthTo = Paths.get(getParent().toString(), fnamExt);
+      if (pthTo.compareTo(pthFrom) == 0) {
+        getLogger().info("No rename per {}", pthFrom.toString());
+        return;
+      }
     }
     setDtAssunta(dt);
     try {
@@ -598,6 +732,8 @@ public abstract class FSFoto extends FSFile {
         .append("\n\t");
     sb.append("dtAcquisizione:\t" + (dtAcquisizione != null ? dtAcquisizione.toString() : "*NULL*")) //
         .append("\n\t");
+    sb.append("dtParentDir:\t" + (dtParentDir != null ? dtParentDir.toString() : "*NULL*")) //
+        .append("\n\t");
 
     return sb.toString();
   }
@@ -626,6 +762,10 @@ public abstract class FSFoto extends FSFile {
 
   public void lavoraIlFile() {
     // System.out.println(toString());
+    String szPath = getPath().toString();
+    if (szPath.contains("_03."))
+      System.out.println("trovato");
+
     Set<CosaFare> df = getCosaFare();
     // il cambio nome ha priorita perche imposta anche     dtAssunta
     if (df.contains(CosaFare.setNomeFile)) {
@@ -657,4 +797,39 @@ public abstract class FSFoto extends FSFile {
     return ux2;
   }
 
+  public LocalDateTime getItem(String p_colName) {
+    LocalDateTime retDt = null;
+    if (getPath().toString().contains("19860723")) {
+      System.out.println("FSFoto.getItem() f=" + getPath().toString());
+    }
+    switch (p_colName) {
+      case FSFile.COL04_DTASSUNTA:
+        retDt = getDtAssunta();
+        break;
+      case FSFile.COL05_DTNOMEFILE:
+        retDt = getDtNomeFile();
+        break;
+      case FSFile.COL06_DTCREAZIONE:
+        retDt = getDtCreazione();
+        break;
+      case FSFile.COL07_DTULTMODIF:
+        retDt = getDtUltModif();
+        break;
+      case FSFile.COL08_DTACQUISIZIONE:
+        retDt = getDtAcquisizione();
+        break;
+      case FSFile.COL09_DTPARENTDIR:
+        retDt = getDtParentDir();
+        break;
+    }
+    return retDt;
+  }
+
+  public boolean isExifParseable() {
+    return m_bExifParseable;
+  }
+
+  public void setExifParseable(boolean bv) {
+    m_bExifParseable = bv;
+  }
 }

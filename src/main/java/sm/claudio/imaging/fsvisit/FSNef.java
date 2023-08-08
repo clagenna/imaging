@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 public class FSNef extends FSFoto {
 
+  private static final String CSZ_EXTENTION = "nef";
   private static Logger s_log = LogManager.getLogger(FSNef.class);
 
   public FSNef() {
@@ -34,7 +35,7 @@ public class FSNef extends FSFoto {
 
   @Override
   public String getFileExtention() {
-    return "nef";
+    return CSZ_EXTENTION;
   }
 
 }

@@ -2,27 +2,83 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>sm.ciscoop</groupId>
+	<groupId>sm.clagenna</groupId>
 	<artifactId>imaging</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!--
+	easy way to set up JavFX on eclipse:
+	https://pragmaticways.com/how-to-add-javafx-to-eclipse-the-easy-way/ 
+	-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mainClassName>sm.claudio.imaging.javafx.MainAppFxml</mainClassName>
 		<lo4j2.vers>2.14.0</lo4j2.vers>
-		<java.version>15</java.version>
+		<java.version>20</java.version>
+		<javafx.version>20.0.2</javafx.version>
+		<lombok.version>1.18.24</lombok.version>
+		<jpro.version>2022.1.6</jpro.version>
+		<gdrive.dir>F:/Google Drive/Util/java</gdrive.dir>
+		<metadata.version>2.18.0</metadata.version>
 	</properties>
-
 	<dependencies>
+		<dependency>
+			<groupId>com.drewnoakes</groupId>
+			<artifactId>metadata-extractor</artifactId>
+			<version>${metadata.version}</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx</artifactId>
+			<version>${javafx.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-web</artifactId>
+			<version>16</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-media</artifactId>
+			<version>18-ea+7</version>
+		</dependency>
+		<!-- per la swzione 8 prove con JFoenix -->
+		<dependency>
+			<groupId>com.jfoenix</groupId>
+			<artifactId>jfoenix</artifactId>
+			<version>9.0.10</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.controlsfx/controlsfx -->
+		<dependency>
+			<groupId>org.controlsfx</groupId>
+			<artifactId>controlsfx</artifactId>
+			<version>11.1.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.16</version>
+			<version>${lombok.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-imaging -->
+		<!--
+		https://mvnrepository.com/artifact/org.apache.commons/commons-imaging -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-imaging</artifactId>
@@ -40,10 +96,14 @@
 			<artifactId>commons-cli</artifactId>
 			<version>1.4</version>
 		</dependency>
-
-		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
-			<version>${lo4j2.vers}</version> </dependency> <dependency> <groupId>org.slf4j</groupId> 
-			<artifactId>slf4j-log4j12</artifactId> <version>${lo4j2.vers}</version> </dependency> -->
+		<!--
+ <dependency> <groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId> 
+			<version>${lo4j2.vers}</version>
+		</dependency> <dependency> <groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId> <version>${lo4j2.vers}</version>
+		</dependency> 
+		-->
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -55,42 +115,24 @@
 			<artifactId>log4j-core</artifactId>
 			<version>${lo4j2.vers}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 	<profiles>
 		<profile>
 			<id>local</id>
 			<build>
-				<plugins>
-
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
+				<plugins />
 			</build>
 		</profile>
-
 		<profile>
 			<id>remote</id>
 			<build>
 				<plugins>
-
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-assembly-plugin</artifactId>
@@ -98,10 +140,15 @@
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
+							<finalName>imaging</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
 							<archive>
 								<manifest>
-									<!-- <mainClass>sm.claudio.imaging.main.MainApp</mainClass> -->
-									<mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass>
+									<!--
+									<mainClass>sm.claudio.imaging.main.MainApp</mainClass> -->
+									<!--
+									mainClass>sm.claudio.imaging.swing.MainFrame2</mainClass -->
+									<mainClass>${mainClassName}</mainClass>
 								</manifest>
 							</archive>
 						</configuration>
@@ -112,40 +159,262 @@
 								<goals>
 									<goal>single</goal>
 								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
 								<configuration>
-<!-- 									<descriptors> -->
-<!-- 										<descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor> -->
-<!-- 									</descriptors> -->
-									<appendAssemblyId>true</appendAssemblyId>
+									<target>
+										<copy file="target/imaging.jar"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
+										<copy file="imaging.cmd"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>delombok</id>
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.8.1</version>
+						<configuration>
+							<!--  compilerArgs> - - enable -
+							preview</compilerArgs	-->
+							<source>${maven.compiler.source}</source>
+							<target>${maven.compiler.target}</target>
+							<fork>true</fork>
+							<compilerArgs>
+								<!--  arg enable-preview< / arg -->
+								<arg>-Xlint:all</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+								<arg>
+									-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+							</compilerArgs>
+							<annotationProcessorPaths>
+								<path>
+									<groupId>org.projectlombok</groupId>
+									<artifactId>lombok</artifactId>
+									<version>${lombok.version}</version>
+								</path>
+							</annotationProcessorPaths>
+						</configuration>
+					</plugin>
+
+
+					<plugin>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok-maven-plugin</artifactId>
+						<version>1.18.20.0</version>
+						<executions>
+							<execution>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>delombok</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>jpro</id>
+
+			<pluginRepositories>
+				<pluginRepository>
+					<id>jpro - sandec repository</id>
+					<url>https://sandec.jfrog.io/artifactory/repo</url>
+				</pluginRepository>
+			</pluginRepositories>
+
+			<repositories>
+				<repository>
+					<id>jpro - sandec repository</id>
+					<url>https://sandec.jfrog.io/artifactory/repo</url>
+				</repository>
+			</repositories>
+
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.sandec.jpro</groupId>
+						<artifactId>jpro-maven-plugin</artifactId>
+						<version>${jpro.version}</version>
+						<configuration>
+							<visible>false</visible>
+							<JVMArgs>
+								<!-- <JVMArg>your-args</JVMArg> -->
+							</JVMArgs>
+							<mainClassName>${mainClassName}</mainClassName>
+							<openingPath>/</openingPath>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>copy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+							<execution>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<copy file="target/imaging.jar"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
+										<copy file="imaging.cmd"
+											toDir="${gdrive.dir}"
+											overwrite="true" />
+									</target>
 								</configuration>
 							</execution>
 						</executions>
 					</plugin>
 
 				</plugins>
+
 			</build>
 		</profile>
+
 	</profiles>
-
-
-
-
 
 
 	<build>
 		<finalName>imaging</finalName>
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
 				<configuration>
-					<!--  compilerArgs> - - enable - preview</compilerArgs -->
-					<source>${java.version}</source>
-					<target>${java.version}</target>
+					<archive>
+						<!-- This is required by bnd-maven-plugin -->
+						<!-- manifestFile>
+						${project.build.outputDirectory}/META-INF/MANIFEST.MF
+						</manifestFile>
+						<manifestEntries>
+						<Automatic-Module-Name>commons.cli</Automatic-Module-Name>
+						</manifestEntries 
+						-->
+					</archive>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<!--   compilerArgs> - - enable - preview</compilerArgs -->
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<fork>true</fork>
+					<compilerArgs>
+						<!--   arg  enable-preview< / arg -->
+						<arg>-Xlint:all</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+						<arg>
+							-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+					</compilerArgs>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.6</version>
+				<configuration>
+					<mainClass>${mainClassName}</mainClass>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -154,14 +423,6 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
-
-
-
-
-
-
-
 </project>

@@ -1,0 +1,7 @@
+	ExFiDi	DiFiEx	FiDiEx
+attuale
+creazione	4	3	4
+ultmodif	5	5	5
+acquisiz	1	4	3
+parent	3	1	2
+nomefile	2	2	1

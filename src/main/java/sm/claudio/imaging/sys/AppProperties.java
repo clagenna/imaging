@@ -18,21 +18,28 @@ import sm.claudio.imaging.swing.ImgModel;
 
 public class AppProperties {
 
-  private static final Logger          s_log               = LogManager.getLogger(AppProperties.class);
-  private static final String          CSZ_PROP_FILE       = "imaging.properties";
-  public static final String           CSZ_PROP_LASTDIR    = "last.dir";
-  public static final String           CSZ_PROP_LASTFIL    = "last.fil";
-  public static final String           CSZ_PROP_DIMFRAME_X = "frame.dimx";
-  public static final String           CSZ_PROP_DIMFRAME_Y = "frame.dimy";
-  public static final String           CSZ_PROP_POSFRAME_X = "frame.posx";
-  public static final String           CSZ_PROP_POSFRAME_Y = "frame.posy";
+  private static final Logger  s_log                = LogManager.getLogger(AppProperties.class);
+  private static final String  CSZ_PROP_FILE        = "imaging.properties";
+  public static final String   CSZ_PROP_LASTDIR     = "last.dir";
+  public static final String   CSZ_PROP_LASTFIL     = "last.fil";
+  public static final String   CSZ_PROP_DIMFRAME_X  = "frame.dimx";
+  public static final String   CSZ_PROP_DIMFRAME_Y  = "frame.dimy";
+  public static final String   CSZ_PROP_POSFRAME_X  = "frame.posx";
+  public static final String   CSZ_PROP_POSFRAME_Y  = "frame.posy";
+  private static final String  CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
+  private static final String  CSZ_PROP_LASTGPX     = "last.gpx";
 
-  private static AppProperties         s_inst;
+  private static AppProperties s_inst;
+  private ETipoCambioNome      tipoCambioNome;
 
-  @Getter @Setter private ISwingLogger swingLogger;
-  @Getter @Setter private Properties   properties;
-  @Getter @Setter private File         propertyFile;
-  @Getter @Setter private ImgModel     model;
+  @Getter @Setter
+  private ISwingLogger         swingLogger;
+  @Getter @Setter
+  private Properties           properties;
+  @Getter @Setter
+  private File                 propertyFile;
+  @Getter @Setter
+  private ImgModel             model;
 
   public AppProperties() {
     if (AppProperties.s_inst != null && !Beans.isDesignTime())
@@ -41,33 +48,33 @@ public class AppProperties {
   }
 
   public void openProperties() {
-    if (propertyFile == null)
+    if (getPropertyFile() == null)
       setPropertyFile(new File(AppProperties.CSZ_PROP_FILE));
 
-    AppProperties.s_log.info("Apro il file properties {}", propertyFile.getAbsolutePath());
-    properties = new Properties();
-    if ( !propertyFile.exists()) {
+    AppProperties.s_log.info("Apro il file properties {}", getPropertyFile().getAbsolutePath());
+    setProperties(new Properties());
+    if ( !getPropertyFile().exists()) {
       AppProperties.s_log.error("Il file di properties {} non esiste", AppProperties.CSZ_PROP_FILE);
       return;
     }
-    try (InputStream is = new FileInputStream(propertyFile)) {
-      properties = new Properties();
-      properties.load(is);
-      setPropertyFile(propertyFile);
+    try (InputStream is = new FileInputStream(getPropertyFile())) {
+      setProperties(new Properties());
+      getProperties().load(is);
+      setPropertyFile(getPropertyFile());
     } catch (IOException e) {
       e.printStackTrace();
-      AppProperties.s_log.error("Errore apertura property file: {}", propertyFile.getAbsolutePath(), e);
+      AppProperties.s_log.error("Errore apertura property file: {}", getPropertyFile().getAbsolutePath(), e);
     }
 
   }
 
   public void saveProperties() {
-    try (OutputStream output = new FileOutputStream(propertyFile)) {
-      properties.store(output, null);
-      AppProperties.s_log.info("Salvo property file {}", propertyFile.getAbsolutePath());
+    try (OutputStream output = new FileOutputStream(getPropertyFile())) {
+      getProperties().store(output, null);
+      AppProperties.s_log.info("Salvo property file {}", getPropertyFile().getAbsolutePath());
     } catch (IOException e) {
       e.printStackTrace();
-      AppProperties.s_log.error("Errore scrittura property file: {}", propertyFile.getAbsolutePath(), e);
+      AppProperties.s_log.error("Errore scrittura property file: {}", getPropertyFile().getAbsolutePath(), e);
     }
 
   }
@@ -78,41 +85,75 @@ public class AppProperties {
 
   public String getLastDir() {
     String szRet = null;
-    if (properties != null)
-      szRet = properties.getProperty(AppProperties.CSZ_PROP_LASTDIR);
+    if (getProperties() != null)
+      szRet = getProperties().getProperty(AppProperties.CSZ_PROP_LASTDIR);
     return szRet;
   }
 
   public void setLastDir(String p_lastDir) {
-    if (properties != null)
+    if (getProperties() != null)
       if (p_lastDir != null)
-        properties.setProperty(AppProperties.CSZ_PROP_LASTDIR, p_lastDir);
+        getProperties().setProperty(AppProperties.CSZ_PROP_LASTDIR, p_lastDir);
   }
 
   public String getLastFile() {
     String szRet = null;
-    if (properties != null)
-      szRet = properties.getProperty(AppProperties.CSZ_PROP_LASTFIL);
+    if (getProperties() != null)
+      szRet = getProperties().getProperty(AppProperties.CSZ_PROP_LASTFIL);
     return szRet;
   }
 
   public void setLastFile(String p_lastFile) {
-    if (properties != null)
+    if (getProperties() != null)
       if (p_lastFile != null)
-        properties.setProperty(AppProperties.CSZ_PROP_LASTFIL, p_lastFile);
+        getProperties().setProperty(AppProperties.CSZ_PROP_LASTFIL, p_lastFile);
+  }
+
+  public String getLastGPX() {
+    String szRet = null;
+    if (getProperties() != null)
+      szRet = getProperties().getProperty(AppProperties.CSZ_PROP_LASTGPX);
+    return szRet;
+  }
+
+  public void setLastGPX(String p_lastGPX) {
+    if (getProperties() != null)
+      if (p_lastGPX != null)
+        getProperties().setProperty(AppProperties.CSZ_PROP_LASTGPX, p_lastGPX);
+  }
+
+  public ETipoCambioNome getTipoCambioNome() {
+    if (tipoCambioNome == null) {
+      if (getProperties().containsKey(CSZ_TIPO_CAMBIO_NOME)) {
+        String sz = getPropVal(CSZ_TIPO_CAMBIO_NOME);
+        try {
+          tipoCambioNome = ETipoCambioNome.valueOf(sz);
+        } catch (Exception e) {
+          s_log.error("Il valore {}={} non e' interpreabile", CSZ_TIPO_CAMBIO_NOME, sz);
+        }
+      } else
+        tipoCambioNome = ETipoCambioNome.piu1Secondo;
+      getProperties().setProperty(CSZ_TIPO_CAMBIO_NOME, tipoCambioNome.toString());
+    }
+    return tipoCambioNome;
+  }
+
+  public void setTipoCambioNome(ETipoCambioNome p_t) {
+    tipoCambioNome = p_t;
+    getProperties().setProperty(CSZ_TIPO_CAMBIO_NOME, tipoCambioNome.toString());
   }
 
   public String getPropVal(String p_key) {
     String szRet = null;
-    if (properties != null)
-      szRet = properties.getProperty(p_key);
+    if (getProperties() != null)
+      szRet = getProperties().getProperty(p_key);
     return szRet;
   }
 
   public void setPropVal(String p_key, String p_val) {
-    if (properties != null)
+    if (getProperties() != null)
       if (p_val != null)
-        properties.setProperty(p_key, p_val);
+        getProperties().setProperty(p_key, p_val);
   }
 
   public void setPropVal(String p_key, int p_val) {
@@ -122,8 +163,12 @@ public class AppProperties {
   public int getPropIntVal(String p_key) {
     Integer ii = Integer.valueOf(0);
     String sz = getPropVal(p_key);
-    if (sz != null)
-      ii = Integer.decode(sz);
+    try {
+      if (sz != null)
+        ii = Integer.decode(sz);
+    } catch (NumberFormatException e) {
+      // e.printStackTrace();
+    }
     return ii.intValue();
   }
 
@@ -149,4 +194,36 @@ public class AppProperties {
   public void setBooleanPropVal(String p_key, boolean bVal) {
     setPropVal(p_key, Boolean.valueOf(bVal).toString());
   }
+  //
+  //  public ISwingLogger getSwingLogger() {
+  //    return swingLogger;
+  //  }
+  //
+  //  public void setSwingLogger(ISwingLogger swingLogger) {
+  //    this.swingLogger = swingLogger;
+  //  }
+  //
+  //  public Properties getProperties() {
+  //    return properties;
+  //  }
+  //
+  //  public void setProperties(Properties properties) {
+  //    this.properties = properties;
+  //  }
+  //
+  //  public File getPropertyFile() {
+  //    return propertyFile;
+  //  }
+  //
+  //  public void setPropertyFile(File propertyFile) {
+  //    this.propertyFile = propertyFile;
+  //  }
+  //
+  //  public ImgModel getModel() {
+  //    return model;
+  //  }
+  //
+  //  public void setModel(ImgModel model) {
+  //    this.model = model;
+  //  }
 }
