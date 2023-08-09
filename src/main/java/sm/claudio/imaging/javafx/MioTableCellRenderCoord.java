@@ -4,6 +4,7 @@ import javafx.scene.control.TableCell;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.gpx.ESrcGeoCoord;
 import sm.claudio.imaging.gpx.GeoCoord;
+import sm.claudio.imaging.sys.AppProperties;
 
 public class MioTableCellRenderCoord<T, F> extends TableCell<FSFile, Double> {
 
@@ -18,6 +19,8 @@ public class MioTableCellRenderCoord<T, F> extends TableCell<FSFile, Double> {
     super.updateItem(p_item, p_empty);
     setText(null);
     setStyle("");
+    AppProperties prop = AppProperties.getInst();
+    boolean showGMS = prop.isShowGMS();
     if (p_item == null || p_empty || getTableRow() == null || (p_item == 0))
       return;
     int latlon = GeoCoord.LATITUDE;
@@ -27,14 +30,22 @@ public class MioTableCellRenderCoord<T, F> extends TableCell<FSFile, Double> {
     GeoCoord coo = new GeoCoord(ESrcGeoCoord.foto);
     switch (latlon) {
       case GeoCoord.LATITUDE:
-        coo.setLat(p_item);
-        coo.setLon(0);
-        sz = coo.getLatGMS().toString();
+        if (showGMS) {
+          coo.setLat(p_item);
+          coo.setLon(0);
+          sz = coo.getLatGMS().toString();
+        } else {
+          sz = String.format("%.10f", p_item);
+        }
         break;
       case GeoCoord.LONGITUDINE:
-        coo.setLat(0);
-        coo.setLon(p_item);
-        sz = coo.getLonGMS().toString();
+        if (showGMS) {
+          coo.setLat(0);
+          coo.setLon(p_item);
+          sz = coo.getLonGMS().toString();
+        } else {
+          sz = String.format("%.10f", p_item);
+        }
         break;
     }
     setText(sz);

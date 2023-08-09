@@ -27,7 +27,8 @@ public class AppProperties {
   public static final String   CSZ_PROP_POSFRAME_X  = "frame.posx";
   public static final String   CSZ_PROP_POSFRAME_Y  = "frame.posy";
   private static final String  CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
-  private static final String  CSZ_PROP_LASTGPX     = "last.gpx";
+  private static final String  CSZ_PROP_LASTGPX     = "gps.last";
+  private static final String  CSZ_PROP_SHOW_GMS    = "gps.show_gms";
 
   private static AppProperties s_inst;
   private ETipoCambioNome      tipoCambioNome;
@@ -62,10 +63,9 @@ public class AppProperties {
       getProperties().load(is);
       setPropertyFile(getPropertyFile());
     } catch (IOException e) {
-      e.printStackTrace();
+      // e.printStackTrace();
       AppProperties.s_log.error("Errore apertura property file: {}", getPropertyFile().getAbsolutePath(), e);
     }
-
   }
 
   public void saveProperties() {
@@ -73,10 +73,9 @@ public class AppProperties {
       getProperties().store(output, null);
       AppProperties.s_log.info("Salvo property file {}", getPropertyFile().getAbsolutePath());
     } catch (IOException e) {
-      e.printStackTrace();
+      // e.printStackTrace();
       AppProperties.s_log.error("Errore scrittura property file: {}", getPropertyFile().getAbsolutePath(), e);
     }
-
   }
 
   public static AppProperties getInst() {
@@ -120,6 +119,14 @@ public class AppProperties {
     if (getProperties() != null)
       if (p_lastGPX != null)
         getProperties().setProperty(AppProperties.CSZ_PROP_LASTGPX, p_lastGPX);
+  }
+
+  public boolean isShowGMS() {
+    return getBooleanPropVal(CSZ_PROP_SHOW_GMS);
+  }
+
+  public void setShowGMS(boolean pv) {
+    getProperties().setProperty(CSZ_PROP_SHOW_GMS, String.valueOf(pv));
   }
 
   public ETipoCambioNome getTipoCambioNome() {

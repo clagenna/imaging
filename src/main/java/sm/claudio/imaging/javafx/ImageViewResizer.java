@@ -33,8 +33,10 @@ public class ImageViewResizer extends Region {
   protected void layoutChildren() {
     ImageView imageView = imageViewProperty.get();
     if (imageView != null) {
+      imageView.setPreserveRatio(true);
+      // System.out.printf("ImageViewResizer(%d, %d) %%%.2f \n", (int) getWidth(), (int) getHeight(), getWidth() / getHeight());
       imageView.setFitWidth(getWidth());
-      imageView.setFitHeight(getHeight());
+      // imageView.setFitHeight(getHeight());
       layoutInArea(imageView, 0, 0, getWidth(), getHeight(), 0, HPos.CENTER, VPos.CENTER);
     }
     super.layoutChildren();

@@ -54,9 +54,9 @@
             </RadialGradient>
          </ripplerFill>
       </JFXButton>
-      <ToggleSwitch id="ckUseGPX" fx:id="ckUseGPX" layoutX="697.0" layoutY="54.0" onDragDone="#ckUseGPXClick" prefHeight="26.0" prefWidth="127.0" text="Usa il file GPX" AnchorPane.rightAnchor="76.0">
+      <ToggleSwitch id="ckUseDecimalGPS" fx:id="ckUseDecimalGPS" layoutX="698.0" layoutY="54.0" onDragDone="#ckMostraGMS" prefHeight="26.0" prefWidth="167.0" text="Mostra Gradi decim." AnchorPane.rightAnchor="35.0">
          <tooltip>
-            <Tooltip text="Esegue la ricerca anche nei sub direttori" />
+            <Tooltip text="Mostra le coordinate GPS in formato gradi decimali oppure Gradi,Minuti,Secondi" />
          </tooltip>
       </ToggleSwitch>
 		<ToggleSwitch id="ckRecurse" fx:id="ckRecurse" layoutX="14.0" layoutY="102.0" onDragDone="#ckRecurseClick" prefHeight="26.0" prefWidth="127.0" text="Recurse Dirs." AnchorPane.leftAnchor="14.0">

@@ -96,7 +96,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   @FXML
   private JFXButton                          btCercaGPX;
   @FXML
-  private ToggleSwitch                       ckUseGPX;
+  private ToggleSwitch                       ckUseDecimalGPS;
   @FXML
   private ToggleSwitch                       ckRecurse;
   @FXML
@@ -145,13 +145,11 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     m_model = new ImgModel();
     m_model.setPriority(EExifPriority.ExifFileDir);
 
-    ckUseGPX.setDisable(true);
-    ckUseGPX.selectedProperty().addListener(new ChangeListener<Boolean>() {
+    ckUseDecimalGPS.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
       @Override
       public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-        System.out.println("ckUseGPX.change event:" + newValue);
-        ckUseGPXClick((DragEvent) null);
+        ckMostraGMS((DragEvent) null);
       }
     });
 
@@ -438,9 +436,11 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   }
 
   @FXML
-  void ckUseGPXClick(DragEvent event) {
-    System.out.println("MainApp2FxmlController.ckUseGPXClick():" + ckRecurse.isSelected());
-
+  void ckMostraGMS(DragEvent event) {
+    // System.out.println("MainApp2FxmlController.ckMostraGMS():" + ckUseDecimalGPS.isSelected());
+    AppProperties prop = AppProperties.getInst();
+    prop.setShowGMS(ckUseDecimalGPS.isSelected());
+    table.refresh();
   }
 
   private void msgBox(String p_format) {
@@ -465,7 +465,6 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   private void checkFattibilita() {
     btAnalizza.setDisable( !m_model.isValoriOk());
     btEsegui.setDisable( !m_model.isValoriOk());
-    ckUseGPX.setDisable( !m_model.isGPXFileOk());
     btInterpolaGPX.setDisable( !m_model.isValoriOk() || !m_model.isGPXFileOk());
     if (m_model.getListFiles() != null)
       btAnalizzaClick(null);
