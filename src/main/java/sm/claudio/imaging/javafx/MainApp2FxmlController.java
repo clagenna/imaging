@@ -64,7 +64,6 @@ import sm.claudio.imaging.sys.ISwingLogger;
 import sm.claudio.imaging.sys.Versione;
 
 public class MainApp2FxmlController implements Initializable, ISwingLogger {
-
   private static final Logger                s_log             = LogManager.getLogger(MainApp2FxmlController.class);
 
   private static final String                IMAGE_EDITING_ICO = "image-editing.png";
@@ -169,9 +168,9 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       }
     });
 
+    Stage mainstage = MainAppFxml.getInst().getPrimaryStage();
     initializeTable();
 
-    Stage mainstage = MainAppFxml.getInst().getPrimaryStage();
     mainstage.setOnCloseRequest(e -> exitApplication(e));
     InputStream stre = getClass().getResourceAsStream(IMAGE_EDITING_ICO);
     if (stre == null)
@@ -242,50 +241,6 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     longitude.setCellFactory(column -> {
       return new MioTableCellRenderCoord<FSFile, Double>(FSFile.COL11_LONGITUDE);
     });
-
-    //    dtnomefile.setCellFactory(column -> {
-    //      return new TableCell<FSFile, LocalDateTime>() {
-    //        @Override
-    //        protected void updateItem(LocalDateTime item, boolean empty) {
-    //          super.updateItem(item, empty);
-    //          if (item == null || empty) {
-    //            setText(null);
-    //            setStyle("");
-    //            return;
-    //          }
-    //          if (getTableRow() == null)
-    //            return;
-    //          FSFile fil = getTableRow().getItem();
-    //          if ( ! (fil instanceof FSFoto)) {
-    //            setText(null);
-    //            setStyle("");
-    //            return;
-    //          }
-    //          FSFoto fot = (FSFoto) fil;
-    //          // Format date.
-    //          LocalDateTime dtass = fot.getDtAssunta();
-    //          String sz = fil.formatDt(dtass);
-    //          setText(sz);
-    //          // Style all dates in March with a different color.
-    //          int v = dtass.compareTo(item);
-    //          // v = -1;
-    //          switch (v) {
-    //            case -1:
-    //              setTextFill(Color.DARKGREEN);
-    //              setStyle("-fx-background-color: lightcoral");
-    //              break;
-    //            case 0:
-    //              setTextFill(Color.BLACK);
-    //              setStyle("");
-    //              break;
-    //            case 1:
-    //              setTextFill(Color.CHOCOLATE);
-    //              setStyle("-fx-background-color: deepskyblue");
-    //              break;
-    //          }
-    //        }
-    //      };
-    //    });
   }
 
   private void leggiProperties(Stage mainstage) {
@@ -321,6 +276,9 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     String sz = props.getPropVal(AppProperties.CSZ_PROP_LASTDIR);
     if (sz != null)
       settaDir(sz, true);
+    for (TableColumn<FSFile, ?> c : table.getColumns()) {
+      readColumnWidth(props, c);
+    }
   }
 
   @FXML
@@ -432,7 +390,6 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     //    double wy = stage.getHeight();
     //    sz = String.format("dim=%.2f,%.2f\n", wx, wy);
     //    s_log.debug(sz);
-
   }
 
   @FXML
@@ -647,8 +604,28 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       return;
     AppProperties prop = AppProperties.getInst();
     prop.setPropVal(AppProperties.CSZ_PROP_LASTDIR, m_model.getDirectory());
-
+    saveColumnWidth(prop);
     Platform.exit();
+  }
+
+  private void saveColumnWidth(AppProperties p_prop) {
+    // saveColumnWidth(p_prop, attuale);
+    for (TableColumn<FSFile, ?> c : table.getColumns()) {
+      // System.out.printf("MainApp2FxmlController.saveColumnWidth(\"%s\")\n", c.getId());
+      saveColumnWidth(p_prop, c);
+    }
+  }
+
+  private void readColumnWidth(AppProperties p_prop, TableColumn<?, ?> p_col) {
+    String sz = String.format(AppProperties.CSZ_PROP_TBCOL, p_col.getId());
+    double w = p_prop.getDoublePropVal(sz);
+    if (w > 0)
+      p_col.setPrefWidth(w);
+  }
+
+  private void saveColumnWidth(AppProperties p_prop, TableColumn<?, ?> p_col) {
+    String sz = String.format(AppProperties.CSZ_PROP_TBCOL, p_col.getId());
+    p_prop.setDoublePropVal(sz, p_col.getWidth());
   }
 
   @FXML

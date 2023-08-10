@@ -20,6 +20,7 @@ import com.drew.metadata.Tag;
 
 import lombok.Getter;
 import lombok.Setter;
+import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.fsvisit.FSFoto;
 
 public class GeoCoord implements IDistance<GeoCoord> {
@@ -58,7 +59,7 @@ public class GeoCoord implements IDistance<GeoCoord> {
   private Path          filePath;
   @Getter @Setter
   private ESrcGeoCoord  sourceCoord;
-
+  
   static {
     // s_patGradiMinSec = Pattern.compile("([+\\-]?[0-9]+). ([0-9]+). ([0-9,\\.]+).*");
     // N 17° 09' 58.3" W 179° 02' 46.8"
@@ -83,6 +84,14 @@ public class GeoCoord implements IDistance<GeoCoord> {
   public GeoCoord(ESrcGeoCoord p_src) {
     init();
     sourceCoord = p_src;
+  }
+
+  public GeoCoord(FSFile pf) {
+    setSourceCoord(ESrcGeoCoord.foto);
+    setLat(pf.getLatitude());
+    setLon(pf.getLongitude());
+    setTstamp(pf.getAcquisizione());
+    setFilePath(pf.getPath());
   }
 
   private void init() {

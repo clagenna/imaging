@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Locale;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -26,6 +27,8 @@ public class AppProperties {
   public static final String   CSZ_PROP_DIMFRAME_Y  = "frame.dimy";
   public static final String   CSZ_PROP_POSFRAME_X  = "frame.posx";
   public static final String   CSZ_PROP_POSFRAME_Y  = "frame.posy";
+  public static final String   CSZ_PROP_TBCOL       = "tbview.col.%s";
+
   private static final String  CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
   private static final String  CSZ_PROP_LASTGPX     = "gps.last";
   private static final String  CSZ_PROP_SHOW_GMS    = "gps.show_gms";
@@ -165,6 +168,18 @@ public class AppProperties {
 
   public void setPropVal(String p_key, int p_val) {
     setPropVal(p_key, String.valueOf(p_val));
+  }
+
+  public void setDoublePropVal(String p_key, double p_val) {
+    String sz = String.format(Locale.US, "%.3f", p_val);
+    setPropVal(p_key, sz);
+  }
+
+  public double getDoublePropVal(String p_key) {
+    String sz = getPropVal(p_key);
+    if (sz == null || sz.length() == 0)
+      return 0f;
+    return Double.parseDouble(sz);
   }
 
   public int getPropIntVal(String p_key) {

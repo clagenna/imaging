@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -84,7 +85,20 @@ public class ImgModel {
     }
     FileSystemVisitatore fsv = new FileSystemVisitatore();
     fsDir.accept(fsv);
+    aggiungiGPSFoto();
     ImgModel.s_log.info("Fine scansione di {}", szSrc);
+  }
+
+  private void aggiungiGPSFoto() {
+    if ( (m_liDicot == null) || m_liFoto == null || m_liFoto == null)
+      return;
+    List<GeoCoord> li = m_liFoto //
+        .stream() //
+        .filter(s -> s.isGPS()) //
+        .map(s -> new GeoCoord(s)) //
+        // .map(GeoCoord::fromFSFoto) // questa dà errore perchè non è una interfaccia funzionale
+        .collect(Collectors.toList());
+    m_liDicot.addAll(li);
   }
 
   public void rinominaFiles() {
@@ -147,6 +161,7 @@ public class ImgModel {
       return false;
     }
     m_liDicot = m_hand.list();
+    aggiungiGPSFoto();
     return m_liDicot != null && m_liDicot.size() > 0;
   }
 

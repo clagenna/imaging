@@ -79,4 +79,16 @@ public class RicercaDicotomica<T extends IDistance<T>> implements IDicot<T> {
     inizializza();
   }
 
+  public void addAll(List<T> p_li) {
+    if (m_li == null) {
+      m_li = new ArrayList<>();
+    }
+    for (T ge : p_li) {
+      if ( !m_li.contains(ge))
+        add(ge);
+    }
+    // m_li.addAll(p_li);
+    sort();
+  }
+
 }
