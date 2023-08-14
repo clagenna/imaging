@@ -12,6 +12,8 @@ import java.util.Date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import lombok.Getter;
+import lombok.Setter;
 import sm.claudio.imaging.javafx.MainApp2FxmlController;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
@@ -35,7 +37,9 @@ public class FSFile implements IFSVisitable {
   // private File   m_fiBackup;
   private double             latitude;
   private double             longitude;
-
+  /** nel caso che i valori GPS siano risultato di interpolazione */
+  @Getter @Setter
+  private boolean            interpolato;
   private Path               m_parent;
   private ImgModel           m_model;
 

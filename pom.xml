@@ -22,6 +22,14 @@
 		<metadata.version>2.18.0</metadata.version>
 	</properties>
 	<dependencies>
+
+		<!--  Gson: Java to JSON conversion -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.10.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.drewnoakes</groupId>
 			<artifactId>metadata-extractor</artifactId>
@@ -120,6 +128,11 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>sm.clagenna</groupId>
+			<artifactId>prjava17</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<profiles>

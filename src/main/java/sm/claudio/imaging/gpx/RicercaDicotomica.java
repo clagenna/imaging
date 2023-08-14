@@ -1,7 +1,7 @@
 package sm.claudio.imaging.gpx;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -14,15 +14,31 @@ public class RicercaDicotomica<T extends IDistance<T>> implements IDicot<T> {
 
   @Override
   public void inizializza() {
-    m_li = new ArrayList<>();
+    m_li = new LinkedList<>();
   }
 
   @Override
   public void add(T p_cosa) {
     if (m_li == null) {
-      m_li = new ArrayList<>();
+      m_li = new LinkedList<>();
     }
-    m_li.add(p_cosa);
+    if ( !m_li.contains(p_cosa))
+      m_li.add(p_cosa);
+  }
+
+  public void addAll(List<T> p_li) {
+    if (m_li == null) {
+      m_li = new LinkedList<>();
+    }
+    for (T ge : p_li) {
+      add(ge);
+    }
+    // m_li.addAll(p_li);
+    sort();
+  }
+
+  public void addAll(RicercaDicotomica<T> p_lLiDi) {
+    addAll(p_lLiDi.m_li);
   }
 
   @Override
@@ -77,18 +93,6 @@ public class RicercaDicotomica<T extends IDistance<T>> implements IDicot<T> {
     if (m_li != null)
       m_li.clear();
     inizializza();
-  }
-
-  public void addAll(List<T> p_li) {
-    if (m_li == null) {
-      m_li = new ArrayList<>();
-    }
-    for (T ge : p_li) {
-      if ( !m_li.contains(ge))
-        add(ge);
-    }
-    // m_li.addAll(p_li);
-    sort();
   }
 
 }

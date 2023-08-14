@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,10 +26,12 @@ import sm.claudio.imaging.fsvisit.FSFoto;
 import sm.claudio.imaging.fsvisit.FileSystemVisitatore;
 import sm.claudio.imaging.gpx.GeoCoord;
 import sm.claudio.imaging.gpx.GpsXmlHandler;
+import sm.claudio.imaging.gpx.JsonParserStream;
 import sm.claudio.imaging.gpx.RicercaDicotomica;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ISwingLogger;
+import sm.claudio.imaging.sys.TimerMeter;
 
 public class ImgModel {
   private static final Logger         s_log = LogManager.getLogger(ImgModel.class);
@@ -40,6 +43,9 @@ public class ImgModel {
   private List<FSFile>                m_liFoto;
   private GpsXmlHandler               m_hand;
   private RicercaDicotomica<GeoCoord> m_liDicot;
+
+  private LocalDateTime               minFotoDate;
+  private LocalDateTime               maxFotoDate;
 
   public ImgModel() {
     AppProperties prop = AppProperties.getInst();
@@ -85,13 +91,18 @@ public class ImgModel {
     }
     FileSystemVisitatore fsv = new FileSystemVisitatore();
     fsDir.accept(fsv);
-    aggiungiGPSFoto();
+    aggiungiGPSDalleFoto();
     ImgModel.s_log.info("Fine scansione di {}", szSrc);
   }
 
-  private void aggiungiGPSFoto() {
+  private void aggiungiGPSDalleFoto() {
     if ( (m_liDicot == null) || m_liFoto == null || m_liFoto == null)
       return;
+    minFotoDate = LocalDateTime.MAX;
+    maxFotoDate = LocalDateTime.MIN;
+    m_liFoto //
+        .stream() //
+        .forEach(s -> minMaxDate(s));
     List<GeoCoord> li = m_liFoto //
         .stream() //
         .filter(s -> s.isGPS()) //
@@ -99,6 +110,17 @@ public class ImgModel {
         // .map(GeoCoord::fromFSFoto) // questa dà errore perchè non è una interfaccia funzionale
         .collect(Collectors.toList());
     m_liDicot.addAll(li);
+  }
+
+  private Object minMaxDate(FSFile p_s) {
+    LocalDateTime vv = p_s.getAcquisizione();
+    if (vv == null)
+      return p_s;
+    if (minFotoDate.isAfter(vv))
+      minFotoDate = vv;
+    if (maxFotoDate.isBefore(vv))
+      maxFotoDate = vv;
+    return p_s;
   }
 
   public void rinominaFiles() {
@@ -137,9 +159,25 @@ public class ImgModel {
     return bRet;
   }
 
-  private boolean parseGpxTrack(String p_gpx) {
-    ISwingLogger swLog = AppProperties.getInst().getSwingLogger();
+  private boolean parseTracks(String p_gpx) {
     m_liDicot = null;
+    if (p_gpx.toLowerCase().endsWith(".gpx"))
+      return parseGpxTracks(p_gpx);
+    return parseJsonTracks(p_gpx);
+  }
+
+  private boolean parseJsonTracks(String p_gpx) {
+    // JsonParser jsonParse = new JsonParser(p_gpx, this);
+    JsonParserStream jsonParse = new JsonParserStream(p_gpx, this);
+    RicercaDicotomica<GeoCoord> lLiDi = jsonParse.parse();
+    m_liDicot.addAll(lLiDi);
+    return false;
+  }
+
+  private boolean parseGpxTracks(String p_gpx) {
+    ISwingLogger swLog = AppProperties.getInst().getSwingLogger();
+    s_log.debug("SAX parse di {}", p_gpx);
+    TimerMeter tim = new TimerMeter("SAX parse");
     SAXParserFactory factory = SAXParserFactory.newInstance();
     SAXParser saxParser;
     try {
@@ -151,6 +189,8 @@ public class ImgModel {
       return false;
     }
     m_hand = new GpsXmlHandler();
+    s_log.debug("Open SAX, time={}", tim.stop());
+    tim = new TimerMeter("SAX parsing");
     try {
       saxParser.parse(p_gpx, m_hand);
       fileGPX = p_gpx;
@@ -160,9 +200,13 @@ public class ImgModel {
       swLog.sparaMess(szMsg);
       return false;
     }
+    s_log.debug("Parse SAX, time={}", tim.stop());
+    tim = new TimerMeter("SAX sorting");
     m_liDicot = m_hand.list();
-    aggiungiGPSFoto();
+    aggiungiGPSDalleFoto();
+    s_log.debug("Sort SAX, time={}", tim.stop());
     return m_liDicot != null && m_liDicot.size() > 0;
+
   }
 
   public String getDirectory() {
@@ -178,7 +222,7 @@ public class ImgModel {
   }
 
   public void setFileGPX(String p_fileGPX) {
-    if ( !parseGpxTrack(p_fileGPX))
+    if ( !parseTracks(p_fileGPX))
       s_log.error("Non sono riuscito ad interpretare {}", p_fileGPX);
   }
 
@@ -210,13 +254,25 @@ public class ImgModel {
   }
 
   public void interpolaGPX() {
-    try {
-      s_log.info("Interpolazione delle coordinate GPS con il file di tracce");
-      Thread.sleep(5000);
-    } catch (InterruptedException e) {
-      // e.printStackTrace();
+    if (m_liFoto == null || m_liFoto.size() == 0 || (m_liDicot == null))
+      return;
+    s_log.info("Interpolazione delle coordinate GPS con il file di tracce");
+    List<FSFile> liNoGps = m_liFoto //
+        .stream() //
+        .filter(s -> !s.isGPS()) //
+        .collect(Collectors.toList());
+    for (FSFile gp : liNoGps) {
+      GeoCoord coo = new GeoCoord(gp);
+      System.out.printf("ImgModel.interpolaGPX(%s)\n", coo.toCsv3());
     }
+  }
 
+  public LocalDateTime getMinFotoDate() {
+    return minFotoDate;
+  }
+
+  public LocalDateTime getMaxFotoDate() {
+    return maxFotoDate;
   }
 
 }

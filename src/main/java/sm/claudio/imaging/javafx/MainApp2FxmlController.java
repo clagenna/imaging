@@ -370,6 +370,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     fil.setTitle("Un file GPX con tracce (TRK)");
     fil.getExtensionFilters().add( //
         new ExtensionFilter("GPX file", "*.gpx"));
+    fil.getExtensionFilters().add( //
+        new ExtensionFilter("Takeout json", "*.json"));
     // imposto la dir precedente (se c'è)
     AppProperties props = AppProperties.getInst();
     String sz = props.getLastDir();

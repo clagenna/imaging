@@ -6,3 +6,6 @@
 /log/
 /bin/
 /logs/
+/log/*.log
+*.gpx
+*.csv

@@ -59,7 +59,10 @@ public class GeoCoord implements IDistance<GeoCoord> {
   private Path          filePath;
   @Getter @Setter
   private ESrcGeoCoord  sourceCoord;
-  
+  /** nel caso che i valori GPS siano risultato di interpolazione */
+  @Getter @Setter
+  private boolean       interpolato;
+
   static {
     // s_patGradiMinSec = Pattern.compile("([+\\-]?[0-9]+). ([0-9]+). ([0-9,\\.]+).*");
     // N 17° 09' 58.3" W 179° 02' 46.8"
@@ -92,6 +95,7 @@ public class GeoCoord implements IDistance<GeoCoord> {
     setLon(pf.getLongitude());
     setTstamp(pf.getAcquisizione());
     setFilePath(pf.getPath());
+    setInterpolato(pf.isInterpolato());
   }
 
   private void init() {
@@ -131,6 +135,10 @@ public class GeoCoord implements IDistance<GeoCoord> {
 
   public double getLat() {
     return latitude;
+  }
+
+  public void setAlt(double p) {
+    altitude = p;
   }
 
   public GMS getLatGMS() {
@@ -292,6 +300,18 @@ public class GeoCoord implements IDistance<GeoCoord> {
     ret.setLon(pf.getLongitude());
     ret.setTstamp(pf.getAcquisizione());
     ret.setFilePath(pf.getPath());
+    return ret;
+  }
+
+  public static GeoCoord fromGooglePos(GooglePos p_v) {
+    if (p_v == null || !p_v.isGps())
+      return null;
+    GeoCoord ret = new GeoCoord(ESrcGeoCoord.google);
+    ret.setLon(p_v.getLongitudeE7());
+    ret.setLat(p_v.getLatitudeE7());
+    ret.setAlt(p_v.getAltitude());
+    ret.setTstamp(p_v.getTimeTs());
+    ret.setInterpolato(false);
     return ret;
   }
 
@@ -467,6 +487,10 @@ public class GeoCoord implements IDistance<GeoCoord> {
 
     double dist = app.distance(app2);
     System.out.printf("Dist 1-2 = %.3f\n", dist);
+  }
+
+  public double getAlt() {
+    return altitude;
   }
 
 }

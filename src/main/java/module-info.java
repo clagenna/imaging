@@ -22,6 +22,7 @@ module imaging {
   requires org.controlsfx.controls;
   requires java.sql;
   requires com.jfoenix;
+  requires com.google.gson;
   requires java.desktop;
   requires commons.cli;
   requires org.apache.logging.log4j;
@@ -32,6 +33,6 @@ module imaging {
   // opens prova.javafx to javafx.graphics, javafx.fxml, org.controlsfx.controls;
   opens sm.claudio.imaging.javafx to javafx.graphics, javafx.fxml, javafx.media, org.controlsfx.controls;
   opens sm.claudio.imaging.fsvisit to javafx.base, javafx.graphics, javafx.fxml, org.controlsfx.controls;
+  opens sm.claudio.imaging.gpx to com.google.gson;
   opens prova.javafx.tree       to javafx.base, javafx.graphics, javafx.fxml, org.controlsfx.controls;
-  
 }

@@ -1,6 +1,7 @@
 package sm.claudio.imaging.javafx;
 
 import javafx.scene.control.TableCell;
+import javafx.scene.paint.Color;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.gpx.ESrcGeoCoord;
 import sm.claudio.imaging.gpx.GeoCoord;
@@ -23,6 +24,13 @@ public class MioTableCellRenderCoord<T, F> extends TableCell<FSFile, Double> {
     boolean showGMS = prop.isShowGMS();
     if (p_item == null || p_empty || getTableRow() == null || (p_item == 0))
       return;
+    if (getTableRow() == null)
+      return;
+    FSFile fil = getTableRow().getItem();
+    if (fil.isInterpolato()) {
+      setTextFill(Color.BLACK);
+      setStyle("-fx-background-color: #FFA500");
+    }
     int latlon = GeoCoord.LATITUDE;
     if (m_colName.startsWith("lon"))
       latlon = GeoCoord.LONGITUDINE;
