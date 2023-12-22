@@ -221,22 +221,22 @@ public class ProvaJFrame2 extends JFrame {
   }
 
   protected void locBtEsegui_Click(ActionEvent e) {
-    // TODO Auto-generated method stub
+    // 
 
   }
 
   protected void locChkRecursive_Click(ActionEvent e) {
-    // TODO Auto-generated method stub
+    // 
 
   }
 
   protected void locTxDir_Click(ActionEvent e) {
-    // TODO Auto-generated method stub
+    // 
 
   }
 
   protected void locRadioPrio_Click(ActionEvent e) {
-    // TODO Auto-generated method stub
+    // 
 
   }
 

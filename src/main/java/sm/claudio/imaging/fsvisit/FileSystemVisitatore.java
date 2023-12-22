@@ -40,7 +40,7 @@ public class FileSystemVisitatore implements IFSVisitatore {
 
   @Override
   public void visit(FSFile p_vis) {
-    s_log.warn("non analizzo FSFile " + p_vis.toString());
+    s_log.warn("non analizzo FSFile \"{}\"" , p_vis.getPath().toString());
   }
 
   @Override

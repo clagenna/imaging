@@ -10,6 +10,6 @@ if ( Test-Path $zipFile ) {
 Start-Process -Wait -FilePath $mvnCmd -ArgumentList 'clean','package','-P','remote'
 
 
-Get-ChildItem -path "lancio2.cmd", "imaging.properties", "target\imaging.jar" |
+Get-ChildItem -path "imaging.cmd", "imaging.properties", "target\imaging.jar" |
     Compress-Archive  -CompressionLevel Fastest -DestinationPath $zipFile
 

@@ -14,7 +14,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
-import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -74,9 +73,9 @@ public abstract class FSFoto extends FSFile {
   private LocalDateTime dtUltModif;
   private LocalDateTime dtAcquisizione;
   private LocalDateTime dtParentDir;
-  private LocalDateTime dtAssunta        = null;
+  private LocalDateTime dtAssunta = null;
 
-  private boolean       m_bExifParseable = true;
+  private boolean m_bExifParseable = true;
 
   enum CosaFare {
     setNomeFile, //
@@ -127,7 +126,7 @@ public abstract class FSFoto extends FSFile {
     } else if (metadata instanceof TiffImageMetadata) {
       exif = (TiffImageMetadata) metadata;
     } else {
-      getLogger().info("Mancano completamente le info EXIF!");
+      getLogger().info("Sul file {} mancano completamente le info EXIF!", fi.getName());
       // return;
     }
     if (exif == null)
@@ -174,12 +173,12 @@ public abstract class FSFoto extends FSFile {
     } else if (metadata instanceof TiffImageMetadata) {
       exif = (TiffImageMetadata) metadata;
     } else {
-      getLogger().info("Mancano completamente le info EXIF!");
+      getLogger().info("Sul file {} mancano completamente le info EXIF!", getPath().toString());
       // return;
     }
 
-    @SuppressWarnings("unchecked") List<TiffImageMetadata.TiffMetadataItem> items = (List<TiffImageMetadata.TiffMetadataItem>) exif
-        .getItems();
+    @SuppressWarnings("unchecked")
+    List<TiffImageMetadata.TiffMetadataItem> items = (List<TiffImageMetadata.TiffMetadataItem>) exif.getItems();
     /**
      * <pre>
      *
@@ -261,8 +260,8 @@ public abstract class FSFoto extends FSFile {
     int n = sz.lastIndexOf(".");
     if (n > 0)
       sz = sz.substring(0, n);
-    if (sz.endsWith("_01"))
-      System.out.println("Trovato");
+    //    if (sz.startsWith("23-"))
+    //      System.out.println("Trovato");
     ParseData prs = new ParseData();
     setDtNomeFile(prs.parseData(sz));
     if (dtNomeFile == null)
@@ -280,8 +279,7 @@ public abstract class FSFoto extends FSFile {
     ParseData prs = new ParseData();
     dtParentDir = prs.parseData(sz);
     if (dtParentDir == null)
-      getLogger().debug("No e' DateTime Parent Dir name :" + sz);
-
+      getLogger().trace("No e' DateTime Parent Dir name :" + sz);
   }
 
   public LocalDateTime getDtAcquisizione() {
@@ -334,9 +332,9 @@ public abstract class FSFoto extends FSFile {
 
   private void studiaIlDaFarsi() {
     String szPath = getPath().toString();
-    getLogger().debug("Analizzo {}", szPath);
-    if (szPath.contains("f20230621_150426_01."))
-      System.out.println("trovato");
+    getLogger().trace("Analizzo {}", szPath);
+    //    if (szPath.contains("2023-12-04"))
+    //      System.out.println("trovato");
 
     m_daFare = new HashSet<>();
     ImgModel mod = AppProperties.getInst().getModel();
@@ -402,9 +400,9 @@ public abstract class FSFoto extends FSFile {
    * </table>
    */
   private void studiaConExifFileDir() {
-    String szPath = getPath().toString();
-    if (szPath.contains("heic"))
-      System.out.println("trovato");
+    // String szPath = getPath().toString();
+    //    if (szPath.contains("heic"))
+    //      System.out.println("trovato");
 
     LocalDateTime dt = null;
     if (dtAcquisizione != null)
@@ -417,19 +415,22 @@ public abstract class FSFoto extends FSFile {
       dt = dtCreazione;
     if (dt == null && dtUltModif != null)
       dt = dtUltModif;
+
     /*
      * se la dtAcquisizione *non* c'è allora prediligo la dtCreazione purchè non
-     * sia troppo distante dalla calcolata dt (<15 gg)
+     * sia troppo distante dalla calcolata dt (<15 gg) 2023-12-15: Tolto perchè
+     * cozza contro la dtNomeFile
      */
-    if (dtAcquisizione == null && dtCreazione != null) {
-      long mins = Duration.between(dtCreazione, dt).toMinutes();
-      long MAXMIN = 24 * 60 * 15;
-      if (Math.abs(mins) < MAXMIN)
-        dt = dtCreazione;
-    }
+    //    if (dtAcquisizione == null && dtCreazione != null) {
+    //      long mins = Duration.between(dtCreazione, dt).toMinutes();
+    //      final long MAXMIN = 24 * 60 * 15;
+    //      if (Math.abs(mins) < MAXMIN)
+    //        dt = dtCreazione;
+    //    }
 
     if (dtAcquisizione == null) {
       dtAcquisizione = dt;
+      m_daFare.add(CosaFare.setDtAcquisizione);
       m_daFare.add(CosaFare.setNomeFile);
       m_daFare.add(CosaFare.setDtCreazione);
       m_daFare.add(CosaFare.setUltModif);
@@ -442,6 +443,7 @@ public abstract class FSFoto extends FSFile {
 
     if (dtCreazione == null)
       m_daFare.add(CosaFare.setDtCreazione);
+
     if (dtUltModif == null)
       m_daFare.add(CosaFare.setUltModif);
 
@@ -567,7 +569,7 @@ public abstract class FSFoto extends FSFile {
     AppProperties app = AppProperties.getInst();
     ETipoCambioNome tipoambio = app.getTipoCambioNome();
     while (Files.exists(pthTo, LinkOption.NOFOLLOW_LINKS)) {
-      getLogger().debug("chg fil.nam: {} esiste!", fnam);
+      getLogger().debug("chg fil.nam: {} esiste!", pthTo.getFileName());
       String szExt = String.format("_%02d.", k);
       //      String sz = fnam.replace(".", String.format("_%d.", k++));
       //      pthTo = Paths.get(getParent().toString(), sz);
@@ -702,16 +704,14 @@ public abstract class FSFoto extends FSFile {
       bOk = false;
       getLogger().error("Errore lettura EXIF sul file {}", pthCopy.toString(), e);
     }
-
     try {
       if (bOk)
         Files.delete(pthCopy);
       else
         Files.move(pthCopy, getPath(), StandardCopyOption.REPLACE_EXISTING);
-    } catch (IOException e) {
+    } catch (Exception e) {
       getLogger().error("Errore di cancellazione di {}", pthCopy.toString(), e);
     }
-
   }
 
   @Override
@@ -762,9 +762,9 @@ public abstract class FSFoto extends FSFile {
 
   public void lavoraIlFile() {
     // System.out.println(toString());
-    String szPath = getPath().toString();
-    if (szPath.contains("_03."))
-      System.out.println("trovato");
+    //    String szPath = getPath().toString();
+    //    if (szPath.contains("2023-12-04"))
+    //      System.out.println("trovato");
 
     Set<CosaFare> df = getCosaFare();
     // il cambio nome ha priorita perche imposta anche     dtAssunta

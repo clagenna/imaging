@@ -23,7 +23,8 @@ public class JsonParserStream {
   private static final String         CSZ_TST  = "deviceTimestamp";
   private static final String         CSZ_FACT = "formFactor";
   private static NumberFormat         intFmt   = NumberFormat.getNumberInstance(Locale.getDefault());
-  private static final long           N_PRIMO  = 15083;
+  // private static final long           N_PRIMO  = 15083;
+  private static final long           N_PRIMO  = 245591;
 
   private int                         added;
   private long                        riga;
@@ -33,6 +34,7 @@ public class JsonParserStream {
   private LocalDateTime               m_tsStart;
   private LocalDateTime               m_tsEnd;
   private GeoCoord                    m_geo;
+  private TimerMeter m_tim;
 
   public JsonParserStream(String p_gpx, ImgModel p_mod) {
     m_jsonFile = p_gpx;
@@ -43,19 +45,19 @@ public class JsonParserStream {
 
   public RicercaDicotomica<GeoCoord> parse() {
     m_li = new RicercaDicotomica<>();
-    TimerMeter tim = new TimerMeter("Json parse");
+    TimerMeter lTim = new TimerMeter("Json parse");
     s_log.debug("Inizio JSON Stream parse {}", m_jsonFile);
 
     added = 0;
     riga = 0;
+    m_tim = new TimerMeter("Parse JSON");
     try (Stream<String> stre = Files.lines(Paths.get(m_jsonFile))) {
       stre.forEach(s -> analizzaRiga(s));
       m_li.sort();
     } catch (IOException e) {
       e.printStackTrace();
     }
-
-    s_log.debug("JsonParser parse time={}", tim.stop());
+    s_log.debug("JsonParser parse time={}", lTim.stop());
     return m_li;
   }
 
@@ -92,14 +94,20 @@ public class JsonParserStream {
 
   private Object analizzaRiga(String p_s) {
 
-    if ( ( (riga++) % N_PRIMO) == 0)
-      System.out.printf("Riga=%s\n", intFmt.format(riga));
+    if ( ( (riga++) % N_PRIMO) == 0) {
+      System.out.printf("Riga=%s time=%s\n", intFmt.format(riga), m_tim.stop());
+      m_tim = new TimerMeter("Parse JSON");
+    }
     if (p_s == null || !p_s.contains(":"))
       return null;
     double dd;
     String[] arr = p_s.split(":");
     String lKey = arr[0].trim().replaceAll("\"", "");
     String lVal = arr[1].trim().replaceAll("\"", "").replace(",", "");
+    if ( lVal.contains("2023-07-08T13:09"))
+      System.out.println("JsonParserStream.analizzaRiga()");
+    
+    
     for (int i = 2; i < arr.length; i++)
       lVal += ":" + arr[i].trim().replaceAll("\"", "").replace(",", "");
 

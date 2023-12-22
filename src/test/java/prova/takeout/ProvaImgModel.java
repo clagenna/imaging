@@ -1,10 +1,16 @@
 package prova.takeout;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
+
 import org.junit.Test;
 
+import sm.claudio.imaging.gpx.GeoCoord;
+import sm.claudio.imaging.gpx.RicercaDicotomica;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
+import sm.claudio.imaging.sys.Utility;
 
 public class ProvaImgModel {
 
@@ -26,11 +32,35 @@ public class ProvaImgModel {
     m_mod = new ImgModel();
     m_mod.setPriority(EExifPriority.ExifFileDir);
     m_mod.setDirectory(CSZ_FOTO_DIR);
+    m_mod.clear();
     m_mod.analizza();
     // questa innesca la parseTracks
     m_mod.setFileGPX(CSZ_GPX_FILE);
     // questa innesca per JSON
     m_mod.setFileGPX(CSZ_JSON_TAKEOUT);
 
+    String szDt = "2023-07-08T10:44:37Z";
+    LocalDateTime dt = Utility.parseUTC(szDt);
+    stampaPeriodo(dt);
+    trovaPosizione(dt);
+
+  }
+
+  private void stampaPeriodo(LocalDateTime dt) {
+    RicercaDicotomica<GeoCoord> liDic = m_mod.getListDicot();
+    LocalDateTime dtMin = dt.minus(Duration.ofHours(4));
+    LocalDateTime dtMax = dt.plus(Duration.ofHours(4));
+
+    liDic.stream() //
+        .filter(s -> s.getDatetime().isAfter(dtMin)) //
+        .filter(s -> s.getDatetime().isBefore(dtMax)) //
+        .forEach(s -> System.out.println(s.toCsv()));
+  }
+
+  private void trovaPosizione(LocalDateTime dt) {
+    GeoCoord coo = new GeoCoord();
+    coo.setTstamp(dt);
+    coo = m_mod.cercaGPS(coo);
+    System.out.printf("Data %s trovato %s\n", Utility.s_dtfmt.format(dt), coo.toString());
   }
 }

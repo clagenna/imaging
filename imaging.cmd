@@ -64,6 +64,10 @@ set MODS=javafx.controls
 set MODS=%MODS%,javafx.base
 set MODS=%MODS%,javafx.fxml
 set MODS=%MODS%,javafx.graphics
+set MODS=%MODS%,javafx.web
 rem set MODS=%MODS%,javafx.media
 
 java --module-path "%MODPATH%" --add-modules="%MODS%" -jar "%JAREXE%"
+
+
+:fine

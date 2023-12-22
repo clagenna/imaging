@@ -67,6 +67,7 @@ public class ImgModel {
     m_liFoto = null;
     if (m_liDicot != null)
       m_liDicot.clear();
+    m_liDicot = null;
   }
 
   public void analizza() {
@@ -160,7 +161,6 @@ public class ImgModel {
   }
 
   private boolean parseTracks(String p_gpx) {
-    m_liDicot = null;
     if (p_gpx.toLowerCase().endsWith(".gpx"))
       return parseGpxTracks(p_gpx);
     return parseJsonTracks(p_gpx);
@@ -171,7 +171,7 @@ public class ImgModel {
     JsonParserStream jsonParse = new JsonParserStream(p_gpx, this);
     RicercaDicotomica<GeoCoord> lLiDi = jsonParse.parse();
     m_liDicot.addAll(lLiDi);
-    return false;
+    return true;
   }
 
   private boolean parseGpxTracks(String p_gpx) {
@@ -206,7 +206,10 @@ public class ImgModel {
     aggiungiGPSDalleFoto();
     s_log.debug("Sort SAX, time={}", tim.stop());
     return m_liDicot != null && m_liDicot.size() > 0;
+  }
 
+  public RicercaDicotomica<GeoCoord> getListDicot() {
+    return m_liDicot;
   }
 
   public String getDirectory() {
@@ -273,6 +276,13 @@ public class ImgModel {
 
   public LocalDateTime getMaxFotoDate() {
     return maxFotoDate;
+  }
+
+  public GeoCoord cercaGPS(GeoCoord p_coo) {
+    if (m_liDicot == null)
+      return null;
+    GeoCoord coo = m_liDicot.cercaDicot(p_coo);
+    return coo;
   }
 
 }

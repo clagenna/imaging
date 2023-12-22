@@ -108,8 +108,7 @@ public class MainFrame extends JFrame implements PropertyChangeListener {
   }
 
   private void creaComponents() {
-    // TODO Auto-generated method stub
-
+    //
   }
 
   protected void locComponentMoved(ComponentEvent p_e) {
@@ -137,8 +136,7 @@ public class MainFrame extends JFrame implements PropertyChangeListener {
 
   @Override
   public void propertyChange(PropertyChangeEvent p_evt) {
-    // TODO Auto-generated method stub
-
+    //
   }
 
   public static void main(String[] args) {

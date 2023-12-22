@@ -53,7 +53,10 @@ public class ParseData implements IParseData {
       if (mtch.find()) {
         for (int k = 0; k < mtch.groupCount(); k++)
           szFmtDt[k] = mtch.group(k + 1);
-        String szDt = String.format("%s:%s:%s %s:%s:%s", (Object[]) szFmtDt);
+        String l_fmt = "%s:%s:%s %s:%s:%s";
+        if (szFmtDt[0].length() == 2)
+          l_fmt = "20%s:%s:%s %s:%s:%s";
+        String szDt = String.format(l_fmt, (Object[]) szFmtDt);
         try {
           dtRet = LocalDateTime.parse(szDt, s_fmtDtExif);
         } catch (Exception e) {
