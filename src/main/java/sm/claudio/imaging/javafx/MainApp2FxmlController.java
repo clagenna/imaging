@@ -10,12 +10,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.spi.StandardLevel;
 import org.controlsfx.control.ToggleSwitch;
 
 import com.jfoenix.controls.JFXButton;
@@ -35,8 +38,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
@@ -60,49 +66,58 @@ import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
+import sm.claudio.imaging.sys.ILog4jReader;
 import sm.claudio.imaging.sys.ISwingLogger;
+import sm.claudio.imaging.sys.Log4jRow;
+import sm.claudio.imaging.sys.MioAppender;
 import sm.claudio.imaging.sys.Versione;
+import sm.claudio.imaging.sys.ex.ImagingLog4jRowException;
 
-public class MainApp2FxmlController implements Initializable, ISwingLogger {
-  private static final Logger                s_log             = LogManager.getLogger(MainApp2FxmlController.class);
+public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog4jReader {
+  private static final Logger s_log = LogManager.getLogger(MainApp2FxmlController.class);
 
-  private static final String                IMAGE_EDITING_ICO = "image-editing.png";
-  private static final String                EXIF_FILE_DIR     = "Exif File Dir";
-  private static final String                FILE_DIR_EXIF     = "File Dir Exif";
-  private static final String                DIR_FILE_EXIF     = "Dir File Exif";
-  public static final SimpleDateFormat       s_fmt             = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+  private static final String IMAGE_EDITING_ICO = "image-editing.png";
+  private static final String EXIF_FILE_DIR     = "Exif File Dir";
+  private static final String FILE_DIR_EXIF     = "File Dir Exif";
+  private static final String DIR_FILE_EXIF     = "Dir File Exif";
+  private static final String CSZ_LOG_LEVEL     = "logLevel";
+  private static final String CSZ_SPLITPOS      = "splitpos";
+
+  public static final SimpleDateFormat s_fmt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
   /**
    * Nel fxml ci deve essere la specifica:<br/>
    * <code>fx:controller="sm.clagenna...MainApp2FxmlController"</code>
    */
-  public static final String                 CSZ_FXMLNAME      = "MainApp2.fxml";
+  public static final String CSZ_FXMLNAME = "MainApp2.fxml";
 
   @FXML
-  private JFXButton                          btCerca;
+  private JFXButton         btCerca;
   @FXML
-  private JFXButton                          btAnalizza;
+  private JFXButton         btAnalizza;
   @FXML
-  private JFXButton                          btEsegui;
+  private JFXButton         btEsegui;
   @FXML
-  private JFXButton                          btInterpolaGPX;
+  private JFXButton         btInterpolaGPX;
   @FXML
-  private JFXButton                          btDupl;
+  private JFXButton         btDupl;
   @FXML
-  private TextField                          txDir;
+  private TextField         txDir;
   @FXML
-  private TextField                          txGpx;
+  private TextField         txGpx;
   @FXML
-  private JFXButton                          btCercaGPX;
+  private JFXButton         btCercaGPX;
   @FXML
-  private ToggleSwitch                       ckUseDecimalGPS;
+  private ToggleSwitch      ckUseDecimalGPS;
   @FXML
-  private ToggleSwitch                       ckRecurse;
+  private ToggleSwitch      ckRecurse;
   @FXML
-  private ChoiceBox<String>                  panRadioB;
+  private ChoiceBox<String> panRadioB;
   @FXML
-  private Label                              lblLogs;
+  private Label             lblLogs;
 
+  @FXML
+  private SplitPane                          spltPane;
   @FXML
   private TableView<FSFile>                  table;
   @FXML
@@ -128,7 +143,24 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   @FXML
   private TableColumn<FSFile, Double>        latitude;
 
-  private ImgModel                           m_model;
+  @FXML
+  private TableView<Log4jRow>           tblView;
+  @FXML
+  private TableColumn<Log4jRow, String> colTime;
+  @FXML
+  private TableColumn<Log4jRow, String> colLev;
+  @FXML
+  private TableColumn<Log4jRow, String> colMsg;
+  @FXML
+  private Button                        btClearMsg;
+  @FXML
+  private ComboBox<Level>               cbLevelMin;
+  private Level                         levelMin;
+  private List<Log4jRow>                m_liMsgs;
+  @FXML
+  private Label                         lbProgressione;
+
+  private ImgModel m_model;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -140,6 +172,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     AppProperties prop = new AppProperties();
     prop.openProperties();
     prop.setSwingLogger(this);
+    levelMin = Level.INFO;
 
     m_model = new ImgModel();
     m_model.setPriority(EExifPriority.ExifFileDir);
@@ -182,7 +215,67 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     // mainstage.setTitle("Convertitore nomi foto");
     mainstage.setTitle(Versione.getVersionEx());
     leggiProperties(mainstage);
+    preparaLogPanel(prop);
 
+  }
+
+  private void preparaLogPanel(AppProperties prop) {
+    MioAppender.setLogReader(this);
+    tblView.setPlaceholder(new Label("Nessun messaggio da mostrare" + ""));
+    tblView.setFixedCellSize(21.0);
+    tblView.setRowFactory(row -> new TableRow<Log4jRow>() {
+      @Override
+      public void updateItem(Log4jRow item, boolean empty) {
+        super.updateItem(item, empty);
+        if (item == null || empty) {
+          setStyle("");
+          return;
+        }
+        String cssSty = "-fx-background-color: ";
+        Level tip = item.getLevel();
+        StandardLevel lev = tip.getStandardLevel();
+        switch (lev) {
+          case TRACE:
+            cssSty += "beige";
+            break;
+          case DEBUG:
+            cssSty += "silver";
+            break;
+          case INFO:
+            cssSty = "";
+            break;
+          case WARN:
+            cssSty += "coral";
+            break;
+          case ERROR:
+            cssSty += "hotpink";
+            break;
+          case FATAL:
+            cssSty += "deeppink";
+            break;
+          default:
+            cssSty = "";
+            break;
+        }
+        // System.out.println("stile=" + cssSty);
+        setStyle(cssSty);
+      }
+    });
+
+    // colTime.setMaxWidth(60.);
+    colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
+    // colLev.setMaxWidth(48.0);
+    colLev.setCellValueFactory(new PropertyValueFactory<>("level"));
+    colMsg.setCellValueFactory(new PropertyValueFactory<>("message"));
+    cbLevelMin.getItems().addAll(Level.TRACE, Level.DEBUG, Level.INFO, Level.WARN, Level.ERROR, Level.FATAL);
+    cbLevelMin.getSelectionModel().select(levelMin);
+
+    // -------- combo level -------
+    if (prop != null) {
+      String sz = prop.getPropVal(CSZ_LOG_LEVEL);
+      if (sz != null)
+        levelMin = Level.toLevel(sz);
+    }
   }
 
   private Object txDirLostFocus(ObservableValue<? extends Boolean> p_obs, Boolean p_oldv, Boolean p_newv) {
@@ -198,7 +291,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     table.setRowFactory(tv -> {
       TableRow<FSFile> row = new TableRow<>();
       row.setOnMouseClicked(event -> {
-        if (event.getClickCount() == 2 && ( !row.isEmpty())) {
+        if (event.getClickCount() == 2 && !row.isEmpty()) {
           // FSFile rowData = row.getItem();
           // System.out.println("Double click on: " + rowData.getAttuale());
           imagePopupWindowShow(row);
@@ -263,11 +356,11 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     //    System.out.printf("X %.2f - %.2f\n", minx, maxx);
     //    System.out.printf("Y %.2f - %.2f\n", miny, maxy);
 
-    if ( (dimX * dimY) > 0) {
+    if (dimX * dimY > 0) {
       mainstage.setWidth(dimX);
       mainstage.setHeight(dimY);
     }
-    if ( (posX * posY) != 0) {
+    if (posX * posY != 0) {
       posX = (int) (posX < minx ? minx : posX);
       posY = (int) (posY < minx ? minx : posY);
       mainstage.setX(posX);
@@ -278,6 +371,32 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       settaDir(sz, true);
     for (TableColumn<FSFile, ?> c : table.getColumns()) {
       readColumnWidth(props, c);
+    }
+    for (TableColumn<Log4jRow, ?> c : tblView.getColumns()) {
+      readColumnWidth(props, c);
+    }
+
+    ChangeListener<Boolean> list = new ChangeListener<Boolean>() {
+
+      @Override
+      public void changed(ObservableValue<? extends Boolean> p_observable, Boolean p_oldValue, Boolean p_newValue) {
+        if (p_newValue) {
+          setSplitPos();
+          p_observable.removeListener(this);
+        }
+      }
+    };
+    // se setto solo splitPos() (Senza passare attraverso lo showingProperty)
+    // lo stage subisce un resize quando la window finisce di costruire
+    mainstage.showingProperty().addListener(list);
+  }
+
+  private void setSplitPos() {
+    AppProperties props = AppProperties.getInst();
+    String szPos = props.getPropVal(CSZ_SPLITPOS);
+    if (szPos != null) {
+      double dbl = Double.valueOf(szPos);
+      spltPane.setDividerPositions(dbl);
     }
   }
 
@@ -495,6 +614,53 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
   }
 
   @Override
+  public void addLog(String[] p_arr) {
+    // [0] - class emitting
+    // [1] - timestamp
+    // [2] - Log Level
+    // [3] - message
+    // System.out.println("addLog=" + String.join("\t", p_arr));
+    Log4jRow riga = null;
+    try {
+      riga = new Log4jRow(p_arr);
+    } catch (ImagingLog4jRowException e) {
+      e.printStackTrace();
+    }
+    if (riga != null)
+      addRigaLog(riga);
+  }
+
+  private void addRigaLog(Log4jRow rig) {
+    if (m_liMsgs == null)
+      m_liMsgs = new ArrayList<>();
+    m_liMsgs.add(rig);
+    // if ( rig.getLevel().isInRange( Level.FATAL, levelMin )) // isLessSpecificThan(levelMin))
+    if (rig.getLevel().intLevel() <= levelMin.intLevel())
+      tblView.getItems().add(rig);
+  }
+
+  @FXML
+  void btClearMsgClick(ActionEvent event) {
+    // System.out.println("ReadFattHTMLController.btClearMsgClick()");
+    tblView.getItems().clear();
+    if (m_liMsgs != null)
+      m_liMsgs.clear();
+    m_liMsgs = null;
+  }
+
+  @FXML
+  void cbLevelMinSel(ActionEvent event) {
+    levelMin = cbLevelMin.getSelectionModel().getSelectedItem();
+    // System.out.println("ReadFattHTMLController.cbLevelMinSel():" + levelMin.name());
+    tblView.getItems().clear();
+    if (m_liMsgs == null || m_liMsgs.size() == 0)
+      return;
+    // List<Log4jRow> li = m_liMsgs.stream().filter(s -> s.getLevel().isInRange(Level.FATAL, levelMin )).toList(); // !s.getLevel().isLessSpecificThan(levelMin)).toList();
+    List<Log4jRow> li = m_liMsgs.stream().filter(s -> s.getLevel().intLevel() <= levelMin.intLevel()).toList();
+    tblView.getItems().addAll(li);
+  }
+
+  @Override
   public void sparaMess(String p_msg) {
     String szOut = "";
     if (p_msg != null)
@@ -607,6 +773,9 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
     AppProperties prop = AppProperties.getInst();
     prop.setPropVal(AppProperties.CSZ_PROP_LASTDIR, m_model.getDirectory());
     saveColumnWidth(prop);
+    double[] pos = spltPane.getDividerPositions();
+    String szPos = String.format("%.4f", pos[0]).replace(",", ".");
+    prop.setPropVal(CSZ_SPLITPOS, szPos);
     Platform.exit();
   }
 
@@ -616,6 +785,11 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger {
       // System.out.printf("MainApp2FxmlController.saveColumnWidth(\"%s\")\n", c.getId());
       saveColumnWidth(p_prop, c);
     }
+    for (TableColumn<Log4jRow, ?> c : tblView.getColumns()) {
+      // System.out.printf("MainApp2FxmlController.saveColumnWidth(\"%s\")\n", c.getId());
+      saveColumnWidth(p_prop, c);
+    }
+
   }
 
   private void readColumnWidth(AppProperties p_prop, TableColumn<?, ?> p_col) {

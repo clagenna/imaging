@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration>
-  <Appenders>
+<Configuration packages="sm.claudio.imaging.sys">
+	<Appenders>
 
-    <Console name="console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%d %-5p  %X{loginame} %-32F:%L - %m%n"/>
-    </Console>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d %-5p  %X{loginame} %-32F:%L - %m%n" />
+		</Console>
 
-    <File name="imaging" fileName="log/imaging.log" append="true">
-      <PatternLayout pattern="%-32c  %d{yyyy-MM-dd HH:mm:ss} %-5p: %m%n"/>
-    </File>
+		<File name="imaging" fileName="log/imaging.log" append="true">
+			<PatternLayout
+				pattern="%-32c  %d{yyyy-MM-dd HH:mm:ss} %-5p: %m%n" />
+		</File>
+		<MioAppender name="MIOAPPENDER">
+			<!-- PatternLayout pattern="serial:%sn |Date:%d |level:%level |class:%logger 
+				|method:%M() |line:%L |Location: %l |message:%m%n"/ -->
+			<PatternLayout pattern="%logger(%L)\t%d\t%level\t%m%n" />
+		</MioAppender>
 
-  </Appenders>
+	</Appenders>
 
-  <Loggers>
-    <Root level="debug">
-      <AppenderRef ref="console"/>
-      <AppenderRef ref="imaging"/>
-    </Root>
-  </Loggers>
+	<Loggers>
+		<Root level="debug">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="imaging" />
+			<AppenderRef ref="MIOAPPENDER" />
+		</Root>
+	</Loggers>
 
 </Configuration>
