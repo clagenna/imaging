@@ -10,6 +10,6 @@ if ( Test-Path $zipFile ) {
 Start-Process -Wait -FilePath $mvnCmd -ArgumentList 'clean','package','-P','remote'
 
 
-Get-ChildItem -path "imaging.cmd", "imaging.properties", "target\imaging.jar" |
+Get-ChildItem -path "imaging.cmd", "imaging.properties", "target\imaging.jar", "installApp.ps1" |
     Compress-Archive  -CompressionLevel Fastest -DestinationPath $zipFile
 
