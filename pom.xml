@@ -12,8 +12,8 @@
 		<mainClassName>sm.claudio.imaging.javafx.MainAppFxml</mainClassName>
 		<compiler.plugin>3.11.0</compiler.plugin>
 		<lo4j2.vers>2.14.0</lo4j2.vers>
-		<java.version>20</java.version>
-		<javafx.version>20.0.2</javafx.version>
+		<java.version>21</java.version>
+		<javafx.version>21</javafx.version>
 		<lombok.version>1.18.30</lombok.version>
 		<jpro.version>2022.1.6</jpro.version>
 		<gson.version>2.10.1</gson.version>
@@ -139,12 +139,14 @@
 		</dependency>
 	</dependencies>
 	<profiles>
+		
 		<profile>
 			<id>local</id>
 			<build>
 				<plugins/>
 			</build>
 		</profile>
+		
 		<profile>
 			<id>remote</id>
 			<build>
@@ -197,6 +199,7 @@
 				</plugins>
 			</build>
 		</profile>
+		
 		<profile>
 			<id>delombok</id>
 			<build>

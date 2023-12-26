@@ -11,7 +11,6 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -20,8 +19,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.spi.StandardLevel;
 import org.controlsfx.control.ToggleSwitch;
-
-import com.jfoenix.controls.JFXButton;
 
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -67,21 +64,20 @@ import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.swing.ImgModel;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.ILog4jReader;
-import sm.claudio.imaging.sys.ISwingLogger;
 import sm.claudio.imaging.sys.Log4jRow;
 import sm.claudio.imaging.sys.MioAppender;
 import sm.claudio.imaging.sys.Versione;
 import sm.claudio.imaging.sys.ex.ImagingLog4jRowException;
 
-public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog4jReader {
+public class MainApp2FxmlController implements Initializable, ILog4jReader {
   private static final Logger s_log = LogManager.getLogger(MainApp2FxmlController.class);
 
   private static final String IMAGE_EDITING_ICO = "image-editing.png";
-  private static final String EXIF_FILE_DIR     = "Exif File Dir";
-  private static final String FILE_DIR_EXIF     = "File Dir Exif";
-  private static final String DIR_FILE_EXIF     = "Dir File Exif";
-  private static final String CSZ_LOG_LEVEL     = "logLevel";
-  private static final String CSZ_SPLITPOS      = "splitpos";
+  //  private static final String EXIF_FILE_DIR     = "Exif File Dir";
+  //  private static final String FILE_DIR_EXIF     = "File Dir Exif";
+  //  private static final String DIR_FILE_EXIF     = "Dir File Exif";
+  private static final String CSZ_LOG_LEVEL = "logLevel";
+  private static final String CSZ_SPLITPOS  = "splitpos";
 
   public static final SimpleDateFormat s_fmt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
@@ -92,29 +88,29 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
   public static final String CSZ_FXMLNAME = "MainApp2.fxml";
 
   @FXML
-  private JFXButton         btCerca;
+  private Button                   btCerca;
   @FXML
-  private JFXButton         btAnalizza;
+  private Button                   btAnalizza;
   @FXML
-  private JFXButton         btEsegui;
+  private Button                   btEsegui;
   @FXML
-  private JFXButton         btInterpolaGPX;
+  private Button                   btInterpolaGPX;
   @FXML
-  private JFXButton         btDupl;
+  private Button                   btDupl;
   @FXML
-  private TextField         txDir;
+  private TextField                txDir;
   @FXML
-  private TextField         txGpx;
+  private TextField                txGpx;
   @FXML
-  private JFXButton         btCercaGPX;
+  private Button                   btCercaGPX;
   @FXML
-  private ToggleSwitch      ckUseDecimalGPS;
+  private ToggleSwitch             ckUseDecimalGPS;
   @FXML
-  private ToggleSwitch      ckRecurse;
+  private ToggleSwitch             ckRecurse;
   @FXML
-  private ChoiceBox<String> panRadioB;
+  private ChoiceBox<EExifPriority> panRadioB;
   @FXML
-  private Label             lblLogs;
+  private Label                    lblLogs;
 
   @FXML
   private SplitPane                          spltPane;
@@ -164,14 +160,15 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    panRadioB.getItems().addAll(EXIF_FILE_DIR, FILE_DIR_EXIF, DIR_FILE_EXIF);
+    // panRadioB.getItems().addAll(EXIF_FILE_DIR, FILE_DIR_EXIF, DIR_FILE_EXIF);
+    panRadioB.getItems().addAll(EExifPriority.values());
     panRadioB.getSelectionModel().select(0);
 
     txDir.focusedProperty().addListener((obs, oldv, newv) -> txDirLostFocus(obs, oldv, newv));
 
-    AppProperties prop = new AppProperties();
-    prop.openProperties();
-    prop.setSwingLogger(this);
+    // AppProperties prop = new AppProperties();
+    // prop.openProperties();
+    AppProperties prop = AppProperties.getInst();
     levelMin = Level.INFO;
 
     m_model = new ImgModel();
@@ -445,14 +442,14 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
     Path pth = Paths.get(p_pth);
     if ( !Files.exists(pth)) {
       String sz = String.format("Il path %s non esiste...", p_pth);
+      s_log.warn(sz);
       msgBox(sz);
-      sparaMess(sz);
       return;
     }
     if ( !Files.isDirectory(pth, LinkOption.NOFOLLOW_LINKS)) {
       String sz = String.format("Il path %s non e' un direttorio!", p_pth);
+      s_log.warn(sz);
       msgBox(sz);
-      sparaMess(sz);
       return;
     }
     m_model.setDirectory(p_pth);
@@ -468,14 +465,14 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
     Path pth = Paths.get(p_pth);
     if ( !Files.exists(pth)) {
       String sz = String.format("Il path del GPX %s non esiste...", p_pth);
+      s_log.warn(sz);
       msgBox(sz);
-      sparaMess(sz);
       return;
     }
     if ( !Files.isRegularFile(pth, LinkOption.NOFOLLOW_LINKS)) {
       String sz = String.format("Il file %s non e' un GPX!", p_pth);
+      s_log.warn(sz);
       msgBox(sz);
-      sparaMess(sz);
       return;
     }
     m_model.setFileGPX(p_pth);
@@ -570,7 +567,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
   }
 
   private void clear() {
-    sparaMess(s_fmt.format(new Date()) + " Inizio esecuzione");
+    //    String sz = "Inizio esecuzione";
+    //    s_log.warn(sz);
     m_model.clear();
   }
 
@@ -660,27 +658,6 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
     tblView.getItems().addAll(li);
   }
 
-  @Override
-  public void sparaMess(String p_msg) {
-    String szOut = "";
-    if (p_msg != null)
-      szOut = p_msg;
-    lblLogs.setText(szOut);
-  }
-
-  @Override
-  public void addRow(String att, String nuo, Path loc, Date dt) {
-    // obsoleto e fuori moda !
-    //
-    //    Object[] arr = new Object[4];
-    //    arr[0] = att;
-    //    arr[1] = nuo;
-    //    arr[2] = loc.toAbsolutePath();
-    //    arr[3] = MainFrame2.s_fmt.format(dt);
-    //    DefaultTableModel mod = (DefaultTableModel) table.getModel();
-    //    mod.addRow(arr);
-  }
-
   public void imagePopupWindowShow(TableRow<FSFile> row) {
     FSFile filejpeg = row.getItem();
     Stage stage = new Stage();
@@ -757,7 +734,7 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
       return;
     table.getSelectionModel().select(indx);
     FSFile fi = table.getSelectionModel().getSelectedItem();
-    System.out.printf("MainApp2FxmlController.doRightLeft(%s)\n", fi.getAttuale());
+    // System.out.printf("MainApp2FxmlController.doRightLeft(%s)\n", fi.getAttuale());
 
     ImageViewResizer imgResiz = caricaImg(fi);
 
@@ -812,7 +789,8 @@ public class MainApp2FxmlController implements Initializable, ISwingLogger, ILog
     stage.setWidth(800);
     stage.setHeight(600);
 
-    URL url = getClass().getResource(TreeViewScene.CSZ_FXMLNAME);
+    // URL url = getClass().getResource(TreeViewScene.CSZ_FXMLNAME);
+    URL url = null;
     if (url == null)
       url = getClass().getClassLoader().getResource(TreeViewScene.CSZ_FXMLNAME);
     Parent radice = FXMLLoader.load(url);

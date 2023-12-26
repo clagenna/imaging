@@ -35,9 +35,6 @@ public class AppProperties {
 
   private static AppProperties s_inst;
   private ETipoCambioNome      tipoCambioNome;
-
-  @Getter @Setter
-  private ISwingLogger         swingLogger;
   @Getter @Setter
   private Properties           properties;
   @Getter @Setter

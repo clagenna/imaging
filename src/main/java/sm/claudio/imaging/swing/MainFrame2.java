@@ -96,7 +96,6 @@ public class MainFrame2 extends JFrame implements ISwingLogger {
 
     AppProperties prop = new AppProperties();
     prop.openProperties();
-    prop.setSwingLogger(this);
     m_model = new ImgModel();
 
     setTitle("Retagging di foto");

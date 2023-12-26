@@ -2,29 +2,35 @@ set LUOGO=%~dp0
 cd /d "%LUOGO%"
 cd
 set qta=0
+set REMDEB=
+if "%1" == "-d" (
+	set REMDEB=-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=y 
+	shift
+)
 
-set JARTEST=target\imaging-jar-with-dependencies.jar
+SET appname=imaging
+set JARTEST=target\%appname%-jar-with-dependencies.jar
 if exist "%JARTEST%" (
   set JAREXE=%JARTEST%
   call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
-set JARTEST=imaging-jar-with-dependencies.jar
+set JARTEST=%appname%-jar-with-dependencies.jar
 if exist "%JARTEST%" (
   set JAREXE=%JARTEST%
   call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
-set JARTEST=target\imaging.jar
+set JARTEST=target\%appname%.jar
 if exist "%JARTEST%" (
   set JAREXE=%JARTEST%
   call :info  "%JARTEST%"
   set /a qta=%qta%+1
   )
 
-set JARTEST=imaging.jar
+set JARTEST=%appname%.jar
 if exist "%JARTEST%" (
   set JAREXE=%JARTEST%
   call :info  "%JARTEST%"
@@ -59,7 +65,10 @@ goto :eof
 
 :vai
 @echo on
-set MODPATH=C:\Program Files\javafx-sdk-17.0.1\lib
+if "%JAVAFX_HOME%" == "" (
+	call :errore non hai settato la envir.var JAVAFX_HOME
+	goto fine
+	)
 set MODS=javafx.controls
 set MODS=%MODS%,javafx.base
 set MODS=%MODS%,javafx.fxml
@@ -67,7 +76,8 @@ set MODS=%MODS%,javafx.graphics
 set MODS=%MODS%,javafx.web
 rem set MODS=%MODS%,javafx.media
 
-java --module-path "%MODPATH%" --add-modules="%MODS%" -jar "%JAREXE%"
+rem java --module-path "%JAVAFX_HOME%\lib" --add-modules="%MODS%" -jar "%JAREXE%"
 
+java %REMDEB%  --module-path "%JAVAFX_HOME%\lib" --add-modules="%MODS%" -jar "%JAREXE%"
 
 :fine

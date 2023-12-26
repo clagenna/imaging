@@ -30,22 +30,21 @@ import sm.claudio.imaging.gpx.JsonParserStream;
 import sm.claudio.imaging.gpx.RicercaDicotomica;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
-import sm.claudio.imaging.sys.ISwingLogger;
 import sm.claudio.imaging.sys.TimerMeter;
 
 public class ImgModel {
-  private static final Logger         s_log = LogManager.getLogger(ImgModel.class);
-  private String                      directory;
-  private String                      fileGPX;
-  private EExifPriority               priority;
-  private boolean                     recursive;
+  private static final Logger s_log = LogManager.getLogger(ImgModel.class);
+  private String              directory;
+  private String              fileGPX;
+  private EExifPriority       priority;
+  private boolean             recursive;
 
   private List<FSFile>                m_liFoto;
   private GpsXmlHandler               m_hand;
   private RicercaDicotomica<GeoCoord> m_liDicot;
 
-  private LocalDateTime               minFotoDate;
-  private LocalDateTime               maxFotoDate;
+  private LocalDateTime minFotoDate;
+  private LocalDateTime maxFotoDate;
 
   public ImgModel() {
     AppProperties prop = AppProperties.getInst();
@@ -71,7 +70,6 @@ public class ImgModel {
   }
 
   public void analizza() {
-    ISwingLogger swingl = AppProperties.getInst().getSwingLogger();
     s_log.debug("ImgModel.esegui: {}", toString());
     String szSrc = getDirectory();
     Path fi = Paths.get(szSrc);
@@ -87,7 +85,6 @@ public class ImgModel {
     } catch (FileNotFoundException e) {
       String szMsg = "Errore open direttorio " + szSrc;
       ImgModel.s_log.error(szMsg, e);
-      swingl.sparaMess(szMsg);
       return;
     }
     FileSystemVisitatore fsv = new FileSystemVisitatore();
@@ -97,7 +94,7 @@ public class ImgModel {
   }
 
   private void aggiungiGPSDalleFoto() {
-    if ( (m_liDicot == null) || m_liFoto == null || m_liFoto == null)
+    if (m_liDicot == null || m_liFoto == null || m_liFoto == null)
       return;
     minFotoDate = LocalDateTime.MAX;
     maxFotoDate = LocalDateTime.MIN;
@@ -141,7 +138,6 @@ public class ImgModel {
 
   public boolean isValoriOk() {
     String szLog = "";
-    ISwingLogger swLog = AppProperties.getInst().getSwingLogger();
     boolean bRet = priority != null;
     if ( !bRet)
       szLog = "Manca la priority";
@@ -155,8 +151,8 @@ public class ImgModel {
       if ( !bRet)
         szLog = "Il direttorio non esiste";
     }
-    swLog.sparaMess(szLog);
-    // System.out.println("ImgModel.isValoriOk():" + bRet);
+    if (szLog.length() > 0)
+      s_log.warn(szLog);
     return bRet;
   }
 
@@ -175,7 +171,6 @@ public class ImgModel {
   }
 
   private boolean parseGpxTracks(String p_gpx) {
-    ISwingLogger swLog = AppProperties.getInst().getSwingLogger();
     s_log.debug("SAX parse di {}", p_gpx);
     TimerMeter tim = new TimerMeter("SAX parse");
     SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -185,7 +180,6 @@ public class ImgModel {
     } catch (ParserConfigurationException | SAXException e) {
       String szMsg = "Errore sul file GPX delle tracce: " + p_gpx + "; err=" + e.getMessage();
       ImgModel.s_log.error(szMsg, e);
-      swLog.sparaMess(szMsg);
       return false;
     }
     m_hand = new GpsXmlHandler();
@@ -197,7 +191,6 @@ public class ImgModel {
     } catch (SAXException | IOException e) {
       String szMsg = "Errore parsing file GPX delle tracce: " + p_gpx + "; err=" + e.getMessage();
       ImgModel.s_log.error(szMsg, e);
-      swLog.sparaMess(szMsg);
       return false;
     }
     s_log.debug("Parse SAX, time={}", tim.stop());
@@ -248,7 +241,7 @@ public class ImgModel {
   @Override
   public String toString() {
     String sz = String.format("path=\"%s\", prio=%s, recurse=%s", //
-        directory, priority.desc(), (recursive ? "recursive" : "currDir only"));
+        directory, priority.desc(), recursive ? "recursive" : "currDir only");
     return sz;
   }
 
@@ -257,7 +250,7 @@ public class ImgModel {
   }
 
   public void interpolaGPX() {
-    if (m_liFoto == null || m_liFoto.size() == 0 || (m_liDicot == null))
+    if (m_liFoto == null || m_liFoto.size() == 0 || m_liDicot == null)
       return;
     s_log.info("Interpolazione delle coordinate GPS con il file di tracce");
     List<FSFile> liNoGps = m_liFoto //

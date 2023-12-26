@@ -1,5 +1,6 @@
 package sm.claudio.imaging.javafx;
 
+import java.io.IOException;
 import java.net.URL;
 
 import javafx.application.Application;
@@ -19,12 +20,30 @@ public class MainAppFxml extends Application {
   public void start(Stage pStage) throws Exception {
     inst = this;
     this.primaryStage = pStage;
-
-    URL url = getClass().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
-    if (url == null)
+    final String l_fxml = "/sm/claudio/imaging/javafx/MainApp2.fxml";
+    // URL url = getClass().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
+    AppProperties prop = new AppProperties();
+    prop.openProperties();
+    URL url = getClass().getResource(l_fxml);
+    if (url == null) {
+      System.err.printf("non trovo getClass().getResource(%s)\n", MainApp2FxmlController.CSZ_FXMLNAME);
       url = getClass().getClassLoader().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
-    Parent radice = FXMLLoader.load(url);
-    Scene  scene  = new Scene(radice, 900, 440);
+      //      url = getClass().getClassLoader().getResource(l_fxml);
+      if (url == null) {
+        System.err.printf("non trovo getClass().getClassLoader().getResource(%s)\n", MainApp2FxmlController.CSZ_FXMLNAME);
+      } else {
+        System.out.printf("Trovato getClass().getClassLoader().getResource(%s)\n", MainApp2FxmlController.CSZ_FXMLNAME);
+      }
+    } else {
+      System.out.printf("Trovato getClass().getResource(%s)\n", MainApp2FxmlController.CSZ_FXMLNAME);
+    }
+    Parent radice = null;
+    try {
+      radice = FXMLLoader.load(url);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    Scene scene = new Scene(radice, 900, 440);
     url = getClass().getResource(CSZ_MAIN_APP2_CSS);
     if (url == null)
       url = getClass().getClassLoader().getResource(CSZ_MAIN_APP2_CSS);
