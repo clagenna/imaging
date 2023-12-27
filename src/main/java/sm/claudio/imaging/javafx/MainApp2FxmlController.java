@@ -410,7 +410,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     // imposto la dir precedente (se c'è)
     AppProperties props = AppProperties.getInst();
     String sz = props.getLastDir();
-    if (sz != null) {
+    if (sz != null && sz.length() > 1) {
       if (Files.exists(Paths.get(sz)))
         fil.setInitialDirectory(new File(sz));
     }
