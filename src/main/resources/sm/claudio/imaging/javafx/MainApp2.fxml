@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
@@ -17,13 +16,13 @@
    <children>
       <TextField fx:id="txDir" layoutX="14.0" layoutY="14.0" onAction="#onEnter" prefHeight="25.0" prefWidth="639.0" promptText="Digita oppure cerca il direttorio di partenza delle foto" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="247.0" />
       <Button fx:id="btCerca" layoutX="661.0" layoutY="14.0" mnemonicParsing="false" onAction="#btCercaClick" text="Cerca.." AnchorPane.rightAnchor="188.0" />
-      <ChoiceBox fx:id="panRadioB" layoutX="727.0" layoutY="14.0" prefHeight="25.0" prefWidth="161.0" AnchorPane.rightAnchor="12.0" />
       <TextField fx:id="txDir1" layoutX="14.0" layoutY="50.0" onAction="#onEnter" prefHeight="25.0" prefWidth="639.0" promptText="Dammi un file di tracce GPX per settare le latitudini e longitudini delle foto" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="247.0" />
+      <ComboBox fx:id="cbPrio" layoutX="732.0" layoutY="17.0" onAction="#cbPrioClick" prefWidth="150.0" />
       <Button fx:id="btCercaGPX" layoutX="661.0" layoutY="50.0" mnemonicParsing="false" onAction="#btCercaGPXClick" text="Cerca.." AnchorPane.rightAnchor="188.0" />
       <ToggleSwitch fx:id="ckUseDecimalGPS" layoutX="746.0" layoutY="54.0" prefHeight="18.0" prefWidth="142.0" text="Mostra Gradi decim." AnchorPane.rightAnchor="12.0" />
       <ToggleSwitch fx:id="ckRecurse" layoutX="14.0" layoutY="89.0" prefHeight="18.0" prefWidth="136.0" text="Recurse Dirs." AnchorPane.leftAnchor="14.0" />
       <Button fx:id="btAnalizza" layoutX="204.0" layoutY="86.0" mnemonicParsing="false" onAction="#btAnalizzaClick" text="Analizza" AnchorPane.leftAnchor="204.0" />
-      <Button fx:id="btEsegui" layoutX="282.0" layoutY="86.0" mnemonicParsing="false" onAction="#btEseguiClick" text="Rinomina" AnchorPane.leftAnchor="282.0" />
+      <Button fx:id="btEsegui" layoutX="282.0" layoutY="86.0" mnemonicParsing="false" onAction="#btEseguiClickThread" text="Rinomina" AnchorPane.leftAnchor="282.0" />
       <Button fx:id="btInterpolaGPX" layoutX="362.0" layoutY="86.0" mnemonicParsing="false" onAction="#btInterpolaGPXClick" text="Interp. GPX" AnchorPane.leftAnchor="362.0" />
       <Button fx:id="btDupl" layoutX="661.0" layoutY="86.0" mnemonicParsing="false" onAction="#btCercaDuplicati" text="Duplicati" AnchorPane.rightAnchor="187.0" />
       <SplitPane fx:id="spltPane" dividerPositions="0.5" layoutX="4.0" layoutY="120.0" orientation="VERTICAL" prefHeight="478.0" prefWidth="893.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="122.0">

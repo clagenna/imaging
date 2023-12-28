@@ -20,11 +20,11 @@ public class MainAppFxml extends Application {
   public void start(Stage pStage) throws Exception {
     inst = this;
     this.primaryStage = pStage;
-    final String l_fxml = "/sm/claudio/imaging/javafx/MainApp2.fxml";
+    // final String l_fxml = "/sm/claudio/imaging/javafx/MainApp2.fxml";
     // URL url = getClass().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
     AppProperties prop = new AppProperties();
     prop.openProperties();
-    URL url = getClass().getResource(l_fxml);
+    URL url = getClass().getResource(MainApp2FxmlController.CSZ_FXMLNAME);
     if (url == null) {
       System.err.printf("non trovo getClass().getResource(%s)\n", MainApp2FxmlController.CSZ_FXMLNAME);
       url = getClass().getClassLoader().getResource(MainApp2FxmlController.CSZ_FXMLNAME);

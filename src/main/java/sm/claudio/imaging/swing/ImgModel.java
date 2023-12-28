@@ -19,6 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
+import javafx.concurrent.Task;
 import sm.claudio.imaging.fsvisit.FSDir;
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.fsvisit.FSFileFactory;
@@ -32,7 +33,7 @@ import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.TimerMeter;
 
-public class ImgModel {
+public class ImgModel extends Task<String> {
   private static final Logger s_log = LogManager.getLogger(ImgModel.class);
   private String              directory;
   private String              fileGPX;
@@ -217,9 +218,11 @@ public class ImgModel {
     return fileGPX;
   }
 
-  public void setFileGPX(String p_fileGPX) {
-    if ( !parseTracks(p_fileGPX))
-      s_log.error("Non sono riuscito ad interpretare {}", p_fileGPX);
+  public void setFileGPX(Path p_pthGPX) {
+    if (p_pthGPX == null)
+      return;
+    if ( !parseTracks(p_pthGPX.toAbsolutePath().toString()))
+      s_log.error("Non sono riuscito ad interpretare {}", p_pthGPX);
   }
 
   public EExifPriority getPriority() {
@@ -276,6 +279,20 @@ public class ImgModel {
       return null;
     GeoCoord coo = m_liDicot.cercaDicot(p_coo);
     return coo;
+  }
+
+  @Override
+  protected String call() throws Exception {
+    //System.out.println("ImgModel Start BackGround Thread");
+    s_log.info("Start BackGround Thread");
+    rinominaFiles();
+    s_log.info("Fine BackGround Thread");
+    return "Done...";
+  }
+
+  public void setDirectory(Path p_pth) {
+    if (p_pth != null)
+      setDirectory(p_pth.toAbsolutePath().toString());
   }
 
 }

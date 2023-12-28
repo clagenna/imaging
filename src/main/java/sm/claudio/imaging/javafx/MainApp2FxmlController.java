@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -36,7 +38,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -88,29 +89,29 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   public static final String CSZ_FXMLNAME = "MainApp2.fxml";
 
   @FXML
-  private Button                   btCerca;
+  private Button                  btCerca;
   @FXML
-  private Button                   btAnalizza;
+  private Button                  btAnalizza;
   @FXML
-  private Button                   btEsegui;
+  private Button                  btEsegui;
   @FXML
-  private Button                   btInterpolaGPX;
+  private Button                  btInterpolaGPX;
   @FXML
-  private Button                   btDupl;
+  private Button                  btDupl;
   @FXML
-  private TextField                txDir;
+  private TextField               txDir;
   @FXML
-  private TextField                txGpx;
+  private TextField               txGpx;
   @FXML
-  private Button                   btCercaGPX;
+  private Button                  btCercaGPX;
   @FXML
-  private ToggleSwitch             ckUseDecimalGPS;
+  private ToggleSwitch            ckUseDecimalGPS;
   @FXML
-  private ToggleSwitch             ckRecurse;
+  private ToggleSwitch            ckRecurse;
   @FXML
-  private ChoiceBox<EExifPriority> panRadioB;
+  private ComboBox<EExifPriority> cbPrio;
   @FXML
-  private Label                    lblLogs;
+  private Label                   lblLogs;
 
   @FXML
   private SplitPane                          spltPane;
@@ -156,23 +157,33 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   private Label                         lbProgressione;
 
-  private ImgModel m_model;
+  private ImgModel      m_model;
+  private boolean       m_bRecurse;
+  private EExifPriority m_prio;
+  private Path          m_pthDirectory;
+  private Path          m_pthGPX;
+
+  private void creaModel() {
+    m_model = new ImgModel();
+    m_model.setPriority(m_prio);
+    m_model.setRecursive(m_bRecurse);
+    m_model.setDirectory(m_pthDirectory);
+    m_model.setFileGPX(m_pthGPX);
+  }
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
     // panRadioB.getItems().addAll(EXIF_FILE_DIR, FILE_DIR_EXIF, DIR_FILE_EXIF);
-    panRadioB.getItems().addAll(EExifPriority.values());
-    panRadioB.getSelectionModel().select(0);
-
+    cbPrio.getItems().addAll(EExifPriority.values());
+    m_prio = EExifPriority.ExifFileDir;
+    cbPrio.getSelectionModel().select(m_prio);
+    creaModel();
     txDir.focusedProperty().addListener((obs, oldv, newv) -> txDirLostFocus(obs, oldv, newv));
 
     // AppProperties prop = new AppProperties();
     // prop.openProperties();
     AppProperties prop = AppProperties.getInst();
     levelMin = Level.INFO;
-
-    m_model = new ImgModel();
-    m_model.setPriority(EExifPriority.ExifFileDir);
 
     ckUseDecimalGPS.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
@@ -182,7 +193,6 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       }
     });
 
-    m_model.setRecursive(true);
     ckRecurse.setSelected(true);
 
     btAnalizza.setDisable(true);
@@ -404,7 +414,15 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   }
 
   @FXML
-  void btCercaClick(ActionEvent event) {
+  public void cbPrioClick(ActionEvent event) {
+    m_prio = cbPrio.getSelectionModel().getSelectedItem();
+    System.out.printf("cbPrioClick(%s)\n", m_prio);
+    if (m_model != null)
+      m_model.setPriority(m_prio);
+  }
+
+  @FXML
+  public void btCercaClick(ActionEvent event) {
     Stage stage = MainAppFxml.getInst().getPrimaryStage();
     DirectoryChooser fil = new DirectoryChooser();
     // imposto la dir precedente (se c'è)
@@ -439,20 +457,21 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     props.setLastDir(p_pth);
     if (bSetTx)
       txDir.setText(p_pth);
-    Path pth = Paths.get(p_pth);
-    if ( !Files.exists(pth)) {
+    m_pthDirectory = Paths.get(p_pth);
+    if ( !Files.exists(m_pthDirectory)) {
       String sz = String.format("Il path %s non esiste...", p_pth);
       s_log.warn(sz);
       msgBox(sz);
       return;
     }
-    if ( !Files.isDirectory(pth, LinkOption.NOFOLLOW_LINKS)) {
+    if ( !Files.isDirectory(m_pthDirectory, LinkOption.NOFOLLOW_LINKS)) {
       String sz = String.format("Il path %s non e' un direttorio!", p_pth);
       s_log.warn(sz);
       msgBox(sz);
       return;
     }
-    m_model.setDirectory(p_pth);
+    if (m_model != null)
+      m_model.setDirectory(m_pthDirectory);
     checkFattibilita();
   }
 
@@ -462,20 +481,21 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     props.setLastGPX(p_pth);
     if (bSetTx)
       txGpx.setText(p_pth);
-    Path pth = Paths.get(p_pth);
-    if ( !Files.exists(pth)) {
+    m_pthGPX = Paths.get(p_pth);
+    if ( !Files.exists(m_pthGPX)) {
       String sz = String.format("Il path del GPX %s non esiste...", p_pth);
       s_log.warn(sz);
       msgBox(sz);
       return;
     }
-    if ( !Files.isRegularFile(pth, LinkOption.NOFOLLOW_LINKS)) {
+    if ( !Files.isRegularFile(m_pthGPX, LinkOption.NOFOLLOW_LINKS)) {
       String sz = String.format("Il file %s non e' un GPX!", p_pth);
       s_log.warn(sz);
       msgBox(sz);
       return;
     }
-    m_model.setFileGPX(p_pth);
+    if (m_model != null)
+      m_model.setFileGPX(m_pthGPX);
     checkFattibilita();
   }
 
@@ -548,7 +568,8 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   void ckRecurseClick(DragEvent event) {
     // System.out.println("MainApp2FxmlController.ckRecurseClick():" + ckRecurse.isSelected());
-    m_model.setRecursive(ckRecurse.isSelected());
+    m_bRecurse = ckRecurse.isSelected();
+    m_model.setRecursive(m_bRecurse);
     checkFattibilita();
   }
 
@@ -570,6 +591,8 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     //    String sz = "Inizio esecuzione";
     //    s_log.warn(sz);
     m_model.clear();
+    m_model = null;
+    creaModel();
   }
 
   private void caricaGriglia() {
@@ -595,7 +618,55 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     } finally {
       stage.getScene().getRoot().setCursor(Cursor.DEFAULT);
     }
+  }
 
+  @FXML
+  void btEseguiClickThread(ActionEvent event) {
+    s_log.debug("Lancio la conversione in background con un thread");
+    ExecutorService backGrService = Executors.newFixedThreadPool(20);
+    Stage stage = MainAppFxml.getInst().getPrimaryStage();
+
+    Platform.runLater(new Runnable() {
+      @Override
+      public void run() {
+        System.out.println("Cursor wait");
+        stage.getScene().setCursor(Cursor.WAIT);
+      }
+    });
+
+    try {
+      System.out.println("eseguiConversioneRunTask() ... new Task!");
+      // =========== Start Event ================
+      m_model.setOnRunning(ev -> {
+        //          lbProgressione.setText(gpdf.getValue());
+        btEsegui.setDisable(true);
+      });
+      // =========== Finish Event ================
+      m_model.setOnSucceeded(ev -> {
+        //          lbProgressione.setText(gpdf.getValue());
+        btEsegui.setDisable(false);
+        Platform.runLater(new Runnable() {
+          @Override
+          public void run() {
+            System.out.println("Cursor DEFAULT");
+            stage.getScene().setCursor(Cursor.DEFAULT);
+          }
+        });
+        btEsegui.setDisable(false);
+        backGrService.shutdown();
+        while ( !backGrService.isTerminated()) {
+          //
+        }
+        backGrService.close();
+        System.out.println("Executor service SHUTDOWN");
+      });
+      backGrService.execute(m_model);
+      // lbProgressione.textProperty().unbind();
+      // ========================================
+    } catch (Exception e) {
+      lbProgressione.textProperty().unbind();
+      s_log.error("Errore conversione", e);
+    }
   }
 
   @FXML
@@ -633,8 +704,19 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       m_liMsgs = new ArrayList<>();
     m_liMsgs.add(rig);
     // if ( rig.getLevel().isInRange( Level.FATAL, levelMin )) // isLessSpecificThan(levelMin))
-    if (rig.getLevel().intLevel() <= levelMin.intLevel())
-      tblView.getItems().add(rig);
+    if (rig.getLevel().intLevel() <= levelMin.intLevel()) {
+      ObservableList<Log4jRow> itms = tblView.getItems();
+      itms.add(rig);
+      if (itms.size() > 4) {
+
+        Platform.runLater(new Runnable() {
+          @Override
+          public void run() {
+            tblView.scrollTo(itms.size() - 1);
+          }
+        });
+      }
+    }
   }
 
   @FXML
@@ -647,7 +729,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   }
 
   @FXML
-  void cbLevelMinSel(ActionEvent event) {
+  private void cbLevelMinSel(ActionEvent event) {
     levelMin = cbLevelMin.getSelectionModel().getSelectedItem();
     // System.out.println("ReadFattHTMLController.cbLevelMinSel():" + levelMin.name());
     tblView.getItems().clear();
@@ -790,9 +872,15 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     stage.setHeight(600);
 
     // URL url = getClass().getResource(TreeViewScene.CSZ_FXMLNAME);
-    URL url = null;
-    if (url == null)
+    URL url = getClass().getResource(TreeViewScene.CSZ_FXMLNAME);
+    if (url == null) {
+      System.err.printf("non trovo getClass().getResource(%s)\n", TreeViewScene.CSZ_FXMLNAME);
       url = getClass().getClassLoader().getResource(TreeViewScene.CSZ_FXMLNAME);
+    }
+    if (url == null) {
+      s_log.error("Non riesco a caricare la form {}", TreeViewScene.CSZ_FXMLNAME);
+      return;
+    }
     Parent radice = FXMLLoader.load(url);
     Scene scene = new Scene(radice, 600, 440);
     stage.setScene(scene);

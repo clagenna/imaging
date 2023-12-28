@@ -33,7 +33,7 @@ public class Versione implements Serializable {
   public static final int    APP_BUILD        = 6;
 
   // e oggi esteso ${dh:CSZ_DATEDEPLOY}
-  public static final String CSZ_DATEDEPLOY   = "05/05/2022 18:22:38";
+  public static final String CSZ_DATEDEPLOY   = "27/12/2023 18:22:38";
 
   /** il nome dell'elemento in cui racchiudere l'XML di questa classe */
   private static String      mainElem;
