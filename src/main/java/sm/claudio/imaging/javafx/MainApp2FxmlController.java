@@ -289,6 +289,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     if ( !p_newv) {
       // System.out.println("MainApp2FxmlController.txDirLostFocus():" + txDir.getText());
       settaDir(txDir.getText());
+      btAnalizzaClick(null);
     }
     return null;
   }
@@ -552,7 +553,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       alt.initOwner(wnd);
       alt.setTitle("Informazione");
       alt.setContentText(p_txt);
-      alt.show();
+      alt.showAndWait();
     } else
       s_log.error("Windows==null; msg={}", p_txt);
   }
@@ -576,15 +577,26 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   void btAnalizzaClick(ActionEvent event) {
     Stage stage = MainAppFxml.getInst().getPrimaryStage();
+    Platform.runLater(new Runnable() {
+      @Override
+      public void run() {
+        stage.getScene().setCursor(Cursor.WAIT);
+      }
+    });
     try {
-      stage.getScene().getRoot().setCursor(Cursor.WAIT);
       clear();
-      m_model.analizza();
-      caricaGriglia();
+      if (m_pthDirectory != null && Files.exists(m_pthDirectory, LinkOption.NOFOLLOW_LINKS)) {
+        m_model.analizza();
+        caricaGriglia();
+      }
     } finally {
-      stage.getScene().getRoot().setCursor(Cursor.DEFAULT);
+      Platform.runLater(new Runnable() {
+        @Override
+        public void run() {
+          stage.getScene().setCursor(Cursor.DEFAULT);
+        }
+      });
     }
-
   }
 
   private void clear() {

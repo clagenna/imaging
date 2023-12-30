@@ -17,7 +17,7 @@
       <TextField fx:id="txDir" layoutX="14.0" layoutY="14.0" onAction="#onEnter" prefHeight="25.0" prefWidth="639.0" promptText="Digita oppure cerca il direttorio di partenza delle foto" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="247.0" />
       <Button fx:id="btCerca" layoutX="661.0" layoutY="14.0" mnemonicParsing="false" onAction="#btCercaClick" text="Cerca.." AnchorPane.rightAnchor="188.0" />
       <TextField fx:id="txDir1" layoutX="14.0" layoutY="50.0" onAction="#onEnter" prefHeight="25.0" prefWidth="639.0" promptText="Dammi un file di tracce GPX per settare le latitudini e longitudini delle foto" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="247.0" />
-      <ComboBox fx:id="cbPrio" layoutX="732.0" layoutY="17.0" onAction="#cbPrioClick" prefWidth="150.0" />
+      <ComboBox fx:id="cbPrio" layoutX="732.0" layoutY="17.0" onAction="#cbPrioClick" prefWidth="150.0" AnchorPane.rightAnchor="18.0" />
       <Button fx:id="btCercaGPX" layoutX="661.0" layoutY="50.0" mnemonicParsing="false" onAction="#btCercaGPXClick" text="Cerca.." AnchorPane.rightAnchor="188.0" />
       <ToggleSwitch fx:id="ckUseDecimalGPS" layoutX="746.0" layoutY="54.0" prefHeight="18.0" prefWidth="142.0" text="Mostra Gradi decim." AnchorPane.rightAnchor="12.0" />
       <ToggleSwitch fx:id="ckRecurse" layoutX="14.0" layoutY="89.0" prefHeight="18.0" prefWidth="136.0" text="Recurse Dirs." AnchorPane.leftAnchor="14.0" />

@@ -32,6 +32,7 @@ import sm.claudio.imaging.gpx.RicercaDicotomica;
 import sm.claudio.imaging.main.EExifPriority;
 import sm.claudio.imaging.sys.AppProperties;
 import sm.claudio.imaging.sys.TimerMeter;
+import sm.claudio.imaging.sys.Utility;
 
 public class ImgModel extends Task<String> {
   private static final Logger s_log = LogManager.getLogger(ImgModel.class);
@@ -91,17 +92,23 @@ public class ImgModel extends Task<String> {
     FileSystemVisitatore fsv = new FileSystemVisitatore();
     fsDir.accept(fsv);
     aggiungiGPSDalleFoto();
+    if (minFotoDate != null && minFotoDate.isBefore(LocalDateTime.MAX)) {
+      ImgModel.s_log.debug("Data min {} data Max {}", // 
+          Utility.s_dtfmt_YMD_hms.format(minFotoDate), //
+          Utility.s_dtfmt_YMD_hms.format(maxFotoDate));
+    }
     ImgModel.s_log.info("Fine scansione di {}", szSrc);
   }
 
   private void aggiungiGPSDalleFoto() {
-    if (m_liDicot == null || m_liFoto == null || m_liFoto == null)
-      return;
     minFotoDate = LocalDateTime.MAX;
     maxFotoDate = LocalDateTime.MIN;
     m_liFoto //
         .stream() //
         .forEach(s -> minMaxDate(s));
+
+    if (m_liDicot == null || m_liFoto == null)
+      return;
     List<GeoCoord> li = m_liFoto //
         .stream() //
         .filter(s -> s.isGPS()) //

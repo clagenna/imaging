@@ -190,7 +190,7 @@
 								<configuration>
 									<target>
 										<copy file="target/imaging.jar" toDir="${gdrive.dir}" overwrite="true"/>
-										<copy file="imaging.cmd" toDir="${gdrive.dir}" overwrite="true"/>
+										<copy file="bin/imaging.cmd" toDir="${gdrive.dir}" overwrite="true"/>
 									</target>
 								</configuration>
 							</execution>
