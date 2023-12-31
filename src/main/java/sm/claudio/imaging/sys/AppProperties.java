@@ -19,19 +19,19 @@ import sm.claudio.imaging.swing.ImgModel;
 
 public class AppProperties {
 
-  private static final Logger  s_log                = LogManager.getLogger(AppProperties.class);
-  private static final String  CSZ_PROP_FILE        = "imaging.properties";
-  public static final String   CSZ_PROP_LASTDIR     = "last.dir";
-  public static final String   CSZ_PROP_LASTFIL     = "last.fil";
-  public static final String   CSZ_PROP_DIMFRAME_X  = "frame.dimx";
-  public static final String   CSZ_PROP_DIMFRAME_Y  = "frame.dimy";
-  public static final String   CSZ_PROP_POSFRAME_X  = "frame.posx";
-  public static final String   CSZ_PROP_POSFRAME_Y  = "frame.posy";
-  public static final String   CSZ_PROP_TBCOL       = "tbview.col.%s";
+  private static final Logger s_log               = LogManager.getLogger(AppProperties.class);
+  private static final String CSZ_PROP_FILE       = "imaging.properties";
+  public static final String  CSZ_PROP_LASTDIR    = "last.dir";
+  public static final String  CSZ_PROP_LASTFIL    = "last.fil";
+  public static final String  CSZ_PROP_LASTGPX    = "gps.last";
+  public static final String  CSZ_PROP_DIMFRAME_X = "frame.dimx";
+  public static final String  CSZ_PROP_DIMFRAME_Y = "frame.dimy";
+  public static final String  CSZ_PROP_POSFRAME_X = "frame.posx";
+  public static final String  CSZ_PROP_POSFRAME_Y = "frame.posy";
+  public static final String  CSZ_PROP_TBCOL      = "tbview.col.%s";
 
-  private static final String  CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
-  private static final String  CSZ_PROP_LASTGPX     = "gps.last";
-  private static final String  CSZ_PROP_SHOW_GMS    = "gps.show_gms";
+  private static final String CSZ_TIPO_CAMBIO_NOME = "tipoCambioNome";
+  private static final String CSZ_PROP_SHOW_GMS    = "gps.show_gms";
 
   private static AppProperties s_inst;
   private ETipoCambioNome      tipoCambioNome;

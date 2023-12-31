@@ -28,10 +28,10 @@ public class Versione implements Serializable {
   /** Minor Version */
   public static final int APP_MIN_VERSION = 0;
   /** Build Version */
-  public static final int    APP_BUILD = 8;
+  public static final int    APP_BUILD = 9;
 
   // e oggi esteso ${dh:CSZ_DATEDEPLOY}
-  public static final String CSZ_DATEDEPLOY = "30/12/2023 16:06:00";
+  public static final String CSZ_DATEDEPLOY = "30/12/2023 16:59:05";
 
   /** il nome dell'elemento in cui racchiudere l'XML di questa classe */
   private static String mainElem;
@@ -80,6 +80,7 @@ public class Versione implements Serializable {
     return sz;
   }
 }
+
 
 
 

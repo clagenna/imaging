@@ -377,6 +377,9 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     String sz = props.getPropVal(AppProperties.CSZ_PROP_LASTDIR);
     if (sz != null)
       settaDir(sz, true);
+    sz = props.getPropVal(AppProperties.CSZ_PROP_LASTGPX);
+    if (sz != null)
+      settaGPX(sz, true);
     for (TableColumn<FSFile, ?> c : table.getColumns()) {
       readColumnWidth(props, c);
     }
@@ -522,7 +525,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       String pathDir = fileScelto.getAbsolutePath();
       settaGPX(pathDir, true);
     } else {
-      System.out.println("Non hai scelto nessun GPX!!");
+      s_log.warn("Non hai scelto nessun GPX!!");
     }
     //
     //    double wx = stage.getWidth();
@@ -843,6 +846,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       return;
     AppProperties prop = AppProperties.getInst();
     prop.setPropVal(AppProperties.CSZ_PROP_LASTDIR, m_model.getDirectory());
+    prop.setLastGPX(m_model.getFileGPX());
     saveColumnWidth(prop);
     double[] pos = spltPane.getDividerPositions();
     String szPos = String.format("%.4f", pos[0]).replace(",", ".");

@@ -650,21 +650,26 @@ public abstract class FSFoto extends FSFile {
     }
   }
 
-  public void cambiaDtAcquisizione() {
+  private Path backupFotoFile() {
+    Path pthCopy = Paths.get(getParent().toString(), UUID.randomUUID().toString() + "." + getFileExtention());
+    try {
+      Files.copy(getPath(), pthCopy, StandardCopyOption.COPY_ATTRIBUTES);
+    } catch (IOException e) {
+      pthCopy = null;
+      getLogger().error("Errore {} backup file per {}", e.getMessage(), getPath().toString(), e);
+    }
+    return pthCopy;
+  }
 
+  public void cambiaDtAcquisizione() {
     if (this instanceof FSTiff) {
       getLogger().error("Non cambio EXIF per {}", getPath().toString());
       return;
     }
-
-    Path pthCopy = Paths.get(getParent().toString(), UUID.randomUUID().toString() + "." + getFileExtention());
     boolean bOk = true;
-    try {
-      Files.copy(getPath(), pthCopy, StandardCopyOption.COPY_ATTRIBUTES);
-    } catch (IOException e) {
-      getLogger().error("Errore set EXIF dtAcq per {}", getPath().toString(), e);
+    Path pthCopy = backupFotoFile();
+    if (pthCopy == null)
       return;
-    }
     File jpegImageFile = pthCopy.toFile();
     File dst = getPath().toFile();
     try (FileOutputStream fos = new FileOutputStream(dst); OutputStream os = new BufferedOutputStream(fos)) {
@@ -712,6 +717,77 @@ public abstract class FSFoto extends FSFile {
     } catch (Exception e) {
       getLogger().error("Errore di cancellazione di {}", pthCopy.toString(), e);
     }
+  }
+
+  public void cambiaGpsCoordinate() {
+    if (this instanceof FSTiff) {
+      getLogger().error("Non cambio EXIF per {}", getPath().toString());
+      return;
+    }
+    if ( !isInterpolato()) {
+      getLogger().debug("Non cambio GPS per {}, non e' interpolato", getPath().toString());
+      return;
+    }
+    if (getLongitude() * getLatitude() == 0) {
+      getLogger().debug("Non cambio GPS per {}, non ha coordinate!", getPath().toString());
+      return;
+    }
+    getLogger().debug("Aggiungo coord. GPS per {}", getPath().toString());
+    boolean bOk = true;
+    Path pthCopy = backupFotoFile();
+    if (pthCopy == null)
+      return;
+    File jpegImageFile = pthCopy.toFile();
+    File dst = getPath().toFile();
+    try (FileOutputStream fos = new FileOutputStream(dst); OutputStream os = new BufferedOutputStream(fos);) {
+      TiffOutputSet outputSet = null;
+      // note that metadata might be null if no metadata is found.
+      final ImageMetadata metadata = Imaging.getMetadata(jpegImageFile);
+      final JpegImageMetadata jpegMetadata = (JpegImageMetadata) metadata;
+      if (null != jpegMetadata) {
+        // note that exif might be null if no Exif metadata is found.
+        final TiffImageMetadata exif = jpegMetadata.getExif();
+
+        if (null != exif) {
+          // TiffImageMetadata class is immutable (read-only).
+          // TiffOutputSet class represents the Exif data to write.
+          //
+          // Usually, we want to update existing Exif metadata by
+          // changing
+          // the values of a few fields, or adding a field.
+          // In these cases, it is easiest to use getOutputSet() to
+          // start with a "copy" of the fields read from the image.
+          outputSet = exif.getOutputSet();
+        }
+      }
+
+      // if file does not contain any exif metadata, we create an empty
+      // set of exif metadata. Otherwise, we keep all of the other
+      // existing tags.
+      if (null == outputSet)
+        outputSet = new TiffOutputSet();
+      // final TiffOutputDirectory exifDirectory = outputSet.getOrCreateExifDirectory();
+      outputSet.setGPSInDegrees(getLongitude(), getLatitude());
+      new ExifRewriter().updateExifMetadataLossless(jpegImageFile, os, outputSet);
+    } catch (FileNotFoundException e) {
+      bOk = false;
+      getLogger().error("Errore sul file {}", pthCopy.toString(), e);
+    } catch (IOException e) {
+      bOk = false;
+      getLogger().error("Errore I/O sul file {}", pthCopy.toString(), e);
+    } catch (ImageReadException | ImageWriteException e) {
+      bOk = false;
+      getLogger().error("Errore lettura EXIF sul file {}", pthCopy.toString(), e);
+    }
+    try {
+      if (bOk)
+        Files.delete(pthCopy);
+      else
+        Files.move(pthCopy, getPath(), StandardCopyOption.REPLACE_EXISTING);
+    } catch (Exception e) {
+      getLogger().error("Errore di cancellazione di {}", pthCopy.toString(), e);
+    }
+
   }
 
   @Override

@@ -12,6 +12,9 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.drew.imaging.ImageMetadataReader;
 import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Directory;
@@ -24,6 +27,7 @@ import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.fsvisit.FSFoto;
 
 public class GeoCoord implements IDistance<GeoCoord> {
+  private static final Logger s_log = LogManager.getLogger(GeoCoord.class);
   public static double                  MIGLIO_TERRESTRE_PER_Miglio_nautico = 1.15077945;
   public static double                  Kilometro_PER_Miglio_nautico        = 1.852;
   // private static Pattern                s_patGradiMinSec;
@@ -374,11 +378,11 @@ public class GeoCoord implements IDistance<GeoCoord> {
     boolean bDeb = false;
     Metadata metadata = null;
     if (bDeb)
-      System.out.println("\n" + p_fi.getAbsolutePath());
+      s_log.debug("Leggo metadata da {}" , p_fi.getAbsolutePath());
     try {
       metadata = ImageMetadataReader.readMetadata(p_fi);
     } catch (ImageProcessingException | IOException e) {
-      System.err.printf("Errore \"%s\" su file \"%s\"\n", e.getMessage(), p_fi.getAbsoluteFile());
+      s_log.error("Errore \"{}\" su file \"{}\"", e.getMessage(), p_fi.getAbsoluteFile());
       return false;
     }
     //    String szDtTime = null;
@@ -390,7 +394,7 @@ public class GeoCoord implements IDistance<GeoCoord> {
     for (Directory directory : metadata.getDirectories()) {
       for (Tag tag : directory.getTags()) {
         if (bDeb)
-          System.out.format("%s/%s = %s\n", directory.getName(), tag.getTagName(), tag.getDescription());
+          s_log.debug("Leggi metad. dir={}/tag={} = {}", directory.getName(), tag.getTagName(), tag.getDescription());
         String szTag = String.format("%s/%s", directory.getName(), tag.getTagName());
         String szVal = tag.getDescription();
         switch (szTag) {

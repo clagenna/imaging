@@ -93,7 +93,7 @@ public class ImgModel extends Task<String> {
     fsDir.accept(fsv);
     aggiungiGPSDalleFoto();
     if (minFotoDate != null && minFotoDate.isBefore(LocalDateTime.MAX)) {
-      ImgModel.s_log.debug("Data min {} data Max {}", // 
+      ImgModel.s_log.debug("Data min {} data Max {}", //
           Utility.s_dtfmt_YMD_hms.format(minFotoDate), //
           Utility.s_dtfmt_YMD_hms.format(maxFotoDate));
     }
@@ -103,12 +103,15 @@ public class ImgModel extends Task<String> {
   private void aggiungiGPSDalleFoto() {
     minFotoDate = LocalDateTime.MAX;
     maxFotoDate = LocalDateTime.MIN;
+    if (m_liFoto == null || m_liFoto.size() == 0)
+      return;
     m_liFoto //
         .stream() //
         .forEach(s -> minMaxDate(s));
 
-    if (m_liDicot == null || m_liFoto == null)
+    if (m_liDicot == null)
       return;
+    // se le foto contengono inf. di GPS allora le aggiungo a m_liDicot
     List<GeoCoord> li = m_liFoto //
         .stream() //
         .filter(s -> s.isGPS()) //
@@ -262,14 +265,21 @@ public class ImgModel extends Task<String> {
   public void interpolaGPX() {
     if (m_liFoto == null || m_liFoto.size() == 0 || m_liDicot == null)
       return;
-    s_log.info("Interpolazione delle coordinate GPS con il file di tracce");
+    s_log.debug("Interpolazione delle coordinate GPS con il file di tracce");
     List<FSFile> liNoGps = m_liFoto //
         .stream() //
         .filter(s -> !s.isGPS()) //
         .collect(Collectors.toList());
     for (FSFile gp : liNoGps) {
       GeoCoord coo = new GeoCoord(gp);
-      System.out.printf("ImgModel.interpolaGPX(%s)\n", coo.toCsv3());
+      GeoCoord breve = m_liDicot.cercaDicot(coo);
+      if (breve != null && gp instanceof FSFoto fo) {
+        fo.setInterpolato(true);
+        fo.setLatitude(breve.getLat());
+        fo.setLongitude(breve.getLon());
+        fo.cambiaGpsCoordinate();
+        s_log.info("Assegno GPX a {} => {}", fo.getPath().toString(), breve);
+      }
     }
   }
 
