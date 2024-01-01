@@ -38,7 +38,7 @@ public class FSCr2 extends FSFoto {
   }
 
   @Override
-  public void cambiaDtAcquisizione() {
+  public void cambiaExifInfoOnFile() {
     getLogger().error("Non cambio EXIF per {}", getPath().toString());
     return;
   }

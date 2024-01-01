@@ -569,7 +569,7 @@ public abstract class FSFoto extends FSFile {
     AppProperties app = AppProperties.getInst();
     ETipoCambioNome tipoambio = app.getTipoCambioNome();
     while (Files.exists(pthTo, LinkOption.NOFOLLOW_LINKS)) {
-      getLogger().debug("chg fil.nam: {} esiste!", pthTo.getFileName());
+      getLogger().debug("change fil.nam: {} esiste!", pthTo.getFileName());
       String szExt = String.format("_%02d.", k);
       //      String sz = fnam.replace(".", String.format("_%d.", k++));
       //      pthTo = Paths.get(getParent().toString(), sz);
@@ -661,7 +661,7 @@ public abstract class FSFoto extends FSFile {
     return pthCopy;
   }
 
-  public void cambiaDtAcquisizione() {
+  public void cambiaExifInfoOnFile() {
     if (this instanceof FSTiff) {
       getLogger().error("Non cambio EXIF per {}", getPath().toString());
       return;
@@ -687,7 +687,11 @@ public abstract class FSFoto extends FSFile {
         outputSet = new TiffOutputSet();
 
       TiffOutputDirectory exifDirectory = outputSet.getOrCreateExifDirectory();
-
+      // se devo cambio le coordinate GPS alla foto
+      var fLatLon = getLongitude() * getLatitude();
+      if ( isInterpolato() && fLatLon != 0) {
+        outputSet.setGPSInDegrees(getLongitude(), getLatitude());
+      }
       // sovrascrivo la dtAcq con la data ottenuta perche adesso deve diventare quella!
       dtAcquisizione = getPiuVecchiaData();
       String szDt = ParseData.s_fmtDtExif.format(dtAcquisizione);
@@ -851,7 +855,7 @@ public abstract class FSFoto extends FSFile {
     for (CosaFare che : df) {
       switch (che) {
         case setDtAcquisizione:
-          cambiaDtAcquisizione();
+          cambiaExifInfoOnFile();
           break;
         case setDtCreazione:
           cambiaDtCreazione();

@@ -580,25 +580,16 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   void btAnalizzaClick(ActionEvent event) {
     Stage stage = MainAppFxml.getInst().getPrimaryStage();
-    Platform.runLater(new Runnable() {
-      @Override
-      public void run() {
-        stage.getScene().setCursor(Cursor.WAIT);
-      }
-    });
+    setCursorOnStage(stage, Cursor.WAIT);
     try {
       clear();
       if (m_pthDirectory != null && Files.exists(m_pthDirectory, LinkOption.NOFOLLOW_LINKS)) {
         m_model.analizza();
+        m_model.interpolaGPX();
         caricaGriglia();
       }
     } finally {
-      Platform.runLater(new Runnable() {
-        @Override
-        public void run() {
-          stage.getScene().setCursor(Cursor.DEFAULT);
-        }
-      });
+      setCursorOnStage(stage, Cursor.DEFAULT);
     }
   }
 
@@ -638,19 +629,11 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   void btEseguiClickThread(ActionEvent event) {
     s_log.debug("Lancio la conversione in background con un thread");
-    ExecutorService backGrService = Executors.newFixedThreadPool(20);
+    ExecutorService backGrService = Executors.newFixedThreadPool(2);
     Stage stage = MainAppFxml.getInst().getPrimaryStage();
-
-    Platform.runLater(new Runnable() {
-      @Override
-      public void run() {
-        System.out.println("Cursor wait");
-        stage.getScene().setCursor(Cursor.WAIT);
-      }
-    });
-
+    setCursorOnStage(stage, Cursor.WAIT);
     try {
-      System.out.println("eseguiConversioneRunTask() ... new Task!");
+      s_log.debug("eseguiConversioneRunTask() ... new Task!");
       // =========== Start Event ================
       m_model.setOnRunning(ev -> {
         //          lbProgressione.setText(gpdf.getValue());
@@ -660,13 +643,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       m_model.setOnSucceeded(ev -> {
         //          lbProgressione.setText(gpdf.getValue());
         btEsegui.setDisable(false);
-        Platform.runLater(new Runnable() {
-          @Override
-          public void run() {
-            System.out.println("Cursor DEFAULT");
-            stage.getScene().setCursor(Cursor.DEFAULT);
-          }
-        });
+        setCursorOnStage(stage, Cursor.DEFAULT);
         btEsegui.setDisable(false);
         backGrService.shutdown();
         while ( !backGrService.isTerminated()) {
@@ -682,6 +659,16 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
       lbProgressione.textProperty().unbind();
       s_log.error("Errore conversione", e);
     }
+  }
+
+  private void setCursorOnStage(Stage stage, Cursor cur) {
+    Platform.runLater(new Runnable() {
+      @Override
+      public void run() {
+        System.out.println("Cursor " + cur);
+        stage.getScene().setCursor(cur);
+      }
+    });
   }
 
   @FXML

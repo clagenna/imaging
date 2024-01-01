@@ -270,6 +270,10 @@ public class ImgModel extends Task<String> {
         .stream() //
         .filter(s -> !s.isGPS()) //
         .collect(Collectors.toList());
+    if ( liNoGps == null || liNoGps.size() == 0) {
+      s_log.debug("Nessun file da interpolare GPS con il file di tracce");
+      return;
+    }
     for (FSFile gp : liNoGps) {
       GeoCoord coo = new GeoCoord(gp);
       GeoCoord breve = m_liDicot.cercaDicot(coo);
@@ -277,8 +281,8 @@ public class ImgModel extends Task<String> {
         fo.setInterpolato(true);
         fo.setLatitude(breve.getLat());
         fo.setLongitude(breve.getLon());
-        fo.cambiaGpsCoordinate();
-        s_log.info("Assegno GPX a {} => {}", fo.getPath().toString(), breve);
+        // fo.cambiaGpsCoordinate();
+        s_log.debug("Assegno GPX a {} => {}", fo.getPath().toString(), breve);
       }
     }
   }

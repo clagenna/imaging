@@ -126,6 +126,7 @@ public class AppProperties {
   }
 
   public void setShowGMS(boolean pv) {
+    // System.out.printf("AppProperties.setShowGMS(%s)\n", pv ? "Show GMS" : "Show Double");
     getProperties().setProperty(CSZ_PROP_SHOW_GMS, String.valueOf(pv));
   }
 
