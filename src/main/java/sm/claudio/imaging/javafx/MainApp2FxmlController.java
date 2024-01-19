@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -39,7 +40,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
@@ -48,6 +51,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -116,7 +121,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   private SplitPane                          spltPane;
   @FXML
-  private TableView<FSFile>                  table;
+  private TableView<FSFile>                  tblvFoto;
   @FXML
   private TableColumn<FSFile, String>        attuale;
   @FXML
@@ -141,7 +146,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   private TableColumn<FSFile, Double>        latitude;
 
   @FXML
-  private TableView<Log4jRow>           tblView;
+  private TableView<Log4jRow>           tblvLogs;
   @FXML
   private TableColumn<Log4jRow, String> colTime;
   @FXML
@@ -185,6 +190,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     AppProperties prop = AppProperties.getInst();
     levelMin = Level.INFO;
 
+    ckUseDecimalGPS.setSelected(true);
     ckUseDecimalGPS.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
       @Override
@@ -228,9 +234,9 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
 
   private void preparaLogPanel(AppProperties prop) {
     MioAppender.setLogReader(this);
-    tblView.setPlaceholder(new Label("Nessun messaggio da mostrare" + ""));
-    tblView.setFixedCellSize(21.0);
-    tblView.setRowFactory(row -> new TableRow<Log4jRow>() {
+    tblvLogs.setPlaceholder(new Label("Nessun messaggio da mostrare" + ""));
+    tblvLogs.setFixedCellSize(21.0);
+    tblvLogs.setRowFactory(row -> new TableRow<Log4jRow>() {
       @Override
       public void updateItem(Log4jRow item, boolean empty) {
         super.updateItem(item, empty);
@@ -296,14 +302,22 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
 
   private void initializeTable() {
     // attuale.setText("Attuale");
-    table.setRowFactory(tv -> {
+    tblvFoto.setRowFactory(tv -> {
       TableRow<FSFile> row = new TableRow<>();
       row.setOnMouseClicked(event -> {
-        if (event.getClickCount() == 2 && !row.isEmpty()) {
+        if ( row.isEmpty())
+          return;
+        if (event.getClickCount() == 2 ) {
           // FSFile rowData = row.getItem();
           // System.out.println("Double click on: " + rowData.getAttuale());
           imagePopupWindowShow(row);
+          return;
+        } 
+        if (event.getClickCount() == 1  &&  event.isControlDown() ) {
+          // System.out.println("Click + Ctrl !");
+          mnuVaiCoord((ActionEvent) null);
         }
+        
       });
       return row;
     });
@@ -377,13 +391,14 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     String sz = props.getPropVal(AppProperties.CSZ_PROP_LASTDIR);
     if (sz != null)
       settaDir(sz, true);
-    sz = props.getPropVal(AppProperties.CSZ_PROP_LASTGPX);
-    if (sz != null)
-      settaGPX(sz, true);
-    for (TableColumn<FSFile, ?> c : table.getColumns()) {
+    // non voglio che tutte le volte che parte faccia il parsing del GPX
+    //    sz = props.getPropVal(AppProperties.CSZ_PROP_LASTGPX);
+    //    if (sz != null)
+    //      settaGPX(sz, true);
+    for (TableColumn<FSFile, ?> c : tblvFoto.getColumns()) {
       readColumnWidth(props, c);
     }
-    for (TableColumn<Log4jRow, ?> c : tblView.getColumns()) {
+    for (TableColumn<Log4jRow, ?> c : tblvLogs.getColumns()) {
       readColumnWidth(props, c);
     }
 
@@ -539,7 +554,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     // System.out.println("MainApp2FxmlController.ckMostraGMS():" + ckUseDecimalGPS.isSelected());
     AppProperties prop = AppProperties.getInst();
     prop.setShowGMS(ckUseDecimalGPS.isSelected());
-    table.refresh();
+    tblvFoto.refresh();
   }
 
   private void msgBox(String p_format) {
@@ -603,12 +618,43 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
 
   private void caricaGriglia() {
     List<FSFile> li = m_model.getListFiles();
-    ObservableList<FSFile> itms = table.getItems();
+    ObservableList<FSFile> itms = tblvFoto.getItems();
     itms.clear();
     if (li == null)
       return;
     for (FSFile fi : li) {
       itms.add(fi);
+    }
+
+    ContextMenu cntxMenu = new ContextMenu();
+
+    MenuItem itm = new MenuItem("Vai Coord.");
+    itm.setOnAction((ActionEvent ev) -> {
+      mnuVaiCoord(ev);
+    });
+    cntxMenu.getItems().add(itm);
+    tblvFoto.setContextMenu(cntxMenu);
+
+  }
+
+  private void mnuVaiCoord(ActionEvent p_ev) {
+    // System.out.println("MainApp2FxmlController.mnuVaiCoord():" + p_ev);
+    FSFile fil = tblvFoto.getSelectionModel().getSelectedItem();
+    final String LNK_MAPS = "https://www.google.com/maps?z=15&t=h&q=%.8f,%.8f";
+    if (fil != null) {
+      double lat = fil.getLatitude();
+      double lon = fil.getLongitude();
+      if (lat * lon != 0) {
+        String lnk = String.format(Locale.US, LNK_MAPS, lat, lon);
+        final ClipboardContent cont = new ClipboardContent();
+        cont.putString(lnk);
+        Clipboard.getSystemClipboard().setContent(cont);
+        MainAppFxml ma = MainAppFxml.getInst();
+        ma.showLink(lnk);
+        s_log.info("ClipBoard Copied: {}", lnk);
+      }
+    } else {
+      System.out.println("No file selected!");
     }
   }
 
@@ -707,14 +753,14 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     m_liMsgs.add(rig);
     // if ( rig.getLevel().isInRange( Level.FATAL, levelMin )) // isLessSpecificThan(levelMin))
     if (rig.getLevel().intLevel() <= levelMin.intLevel()) {
-      ObservableList<Log4jRow> itms = tblView.getItems();
+      ObservableList<Log4jRow> itms = tblvLogs.getItems();
       itms.add(rig);
       if (itms.size() > 4) {
 
         Platform.runLater(new Runnable() {
           @Override
           public void run() {
-            tblView.scrollTo(itms.size() - 1);
+            tblvLogs.scrollTo(itms.size() - 1);
           }
         });
       }
@@ -724,7 +770,7 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   @FXML
   void btClearMsgClick(ActionEvent event) {
     // System.out.println("ReadFattHTMLController.btClearMsgClick()");
-    tblView.getItems().clear();
+    tblvLogs.getItems().clear();
     if (m_liMsgs != null)
       m_liMsgs.clear();
     m_liMsgs = null;
@@ -734,12 +780,12 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
   private void cbLevelMinSel(ActionEvent event) {
     levelMin = cbLevelMin.getSelectionModel().getSelectedItem();
     // System.out.println("ReadFattHTMLController.cbLevelMinSel():" + levelMin.name());
-    tblView.getItems().clear();
+    tblvLogs.getItems().clear();
     if (m_liMsgs == null || m_liMsgs.size() == 0)
       return;
     // List<Log4jRow> li = m_liMsgs.stream().filter(s -> s.getLevel().isInRange(Level.FATAL, levelMin )).toList(); // !s.getLevel().isLessSpecificThan(levelMin)).toList();
     List<Log4jRow> li = m_liMsgs.stream().filter(s -> s.getLevel().intLevel() <= levelMin.intLevel()).toList();
-    tblView.getItems().addAll(li);
+    tblvLogs.getItems().addAll(li);
   }
 
   public void imagePopupWindowShow(TableRow<FSFile> row) {
@@ -796,17 +842,17 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
 
   protected void doRightLeft(TableRow<FSFile> row, KeyCode code, Scene scene) {
     boolean bOk = false;
-    int qta = table.getItems().size();
-    int indx = table.getSelectionModel().getSelectedIndex();
+    int qta = tblvFoto.getItems().size();
+    int indx = tblvFoto.getSelectionModel().getSelectedIndex();
     switch (code) {
       case LEFT:
-        table.getFocusModel().focusPrevious();
+        tblvFoto.getFocusModel().focusPrevious();
         indx--;
         if (indx >= 0)
           bOk = true;
         break;
       case RIGHT:
-        table.getFocusModel().focusNext();
+        tblvFoto.getFocusModel().focusNext();
         indx++;
         if (indx < qta)
           bOk = true;
@@ -816,8 +862,8 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
     }
     if ( !bOk)
       return;
-    table.getSelectionModel().select(indx);
-    FSFile fi = table.getSelectionModel().getSelectedItem();
+    tblvFoto.getSelectionModel().select(indx);
+    FSFile fi = tblvFoto.getSelectionModel().getSelectedItem();
     // System.out.printf("MainApp2FxmlController.doRightLeft(%s)\n", fi.getAttuale());
 
     ImageViewResizer imgResiz = caricaImg(fi);
@@ -843,11 +889,11 @@ public class MainApp2FxmlController implements Initializable, ILog4jReader {
 
   private void saveColumnWidth(AppProperties p_prop) {
     // saveColumnWidth(p_prop, attuale);
-    for (TableColumn<FSFile, ?> c : table.getColumns()) {
+    for (TableColumn<FSFile, ?> c : tblvFoto.getColumns()) {
       // System.out.printf("MainApp2FxmlController.saveColumnWidth(\"%s\")\n", c.getId());
       saveColumnWidth(p_prop, c);
     }
-    for (TableColumn<Log4jRow, ?> c : tblView.getColumns()) {
+    for (TableColumn<Log4jRow, ?> c : tblvLogs.getColumns()) {
       // System.out.printf("MainApp2FxmlController.saveColumnWidth(\"%s\")\n", c.getId());
       saveColumnWidth(p_prop, c);
     }

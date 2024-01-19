@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FolderTypes]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FolderTypes\{71689AC1-CC88-45D0-8A22-2943C3E7DFB3}]
+"DefaultView"="{0167146E-5395-4C48-9048-D584EEACA4F2}"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FolderTypes\{B3690E58-E961-423B-B687-386Ebfd83239}]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FolderTypes\{B3690E58-E961-423B-B687-386Ebfd83239}\TopViews\{00000000-0000-0000-0000-000000000000}]
+"ColumnList"="prop:0System.ItemNameDisplay;0System.ItemDate;0System.ItemTypeText;0System.Size;0System.Keywords;1System.GPS.Latitude;1System.GPS.Longitude;1System.GPS.Altitude;1System.DateCreated;1System.DateModified;1System.Photo.DateTaken;1System.Image.Dimensions;1System.Rating"
+"IconSize"=dword:00000060
+"LogicalViewMode"=dword:00000003
+"Name"="NoName"
+"Order"=dword:00000000

@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 import javafx.scene.control.TableCell;
 import javafx.scene.paint.Color;
-
 import sm.claudio.imaging.fsvisit.FSFile;
 import sm.claudio.imaging.fsvisit.FSFoto;
 
@@ -33,6 +32,7 @@ public class MioTableCellRenderDate<T, F> extends TableCell<FSFile, LocalDateTim
       setStyle("");
       return;
     }
+
     FSFoto fot = (FSFoto) fil;
     // Format date.
     LocalDateTime dt = fot.getDtAssunta();
@@ -44,8 +44,8 @@ public class MioTableCellRenderDate<T, F> extends TableCell<FSFile, LocalDateTim
     int v = dt.compareTo(item);
     v = v < 0 ? -1 : v;
     v = v > 0 ? 1 : v;
-//    System.out.printf("MioTableCellRenderDate.updateItem(%s %s %d %s)\n", //
-//        m_colName, sz, v, fil.formatDt(dt));
+    //    System.out.printf("MioTableCellRenderDate.updateItem(%s %s %d %s)\n", //
+    //        m_colName, sz, v, fil.formatDt(dt));
     switch (v) {
       case -1:
         setTextFill(Color.BLACK);

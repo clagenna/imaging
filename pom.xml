@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sm.clagenna</groupId>
 	<artifactId>imaging</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<!--
 	easy way to set up JavFX on eclipse:
 	https://pragmaticways.com/how-to-add-javafx-to-eclipse-the-easy-way/ 
@@ -139,14 +139,12 @@
 		</dependency>
 	</dependencies>
 	<profiles>
-		
 		<profile>
 			<id>local</id>
 			<build>
 				<plugins/>
 			</build>
 		</profile>
-		
 		<profile>
 			<id>remote</id>
 			<build>
@@ -177,7 +175,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					
 					<plugin>
 						<artifactId>maven-antrun-plugin</artifactId>
 						<version>3.0.0</version>
@@ -199,7 +196,6 @@
 				</plugins>
 			</build>
 		</profile>
-		
 		<profile>
 			<id>delombok</id>
 			<build>
@@ -280,8 +276,7 @@
 						<configuration>
 							<visible>false</visible>
 							<JVMArgs>
-								<!--
- <JVMArg>your-args</JVMArg> 
+								<!-- <JVMArg>your-args</JVMArg> 
 								-->
 							</JVMArgs>
 							<mainClassName>${mainClassName}</mainClassName>

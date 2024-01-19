@@ -10,6 +10,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sm.claudio.imaging.sys.AppProperties;
 
+// FIXME fare in modo che non memorizzi/cancella l'ultimo file GPX
+// TODO provare creare menu contestuale sulla foto
+// TODO aggiungere alla menu contestuale il lancio di google maps sulle coordinate
 public class MainAppFxml extends Application {
 
   private static final String CSZ_MAIN_APP2_CSS = "/sm/claudio/imaging/javafx/styleMainApp2.css";
@@ -86,5 +89,10 @@ public class MainAppFxml extends Application {
 
   public void setPrimaryStage(Stage primaryStage) {
     this.primaryStage = primaryStage;
+  }
+
+  public void showLink(String p_lnk) {
+    getHostServices().showDocument(p_lnk);
+
   }
 }

@@ -29,7 +29,7 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tblvFoto" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 					<columns>
 						<TableColumn fx:id="attuale" prefWidth="75.0" text="Attuale" />
 						<TableColumn fx:id="percorso" prefWidth="120.0" text="Percorso" />
@@ -50,7 +50,7 @@
                <children>
                   <Button fx:id="btClearMsg" layoutX="807.0" layoutY="20.0" mnemonicParsing="false" onAction="#btClearMsgClick" text="Clear" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="20.0" />
                   <ComboBox fx:id="cbLevelMin" layoutX="778.0" layoutY="62.0" onAction="#cbLevelMinSel" prefHeight="25.0" prefWidth="106.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="62.0" />
-                  <TableView fx:id="tblView" layoutX="91.0" layoutY="14.0" prefHeight="200.0" prefWidth="674.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tblvLogs" layoutX="91.0" layoutY="14.0" prefHeight="200.0" prefWidth="674.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="0.0">
 					<columns>
 						<TableColumn fx:id="colTime" text="Momento" />
 						<TableColumn fx:id="colLev" prefWidth="75.0" text="Liv.Err" />

@@ -1,6 +1,6 @@
 set LUOGO=%~dp0
-cd /d "%LUOGO%"
-cd
+cd /d "%LUOGO%\.."
+
 set qta=0
 set REMDEB=
 if "%1" == "-d" (
